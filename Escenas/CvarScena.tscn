@@ -4,9 +4,9 @@
 [ext_resource type="Theme" uid="uid://6c443vuhilj7" path="res://new_theme.tres" id="2_x1i1o"]
 [ext_resource type="Texture2D" uid="uid://d4aqqwf5dvpde" path="res://Imagenes/fondo.png" id="3_r4d6k"]
 [ext_resource type="Texture2D" uid="uid://yg600vlhljh6" path="res://Imagenes/Colaboradores/asignarColaborador.png" id="4_li7gb"]
-[ext_resource type="Texture2D" uid="uid://uv2ukc7xrdhh" path="res://Imagenes/datos personales/identificacion.png" id="5_k544a"]
+[ext_resource type="PackedScene" uid="uid://dtxemqu8rspx" path="res://Escenas/Cvar/identificación.tscn" id="6_6f0du"]
 [ext_resource type="Texture2D" uid="uid://cmspu1kh1rrvy" path="res://Imagenes/datos personales/Residencia.png" id="6_jfhp5"]
-[ext_resource type="Script" path="res://scripts/Dialogo.gd" id="7_6obiw"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="7_ucgfs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vency"]
 bg_color = Color(1, 1, 1, 1)
@@ -87,212 +87,7 @@ expand_mode = 5
 visible = false
 layout_mode = 2
 
-[node name="IDENTIFICACIÓN" type="TextureRect" parent="ScrollContainer/original/DATOS PERSONALES"]
-layout_mode = 2
-texture = ExtResource("3_r4d6k")
-
-[node name="TextureRect" type="TextureRect" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN"]
-layout_mode = 2
-offset_top = 1.99999
-offset_right = 1280.0
-offset_bottom = 1686.79
-texture = ExtResource("5_k544a")
-expand_mode = 5
-stretch_mode = 4
-
-[node name="TextEdit6" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 200.0
-offset_right = 760.0
-offset_bottom = 230.0
-
-[node name="TextEdit7" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 248.0
-offset_right = 760.0
-offset_bottom = 278.0
-
-[node name="TextEdit8" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 296.0
-offset_right = 760.0
-offset_bottom = 326.0
-
-[node name="TextEdit10" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 768.0
-offset_right = 760.0
-offset_bottom = 798.0
-
-[node name="TextEdit11" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 816.0
-offset_right = 760.0
-offset_bottom = 846.0
-
-[node name="TextEdit12" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 1136.0
-offset_right = 760.0
-offset_bottom = 1166.0
-
-[node name="TextEdit13" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 1184.0
-offset_right = 760.0
-offset_bottom = 1214.0
-
-[node name="TextEdit14" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 496.0
-offset_top = 1336.0
-offset_right = 920.0
-offset_bottom = 1520.0
-
-[node name="TextEdit9" type="TextEdit" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 432.0
-offset_right = 568.0
-offset_bottom = 462.0
-
-[node name="OptionButton" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 384.0
-offset_right = 760.0
-offset_bottom = 415.0
-item_count = 7
-selected = 0
-popup/item_0/text = "Soldero/a"
-popup/item_0/id = 0
-popup/item_1/text = "Casado/a"
-popup/item_1/id = 1
-popup/item_2/text = "Viudo/a"
-popup/item_2/id = 2
-popup/item_3/text = "Divorciado/a"
-popup/item_3/id = 3
-popup/item_4/text = "Unido/a de hecho"
-popup/item_4/id = 4
-popup/item_5/text = "Unido7a civilmente"
-popup/item_5/id = 5
-popup/item_6/text = "separado/a"
-popup/item_6/id = 6
-
-[node name="OptionButton2" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 472.0
-offset_right = 760.0
-offset_bottom = 503.0
-disabled = true
-item_count = 1
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "argentina"
-popup/item_0/id = 0
-
-[node name="OptionButton3" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 520.0
-offset_right = 760.0
-offset_bottom = 551.0
-item_count = 3
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "Nativo"
-popup/item_0/id = 0
-popup/item_1/text = "Naturalizado"
-popup/item_1/id = 1
-popup/item_2/text = "Por Opción"
-popup/item_2/id = 2
-
-[node name="OptionButton4" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 672.0
-offset_right = 760.0
-offset_bottom = 703.0
-item_count = 1
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "--------Seleccionar-------"
-popup/item_0/id = 0
-
-[node name="OptionButton5" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 720.0
-offset_right = 760.0
-offset_bottom = 751.0
-item_count = 1
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "--------Seleccionar-------"
-popup/item_0/id = 0
-
-[node name="OptionButton6" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 992.0
-offset_right = 760.0
-offset_bottom = 1023.0
-item_count = 1
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "--------Seleccionar-------"
-popup/item_0/id = 0
-
-[node name="OptionButton7" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 1040.0
-offset_right = 760.0
-offset_bottom = 1071.0
-item_count = 1
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "--------Seleccionar-------"
-popup/item_0/id = 0
-
-[node name="OptionButton8" type="OptionButton" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 1088.0
-offset_right = 760.0
-offset_bottom = 1119.0
-item_count = 1
-selected = 0
-fit_to_longest_item = false
-popup/item_0/text = "--------Seleccionar-------"
-popup/item_0/id = 0
-
-[node name="Button" type="Button" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 936.0
-offset_top = 1568.0
-offset_right = 1009.0
-offset_bottom = 1599.0
-text = "Guardar"
-
-[node name="Button2" type="Button" parent="ScrollContainer/original/DATOS PERSONALES/IDENTIFICACIÓN/TextureRect"]
-layout_mode = 0
-offset_left = 1024.0
-offset_top = 1568.0
-offset_right = 1072.0
-offset_bottom = 1599.0
-text = "Salir"
-
 [node name="DIRECCIÓN RESIDENCIAL" type="TextureRect" parent="ScrollContainer/original/DATOS PERSONALES"]
-visible = false
 layout_mode = 2
 texture = ExtResource("3_r4d6k")
 
@@ -468,6 +263,10 @@ offset_top = 1120.0
 offset_right = 1184.0
 offset_bottom = 1151.0
 text = "Salir"
+
+[node name="IDENTIFICACIÓN" parent="ScrollContainer/original/DATOS PERSONALES" instance=ExtResource("6_6f0du")]
+visible = false
+layout_mode = 2
 
 [node name="FORMACIÓN" type="TabContainer" parent="ScrollContainer/original"]
 visible = false
@@ -706,32 +505,5 @@ scale = Vector2(9, 9)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "error 404"
 
-[node name="CuadroDialogo" type="ColorRect" parent="."]
-layout_mode = 0
-offset_top = 368.0
-offset_right = 1280.0
-offset_bottom = 728.0
-color = Color(0.156863, 0.145098, 0.145098, 1)
-script = ExtResource("7_6obiw")
-
-[node name="DialogoText" type="Label" parent="CuadroDialogo"]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 24.0
-offset_right = 1216.0
-offset_bottom = 336.0
-theme_override_font_sizes/font_size = 30
-text = "Personaje: ¡Hola! Me alegra verte interesado en la investigación científica y tecnológica en Argentina."
-autowrap_mode = 3
-clip_text = true
-
-[node name="IndicacionText" type="Label" parent="CuadroDialogo"]
-layout_mode = 0
-offset_left = 1056.0
-offset_top = 312.0
-offset_right = 1288.0
-offset_bottom = 368.0
-theme_override_font_sizes/font_size = 30
-text = "Presiona Enter"
-autowrap_mode = 3
-clip_text = true
+[node name="CuadroDialogo" parent="." instance=ExtResource("7_ucgfs")]
+layout_mode = 1

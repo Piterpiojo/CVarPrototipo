@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7jonfd41k68h"]
+
+[ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
+
+[node name="CuadroDialogo" type="ColorRect"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.156863, 0.145098, 0.145098, 1)
+script = ExtResource("1_pygju")
+
+[node name="DialogoText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 1216.0
+offset_bottom = 336.0
+theme_override_font_sizes/font_size = 30
+text = "Personaje: ¡Hola! Me alegra verte interesado en la investigación científica y tecnológica en Argentina."
+autowrap_mode = 3
+clip_text = true
+
+[node name="IndicacionText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 312.0
+offset_right = 1288.0
+offset_bottom = 368.0
+theme_override_font_sizes/font_size = 30
+text = "Presiona Enter"
+autowrap_mode = 3
+clip_text = true
