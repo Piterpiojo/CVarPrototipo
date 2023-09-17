@@ -1,5 +1,5 @@
 extends Control
-var dialogo = [
+const dialogo = [
 	"U: (frustrado) Tengo que dejar de posponer esto, ¡Vamos a ver si puedo crear una cuenta de una vez por todas!",
 	"A: ¡Hola! Soy Ave, tu asistente virtual. Estoy aquí para facilitar la creación de tu cuenta ¿En qué puedo ayudarte hoy?",
 	"U: (suspira) Necesito una cuenta, pero realmente es mi primera vez utilizando este programa. ¿Te molestaría enseñarme cómo seguir?",
