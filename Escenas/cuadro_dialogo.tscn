@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=3 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
+[ext_resource type="Texture2D" uid="uid://5ak8f6m0tsgf" path="res://icon.svg" id="2_x8gtp"]
 
 [node name="CuadroDialogo" type="ColorRect"]
 anchors_preset = 7
@@ -13,13 +14,13 @@ offset_top = -360.0
 offset_right = 640.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0.156863, 0.145098, 0.145098, 1)
+color = Color(0, 0, 0, 0.941176)
 script = ExtResource("1_pygju")
 
 [node name="DialogoText" type="Label" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 24.0
+offset_left = 239.0
+offset_top = 29.0
 offset_right = 1216.0
 offset_bottom = 336.0
 theme_override_font_sizes/font_size = 30
@@ -28,12 +29,32 @@ autowrap_mode = 3
 clip_text = true
 
 [node name="IndicacionText" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1056.0
-offset_top = 312.0
-offset_right = 1288.0
-offset_bottom = 368.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = -56.0
+grow_horizontal = 0
+grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "Presiona Enter"
 autowrap_mode = 3
 clip_text = true
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Container"]
+position = Vector2(119, -106)
+scale = Vector2(1.77344, 1.64063)
+texture = ExtResource("2_x8gtp")
