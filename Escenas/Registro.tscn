@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://byaop5vlbj2eb"]
+[gd_scene load_steps=10 format=3 uid="uid://p32ucbdoh3h8"]
 
 [ext_resource type="Texture2D" uid="uid://ct44731gqe5ya" path="res://Imagenes/RegistroUsuario/Registro de Usuario-12.png" id="1_vo4s6"]
 [ext_resource type="Script" path="res://scripts/Registro.gd" id="1_vomw3"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_k11q6"]
-[ext_resource type="ButtonGroup" uid="uid://b6t1mkbmljs1r" path="res://Escenas/sexoradiobutton.tres" id="4_i7yo5"]
-[ext_resource type="ButtonGroup" uid="uid://d3t5isdmghosp" path="res://Escenas/Cuil_cuitradio.tres" id="5_277i8"]
+[ext_resource type="ButtonGroup" path="res://Escenas/sexoradiobutton.tres" id="4_i7yo5"]
+[ext_resource type="ButtonGroup" path="res://Escenas/Cuil_cuitradio.tres" id="5_277i8"]
 
 [sub_resource type="Animation" id="Animation_44334"]
 length = 0.001
