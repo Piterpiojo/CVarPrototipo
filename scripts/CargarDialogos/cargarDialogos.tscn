@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=3 uid="uid://18ibinpmvwir"]
+
+[ext_resource type="Script" path="res://scripts/CargarDialogos/crearDialogos.gd" id="1_ywm8g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ywm8g")
+
+[node name="dialogo" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1024.0
+offset_top = -248.0
+grow_horizontal = 0
+grow_vertical = 0
+placeholder_text = "Aqui va el dialogo del personaje"
+
+[node name="personaje" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 232.0
+offset_bottom = 20.0
+grow_vertical = 2
+placeholder_text = "Personaje"
+
+[node name="emocion" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -72.0
+offset_right = 146.0
+offset_bottom = -41.0
+grow_vertical = 2
+item_count = 3
+selected = 0
+popup/item_0/text = "Feliz"
+popup/item_0/id = 0
+popup/item_1/text = "Enojado"
+popup/item_1/id = 1
+popup/item_2/text = "Triste"
+popup/item_2/id = 2
+
+[node name="cargar" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Agregar linea"
+
+[node name="nivel" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -136.0
+offset_top = 64.0
+offset_right = 144.0
+offset_bottom = 95.0
+grow_horizontal = 2
+placeholder_text = "nivel o nombre para el archivo"
+
+[node name="titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Creador de dialogos Version 0.1"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 120.0
+offset_right = 976.0
+offset_bottom = 224.0
+text = "La idea  que se me ocurrio es tener un archivo por nivel, el archivo contiene:
+Quien habla, si el usuario o la IA, el dialogo y el sprite que tiene que  usar la IA
+dependiendo las emociones que se realicen.
+Si hay una forma mas optima avisen.
+los archivos se guardan en la carpeta dialogos del proyecto"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="cargar" to="." method="_on_cargar_pressed"]
