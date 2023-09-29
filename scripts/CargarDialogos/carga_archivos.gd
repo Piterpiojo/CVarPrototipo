@@ -13,9 +13,9 @@ func cargar(nombre):
 	else:
 		return
 
-func guardar(data,nombre):
+func guardar(Data,nombre):
 	var archivo
 	archivo = FileAccess.open(path + nombre +".json",FileAccess.WRITE)
-	archivo.store_string(JSON.stringify(data,"\t"))
+	archivo.store_string(JSON.stringify(Data,"\t"))
 	print("guardado con exito")
 	archivo.close()

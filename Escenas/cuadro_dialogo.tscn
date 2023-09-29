@@ -24,7 +24,6 @@ offset_top = 29.0
 offset_right = 1216.0
 offset_bottom = 336.0
 theme_override_font_sizes/font_size = 30
-text = "Personaje: ¡Hola! Me alegra verte interesado en la investigación científica y tecnológica en Argentina."
 autowrap_mode = 3
 clip_text = true
 

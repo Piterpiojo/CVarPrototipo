@@ -3,7 +3,7 @@ extends Control
 var Dialogo_nivel= {}
 
 func crear_personaje_emocion():
-	var Personaje_y_Emocion : Array
+	var Personaje_y_Emocion =[]
 	Personaje_y_Emocion.append($personaje.text)
 	Personaje_y_Emocion.append($emocion.text)
 	return Personaje_y_Emocion
