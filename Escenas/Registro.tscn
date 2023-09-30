@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://byaop5vlbj2eb"]
+[gd_scene load_steps=10 format=3 uid="uid://p32ucbdoh3h8"]
 
 [ext_resource type="Texture2D" uid="uid://ct44731gqe5ya" path="res://Imagenes/RegistroUsuario/Registro de Usuario-12.png" id="1_vo4s6"]
 [ext_resource type="Script" path="res://scripts/Registro.gd" id="1_vomw3"]

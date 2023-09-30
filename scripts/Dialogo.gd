@@ -7,10 +7,11 @@ func comenzar():
 	Mostrar_Linea(indice_dialogo)
 	
 func Mostrar_Linea(indice):
-	$DialogoText.text = dialogos[indice]
+	$DialogoText.text = dialogos[indice]["texto"]
+	$Container/Sprite2D.play(dialogos[indice]["emocion"])
 
 
-func _process(delta):
+func _process(_delta):
 	if(Input.is_action_just_pressed("ui_select") and habilitado):
 		sig_dialogo()
 
