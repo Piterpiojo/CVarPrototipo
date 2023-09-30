@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://18ibinpmvwir"]
+[gd_scene load_steps=3 format=3 uid="uid://18ibinpmvwir"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/crearDialogos.gd" id="1_ywm8g"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_y28ju"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,35 +25,66 @@ grow_horizontal = 0
 grow_vertical = 0
 placeholder_text = "Aqui va el dialogo del personaje"
 
-[node name="personaje" type="LineEdit" parent="."]
+[node name="personaje" type="OptionButton" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_left = 13.0
 offset_top = -20.0
-offset_right = 232.0
+offset_right = 245.0
 offset_bottom = 20.0
 grow_vertical = 2
-placeholder_text = "Personaje"
+item_count = 2
+selected = 1
+popup/item_0/text = "Usuario"
+popup/item_0/id = 0
+popup/item_1/text = "IA"
+popup/item_1/id = 1
+
+[node name="Label" type="Label" parent="personaje"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 78.0
+text = "Personaje"
 
 [node name="emocion" type="OptionButton" parent="."]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 40.0
-offset_top = -72.0
-offset_right = 146.0
-offset_bottom = -41.0
+offset_left = 259.0
+offset_top = -15.0
+offset_right = 415.0
+offset_bottom = 16.0
 grow_vertical = 2
-item_count = 3
+item_count = 9
 selected = 0
-popup/item_0/text = "Feliz"
+popup/item_0/text = "confiada"
 popup/item_0/id = 0
-popup/item_1/text = "Enojado"
+popup/item_1/text = "curiosa"
 popup/item_1/id = 1
-popup/item_2/text = "Triste"
+popup/item_2/text = "descompuesta"
 popup/item_2/id = 2
+popup/item_3/text = "ensenando"
+popup/item_3/id = 3
+popup/item_4/text = "estatico"
+popup/item_4/id = 4
+popup/item_5/text = "felicitaciones"
+popup/item_5/id = 5
+popup/item_6/text = "saludando"
+popup/item_6/id = 6
+popup/item_7/text = "seguime"
+popup/item_7/id = 7
+popup/item_8/text = "senalando"
+popup/item_8/id = 8
+
+[node name="Label" type="Label" parent="emocion"]
+layout_mode = 0
+offset_top = -26.0
+offset_right = 67.0
+text = "Emocion"
 
 [node name="cargar" type="Button" parent="."]
 layout_mode = 1
@@ -89,7 +121,7 @@ offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "Creador de dialogos Version 0.1"
+text = "Creador de dialogos Version 0.2"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -105,4 +137,19 @@ los archivos se guardan en la carpeta dialogos del proyecto"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CuadroDialogo" parent="." instance=ExtResource("2_y28ju")]
+visible = false
+layout_mode = 1
+
+[node name="verprueba" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 38.0
+offset_right = 138.0
+offset_bottom = 92.0
+text = "Ver prueba
+Dialogo
+"
+
 [connection signal="pressed" from="cargar" to="." method="_on_cargar_pressed"]
+[connection signal="pressed" from="verprueba" to="." method="_on_verprueba_pressed"]

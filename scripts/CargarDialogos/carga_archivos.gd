@@ -1,10 +1,10 @@
 extends Node
 const path = "res://dialogos/"
-var data = {}
+var data = []
 	
 func cargar(nombre):
-	if(FileAccess.file_exists(path+ nombre + ".json")):
-		var archivo = FileAccess.open(path,FileAccess.READ);
+	if(FileAccess.file_exists(path + nombre + ".json")):
+		var archivo = FileAccess.open(path + nombre + ".json",FileAccess.READ);
 		var text = archivo.get_as_text()
 		data = JSON.parse_string(text)
 		print("cargado con exito")

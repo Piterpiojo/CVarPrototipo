@@ -7,7 +7,8 @@ func comenzar():
 	Mostrar_Linea(indice_dialogo)
 	
 func Mostrar_Linea(indice):
-	$DialogoText.text = dialogos[indice]
+	$DialogoText.text = dialogos[indice]["texto"]
+	$Container/Sprite2D.play(dialogos[indice]["emocion"])
 
 
 func _process(_delta):

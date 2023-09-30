@@ -1,7 +1,90 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=12 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
-[ext_resource type="Texture2D" uid="uid://5ak8f6m0tsgf" path="res://icon.svg" id="2_x8gtp"]
+[ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/confiada.png" id="2_onbdu"]
+[ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/curiosa.png" id="3_vb4f6"]
+[ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/descompuesta.png" id="4_4fa0e"]
+[ext_resource type="Texture2D" uid="uid://bssnsaxko8pgn" path="res://Sprites/ensenando.png" id="5_y8t5c"]
+[ext_resource type="Texture2D" uid="uid://c4t3ymhtjv7hc" path="res://Sprites/estatico.png" id="6_kgbrl"]
+[ext_resource type="Texture2D" uid="uid://c3kqts130606p" path="res://Sprites/felicitaciones.png" id="7_qvh23"]
+[ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/saludando.png" id="8_xmnx2"]
+[ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/seguime.png" id="9_v750b"]
+[ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/senalando.png" id="10_eii8k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u8deg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onbdu")
+}],
+"loop": true,
+"name": &"confiada",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vb4f6")
+}],
+"loop": true,
+"name": &"curiosa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4fa0e")
+}],
+"loop": true,
+"name": &"descompuesta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_y8t5c")
+}],
+"loop": true,
+"name": &"ensenando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_kgbrl")
+}],
+"loop": true,
+"name": &"estatico",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qvh23")
+}],
+"loop": true,
+"name": &"felicitaciones",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xmnx2")
+}],
+"loop": true,
+"name": &"saludando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_v750b")
+}],
+"loop": true,
+"name": &"seguime",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_eii8k")
+}],
+"loop": true,
+"name": &"senalando",
+"speed": 5.0
+}]
 
 [node name="CuadroDialogo" type="ColorRect"]
 anchors_preset = 7
@@ -53,7 +136,8 @@ offset_right = 40.0
 offset_bottom = 20.0
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Container"]
-position = Vector2(119, -106)
-scale = Vector2(1.77344, 1.64063)
-texture = ExtResource("2_x8gtp")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Container"]
+position = Vector2(125, -88)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_u8deg")
+animation = &"senalando"
