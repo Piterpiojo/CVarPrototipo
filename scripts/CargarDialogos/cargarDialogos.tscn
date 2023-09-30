@@ -1,7 +1,91 @@
-[gd_scene load_steps=3 format=3 uid="uid://18ibinpmvwir"]
+[gd_scene load_steps=13 format=3 uid="uid://18ibinpmvwir"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/crearDialogos.gd" id="1_ywm8g"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_y28ju"]
+[ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/confiada.png" id="3_drbot"]
+[ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/curiosa.png" id="4_mbxw2"]
+[ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/descompuesta.png" id="5_5ba4k"]
+[ext_resource type="Texture2D" uid="uid://bssnsaxko8pgn" path="res://Sprites/ensenando.png" id="6_fdpg2"]
+[ext_resource type="Texture2D" uid="uid://c4t3ymhtjv7hc" path="res://Sprites/estatico.png" id="7_7c14u"]
+[ext_resource type="Texture2D" uid="uid://c3kqts130606p" path="res://Sprites/felicitaciones.png" id="8_8ayoq"]
+[ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/saludando.png" id="9_lihwc"]
+[ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/seguime.png" id="10_7w7v2"]
+[ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/senalando.png" id="11_6gb7f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvcxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_drbot")
+}],
+"loop": true,
+"name": &"confiada",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mbxw2")
+}],
+"loop": true,
+"name": &"curiosa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5ba4k")
+}],
+"loop": true,
+"name": &"descompuesta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_fdpg2")
+}],
+"loop": true,
+"name": &"ensenando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7c14u")
+}],
+"loop": true,
+"name": &"estatico",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8ayoq")
+}],
+"loop": true,
+"name": &"felicitaciones",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_lihwc")
+}],
+"loop": true,
+"name": &"saludando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7w7v2")
+}],
+"loop": true,
+"name": &"seguime",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_6gb7f")
+}],
+"loop": true,
+"name": &"senalando",
+"speed": 5.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -124,15 +208,21 @@ grow_horizontal = 2
 text = "Creador de dialogos Version 0.2"
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 376.0
-offset_top = 120.0
-offset_right = 976.0
-offset_bottom = 224.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -245.0
+offset_right = 300.0
+offset_bottom = -115.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "La idea  que se me ocurrio es tener un archivo por nivel, el archivo contiene:
 Quien habla, si el usuario o la IA, el dialogo y el sprite que tiene que  usar la IA
 dependiendo las emociones que se realicen.
-Si hay una forma mas optima avisen.
 los archivos se guardan en la carpeta dialogos del proyecto"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -151,5 +241,12 @@ text = "Ver prueba
 Dialogo
 "
 
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(487, 368)
+scale = Vector2(0.228125, 0.315741)
+sprite_frames = SubResource("SpriteFrames_mvcxp")
+animation = &"senalando"
+
+[connection signal="item_selected" from="emocion" to="." method="_on_emocion_item_selected"]
 [connection signal="pressed" from="cargar" to="." method="_on_cargar_pressed"]
 [connection signal="pressed" from="verprueba" to="." method="_on_verprueba_pressed"]

@@ -1,7 +1,6 @@
 extends Control
 
 var Dialogo_nivel=[]
- 
 
 func crear_mensaje(personaje,texto,emocion):
 	var mensaje={
@@ -10,7 +9,6 @@ func crear_mensaje(personaje,texto,emocion):
 		"emocion":emocion
 	}
 	Dialogo_nivel.append(mensaje)
-
 
 func _on_cargar_pressed():
 	crear_mensaje($personaje.text,$dialogo.text,$emocion.text)
@@ -25,3 +23,7 @@ func _on_verprueba_pressed():
 		$CuadroDialogo.Mostrar_Linea(0)
 		$CuadroDialogo.habilitar_dialogo()
 
+
+
+func _on_emocion_item_selected(index):
+	$Sprite2D.play($emocion.text)
