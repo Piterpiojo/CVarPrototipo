@@ -21,7 +21,7 @@ func Mostrar_Linea(indice):
 
 
 func _process(_delta):
-	if(Input.is_action_just_pressed("ui_select") and habilitado):
+	if(Input.is_action_just_pressed("click") and habilitado):
 		sig_dialogo()
 
 func dialogo_actual():

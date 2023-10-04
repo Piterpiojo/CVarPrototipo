@@ -8,7 +8,6 @@ var i = 0
 
 func _ready():
 	buscar_cuadros($ScrollContainer/TextureRect)
-	conectar_todo()
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()
 
@@ -19,8 +18,7 @@ func eliminar_fake():
 func buscar_cuadros(nodo):
 	for child in nodo.get_children():
 		if child is LineEdit:
-			cuadros_texto.append(nodo)
-	print(cuadros_texto.size())
+			cuadros_texto.append(child)
 
 func _process(delta):
 	if(!ya_ejecuto):
@@ -28,7 +26,8 @@ func _process(delta):
 
 func vaciar_todo():
 	for cuadro in cuadros_texto:
-		cuadro.text = ""
+		if cuadro is LineEdit:
+			cuadro.clear()
 
 func _ejecutar_evento():
 	if $CuadroDialogo.dialogo_actual() == 3:
@@ -38,11 +37,6 @@ func _ejecutar_evento():
 		
 func cambiar_dialogo():
 	$CuadroDialogo.sig_dialogo()
-
-
-
-
-
 
 
 func _on_pasaporte_pressed():
@@ -59,9 +53,9 @@ func hay_campos_vacios():
 
 func comprobar_respuesta():
 	return $ScrollContainer/TextureRect/respuesta_secreta.text == $ScrollContainer/TextureRect/respuesta_secreta_nuevamente.text && $ScrollContainer/TextureRect/respuesta_secreta.text != ""
+
 func comprobar_correo():
 	return $ScrollContainer/TextureRect/correo.text == $ScrollContainer/TextureRect/repetir_correo.text and $ScrollContainer/TextureRect/repetir_correo.text == $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text && $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text !=""
-
 
 
 func _on_enviar_pressed():
@@ -76,11 +70,6 @@ func _on_enviar_pressed():
 			$CuadroDialogo.mostrar_dialogo_unico("error correo")
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta")
-
-
-func _on_respuesta_secreta_nuevamente_focus_exited():
-	print("salio")
-
 
 func _on_respuesta_secreta_nuevamente_focus_entered():
 	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, MUCHO cuidado con hacer dos clicks dentro de un cuadro de texto.  Va a borrar toda tu información y realmente no queremos eso, ¿No?")
@@ -104,15 +93,15 @@ func _on_animation_player_animation_finished(anim_name):
 	if(anim_name == "fin"):
 		get_tree().quit()
 
-
-
-
 func _on_nombre_2_gui_input(event):
 	if(event is InputEventMouseButton):
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
 			i+=1
 			print("tocado" + str(i))
-			
+		if(i > 2):
+			vaciar_todo()
+			llamar_dialogo("lo lograste, vaciaste todo")
+			i = 0
 
 
 func deshabilitar_entrada():
@@ -121,12 +110,6 @@ func deshabilitar_entrada():
 func habilitar_entrada():
 	$CuadroDialogo.habilitar()
 
-func conectar_todo():
-	for nodo in cuadros_texto:
-		if nodo is LineEdit:
-			nodo.focus_exited.connect(_on_nombre_2_focus_exited)
-			nodo.gui_input.connect(_on_nombre_2_gui_input)
-	
 func _on_nombre_2_focus_exited():
 	i=0
 
