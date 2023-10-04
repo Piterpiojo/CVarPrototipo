@@ -1,0 +1,87 @@
+[
+	{
+		"emocion": "confiada",
+		"personaje": "Usuario",
+		"texto": "Tengo que dejar de posponer esto, ¡Vamos a ver si puedo crear una cuenta de una vez por todas!"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "IA",
+		"texto": "¡Hola! Soy Ave, tu asistente virtual. Estoy aquí para facilitar la creación de tu cuenta ¿En qué puedo ayudarte hoy?"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "Necesito una cuenta, pero realmente es mi primera vez utilizando este programa. ¿Te molestaría enseñarme cómo seguir?"
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "¡En lo absoluto, no hay problema! Mi trabajo es asistirte con lo que pueda ayudarte!"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "..."
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "IA",
+		"texto": "Oh, parece que la página está caída."
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "Usuario",
+		"texto": "¿En serio?"
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": "No, fue un pequeño chiste. Bueno, para comenzar, tenemos que registrarte como un usuario en la página. \nPara eso, deberías entrar en el enlace que dice Si es un usuario nuevo presione aquí. \nEste botón te redirigirá al registro de usuario, que te permitirá crear la base de tu cuenta."
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "blabla blabla blabla"
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": "blabla blabla blabla"
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "blabla blabla blabla"
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "blabla blabla blabla blabla blabla blabla"
+	},
+	{
+		"emocion": "seguime",
+		"personaje": "IA",
+		"texto": "blabla blabla blabla blabla"
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "... y esa es la razón por la que se eligió ese tono de azul para la pantalla principal."
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "Usuario",
+		"texto": "¿En serio? Wow, jamás me lo hubiera esperado. ¿Podríamos continuar con la creación de la cuenta?"
+	},
+	{
+		"emocion": "seguime",
+		"personaje": "IA",
+		"texto": "Sí, definitivamente, ya mismo."
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "Realmente tienes suerte de tenerme contigo. Sin mi ayuda, podría haber resultado algo abrumador."
+	}
+]

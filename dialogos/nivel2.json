@@ -1,0 +1,27 @@
+[
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": "Ahora que la página está de vuelta, ¡vamos a crear tu cuenta! Solo necesitamos llenar algunos datos personales primero"
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "Usuario",
+		"texto": "..."
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "¿Eso? Ni siquiera te preocupes, yo me encargo de eso en un parpadeo."
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": ""
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "¿Te parece bien esto? Son solo algunos datos personales que necesitamos para continuar. \nTen cuidado al seleccionar país de emisión, solo deberías tocar la opción de País de Emisión si seleccionamos Pasaporte."
+	}
+]

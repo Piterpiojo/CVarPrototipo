@@ -7,7 +7,6 @@ func cargar(nombre):
 		var archivo = FileAccess.open(path + nombre + ".json",FileAccess.READ);
 		var text = archivo.get_as_text()
 		data = JSON.parse_string(text)
-		print("cargado con exito")
 		archivo.close()
 		return data
 	else:

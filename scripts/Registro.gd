@@ -1,11 +1,4 @@
 extends Control
-const dialogo = [
-	"A: (entusiasmada) Ahora que la página está de vuelta, ¡vamos a crear tu cuenta! Solo necesitamos llenar algunos datos personales primero",
-	"...",
-	"A: ¿Eso? Ni siquiera te preocupes, yo me encargo de eso en un parpadeo.",
-	"",
-	"A: ¿Te parece bien esto? Son solo algunos datos personales que necesitamos para continuar. Ten cuidado al seleccionar país de emisión, solo deberías tocar la opción de País de Emisión si seleccionamos Pasaporte."
-]
 var cuadros_llenos : int = 0
 var ya_ejecuto : bool = false
 var respuesta_secreta
@@ -14,10 +7,11 @@ var cuadros_texto=[]
 var i = 0
 
 func _ready():
-	$CuadroDialogo.dialogos = dialogo
-	$CuadroDialogo.comenzar()
 	buscar_cuadros($ScrollContainer/TextureRect)
 	conectar_todo()
+	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
+	$CuadroDialogo.comenzar()
+
 
 func eliminar_fake():
 	$ScrollContainer/TextureRect/fake.queue_free()
@@ -44,7 +38,7 @@ func _ejecutar_evento():
 		
 func cambiar_dialogo():
 	$CuadroDialogo.sig_dialogo()
-	$CuadroDialogo.habilitado=true
+
 
 
 
@@ -55,19 +49,32 @@ func _on_pasaporte_pressed():
 	if $ScrollContainer/TextureRect/cuilBox.button_pressed == true:
 		$CuadroDialogo.mostrar_dialogo_unico("solo deberías tocar la opción de País de Emisión si seleccionamos Pasaporte.")
 
+func hay_campos_vacios():
+	for text in cuadros_texto:
+		if text is LineEdit:
+			if(text.text == ""):
+				return true
+	return false
+
+
+func comprobar_respuesta():
+	return $ScrollContainer/TextureRect/respuesta_secreta.text == $ScrollContainer/TextureRect/respuesta_secreta_nuevamente.text && $ScrollContainer/TextureRect/respuesta_secreta.text != ""
+func comprobar_correo():
+	return $ScrollContainer/TextureRect/correo.text == $ScrollContainer/TextureRect/repetir_correo.text and $ScrollContainer/TextureRect/repetir_correo.text == $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text && $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text !=""
 
 
 
 func _on_enviar_pressed():
-	if $ScrollContainer/TextureRect/respuesta_secreta.text == $ScrollContainer/TextureRect/respuesta_secreta_nuevamente.text:
-		if($ScrollContainer/TextureRect/correo.text == $ScrollContainer/TextureRect/repetir_correo.text and $ScrollContainer/TextureRect/repetir_correo.text == $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text):
-			llamar_dialogo("¡Felicidades!, pudiste poner toda tu información, ahora solo faltaría verificar tu contraseña. Acompañame.")
-			$Timer.start()
+	if comprobar_respuesta():
+		if(comprobar_correo()):
+			if(!hay_campos_vacios()):
+				llamar_dialogo("¡Felicidades!, pudiste poner toda tu información, ahora solo faltaría verificar tu contraseña. Acompañame.")
+				$Timer.start()
+			else:
+				llamar_dialogo("te falto algun campo")
 		else:
 			$CuadroDialogo.mostrar_dialogo_unico("error correo")
-			print("error correo")
 	else:
-		print("error respuesta secreta")
 		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta")
 
 
@@ -107,11 +114,21 @@ func _on_nombre_2_gui_input(event):
 			print("tocado" + str(i))
 			
 
+
+func deshabilitar_entrada():
+	$CuadroDialogo.deshabilitar()
+
+func habilitar_entrada():
+	$CuadroDialogo.habilitar()
+
 func conectar_todo():
 	for nodo in cuadros_texto:
 		if nodo is LineEdit:
-			nodo.connect("focus_exited","_on_nombre_2_focus_exited")
-			nodo.connect("gui_input","_on_nombre_2_gui_input")
+			nodo.focus_exited.connect(_on_nombre_2_focus_exited)
+			nodo.gui_input.connect(_on_nombre_2_gui_input)
 	
 func _on_nombre_2_focus_exited():
 	i=0
+
+
+
