@@ -31,7 +31,7 @@ offset_right = 73.0
 offset_bottom = 210.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 80
-text = "Titulo del Proyecto"
+text = "Guia impractica Cvar"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlknlog2m1w1i"]
+
+[ext_resource type="FontFile" uid="uid://0smxyo876ro4" path="res://Sprites/fuentes/digital-7.ttf" id="1_1pygp"]
+[ext_resource type="Texture2D" uid="uid://cjjgeecnmxm23" path="res://Imagenes/recuperar_contrasenia/cambio_contrasenia12.png" id="1_g1oao"]
+[ext_resource type="Script" path="res://scripts/nivel_3_recupero_contrasenia.gd" id="1_jtls3"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_ro64f"]
+[ext_resource type="Texture2D" uid="uid://bj844ikvy83d2" path="res://Sprites/NicePng_email-icon-png-transparent_903587.png" id="5_hs5fl"]
+
+[node name="nivel3-recupero_contrasenia" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jtls3")
+
+[node name="reloj" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 544.0
+offset_top = 32.0
+offset_right = 798.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.807843, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_1pygp")
+theme_override_font_sizes/font_size = 80
+text = "48:00:00"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
+layout_mode = 2
+texture = ExtResource("1_g1oao")
+
+[node name="contrasenia_anterior" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 392.0
+offset_right = 1000.0
+offset_bottom = 423.0
+
+[node name="nueva" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 456.0
+offset_right = 1000.0
+offset_bottom = 487.0
+
+[node name="repetir" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 520.0
+offset_right = 1000.0
+offset_bottom = 551.0
+
+[node name="cambiar" type="Button" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 1000.0
+offset_top = 744.0
+offset_right = 1072.0
+offset_bottom = 775.0
+text = "Cambiar"
+
+[node name="cancelar" type="Button" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 744.0
+offset_right = 1160.0
+offset_bottom = 775.0
+text = "Cancelar"
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("2_ro64f")]
+layout_mode = 1
+
+[node name="segundos" type="Timer" parent="."]
+wait_time = 0.001
+autostart = true
+
+[node name="NicePngEmail-icon-png-transparent903587" type="Sprite2D" parent="."]
+position = Vector2(1216, 248)
+texture = ExtResource("5_hs5fl")
+
+[connection signal="timeout" from="segundos" to="." method="_on_segundos_timeout"]
