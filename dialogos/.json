@@ -1,0 +1,37 @@
+[
+	{
+		"emocion": "saludando",
+		"personaje": "IA",
+		"texto": "La pantalla abre con Ave muy entusiasmada, comentandonos que con todos estos datos personales\nque le promocionamos, cree tener una buena representaciones del usuario de forma física, acto seguido, \nnos muestra algún tipo de imagen bizarra al azar, con forma levemente humana."
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": "¿Te gusta tu retrato?"
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "Usuario",
+		"texto": "El usuario se mantiene en silencio, intentando descifrar lo que está viendo"
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "¿Wow,  tan sorprendido? ¿Acaso no estabas al tanto? a las IA  ahora no solo nos emplean por nuestras habilidades para procesar datos escritos,\nsino que también recientemente incursionamos en el mundo del arte y estamos abriéndonos paso también en otros escenarios; \nEn fin, a lo que sigue; Tus datos fueron cargados de forma correcta, en breve recibirás un mail… "
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "Con instrucciones de cómo continuar, en caso de no recibirlo dentro de las próximas 48 horas…"
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "... Deberías consultar a registracioncvar@mincyt.gob.ar…. Aunque para tu suerte, como cuentas conmigo, \npuedo hacer algo al respecto de forma directa  yo si fuese necesario… pero de momento, esperemos…\n"
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "Usuario",
+		"texto": " Todavía nada, ninguna notificación de mensaje nuevo, ¿No se supone que esto es automático?\n"
+	}
+]

@@ -2,6 +2,7 @@ extends Node
 var indice_dialogo = 0
 var habilitado :bool = true
 var dialogos = []
+var pausa : bool = false
 
 func deshabilitar():
 	habilitado = false
@@ -28,11 +29,12 @@ func dialogo_actual():
 	return indice_dialogo
 
 func sig_dialogo():
-	indice_dialogo += 1
-	if indice_dialogo < len(dialogos):
-		Mostrar_Linea(indice_dialogo)
-	else:
-		desactivar_dialogo()
+	if !pausa:
+		indice_dialogo += 1
+		if indice_dialogo < len(dialogos):
+			Mostrar_Linea(indice_dialogo)
+		else:
+			desactivar_dialogo()
 
 func habilitar_dialogo():
 	self.visible= true

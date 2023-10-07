@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
-[ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/confiada.png" id="2_onbdu"]
-[ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/curiosa.png" id="3_vb4f6"]
-[ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/descompuesta.png" id="4_4fa0e"]
-[ext_resource type="Texture2D" uid="uid://bssnsaxko8pgn" path="res://Sprites/ensenando.png" id="5_y8t5c"]
-[ext_resource type="Texture2D" uid="uid://c4t3ymhtjv7hc" path="res://Sprites/estatico.png" id="6_kgbrl"]
-[ext_resource type="Texture2D" uid="uid://c3kqts130606p" path="res://Sprites/felicitaciones.png" id="7_qvh23"]
-[ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/saludando.png" id="8_xmnx2"]
-[ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/seguime.png" id="9_v750b"]
-[ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/senalando.png" id="10_eii8k"]
+[ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_onbdu"]
+[ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="3_vb4f6"]
+[ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/ave/descompuesta.png" id="4_4fa0e"]
+[ext_resource type="Texture2D" uid="uid://bssnsaxko8pgn" path="res://Sprites/ave/ensenando.png" id="5_y8t5c"]
+[ext_resource type="Texture2D" uid="uid://c4t3ymhtjv7hc" path="res://Sprites/ave/estatico.png" id="6_kgbrl"]
+[ext_resource type="Texture2D" uid="uid://c3kqts130606p" path="res://Sprites/ave/felicitaciones.png" id="7_qvh23"]
+[ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/ave/saludando.png" id="8_xmnx2"]
+[ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/ave/seguime.png" id="9_v750b"]
+[ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/ave/senalando.png" id="10_eii8k"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u8deg"]
 animations = [{
@@ -106,7 +106,7 @@ offset_left = 239.0
 offset_top = 29.0
 offset_right = 1216.0
 offset_bottom = 336.0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 24
 autowrap_mode = 3
 clip_text = true
 
