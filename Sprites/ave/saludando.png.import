@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://um6rccuorrvd"
-path="res://.godot/imported/senalando.png-07d87121657965e8c709022905ae0b66.ctex"
+uid="uid://bnvthotqk0857"
+path="res://.godot/imported/saludando.png-84449fa97266d1cee34377ba13a5d84f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/senalando.png"
-dest_files=["res://.godot/imported/senalando.png-07d87121657965e8c709022905ae0b66.ctex"]
+source_file="res://Sprites/ave/saludando.png"
+dest_files=["res://.godot/imported/saludando.png-84449fa97266d1cee34377ba13a5d84f.ctex"]
 
 [params]
 

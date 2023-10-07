@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4t3ymhtjv7hc"
-path="res://.godot/imported/estatico.png-a6b75a930b40badead4691ba6ed85368.ctex"
+uid="uid://dh7bpq0vdww8l"
+path="res://.godot/imported/curiosa.png-fbd3cf21f6cee7b84bd93afff513639d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/estatico.png"
-dest_files=["res://.godot/imported/estatico.png-a6b75a930b40badead4691ba6ed85368.ctex"]
+source_file="res://Sprites/ave/curiosa.png"
+dest_files=["res://.godot/imported/curiosa.png-fbd3cf21f6cee7b84bd93afff513639d.ctex"]
 
 [params]
 

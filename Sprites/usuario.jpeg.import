@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3kqts130606p"
-path="res://.godot/imported/felicitaciones.png-8107bee4cffb62b749c5f2b65e3e2f37.ctex"
+uid="uid://b6syym0ycomal"
+path="res://.godot/imported/usuario.jpeg-c4a68bf5427e79e6eab64ba115de805c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/felicitaciones.png"
-dest_files=["res://.godot/imported/felicitaciones.png-8107bee4cffb62b749c5f2b65e3e2f37.ctex"]
+source_file="res://Sprites/usuario.jpeg"
+dest_files=["res://.godot/imported/usuario.jpeg-c4a68bf5427e79e6eab64ba115de805c.ctex"]
 
 [params]
 

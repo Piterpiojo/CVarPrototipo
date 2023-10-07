@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dikdnsjqa1c2m"
-path="res://.godot/imported/confiada.png-7caa7c9bb3c181454272521122d04959.ctex"
+path="res://.godot/imported/confiada.png-b4f09e2a20318900987fa04d2e7c6422.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/confiada.png"
-dest_files=["res://.godot/imported/confiada.png-7caa7c9bb3c181454272521122d04959.ctex"]
+source_file="res://Sprites/ave/confiada.png"
+dest_files=["res://.godot/imported/confiada.png-b4f09e2a20318900987fa04d2e7c6422.ctex"]
 
 [params]
 

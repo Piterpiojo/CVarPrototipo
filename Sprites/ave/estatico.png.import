@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bssnsaxko8pgn"
-path="res://.godot/imported/ensenando.png-ce8ba91fc1739419c0380a512ecb5725.ctex"
+uid="uid://c4t3ymhtjv7hc"
+path="res://.godot/imported/estatico.png-e4dff042ef1ef139187bf70c66cbb636.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ensenando.png"
-dest_files=["res://.godot/imported/ensenando.png-ce8ba91fc1739419c0380a512ecb5725.ctex"]
+source_file="res://Sprites/ave/estatico.png"
+dest_files=["res://.godot/imported/estatico.png-e4dff042ef1ef139187bf70c66cbb636.ctex"]
 
 [params]
 

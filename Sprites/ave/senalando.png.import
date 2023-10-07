@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs4en00t60iv0"
-path="res://.godot/imported/descompuesta.png-4540e0b2e353478b3980dea34a83ba67.ctex"
+uid="uid://um6rccuorrvd"
+path="res://.godot/imported/senalando.png-5909fe6ec9750e3a0c569bb7ce2e83db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/descompuesta.png"
-dest_files=["res://.godot/imported/descompuesta.png-4540e0b2e353478b3980dea34a83ba67.ctex"]
+source_file="res://Sprites/ave/senalando.png"
+dest_files=["res://.godot/imported/senalando.png-5909fe6ec9750e3a0c569bb7ce2e83db.ctex"]
 
 [params]
 

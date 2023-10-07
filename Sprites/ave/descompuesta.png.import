@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wwrb7tqrfqj4"
-path="res://.godot/imported/seguime.png-3dd3bdaeaed0996debed42d3163fd422.ctex"
+uid="uid://cs4en00t60iv0"
+path="res://.godot/imported/descompuesta.png-febd6a86c2657a255fc758cc9cedecb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/seguime.png"
-dest_files=["res://.godot/imported/seguime.png-3dd3bdaeaed0996debed42d3163fd422.ctex"]
+source_file="res://Sprites/ave/descompuesta.png"
+dest_files=["res://.godot/imported/descompuesta.png-febd6a86c2657a255fc758cc9cedecb3.ctex"]
 
 [params]
 

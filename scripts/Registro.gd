@@ -11,7 +11,6 @@ func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()
 
-
 func eliminar_fake():
 	$ScrollContainer/TextureRect/fake.queue_free()
 	
@@ -34,10 +33,9 @@ func _ejecutar_evento():
 		$CuadroDialogo.habilitado = false
 		$AnimationPlayer.play("arreglar")
 		ya_ejecuto = true
-		
+
 func cambiar_dialogo():
 	$CuadroDialogo.sig_dialogo()
-
 
 func _on_pasaporte_pressed():
 	if $ScrollContainer/TextureRect/cuilBox.button_pressed == true:
@@ -50,20 +48,21 @@ func hay_campos_vacios():
 				return true
 	return false
 
-
 func comprobar_respuesta():
 	return $ScrollContainer/TextureRect/respuesta_secreta.text == $ScrollContainer/TextureRect/respuesta_secreta_nuevamente.text && $ScrollContainer/TextureRect/respuesta_secreta.text != ""
 
 func comprobar_correo():
 	return $ScrollContainer/TextureRect/correo.text == $ScrollContainer/TextureRect/repetir_correo.text and $ScrollContainer/TextureRect/repetir_correo.text == $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text && $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text !=""
 
-
 func _on_enviar_pressed():
 	if comprobar_respuesta():
 		if(comprobar_correo()):
 			if(!hay_campos_vacios()):
-				llamar_dialogo("¡Felicidades!, pudiste poner toda tu información, ahora solo faltaría verificar tu contraseña. Acompañame.")
-				$Timer.start()
+				if($TextureRect/nombre9.text== "w62bc"):
+					llamar_dialogo("¡Felicidades!, pudiste poner toda tu información, ahora solo faltaría verificar tu contraseña. Acompañame.")
+					$Timer.start()
+				else:
+					llamar_dialogo("el codigo de seguridad es incorrecto")
 			else:
 				llamar_dialogo("te falto algun campo")
 		else:
@@ -77,13 +76,10 @@ func _on_respuesta_secreta_nuevamente_focus_entered():
 func llamar_dialogo(texto):
 	$CuadroDialogo.mostrar_dialogo_unico(texto)
 
-
 func _on_recargar_pressed():
 	contador_recarga +=1
 	if contador_recarga >3:
 		$CuadroDialogo.mostrar_dialogo_unico("deberia mostrar lo correcto")
-
-
 
 func _on_timer_timeout():
 	$AnimationPlayer.play("fin")
@@ -102,7 +98,6 @@ func _on_nombre_2_gui_input(event):
 			vaciar_todo()
 			llamar_dialogo("lo lograste, vaciaste todo")
 			i = 0
-
 
 func deshabilitar_entrada():
 	$CuadroDialogo.deshabilitar()

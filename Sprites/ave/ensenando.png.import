@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnvthotqk0857"
-path="res://.godot/imported/saludando.png-82d08b29bbb1b1d6377821816f6876a0.ctex"
+uid="uid://bssnsaxko8pgn"
+path="res://.godot/imported/ensenando.png-ca42d76fdc162f51290ea9f4b4d5228f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/saludando.png"
-dest_files=["res://.godot/imported/saludando.png-82d08b29bbb1b1d6377821816f6876a0.ctex"]
+source_file="res://Sprites/ave/ensenando.png"
+dest_files=["res://.godot/imported/ensenando.png-ca42d76fdc162f51290ea9f4b4d5228f.ctex"]
 
 [params]
 

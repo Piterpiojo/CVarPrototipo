@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlknlog2m1w1i"]
+[gd_scene load_steps=7 format=3 uid="uid://dlknlog2m1w1i"]
 
 [ext_resource type="FontFile" uid="uid://0smxyo876ro4" path="res://Sprites/fuentes/digital-7.ttf" id="1_1pygp"]
 [ext_resource type="Texture2D" uid="uid://cjjgeecnmxm23" path="res://Imagenes/recuperar_contrasenia/cambio_contrasenia12.png" id="1_g1oao"]
 [ext_resource type="Script" path="res://scripts/nivel_3_recupero_contrasenia.gd" id="1_jtls3"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_ro64f"]
 [ext_resource type="Texture2D" uid="uid://bj844ikvy83d2" path="res://Sprites/NicePng_email-icon-png-transparent_903587.png" id="5_hs5fl"]
+[ext_resource type="Texture2D" uid="uid://b6syym0ycomal" path="res://Sprites/usuario.jpeg" id="6_8j1ev"]
 
 [node name="nivel3-recupero_contrasenia" type="Control"]
 layout_mode = 3
@@ -81,11 +82,17 @@ text = "Cancelar"
 layout_mode = 1
 
 [node name="segundos" type="Timer" parent="."]
-wait_time = 0.001
+wait_time = 0.05
 autostart = true
 
 [node name="NicePngEmail-icon-png-transparent903587" type="Sprite2D" parent="."]
 position = Vector2(1216, 248)
 texture = ExtResource("5_hs5fl")
+
+[node name="Usuario" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(648, 280)
+scale = Vector2(0.307407, 0.27305)
+texture = ExtResource("6_8j1ev")
 
 [connection signal="timeout" from="segundos" to="." method="_on_segundos_timeout"]
