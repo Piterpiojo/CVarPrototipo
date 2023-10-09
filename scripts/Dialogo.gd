@@ -24,6 +24,10 @@ func Mostrar_Linea(indice):
 func _process(_delta):
 	if(Input.is_action_just_pressed("click") and habilitado):
 		sig_dialogo()
+	if(pausa):
+		$IndicacionText.text="Esperando..."
+	else:
+		$IndicacionText.text="Click para continuar"
 
 func dialogo_actual():
 	return indice_dialogo

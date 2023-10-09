@@ -47,16 +47,21 @@ func eventos():
 		bandera5=true
 	elif $CuadroDialogo.indice_dialogo== 15 and !bandera6:
 		$reloj.visible= false
+		$"NicePngEmail-icon-png-transparent903587".visible = false
 		$contrasenia.visible=true
 		pausar_y_ocultar_dialogo()
 		bandera6 = true
 	elif $CuadroDialogo.indice_dialogo == 25 and !bandera7:
-		pausar_y_ocultar_dialogo()
 		bandera7=true
-	elif $CuadroDialogo.indice_dialogo == 28 and !bandera8:
 		pausar_y_ocultar_dialogo()
+		
+	elif $CuadroDialogo.indice_dialogo == 28 and !bandera8:
+		bandera8=true
+		pausar_y_ocultar_dialogo()
+		
 	elif $CuadroDialogo.indice_dialogo == 29 and !banderaFin:
 		$AnimationPlayer.play("fin")
+		banderaFin=true
 
 
 func pausar_y_ocultar_dialogo():
@@ -119,8 +124,8 @@ func _on_ingresar_pressed():
 	else:
 		errores +=1
 		$ScrollContainer/identificacion/error.visible= true
-	if(errores == 3):
-		reanudar_dialogo()
+		if(errores == 3):
+			reanudar_dialogo()
 
 func pasar_al_siguiente():
 	get_tree().quit()
