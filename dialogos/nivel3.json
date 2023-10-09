@@ -96,7 +96,7 @@
 	},
 	{
 		"emocion": "curiosa",
-		"personaje": "Usuario",
+		"personaje": "IA",
 		"texto": "¿Pues, probaste ponerlos en orden alfanumérico?\n\n\n"
 	},
 	{
@@ -125,6 +125,11 @@
 		"texto": " *Suspiro* Solo acabemos con esta sección ¿si?\n"
 	},
 	{
+		"emocion": "confiada",
+		"personaje": "Usuario",
+		"texto": "este dialogo no debe ser visible\n"
+	},
+	{
 		"emocion": "ensenando",
 		"personaje": "IA",
 		"texto": "Muy bien, en este siguiente paso, deberás volver a poner la contraseña anterior y elegir una nueva y repetir 10 veces la nueva, \npara asegurarnos que te la memorices a la fuerza. "
@@ -133,6 +138,11 @@
 		"emocion": "senalando",
 		"personaje": "IA",
 		"texto": "Para dejarlo más facil, te mostraré la contraseña anterior en el orden correcto. \nUna cosa más, tu contraseña nueva debe tener si o si números y letras."
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "Usuario",
+		"texto": "este dialogo no debe ser visible\n"
 	},
 	{
 		"emocion": "felicitaciones",

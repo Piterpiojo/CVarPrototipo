@@ -86,6 +86,24 @@ offset_bottom = 87.0
 text = "Crear Archivo
 Dialogos"
 
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 384.0
+offset_right = 255.0
+offset_bottom = 449.0
+text = "Probar nivel 2"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 454.0
+offset_right = 256.0
+offset_bottom = 528.0
+text = "Probar nivel 3"
+
 [connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

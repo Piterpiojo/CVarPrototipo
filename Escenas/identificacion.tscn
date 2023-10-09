@@ -61,6 +61,14 @@ offset_top = 521.0
 offset_right = 783.0
 offset_bottom = 555.0
 
+[node name="ingresar" type="Button" parent="ScrollContainer/TextureRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 484.0
+offset_top = 571.0
+offset_right = 789.0
+offset_bottom = 612.0
+
 [node name="CuadroDialogo" parent="." instance=ExtResource("2_610dh")]
 layout_mode = 1
 offset_top = -362.0

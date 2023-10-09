@@ -84,7 +84,9 @@ func _on_recargar_pressed():
 func _on_timer_timeout():
 	$AnimationPlayer.play("fin")
 
-
+func pasar_al_siguiente():
+	get_tree().change_scene_to_file("res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn")
+	
 func _on_animation_player_animation_finished(anim_name):
 	if(anim_name == "fin"):
 		get_tree().quit()

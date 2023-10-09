@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dlknlog2m1w1i"]
+[gd_scene load_steps=12 format=3 uid="uid://dlknlog2m1w1i"]
 
 [ext_resource type="FontFile" uid="uid://0smxyo876ro4" path="res://Sprites/fuentes/digital-7.ttf" id="1_1pygp"]
 [ext_resource type="Texture2D" uid="uid://cjjgeecnmxm23" path="res://Imagenes/recuperar_contrasenia/cambio_contrasenia12.png" id="1_g1oao"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_ro64f"]
 [ext_resource type="Texture2D" uid="uid://bj844ikvy83d2" path="res://Sprites/NicePng_email-icon-png-transparent_903587.png" id="5_hs5fl"]
 [ext_resource type="Texture2D" uid="uid://b6syym0ycomal" path="res://Sprites/usuario.jpeg" id="6_8j1ev"]
+[ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="7_0ew3f"]
 
 [sub_resource type="Animation" id="Animation_hfu2l"]
 length = 0.001
@@ -20,6 +21,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_uovhh"]
@@ -38,9 +51,40 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_ngiub"]
+resource_name = "fin"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"pasar_al_siguiente"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_60alr"]
 _data = {
 "RESET": SubResource("Animation_hfu2l"),
+"fin": SubResource("Animation_ngiub"),
 "mostrar_foto": SubResource("Animation_uovhh")
 }
 
@@ -92,6 +136,7 @@ offset_left = 704.0
 offset_top = 456.0
 offset_right = 1000.0
 offset_bottom = 487.0
+secret = true
 
 [node name="repetir" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -99,6 +144,19 @@ offset_left = 704.0
 offset_top = 520.0
 offset_right = 1000.0
 offset_bottom = 551.0
+secret = true
+
+[node name="error2" type="Label" parent="ScrollContainer/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 544.0
+offset_top = 544.0
+offset_right = 772.0
+offset_bottom = 622.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "La contraseña no 
+coincide"
+horizontal_alignment = 1
 
 [node name="cambiar" type="Button" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -116,10 +174,83 @@ offset_right = 1160.0
 offset_bottom = 775.0
 text = "Cancelar"
 
+[node name="identificacion" type="TextureRect" parent="ScrollContainer"]
+layout_mode = 2
+texture = ExtResource("7_0ew3f")
+
+[node name="OlvidoContrasenia" type="Button" parent="ScrollContainer/identificacion"]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 708.0
+offset_right = 795.0
+offset_bottom = 724.0
+flat = true
+
+[node name="NuevoUsuario" type="Button" parent="ScrollContainer/identificacion"]
+layout_mode = 0
+offset_left = 479.0
+offset_top = 737.0
+offset_right = 795.0
+offset_bottom = 753.0
+flat = true
+
+[node name="usuario" type="TextEdit" parent="ScrollContainer/identificacion"]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 460.0
+offset_right = 783.0
+offset_bottom = 494.0
+
+[node name="contrasenia" type="LineEdit" parent="ScrollContainer/identificacion"]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 521.0
+offset_right = 783.0
+offset_bottom = 555.0
+secret = true
+
+[node name="error" type="Label" parent="ScrollContainer/identificacion"]
+visible = false
+layout_mode = 0
+offset_left = 528.0
+offset_top = 616.0
+offset_right = 756.0
+offset_bottom = 694.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Acceso denegado: El nombre
+ de Usuario y/o la Contraseña
+ son incorrectos "
+horizontal_alignment = 1
+
+[node name="ingresar" type="Button" parent="ScrollContainer/identificacion"]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 571.0
+offset_right = 789.0
+offset_bottom = 612.0
+flat = true
+
+[node name="contrasenia" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = 96.0
+offset_right = 333.0
+offset_bottom = 291.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 140
+text = "6O9LiNE5"
+
 [node name="CuadroDialogo" parent="." instance=ExtResource("2_ro64f")]
 layout_mode = 1
 
 [node name="minutos" type="Timer" parent="."]
+
+[node name="horas" type="Timer" parent="."]
 
 [node name="segundos" type="Timer" parent="."]
 wait_time = 0.05
@@ -143,6 +274,9 @@ libraries = {
 [node name="espera" type="Timer" parent="."]
 wait_time = 15.0
 
+[connection signal="pressed" from="ScrollContainer/TextureRect/cambiar" to="." method="_on_cambiar_pressed"]
+[connection signal="pressed" from="ScrollContainer/identificacion/ingresar" to="." method="_on_ingresar_pressed"]
 [connection signal="timeout" from="minutos" to="." method="_on_minutos_timeout"]
+[connection signal="timeout" from="horas" to="." method="_on_horas_timeout"]
 [connection signal="timeout" from="segundos" to="." method="_on_segundos_timeout"]
 [connection signal="timeout" from="espera" to="." method="_on_espera_timeout"]
