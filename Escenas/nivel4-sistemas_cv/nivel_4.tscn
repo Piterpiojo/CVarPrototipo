@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://bdhbfpnq83ybt"]
+
+[ext_resource type="Texture2D" uid="uid://d4e0xqbettcgg" path="res://Imagenes/Sistemas_CV/Sistemas-12.png" id="1_nh3oo"]
+[ext_resource type="Script" path="res://scripts/nivel_4.gd" id="1_xry6i"]
+[ext_resource type="Texture2D" uid="uid://5ak8f6m0tsgf" path="res://icon.svg" id="2_8njv8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk3fy"]
+size = Vector2(731.429, 65.7876)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygas4"]
+size = Vector2(296.647, 131.115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1tft"]
+size = Vector2(538, 34)
+
+[node name="nivel4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xry6i")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_nh3oo")
+
+[node name="suelo" type="StaticBody2D" parent="."]
+position = Vector2(640, 728)
+scale = Vector2(1.75, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo"]
+position = Vector2(-3.43323e-05, 16.0002)
+shape = SubResource("RectangleShape2D_qk3fy")
+
+[node name="logo" type="RigidBody2D" parent="."]
+position = Vector2(752, 112)
+
+[node name="Icon" type="Sprite2D" parent="logo"]
+position = Vector2(-6.10352e-05, -3.05176e-05)
+rotation = 0.363028
+scale = Vector2(2.31478, 1)
+texture = ExtResource("2_8njv8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="logo"]
+position = Vector2(3.05176e-05, 0)
+rotation = 0.363028
+shape = SubResource("RectangleShape2D_ygas4")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(915, 447)
+shape = SubResource("RectangleShape2D_u1tft")
+
+[node name="Boton" type="Button" parent="RigidBody2D"]
+offset_left = 640.0
+offset_top = 424.0
+offset_right = 1168.0
+offset_bottom = 468.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "Usuario curriculum Vitae"
+flat = true
+alignment = 0
+
+[connection signal="input_event" from="logo" to="." method="_on_logo_input_event"]
