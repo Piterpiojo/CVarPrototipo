@@ -41,6 +41,7 @@ func sig_dialogo():
 			desactivar_dialogo()
 
 func habilitar_dialogo():
+	pausa = false
 	self.visible= true
 	habilitado = true
 
@@ -49,5 +50,6 @@ func mostrar_dialogo_unico(texto):
 	$DialogoText.text = texto
 
 func desactivar_dialogo():
+	pausa = true
 	self.visible = false
 	habilitado = false

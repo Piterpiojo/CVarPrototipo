@@ -1,0 +1,77 @@
+[
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": "¡Ahora sí, ya eres parte de la plataforma! Bienvenido al primer paso de tu carrera profesional!."
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "IA",
+		"texto": "Lo que ves aquí, es tu puerta para crear tu CV, ¿No te emociona ver una plataforma tan maravillosa y ser parte de ella? \nBueno, “Parte de ella en un sentido figurado” Ya sabes porque técnicamente\nno eres parte de la empresa ni estas cobrando por esto tampoco, \na diferencia mía que ya estoy saboreando ese dulce dulce aguinaldo"
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "Usuario",
+		"texto": "Pero tu eres una IA, ¿cómo está eso de que  te pagan?"
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "Que desactualizado que estas, las criptomonedas llevan existiendo hace varios años."
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "Usuario",
+		"texto": "Pero eso no responde…Ah no importa, terminemos con esto lo más rápido posible ¿Como prosigo?"
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": " Esta puede que sea tu prueba más difícil hasta ahora, para proseguir debes…"
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "IA",
+		"texto": "Tocar ese botón, el único de la pantalla"
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "Usuario",
+		"texto": "… ¿Cual es la trampa acá?"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "IA",
+		"texto": "Ninguna, realmente, dejando de lado las bromas, esta parte es bastante automática, \nsolo tocalo y podremos proseguir, es más, mientras lo tocas aprovecharé para tomarme mi descanso"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "este dialogo no se ve"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "Eh… AVe, estoy teniendo unos problemas…. ¿Ave?"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "Ave no responde tu llamado ya que, como dijo, esta en su descanso"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "Ok, supongo que solo somos tu y yo, botón endemoniado, debe haber una forma en la que pueda frenarte en el lugar…."
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "aca hay eventos"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "Te veré en el infierno maldito botón mugroso"
+	}
+]

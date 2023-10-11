@@ -1,17 +1,94 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdhbfpnq83ybt"]
+[gd_scene load_steps=15 format=3 uid="uid://bdhbfpnq83ybt"]
 
 [ext_resource type="Texture2D" uid="uid://d4e0xqbettcgg" path="res://Imagenes/Sistemas_CV/Sistemas-12.png" id="1_nh3oo"]
 [ext_resource type="Script" path="res://scripts/nivel_4.gd" id="1_xry6i"]
-[ext_resource type="Texture2D" uid="uid://5ak8f6m0tsgf" path="res://icon.svg" id="2_8njv8"]
+[ext_resource type="Texture2D" uid="uid://bn2lceqt58atk" path="res://Imagenes/logo.png" id="3_oyvwg"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="4_fpakq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk3fy"]
 size = Vector2(731.429, 65.7876)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfl5o"]
+size = Vector2(20, 1488)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygas4"]
-size = Vector2(296.647, 131.115)
+size = Vector2(323.463, 162.026)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khgyg"]
+size = Vector2(292.13, 131.59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1tft"]
-size = Vector2(538, 34)
+size = Vector2(338, 34)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qp36"]
+radius = 87.9971
+height = 495.854
+
+[sub_resource type="Animation" id="Animation_rmvtq"]
+resource_name = "sacudir"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("logo/Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.363028, -0.493928, 0.363028]
+}
+
+[sub_resource type="Animation" id="Animation_657wx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("logo/Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.363028]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ck32b"]
+resource_name = "fin"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqt1o"]
+_data = {
+"RESET": SubResource("Animation_657wx"),
+"fin": SubResource("Animation_ck32b"),
+"sacudir": SubResource("Animation_rmvtq")
+}
 
 [node name="nivel4" type="Control"]
 layout_mode = 3
@@ -23,6 +100,7 @@ grow_vertical = 2
 script = ExtResource("1_xry6i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+process_mode = 4
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -36,36 +114,78 @@ scale = Vector2(1.75, 0.5)
 position = Vector2(-3.43323e-05, 16.0002)
 shape = SubResource("RectangleShape2D_qk3fy")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="suelo"]
+position = Vector2(9.14285, -1488)
+shape = SubResource("RectangleShape2D_qk3fy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="suelo"]
+position = Vector2(-374.857, -704)
+shape = SubResource("RectangleShape2D_hfl5o")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="suelo"]
+position = Vector2(374.857, -704)
+shape = SubResource("RectangleShape2D_hfl5o")
+
 [node name="logo" type="RigidBody2D" parent="."]
 position = Vector2(752, 112)
+freeze = true
 
 [node name="Icon" type="Sprite2D" parent="logo"]
-position = Vector2(-6.10352e-05, -3.05176e-05)
+position = Vector2(-0.460395, 1.21181)
 rotation = 0.363028
-scale = Vector2(2.31478, 1)
-texture = ExtResource("2_8njv8")
+scale = Vector2(2.31478, 2.75118)
+texture = ExtResource("3_oyvwg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="logo"]
-position = Vector2(3.05176e-05, 0)
+[node name="Area2D" type="Area2D" parent="logo"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="logo/Area2D"]
 rotation = 0.363028
 shape = SubResource("RectangleShape2D_ygas4")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="logo"]
+rotation = 0.37327
+shape = SubResource("RectangleShape2D_khgyg")
+
+[node name="boton" type="RigidBody2D" parent="."]
+mass = 0.21
 gravity_scale = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(915, 447)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boton"]
+position = Vector2(815, 447)
 shape = SubResource("RectangleShape2D_u1tft")
 
-[node name="Boton" type="Button" parent="RigidBody2D"]
+[node name="Boton" type="Button" parent="boton"]
 offset_left = 640.0
 offset_top = 424.0
-offset_right = 1168.0
+offset_right = 992.0
 offset_bottom = 468.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.0627451, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.576471, 0.0313726, 1)
+theme_override_colors/font_hover_color = Color(1, 0.694118, 0.4, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 1, 1)
 theme_override_font_sizes/font_size = 26
+disabled = true
 text = "Usuario curriculum Vitae"
 flat = true
 alignment = 0
 
-[connection signal="input_event" from="logo" to="." method="_on_logo_input_event"]
+[node name="Area2D" type="Area2D" parent="boton"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boton/Area2D"]
+position = Vector2(816, 448)
+rotation = 1.57888
+shape = SubResource("CapsuleShape2D_0qp36")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fqt1o")
+}
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("4_fpakq")]
+layout_mode = 1
+
+[connection signal="body_entered" from="logo/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="input_event" from="logo/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="pressed" from="boton/Boton" to="." method="_on_boton_pressed"]
+[connection signal="mouse_entered" from="boton/Area2D" to="." method="_on_area_2d_mouse_entered"]
