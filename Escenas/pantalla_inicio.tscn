@@ -108,7 +108,15 @@ offset_left = 96.0
 offset_top = 536.0
 offset_right = 253.0
 offset_bottom = 610.0
-text = "Probar nivel 4 (en curso)"
+text = "Probar nivel 4"
+
+[node name="Button6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 616.0
+offset_right = 292.0
+offset_bottom = 690.0
+text = "Probar nivel 5 (en curso)"
 
 [connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
@@ -116,3 +124,4 @@ text = "Probar nivel 4 (en curso)"
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]

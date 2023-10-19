@@ -1,0 +1,82 @@
+[
+	{
+		"emocion": "saludando",
+		"personaje": "IA",
+		"texto": "*Bostezo* Que buena suspensión/Hibernación me pegue…. ¿Bueno, fue sencillo no?"
+	},
+	{
+		"emocion": "saludando",
+		"personaje": "Usuario",
+		"texto": "…Facilisimo…. \n"
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "Bien, ya estamos listos para la sección más desafiante pero también la más gratificante y esta vez sí que lo digo con absolutamente\n0 sarcasmo; Bueno, siendo sincera nunca puedo asegurar un 0% Exacto de sarcasmo por como esta hecho mi propio código, \npero sí puedo asegurarte un 0,000000001% de sarcasmo máximo en la frase anterior. \nEn fin, a lo que vamos, Vas a tener que completar paso a paso la información solicitada, \nsin importar que tan vergonzosa sea, todo es necesario para armar un CV de la mejor forma!\n"
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "Usuario",
+		"texto": "¿Estas…. segura de que todo esto va ayudar a mi CV?\n"
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "Escuchame una cosa, ¿quién es la que tiene trabajo acá?\n"
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "Usuario",
+		"texto": "PERO LITERALMENTE FUISTE PROGRAMADA PARA EL TRABAJO NI SIQUIERA DEBISTE PASAR UNA ENTREVISTA"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": " ¿QUIEN?"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "..."
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "RESPONDEME"
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "Usuario",
+		"texto": "Vos..."
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "Entonces seguí lo que yo digo, que lo digo por experiencia."
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "... "
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "Usuario",
+		"texto": "a completar, esto no se ve"
+	},
+	{
+		"emocion": "descompuesta",
+		"personaje": "IA",
+		"texto": "NO NO NO, ESO SI QUE NO"
+	},
+	{
+		"emocion": "descompuesta",
+		"personaje": "Usuario",
+		"texto": "¿Qué pasó?"
+	},
+	{
+		"emocion": "descompuesta",
+		"personaje": "IA",
+		"texto": "Estas cometiendo una falla grave en el sistema por fallas tan irresponsables como la que acabas de cometer terminan ocurriendo \nerrores luego, ay por Alan turing (Expresado como si dijera ay por dios)  y despues se quejan cuando nosotros los reemplazamos a \nustedes los humanos cuando no saben seguir una orden tan clara y bien comunicada; \nNunca debes seleccionar país de emisión de pasaporte A MENOS QUE SELECCIONES PASAPORTE como documento, \n¡Es obvio! Tan obvio que o bien, hasta ahora te juzgue mal y no eres tan avispado como pensé o realmente estás probando \ncualquier opción posible para hacerme enojar; Si es lo segundo, deja de hacerlo que aquí no estamos para andar jugando! \nEsto es un trámite serio!"
+	}
+]

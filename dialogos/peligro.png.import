@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ex0hxdbqj0ql"
-path="res://.godot/imported/Registro de Usuario-1.png-9c8bb675b7918adf38ad964f741dcd4a.ctex"
+uid="uid://dhsao611j3kw1"
+path="res://.godot/imported/peligro.png-b496b9cb20f458c0b77bdb75de4fc096.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/RegistroUsuario/Registro de Usuario-1.png"
-dest_files=["res://.godot/imported/Registro de Usuario-1.png-9c8bb675b7918adf38ad964f741dcd4a.ctex"]
+source_file="res://dialogos/peligro.png"
+dest_files=["res://.godot/imported/peligro.png-b496b9cb20f458c0b77bdb75de4fc096.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=false
+process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false

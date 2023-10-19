@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ex0hxdbqj0ql"
-path="res://.godot/imported/Registro de Usuario-1.png-9c8bb675b7918adf38ad964f741dcd4a.ctex"
+uid="uid://d1pe6dt1shv3d"
+path="res://.godot/imported/seccion5c-1.png-034724494f1b09f5ac6e7981695337e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/RegistroUsuario/Registro de Usuario-1.png"
-dest_files=["res://.godot/imported/Registro de Usuario-1.png-9c8bb675b7918adf38ad964f741dcd4a.ctex"]
+source_file="res://Imagenes/seccion5/seccion5c-1.png"
+dest_files=["res://.godot/imported/seccion5c-1.png-034724494f1b09f5ac6e7981695337e3.ctex"]
 
 [params]
 

@@ -24,3 +24,7 @@ func _on_button_4_pressed():
 
 func _on_button_5_pressed():
 	get_tree().change_scene_to_file("res://Escenas/nivel4-sistemas_cv/nivel_4.tscn")
+
+
+func _on_button_6_pressed():
+	get_tree().change_scene_to_file("res://Escenas/nivel5/nivel5.tscn")
