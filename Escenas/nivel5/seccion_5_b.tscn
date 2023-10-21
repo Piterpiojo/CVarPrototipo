@@ -1,0 +1,346 @@
+[gd_scene load_steps=7 format=3 uid="uid://owao3l8xso4f"]
+
+[ext_resource type="Texture2D" uid="uid://cc88p371wiv4b" path="res://Imagenes/seccion5/seccion5b-12.png" id="1_gnlaj"]
+[ext_resource type="Script" path="res://scripts/seccion_5_b.gd" id="1_v4s2q"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_jbfj6"]
+
+[sub_resource type="Animation" id="Animation_rsdyb"]
+resource_name = "publicidad"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 15, 20),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(925, 725), Vector2(920, 0), Vector2(920, 0), Vector2(920, 730)]
+}
+
+[sub_resource type="Animation" id="Animation_c3amr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(925, 725)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l36b4"]
+_data = {
+"RESET": SubResource("Animation_c3amr"),
+"publicidad": SubResource("Animation_rsdyb")
+}
+
+[node name="seccion5-b" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4s2q")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
+layout_mode = 2
+texture = ExtResource("1_gnlaj")
+
+[node name="LineEdit3" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 371.0
+offset_right = 547.0
+offset_bottom = 402.0
+
+[node name="LineEdit4" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 408.0
+offset_right = 547.0
+offset_bottom = 439.0
+
+[node name="LineEdit8" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 698.0
+offset_right = 547.0
+offset_bottom = 729.0
+
+[node name="LineEdit5" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 553.0
+offset_right = 723.0
+offset_bottom = 584.0
+
+[node name="LineEdit6" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 628.0
+offset_right = 723.0
+offset_bottom = 659.0
+
+[node name="LineEdit14" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 813.0
+offset_right = 713.0
+offset_bottom = 844.0
+
+[node name="LineEdit15" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 853.0
+offset_right = 713.0
+offset_bottom = 884.0
+
+[node name="LineEdit17" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 923.0
+offset_right = 713.0
+offset_bottom = 954.0
+
+[node name="LineEdit18" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 1098.0
+offset_right = 1048.0
+offset_bottom = 1273.0
+
+[node name="pais" type="OptionButton" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 443.0
+offset_right = 673.0
+offset_bottom = 474.0
+item_count = 6
+selected = 0
+popup/item_0/text = "---Seleccionar--"
+popup/item_0/id = 0
+popup/item_1/text = "Argentina"
+popup/item_1/id = 1
+popup/item_2/text = "Bolivia"
+popup/item_2/id = 2
+popup/item_3/text = "Brasil"
+popup/item_3/id = 3
+popup/item_4/text = "Paraguay"
+popup/item_4/id = 4
+popup/item_5/text = "Uruguay"
+popup/item_5/id = 5
+
+[node name="provincia" type="OptionButton" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 483.0
+offset_right = 673.0
+offset_bottom = 507.0
+
+[node name="partido" type="OptionButton" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 518.0
+offset_right = 673.0
+offset_bottom = 542.0
+
+[node name="localidad" type="OptionButton" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 593.0
+offset_right = 673.0
+offset_bottom = 617.0
+item_count = 2
+selected = 0
+popup/item_0/text = "---Seleccionar---"
+popup/item_0/id = 0
+popup/item_1/text = "OTRO"
+popup/item_1/id = 1
+
+[node name="calle" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 301.0
+offset_right = 895.0
+offset_bottom = 332.0
+
+[node name="LineEdit2" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 336.0
+offset_right = 547.0
+offset_bottom = 367.0
+
+[node name="LineEdit9" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 468.0
+offset_top = 753.0
+offset_right = 535.062
+offset_bottom = 784.0
+
+[node name="Label" type="Label" parent="ScrollContainer/TextureRect/LineEdit9"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 51.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Pais
+ej:0054"
+
+[node name="LineEdit10" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 558.0
+offset_top = 753.0
+offset_right = 625.062
+offset_bottom = 784.0
+
+[node name="Label" type="Label" parent="ScrollContainer/TextureRect/LineEdit10"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 51.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Área
+0221"
+
+[node name="LineEdit11" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 653.0
+offset_top = 753.0
+offset_right = 720.062
+offset_bottom = 784.0
+
+[node name="Label" type="Label" parent="ScrollContainer/TextureRect/LineEdit11"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 51.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Caract.
+423"
+
+[node name="LineEdit12" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 743.0
+offset_top = 753.0
+offset_right = 810.062
+offset_bottom = 784.0
+
+[node name="Label" type="Label" parent="ScrollContainer/TextureRect/LineEdit12"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 51.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Nro.
+6283"
+
+[node name="LineEdit13" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 838.0
+offset_top = 753.0
+offset_right = 905.062
+offset_bottom = 784.0
+
+[node name="Label" type="Label" parent="ScrollContainer/TextureRect/LineEdit13"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 30.0
+offset_right = 54.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "Interno
+211"
+
+[node name="LineEdit7" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 448.0
+offset_top = 663.0
+offset_right = 547.0
+offset_bottom = 694.0
+
+[node name="LineEdit16" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+layout_mode = 2
+offset_left = 443.0
+offset_top = 888.0
+offset_right = 718.0
+offset_bottom = 919.0
+
+[node name="guardar" type="Button" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 1095.0
+offset_top = 1315.0
+offset_right = 1150.0
+offset_bottom = 1340.0
+flat = true
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("3_jbfj6")]
+layout_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 925.0
+offset_top = 725.0
+offset_right = 1280.0
+offset_bottom = 930.0
+color = Color(0.105882, 0.388235, 0.72549, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.5
+offset_right = 31.5
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Noticia"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -155.0
+offset_right = 175.0
+grow_horizontal = 2
+grow_vertical = 0
+autowrap_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l36b4")
+}
+
+[connection signal="gui_input" from="ScrollContainer/TextureRect/LineEdit16" to="." method="_on_line_edit_16_gui_input"]
+[connection signal="pressed" from="ScrollContainer/TextureRect/guardar" to="." method="_on_guardar_pressed"]
