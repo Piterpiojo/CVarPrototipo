@@ -27,3 +27,7 @@ func _on_verprueba_pressed():
 
 func _on_emocion_item_selected(index):
 	$Sprite2D.play($emocion.text)
+
+
+func _on_button_pressed():
+	$CuadroDialogo.mostrar_dialogo_unico($dialogo.text)

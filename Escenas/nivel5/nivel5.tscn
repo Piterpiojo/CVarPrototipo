@@ -8,21 +8,6 @@
 [ext_resource type="AudioStream" uid="uid://cw0uu8l3rrfev" path="res://sonidos/alerta.mp3" id="6_8gfki"]
 [ext_resource type="Texture2D" uid="uid://dhsao611j3kw1" path="res://dialogos/peligro.png" id="7_c4fn7"]
 
-[sub_resource type="Animation" id="Animation_m16ve"]
-resource_name = "intro"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ScrollContainer/seccion-a:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_3kjdd"]
 length = 0.001
 tracks/0/type = "value"
@@ -36,6 +21,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m16ve"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer/seccion-a:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pfd1q"]
@@ -146,9 +146,9 @@ offset_bottom = 1103.0
 
 [node name="Label2" type="Label" parent="ScrollContainer/seccion-a/LineEdit16"]
 layout_mode = 0
-offset_left = -208.0
+offset_left = -224.0
 offset_top = -16.0
-offset_right = -5.0
+offset_right = -21.0
 offset_bottom = 36.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Partidos de fútbol jugados 
@@ -157,32 +157,33 @@ el dia de su nacimiento:"
 [node name="LineEdit17" type="LineEdit" parent="ScrollContainer/seccion-a"]
 layout_mode = 0
 offset_left = 944.0
-offset_top = 1192.0
+offset_top = 1191.0
 offset_right = 1011.06
-offset_bottom = 1223.0
+offset_bottom = 1222.0
 
 [node name="Label2" type="Label" parent="ScrollContainer/seccion-a/LineEdit17"]
 layout_mode = 0
-offset_left = -208.0
-offset_top = -80.0
+offset_left = -223.0
+offset_top = -81.0
 offset_right = -5.0
-offset_bottom = 50.0
+offset_bottom = 49.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Sumatoria de la fecha de su nacimiento y cantidad de goles promedios que se hacen en un partido de fútbol 5:"
 autowrap_mode = 2
 
 [node name="LineEdit18" type="LineEdit" parent="ScrollContainer/seccion-a"]
 layout_mode = 0
-offset_left = 944.0
+offset_left = 838.0
 offset_top = 1240.0
-offset_right = 1011.06
+offset_right = 1045.0
 offset_bottom = 1271.0
 
 [node name="Label2" type="Label" parent="ScrollContainer/seccion-a/LineEdit18"]
 layout_mode = 0
-offset_left = -208.0
-offset_right = -5.0
-offset_bottom = 52.0
+offset_left = -118.0
+offset_top = 2.0
+offset_right = -3.0
+offset_bottom = 54.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Bio de Tinder:"
 autowrap_mode = 2
@@ -434,6 +435,14 @@ offset_top = 1384.0
 offset_right = 984.0
 offset_bottom = 1552.0
 
+[node name="guardar" type="Button" parent="ScrollContainer/seccion-a"]
+layout_mode = 0
+offset_left = 945.0
+offset_top = 1602.0
+offset_right = 1002.0
+offset_bottom = 1628.0
+flat = true
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_pfd1q")
@@ -456,4 +465,5 @@ wait_time = 5.0
 one_shot = true
 
 [connection signal="toggled" from="ScrollContainer/seccion-a/Pais_pasaporte" to="." method="_on_pais_pasaporte_toggled"]
+[connection signal="pressed" from="ScrollContainer/seccion-a/guardar" to="." method="_on_guardar_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
