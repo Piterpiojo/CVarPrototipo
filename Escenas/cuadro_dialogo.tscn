@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=13 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
+[ext_resource type="Texture2D" uid="uid://764eyercb4j5" path="res://ui/dialogopersonaje2.png" id="2_och7u"]
 [ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_onbdu"]
 [ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="3_vb4f6"]
 [ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/ave/descompuesta.png" id="4_4fa0e"]
@@ -86,26 +87,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CuadroDialogo" type="ColorRect"]
+[node name="CuadroDialogo" type="TextureRect"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
+offset_left = -662.0
+offset_top = -427.0
+offset_right = 705.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0, 0, 0, 0.941176)
+texture = ExtResource("2_och7u")
 script = ExtResource("1_pygju")
 
 [node name="DialogoText" type="Label" parent="."]
 layout_mode = 0
-offset_left = 239.0
-offset_top = 29.0
-offset_right = 1216.0
-offset_bottom = 336.0
+offset_left = 290.0
+offset_top = 136.0
+offset_right = 1267.0
+offset_bottom = 443.0
 theme_override_font_sizes/font_size = 22
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor bibendum felis, vel scelerisque justo. Suspendisse potenti. Sed feugiat tincidunt nisi, a venenatis velit hendrerit sit amet. Vivamus ac nunc id orci fringilla vehicula. Proin euismod arcu at libero dictum, eu bibendum odio accumsan. Sed at mi sit amet purus tincidunt pellentesque id nec purus. Nulla auctor, est a fermentum efficitur, urna orci tincidunt ante, in eleifend eros turpis in tellus. Integer vel quam sed justo bibendum vulputate. Nulla facilisi. Sed nec ullamcorper elit."
 autowrap_mode = 3
@@ -118,8 +120,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -184.0
-offset_top = -32.0
+offset_left = -278.0
+offset_top = -81.0
+offset_right = -94.0
+offset_bottom = -49.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 14
@@ -134,13 +138,27 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -20.0
-offset_right = 40.0
-offset_bottom = 20.0
+offset_left = 36.0
+offset_top = 19.5
+offset_right = 76.0
+offset_bottom = 59.5
 grow_vertical = 2
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Container"]
-position = Vector2(125, -88)
+position = Vector2(125, -71)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_u8deg")
 animation = &"senalando"
+
+[node name="personaje" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 52.0
+offset_top = -205.5
+offset_right = 363.0
+offset_bottom = -156.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Ave"

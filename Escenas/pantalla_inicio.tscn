@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqreb62ncc810"]
 
 [ext_resource type="Script" path="res://scripts/PantallaInicio.gd" id="1_gvw1p"]
-[ext_resource type="Texture2D" uid="uid://5ak8f6m0tsgf" path="res://icon.svg" id="2_gd8m0"]
+[ext_resource type="Texture2D" uid="uid://3wqmh6smwmwi" path="res://ui/boton.png" id="2_wjfdb"]
 
 [node name="PantallaInicio" type="Control"]
 layout_mode = 3
@@ -25,25 +25,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -72.0
-offset_top = 184.0
-offset_right = 73.0
-offset_bottom = 210.0
+offset_left = -399.0
+offset_top = 96.0
+offset_right = 403.0
+offset_bottom = 209.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 80
 text = "Guia impractica Cvar"
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -64.0
-offset_top = 40.0
-offset_right = 64.0
-offset_bottom = 168.0
-grow_horizontal = 2
-texture = ExtResource("2_gd8m0")
 
 [node name="Iniciar" type="Button" parent="."]
 layout_mode = 1
@@ -52,14 +40,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -80.0
-offset_top = 72.0
-offset_right = 79.0
-offset_bottom = 149.0
+offset_left = -306.0
+offset_top = -41.0
+offset_right = 342.0
+offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Iniciar"
+icon = ExtResource("2_wjfdb")
+icon_alignment = 1
 
 [node name="Salir" type="Button" parent="."]
 layout_mode = 1
@@ -68,14 +58,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -56.0
-offset_top = -168.0
-offset_right = 58.0
-offset_bottom = -91.0
+offset_left = -306.0
+offset_top = -213.0
+offset_right = 342.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 50
 text = "Salir"
+icon = ExtResource("2_wjfdb")
+icon_alignment = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

@@ -17,8 +17,10 @@ func Mostrar_Linea(indice):
 	$Container/Sprite2D.play(dialogos[indice]["emocion"])
 	if(dialogos[indice]["personaje"]=="Usuario"):
 		$Container/Sprite2D.visible =false
+		$personaje.text= "Usuario"
 	else:
 		$Container/Sprite2D.visible =true
+		$personaje.text = "Ave"
 
 
 func _process(_delta):

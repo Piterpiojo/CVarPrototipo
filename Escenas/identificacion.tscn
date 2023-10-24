@@ -71,7 +71,9 @@ offset_bottom = 612.0
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("2_610dh")]
 layout_mode = 1
-offset_top = -362.0
-offset_right = 642.0
+offset_left = -655.0
+offset_top = -439.0
+offset_right = 712.0
+offset_bottom = 6.0
 
 [connection signal="pressed" from="ScrollContainer/TextureRect/NuevoUsuario" to="." method="_on_nuevo_usuario_pressed"]
