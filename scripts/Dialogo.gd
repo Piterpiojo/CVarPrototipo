@@ -55,3 +55,4 @@ func desactivar_dialogo():
 	pausa = true
 	self.visible = false
 	habilitado = false
+

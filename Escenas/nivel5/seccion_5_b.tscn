@@ -1,8 +1,65 @@
-[gd_scene load_steps=7 format=3 uid="uid://owao3l8xso4f"]
+[gd_scene load_steps=8 format=3 uid="uid://owao3l8xso4f"]
 
 [ext_resource type="Texture2D" uid="uid://cc88p371wiv4b" path="res://Imagenes/seccion5/seccion5b-12.png" id="1_gnlaj"]
 [ext_resource type="Script" path="res://scripts/seccion_5_b.gd" id="1_v4s2q"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_jbfj6"]
+
+[sub_resource type="Animation" id="Animation_c3amr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(925, 725)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_35c8i"]
+resource_name = "fin"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cambiarEscena"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_rsdyb"]
 resource_name = "publicidad"
@@ -20,24 +77,10 @@ tracks/0/keys = {
 "values": [Vector2(925, 725), Vector2(920, 0), Vector2(920, 0), Vector2(920, 730)]
 }
 
-[sub_resource type="Animation" id="Animation_c3amr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(925, 725)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l36b4"]
 _data = {
 "RESET": SubResource("Animation_c3amr"),
+"fin": SubResource("Animation_35c8i"),
 "publicidad": SubResource("Animation_rsdyb")
 }
 
@@ -341,6 +384,8 @@ autowrap_mode = 2
 libraries = {
 "": SubResource("AnimationLibrary_l36b4")
 }
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="gui_input" from="ScrollContainer/TextureRect/LineEdit16" to="." method="_on_line_edit_16_gui_input"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/guardar" to="." method="_on_guardar_pressed"]

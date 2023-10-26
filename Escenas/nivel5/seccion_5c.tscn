@@ -1,10 +1,117 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmshaoi4drcid"]
+[gd_scene load_steps=11 format=3 uid="uid://dmshaoi4drcid"]
 
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_n0fm6"]
+[ext_resource type="Script" path="res://scripts/seccion_5c.gd" id="1_rta87"]
 [ext_resource type="Texture2D" uid="uid://dngvv84y2htt2" path="res://Imagenes/seccion5/seccion5c-12.png" id="2_qmik0"]
+[ext_resource type="Texture2D" uid="uid://so8w0pofq670" path="res://Imagenes/seccion5/seccion5ca12.png" id="3_mq747"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8j2sx"]
+size = Vector2(448, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_32s0s"]
 size = Vector2(60, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sn8o"]
+size = Vector2(1296, 20)
+
+[sub_resource type="Animation" id="Animation_aocwp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScrollContainer/ca:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScrollContainer/TextureRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_of465"]
+resource_name = "anegro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ScrollContainer/ca:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ScrollContainer/TextureRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ultimo_dialogo"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_agbgw"]
+_data = {
+"RESET": SubResource("Animation_aocwp"),
+"anegro": SubResource("Animation_of465")
+}
 
 [node name="seccion5c" type="Control"]
 layout_mode = 3
@@ -13,6 +120,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_rta87")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -21,6 +129,80 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ca" type="TextureRect" parent="ScrollContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_mq747")
+
+[node name="Label" type="Label" parent="ScrollContainer/ca"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 689.0
+offset_right = 961.0
+offset_bottom = 712.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "Instituto de Aviación Ícaro/Departamento de humanidades"
+uppercase = true
+
+[node name="Button" type="Button" parent="ScrollContainer/ca/Label"]
+layout_mode = 0
+offset_right = 535.0
+offset_bottom = 23.0
+flat = true
+
+[node name="Label2" type="Label" parent="ScrollContainer/ca"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 718.0
+offset_right = 962.0
+offset_bottom = 744.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "Instituto de Aviación Ícaro/Departamento de Críptidos"
+uppercase = true
+
+[node name="Button2" type="Button" parent="ScrollContainer/ca/Label2"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 534.0
+offset_bottom = 24.0
+flat = true
+
+[node name="Label3" type="Label" parent="ScrollContainer/ca"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 747.0
+offset_right = 962.0
+offset_bottom = 773.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "Instituto de Aviación Ícaro/Departamento de defensa aérea"
+uppercase = true
+
+[node name="Button4" type="Button" parent="ScrollContainer/ca/Label3"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 535.0
+offset_bottom = 25.0
+flat = true
+
+[node name="Label4" type="Label" parent="ScrollContainer/ca"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 774.0
+offset_right = 962.0
+offset_bottom = 800.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "Instituto de Aviación Ícaro/Departamento de defensa planetaria"
+uppercase = true
+
+[node name="Button3" type="Button" parent="ScrollContainer/ca/Label4"]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 582.0
+offset_bottom = 24.0
+flat = true
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
@@ -144,14 +326,22 @@ offset_top = 597.0
 offset_right = 890.0
 offset_bottom = 628.0
 
-[node name="institucion" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
-layout_mode = 0
-offset_left = 337.0
-offset_top = 318.0
-offset_right = 784.0
-offset_bottom = 349.0
+[node name="institucion" type="RigidBody2D" parent="ScrollContainer/TextureRect"]
+position = Vector2(337, 318)
+mass = 0.01
+gravity_scale = 0.0
+freeze = true
+linear_velocity = Vector2(-23, -43)
 
-[node name="calle3" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
+[node name="institucion" type="LineEdit" parent="ScrollContainer/TextureRect/institucion" groups=["obligatorio"]]
+offset_right = 447.0
+offset_bottom = 31.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/institucion"]
+position = Vector2(224, 16)
+shape = SubResource("RectangleShape2D_8j2sx")
+
+[node name="institucionSeleccionada" type="LineEdit" parent="ScrollContainer/TextureRect" groups=["obligatorio"]]
 layout_mode = 0
 offset_left = 337.0
 offset_top = 366.0
@@ -269,18 +459,19 @@ offset_top = 1184.0
 offset_right = 713.0
 offset_bottom = 1215.0
 
-[node name="RigidBody2D" type="RigidBody2D" parent="ScrollContainer/TextureRect"]
+[node name="buscar" type="RigidBody2D" parent="ScrollContainer/TextureRect"]
 position = Vector2(811, 317)
 mass = 0.01
 gravity_scale = 0.0
-linear_velocity = Vector2(23, 43)
+freeze = true
+linear_velocity = Vector2(23, -43)
 
-[node name="Buscar" type="Button" parent="ScrollContainer/TextureRect/RigidBody2D"]
+[node name="Buscar" type="Button" parent="ScrollContainer/TextureRect/buscar"]
 offset_right = 61.0
 offset_bottom = 31.0
 text = "Buscar"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/buscar"]
 position = Vector2(31, 15.5)
 shape = SubResource("RectangleShape2D_32s0s")
 
@@ -292,10 +483,47 @@ offset_right = 872.0
 offset_bottom = 395.0
 text = "Limpiar"
 
-[node name="TextureRect" parent="." instance=ExtResource("1_n0fm6")]
-visible = false
+[node name="guardar" type="Button" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 1095.0
+offset_top = 1610.0
+offset_right = 1152.0
+offset_bottom = 1636.0
+flat = true
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("1_n0fm6")]
 layout_mode = 1
 offset_left = -680.0
 offset_top = -451.0
 offset_right = 715.0
 offset_bottom = 20.0
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(638, 0)
+shape = SubResource("RectangleShape2D_3sn8o")
+
+[node name="StaticBody2D2" type="Area2D" parent="."]
+position = Vector2(0, 726)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(638, 0)
+shape = SubResource("RectangleShape2D_3sn8o")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_agbgw")
+}
+
+[connection signal="pressed" from="ScrollContainer/ca/Label/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/ca/Label2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/ca/Label3/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/ca/Label4/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/TextureRect/buscar/Buscar" to="." method="_on_buscar_pressed"]
+[connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

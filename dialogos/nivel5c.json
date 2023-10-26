@@ -1,0 +1,17 @@
+[
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": "Muy bien, pocos pasos quedan para que tu futuro como un criptozoólogo esté sellado.\n"
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "Usuario",
+		"texto": "Estoy bastante seguro de que esa no es mi primera opción laboral, pero si la vida te da limones…"
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "En fin, vamos ahora con los datos de la dirección laboral, una vez más, no quiero meterme en broncas manejando datos sensibles, así que, elijamos uno al azar, ultimamente escuche mucho de el famoso “Instituto de Aviación Ícaro” prueba a buscarlo!"
+	}
+]
