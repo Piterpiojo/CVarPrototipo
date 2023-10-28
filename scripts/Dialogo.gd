@@ -3,11 +3,18 @@ var indice_dialogo = 0
 var habilitado :bool = true
 var dialogos = []
 var pausa : bool = false
-
+var usuario = preload("res://ui/dialogousuario2.png")
+var ave = preload("res://ui/dialogopersonaje2.png")
+var cuadro
 func deshabilitar():
 	habilitado = false
 func habilitar():
 	habilitado = true
+
+func _ready():
+	cuadro = get_node(".")
+	
+	
 
 func comenzar():
 	Mostrar_Linea(indice_dialogo)
@@ -17,10 +24,14 @@ func Mostrar_Linea(indice):
 	$Container/Sprite2D.play(dialogos[indice]["emocion"])
 	if(dialogos[indice]["personaje"]=="Usuario"):
 		$Container/Sprite2D.visible =false
-		$personaje.text= "Usuario"
+		$personaje.visible=false
+		$Usuario.visible=true
+		cuadro.texture= usuario
 	else:
 		$Container/Sprite2D.visible =true
-		$personaje.text = "Ave"
+		$personaje.visible=true
+		$Usuario.visible=false
+		cuadro.texture=ave
 
 
 func _process(_delta):
@@ -47,9 +58,19 @@ func habilitar_dialogo():
 	self.visible= true
 	habilitado = true
 
-func mostrar_dialogo_unico(texto):
+func mostrar_dialogo_unico(texto,pj):
 	habilitar_dialogo()
 	$DialogoText.text = texto
+	if(pj=="Usuario"):
+		$Container/Sprite2D.visible =false
+		$personaje.visible=false
+		$Usuario.visible=true
+		cuadro.texture= usuario
+	else:
+		$Container/Sprite2D.visible =true
+		$personaje.visible=true
+		$Usuario.visible=false
+		cuadro.texture=ave
 
 func desactivar_dialogo():
 	pausa = true

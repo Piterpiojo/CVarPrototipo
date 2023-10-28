@@ -166,25 +166,25 @@ func flotar():
 
 
 func _on_button_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico("Qué aburrido eres, ni dan ganas de jugar contigo")
+	$CuadroDialogo.mostrar_dialogo_unico("Qué aburrido eres, ni dan ganas de jugar contigo","ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label.text
 	$Timer.start()
 
 func _on_button_2_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico("Lo sabía, es tu destino!")
+	$CuadroDialogo.mostrar_dialogo_unico("Lo sabía, es tu destino!","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label2.text
 	$Timer.start()
 
 
 func _on_button_4_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico("¡Cuidado con cruzar el espacio aéreo romano!")
+	$CuadroDialogo.mostrar_dialogo_unico("¡Cuidado con cruzar el espacio aéreo romano!","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label3.text
 	$Timer.start()
 
 
 
 func _on_button_3_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico(" ¡Que la fuerza te acompañe!... Oh no… a nuestros abogados no les va a gustar esa referencia…")
+	$CuadroDialogo.mostrar_dialogo_unico(" ¡Que la fuerza te acompañe!... Oh no… a nuestros abogados no les va a gustar esa referencia…","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label4.text
 	$Timer.start()
 
@@ -197,9 +197,9 @@ func _on_buscar_pressed():
 		$ScrollContainer/TextureRect/buscar.global_position = pos_inicial_bucar
 		$ScrollContainer/TextureRect/institucion.global_position = pos_inicial_insti
 		$CuadroDialogo.mostrar_dialogo_unico("Excelente habilidades de vuelo capitán! Muy bien, ahora solo queda seleccionar alguno de los departamentos, normalmente, tendrás que prestar atención a que fuera el que perteneces, trata de elegir el que más te llame la atención al menos 
-")
+","Ave")
 	else:
-		$CuadroDialogo.mostrar_dialogo_unico("Instituto de Aviación Ícaro es lo que hay que escribir")
+		$CuadroDialogo.mostrar_dialogo_unico("Instituto de Aviación Ícaro es lo que hay que escribir","Ave")
 
 
 func _on_timer_timeout():
@@ -208,4 +208,4 @@ func _on_timer_timeout():
 	
 func ultimo_dialogo():
 	$CuadroDialogo.mostrar_dialogo_unico("Termina de completar los datos así podremos avanzar mi estimado usuario de velas de cera, cuéntame un poco de tu experiencia en el instituto icaro y terminar de completar los datos, y como siempre, si algo no lo sabes ¡lo inventas! 
-")
+","Ave")

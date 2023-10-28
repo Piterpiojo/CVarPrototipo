@@ -95,7 +95,6 @@ func _on_minutos_timeout():
 
 
 func _on_espera_timeout():
-	print("estoy vivooo")
 	reanudar_dialogo()
 	$espera.stop()
 

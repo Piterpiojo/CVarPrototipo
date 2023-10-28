@@ -190,4 +190,4 @@ func _on_guardar_pressed():
 	if !hay_campos_vacios():
 		get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5_b.tscn")
 	else:
-		$CuadroDialogo.mostrar_dialogo_unico("te falto algun campo")
+		$CuadroDialogo.mostrar_dialogo_unico("te falto algun campo","Ave")

@@ -39,7 +39,7 @@ func cambiar_dialogo():
 
 func _on_pasaporte_pressed():
 	if $ScrollContainer/TextureRect/cuilBox.button_pressed == true:
-		$CuadroDialogo.mostrar_dialogo_unico("solo deberías tocar la opción de País de Emisión si seleccionamos Pasaporte.")
+		$CuadroDialogo.mostrar_dialogo_unico("solo deberías tocar la opción de País de Emisión si seleccionamos Pasaporte.","Ave")
 
 func hay_campos_vacios():
 	for text in cuadros_texto:
@@ -66,12 +66,12 @@ func _on_enviar_pressed():
 			else:
 				llamar_dialogo("te falto algun campo")
 		else:
-			$CuadroDialogo.mostrar_dialogo_unico("error correo")
+			$CuadroDialogo.mostrar_dialogo_unico("error correo","Ave")
 	else:
-		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta")
+		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta","Ave")
 
 func _on_respuesta_secreta_nuevamente_focus_entered():
-	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, MUCHO cuidado con hacer dos clicks dentro de un cuadro de texto.  Va a borrar toda tu información y realmente no queremos eso, ¿No?")
+	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, MUCHO cuidado con hacer dos clicks dentro de un cuadro de texto.  Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
 
 func llamar_dialogo(texto):
 	$CuadroDialogo.mostrar_dialogo_unico(texto)
@@ -79,7 +79,7 @@ func llamar_dialogo(texto):
 func _on_recargar_pressed():
 	contador_recarga +=1
 	if contador_recarga >3:
-		$CuadroDialogo.mostrar_dialogo_unico("deberia mostrar lo correcto")
+		$CuadroDialogo.mostrar_dialogo_unico("deberia mostrar lo correcto","Ave")
 
 func _on_timer_timeout():
 	$AnimationPlayer.play("fin")

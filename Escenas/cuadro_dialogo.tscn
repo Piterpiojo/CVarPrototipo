@@ -1,7 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
-[ext_resource type="Texture2D" uid="uid://764eyercb4j5" path="res://ui/dialogopersonaje2.png" id="2_och7u"]
 [ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_onbdu"]
 [ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="3_vb4f6"]
 [ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/ave/descompuesta.png" id="4_4fa0e"]
@@ -11,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/ave/saludando.png" id="8_xmnx2"]
 [ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/ave/seguime.png" id="9_v750b"]
 [ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/ave/senalando.png" id="10_eii8k"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_poixm"]
+load_path = "res://.godot/imported/dialogopersonaje2.png-ae30b831c6e8e1bf7fdd467af64d9b10.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u8deg"]
 animations = [{
@@ -99,7 +101,7 @@ offset_right = 705.0
 offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("2_och7u")
+texture = SubResource("CompressedTexture2D_poixm")
 script = ExtResource("1_pygju")
 
 [node name="DialogoText" type="Label" parent="."]
@@ -155,11 +157,28 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 52.0
-offset_top = -201.5
-offset_right = 363.0
-offset_bottom = -156.5
+offset_left = 48.0
+offset_top = -196.5
+offset_right = 359.0
+offset_bottom = -151.5
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Ave"
+vertical_alignment = 1
+
+[node name="Usuario" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -394.0
+offset_top = -198.5
+offset_right = -83.0
+offset_bottom = -153.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Usuario"
 vertical_alignment = 1
