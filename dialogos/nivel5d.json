@@ -1,0 +1,27 @@
+[
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "Esto es el área de Experticia en CyT, donde básicamente necesitamos rellenar el bloque con todas tus experiencias y que resumamos brevemente tu persona, académicamente hablando"
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "Usuario",
+		"texto": "Pero…¿Cómo podría llenar todo un bloque de texto? ¡Ni siquiera sé si tengo la suficiente experiencia como para rellenar un renglón!"
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "IA",
+		"texto": "No tengas miedo, es normal sentirnos abrumados cuando nos enfrentamos a este tipo de tareas. Mientras estabas hablando, revise varios estudios que determinan que una persona se expresa mejor cuando se establece un límite de tiempo, así que…"
+	},
+	{
+		"emocion": "descompuesta",
+		"personaje": "IA",
+		"texto": "…si no completas el bloque de texto con tu información académica, experiencias pasadas o con lo que almorzaste ayer, la humanidad entera va a desaparecer. \n¡Buena suerte!"
+	},
+	{
+		"emocion": "descompuesta",
+		"personaje": "Usuario",
+		"texto": "¿¡QUE!?"
+	}
+]

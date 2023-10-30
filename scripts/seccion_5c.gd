@@ -2,6 +2,7 @@ extends Control
 var bandera = false
 var pos_inicial_insti
 var pos_inicial_bucar
+var puede_terminar=false
 var provincias =['--- Seleccionar ---', 'Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
 var partido = [
 		"---------- Seleccionar ----------",
@@ -205,7 +206,15 @@ func _on_buscar_pressed():
 func _on_timer_timeout():
 	$AnimationPlayer.play("anegro")
 	
-	
+func cambiar_escena():
+	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5d.tscn")
 func ultimo_dialogo():
 	$CuadroDialogo.mostrar_dialogo_unico("Termina de completar los datos así podremos avanzar mi estimado usuario de velas de cera, cuéntame un poco de tu experiencia en el instituto icaro y terminar de completar los datos, y como siempre, si algo no lo sabes ¡lo inventas! 
 ","Ave")
+	puede_terminar=true
+
+
+
+func _on_guardar_pressed():
+	if puede_terminar:
+		$AnimationPlayer.play("fin")

@@ -6,6 +6,8 @@ var pausa : bool = false
 var usuario = preload("res://ui/dialogousuario2.png")
 var ave = preload("res://ui/dialogopersonaje2.png")
 var cuadro
+
+
 func deshabilitar():
 	habilitado = false
 func habilitar():

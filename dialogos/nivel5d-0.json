@@ -1,0 +1,37 @@
+[
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "..."
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "Usuario",
+		"texto": "..."
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "Guau. ¿Ni siquiera tu almuerzo? Es algo nuevo para mi. Puedo derivarte a clases de manejo de la ansiedad si lo sentis necesario…\n"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "Estoy bien. ¿Podemos continuar?"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "¿Podemos?"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "..."
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "... Ok."
+	}
+]

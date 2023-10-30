@@ -1,0 +1,77 @@
+[
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "Guau."
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "EL MUNDO ESTÁ A SALVO AHORA, ¿NO?"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "¿Qué? "
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "Ave sigue admirando el desastre que son 150 palabras tipeadas en menos de un minuto."
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "Ah, si, eso. Según mis estudios una persona se expresa mejor cuando se establece una amenaza inminente y toda la responsabilidad recae sobre esa persona."
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "Usuario",
+		"texto": "Y SUPERÉ LA TAREA CON CRECES ¿NO?"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "No lo sé. ¿Cómo pudiste escribir tanto en tan poco tiempo? ¿Tiene sentido algo de lo que hay acá?¿Es realmente un reflejo de tu experiencia y conocimiento? Es…demasiado."
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "¿NO VAS A FELICITARME?"
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "..."
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "Usuario",
+		"texto": "..."
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "IA",
+		"texto": "..."
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "Usuario",
+		"texto": "Perdón. ¿Podemos continuar?"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "…el record mundial es de 256…"
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "…"
+	},
+	{
+		"emocion": "seguime",
+		"personaje": "IA",
+		"texto": "…Ok. Podemos seguir ya."
+	}
+]

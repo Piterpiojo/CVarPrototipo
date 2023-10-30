@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdtswavnwaub5"]
+
+[ext_resource type="Texture2D" uid="uid://chjwu3a3gv1i3" path="res://Imagenes/seccion5/seccion5d-12.png" id="1_df02l"]
+[ext_resource type="Script" path="res://scripts/seccion_5d.gd" id="1_u65dd"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_71nft"]
+
+[node name="seccion5d" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u65dd")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
+layout_mode = 2
+texture = ExtResource("1_df02l")
+
+[node name="texto_usuario" type="TextEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 344.0
+offset_right = 976.0
+offset_bottom = 464.0
+
+[node name="OptionButton" type="OptionButton" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 589.0
+offset_right = 975.0
+offset_bottom = 613.0
+
+[node name="OptionButton2" type="OptionButton" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 615.0
+offset_right = 975.0
+offset_bottom = 639.0
+
+[node name="LineEdit" type="LineEdit" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 641.0
+offset_right = 975.0
+offset_bottom = 672.0
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("2_71nft")]
+layout_mode = 1
+offset_left = -672.0
+offset_top = -440.0
+offset_right = 695.0
+offset_bottom = 5.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="time" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -188.0
+offset_top = 9.0
+offset_right = 127.0
+offset_bottom = 44.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.588235, 0, 0, 1)
+theme_override_font_sizes/font_size = 23
+text = "Tiempo antes del Apocalipsis"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
