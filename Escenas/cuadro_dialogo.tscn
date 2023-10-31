@@ -164,10 +164,10 @@ offset_bottom = -151.5
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Ave"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Usuario" type="Label" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -182,4 +182,5 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "Usuario"
+horizontal_alignment = 1
 vertical_alignment = 1

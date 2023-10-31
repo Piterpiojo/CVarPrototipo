@@ -1,8 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj6w7b8ehmjet"]
+[gd_scene load_steps=10 format=3 uid="uid://bj6w7b8ehmjet"]
 
 [ext_resource type="Script" path="res://scripts/seccion_5_db.gd" id="1_hmole"]
-[ext_resource type="Texture2D" uid="uid://cgve0xfq8pt8f" path="res://Imagenes/seccion5/seccion5db-12.png" id="1_jj5dc"]
+[ext_resource type="Texture2D" uid="uid://clhv7n8c66h06" path="res://Imagenes/seccion5/seccion5dc-1.png" id="2_n6ktq"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_37i6i"]
+[ext_resource type="PackedScene" uid="uid://dnjixa0jv5eus" path="res://rigid_body_2d.tscn" id="4_vq33t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgokq"]
+size = Vector2(381, 27)
+
+[sub_resource type="Animation" id="Animation_xy1w1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_mb1kr"]
 resource_name = "sacudelo"
@@ -33,48 +52,31 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_xy1w1"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ScrollContainer:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_latss"]
 _data = {
 "RESET": SubResource("Animation_xy1w1"),
 "sacudelo": SubResource("Animation_mb1kr")
 }
 
-[node name="seccion5db" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o436f"]
+size = Vector2(1279, 30)
+
+[node name="seccion5db" type="Node2D"]
 script = ExtResource("1_hmole")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 724.0
 grow_horizontal = 2
 grow_vertical = 2
-scroll_vertical = 405
+scroll_vertical = 100
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
-texture = ExtResource("1_jj5dc")
+texture = ExtResource("2_n6ktq")
 
 [node name="texto_usuario" type="TextEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -170,16 +172,206 @@ offset_top = 816.0
 offset_right = 1024.0
 offset_bottom = 847.0
 
-[node name="CuadroDialogo" parent="." instance=ExtResource("3_37i6i")]
+[node name="Container" type="Container" parent="ScrollContainer/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="texto" type="Area2D" parent="ScrollContainer/TextureRect/Container"]
+position = Vector2(528, 1015)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/Container/texto"]
+position = Vector2(156.5, 3.5)
+shape = SubResource("RectangleShape2D_rgokq")
+
+[node name="texto2" type="Area2D" parent="ScrollContainer/TextureRect/Container"]
+position = Vector2(528, 1048)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/Container/texto2"]
+position = Vector2(156.5, 3.5)
+shape = SubResource("RectangleShape2D_rgokq")
+
+[node name="texto3" type="Area2D" parent="ScrollContainer/TextureRect/Container"]
+position = Vector2(528, 1082)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/Container/texto3"]
+position = Vector2(156.5, 3.5)
+shape = SubResource("RectangleShape2D_rgokq")
+
+[node name="ingles" type="Area2D" parent="ScrollContainer/TextureRect/Container"]
+position = Vector2(529, 1213)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/Container/ingles"]
+position = Vector2(156, 3)
+shape = SubResource("RectangleShape2D_rgokq")
+
+[node name="ingles2" type="Area2D" parent="ScrollContainer/TextureRect/Container"]
+position = Vector2(530, 1246)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/Container/ingles2"]
+position = Vector2(155, 3)
+shape = SubResource("RectangleShape2D_rgokq")
+
+[node name="ingles3" type="Area2D" parent="ScrollContainer/TextureRect/Container"]
+position = Vector2(529, 1279)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/Container/ingles3"]
+position = Vector2(156, 4)
+shape = SubResource("RectangleShape2D_rgokq")
+
+[node name="palabras" type="Node" parent="ScrollContainer/TextureRect"]
+
+[node name="RigidBody2D" parent="ScrollContainer/TextureRect/palabras" groups=["ingles"] instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(184, -36)
+texto = "Feather"
+
+[node name="RigidBody2D2" parent="ScrollContainer/TextureRect/palabras" instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(1072, -89)
+texto = "Wanted"
+
+[node name="RigidBody2D3" parent="ScrollContainer/TextureRect/palabras" instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(101, -209)
+texto = "Carding"
+
+[node name="RigidBody2D4" parent="ScrollContainer/TextureRect/palabras" instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(89, -76)
+texto = "Elastico"
+
+[node name="RigidBody2D5" parent="ScrollContainer/TextureRect/palabras" groups=["espaniol"] instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(219, -146)
+texto = "Piedra"
+
+[node name="RigidBody2D6" parent="ScrollContainer/TextureRect/palabras" groups=["espaniol"] instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(137, -304)
+texto = "Hilar"
+
+[node name="RigidBody2D7" parent="ScrollContainer/TextureRect/palabras" groups=["ingles"] instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(1019, -30)
+texto = "Oink"
+
+[node name="RigidBody2D8" parent="ScrollContainer/TextureRect/palabras" groups=["ingles"] instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(1181, -78)
+texto = "Goat"
+
+[node name="RigidBody2D9" parent="ScrollContainer/TextureRect/palabras" groups=["espaniol"] instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(1167, -33)
+texto = "Ladrillo"
+
+[node name="RigidBody2D10" parent="ScrollContainer/TextureRect/palabras" instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(241, -255)
+texto = "Canilla"
+
+[node name="RigidBody2D11" parent="ScrollContainer/TextureRect/palabras" instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(1054, -140)
+texto = "Monitor"
+
+[node name="RigidBody2D12" parent="ScrollContainer/TextureRect/palabras" instance=ExtResource("4_vq33t")]
+z_index = 1
+position = Vector2(1203, -127)
+texto = "Deckbox"
+
+[node name="Container2" type="Control" parent="ScrollContainer/TextureRect"]
 layout_mode = 1
-offset_left = -663.0
-offset_top = -433.0
-offset_right = 704.0
-offset_bottom = 12.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -848.0
+offset_top = -996.0
+offset_right = -848.0
+offset_bottom = -996.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="texto" type="Label" parent="ScrollContainer/TextureRect/Container2"]
+layout_mode = 0
+offset_left = 494.0
+offset_top = 897.0
+offset_right = 583.0
+offset_bottom = 934.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="texto2" type="Label" parent="ScrollContainer/TextureRect/Container2"]
+layout_mode = 0
+offset_left = 495.0
+offset_top = 929.0
+offset_right = 584.0
+offset_bottom = 966.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="texto3" type="Label" parent="ScrollContainer/TextureRect/Container2"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 963.0
+offset_right = 585.0
+offset_bottom = 1000.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="ingles" type="Label" parent="ScrollContainer/TextureRect/Container2"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 1094.0
+offset_right = 581.0
+offset_bottom = 1131.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="ingles2" type="Label" parent="ScrollContainer/TextureRect/Container2"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 1127.0
+offset_right = 581.0
+offset_bottom = 1164.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="ingles3" type="Label" parent="ScrollContainer/TextureRect/Container2"]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 1160.0
+offset_right = 581.0
+offset_bottom = 1197.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("3_37i6i")]
+offset_left = -28.0
+offset_top = 301.0
+offset_right = 1339.0
+offset_bottom = 746.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_latss")
 }
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(639.5, 730)
+shape = SubResource("RectangleShape2D_o436f")
+
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete2" to="." method="_on_siete_2_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/TextureRect/seis2" to="." method="_on_seis_2_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/TextureRect/tres2" to="." method="_on_tres_2_item_selected"]
+[connection signal="body_entered" from="ScrollContainer/TextureRect/Container/texto" to="." method="_on_texto_body_entered"]
+[connection signal="body_entered" from="ScrollContainer/TextureRect/Container/texto2" to="." method="_on_texto_2_body_entered"]
+[connection signal="body_entered" from="ScrollContainer/TextureRect/Container/texto3" to="." method="_on_texto_3_body_entered"]
+[connection signal="body_entered" from="ScrollContainer/TextureRect/Container/ingles" to="." method="_on_ingles_body_entered"]
+[connection signal="body_entered" from="ScrollContainer/TextureRect/Container/ingles2" to="." method="_on_ingles_2_body_entered"]
+[connection signal="body_entered" from="ScrollContainer/TextureRect/Container/ingles3" to="." method="_on_ingles_3_body_entered"]

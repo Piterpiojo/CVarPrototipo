@@ -17,7 +17,7 @@ func _process(delta):
 		$Timer.start()
 		bandera1=true
 	if($CuadroDialogo.visible == false and fase2):
-		get_tree().change_scene_to_file("res://Escenas/pantalla_inicio.tscn")
+		get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5_db.tscn")
 	
 
 

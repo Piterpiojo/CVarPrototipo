@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 var titulos = [
 	"---------- Seleccionar ----------",
 	"1 CIENCIAS NATURALES Y EXACTAS",
@@ -50,21 +50,53 @@ var titulos = [
 	"6.4 Arte",
 	"6.5 Otras Humanidades"
 ]
+var parte2=false
 var bandera1=false
-
+var bandera2=false
+var uno= false
+var dos= false
+var tres=false
+var ocupadoEsp=[false,false,false]
+var ocupadoIng=[false,false,false]
 func _ready():
-	$CuadroDialogo.dialogos = CargaArchivos.cargar("Nivel5Db")
+	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5Db")
 	$CuadroDialogo.comenzar()
+	congelar(true)
 	for i in titulos:
 		$ScrollContainer/TextureRect/siete.add_item(i)
 		$ScrollContainer/TextureRect/seis.add_item(i)
 		$ScrollContainer/TextureRect/tres.add_item(i)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func completas():
+	var cantidad=0
+	for i in ocupadoEsp:
+		if(i):
+			cantidad +=1
+	for i in ocupadoIng:
+		if(i):
+			cantidad+=1
+	return cantidad
+
+func congelar(bul):
+	for i in $ScrollContainer/TextureRect/palabras.get_children():
+		if(i is RigidBody2D):
+			i.freeze=bul
+
+func nuevo_dialogo():
+	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5dc")
+	$CuadroDialogo.indice_dialogo=0
+	$CuadroDialogo.habilitar_dialogo()
+	$CuadroDialogo.comenzar()
+	parte2=true
+
+func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 6 and !bandera1):
 		$AnimationPlayer.play("sacudelo")
 		bandera1=true
+	if($CuadroDialogo.indice_dialogo == 4 and !bandera2 and parte2):
+		$CuadroDialogo.desactivar_dialogo()
+		bandera2=true
+
 
 func llenarCuadros():
 	limpiar()
@@ -94,7 +126,92 @@ func cambiarValoresLineas(texto):
 
 
 
-func _on_siete_2_item_selected(index):
-	if($ScrollContainer/TextureRect/siete2.selected == 4 ):
-		if($ScrollContainer/TextureRect/siete.selected == 3):
-			print("bien")
+func _on_siete_2_item_selected(_index):
+	if($ScrollContainer/TextureRect/siete.text== "Los Siete Cabritillos y el Lobo" ):
+		if($ScrollContainer/TextureRect/siete2.text == "Un lobo engaña a los cabritillos, pero el último los salva."):
+			uno=true
+	if uno and dos and tres:
+		congelar(false)
+		nuevo_dialogo()
+		
+func _on_seis_2_item_selected(_index):
+	if($ScrollContainer/TextureRect/seis.text== "Los Seis Cisnes" ):
+		if($ScrollContainer/TextureRect/seis2.text == "Una princesa teje camisas para liberar a sus hermanos cisnes."):
+			dos=true
+	if uno and dos and tres:
+		congelar(false)
+		nuevo_dialogo()
+
+func _on_tres_2_item_selected(_index):
+	if($ScrollContainer/TextureRect/tres.text=="Los Tres Cerditos"):
+		if($ScrollContainer/TextureRect/tres2.text == "Tres cerditos construyen casas, el lobo las derriba, excepto la de ladrillos."):
+			tres=true
+	if uno and dos and tres:
+		congelar(false)
+		nuevo_dialogo()
+
+
+func _on_texto_body_entered(body):
+	if(body.is_in_group("espaniol") and !ocupadoEsp[0] and body.puedeSel):
+		ocupadoEsp[0]=true
+		body.puedeSel=false
+		$ScrollContainer/TextureRect/Container2/texto.text=body.texto
+		body.queue_free()
+		if completas() ==6:
+			$CuadroDialogo.habilitar_dialogo()
+			$CuadroDialogo.sig_dialogo()
+
+func _on_texto_2_body_entered(body):
+	if(body.is_in_group("espaniol") and !ocupadoEsp[1]  and body.puedeSel):
+		body.puedeSel=false
+		ocupadoEsp[1]=true
+		$ScrollContainer/TextureRect/Container2/texto2.text=body.texto
+		body.queue_free()
+		if completas() ==6:
+			$CuadroDialogo.habilitar_dialogo()
+			$CuadroDialogo.sig_dialogo()
+		
+func _on_texto_3_body_entered(body):
+	if(body.is_in_group("espaniol") and !ocupadoEsp[2]  and body.puedeSel):
+		body.puedeSel=false
+		ocupadoEsp[2]=true
+		$ScrollContainer/TextureRect/Container2/texto3.text=body.texto
+		body.queue_free()
+		if completas() ==6:
+			$CuadroDialogo.habilitar_dialogo()
+			$CuadroDialogo.sig_dialogo()
+
+
+
+
+func _on_ingles_body_entered(body):
+	if(body.is_in_group("ingles") and !ocupadoIng[0]  and body.puedeSel):
+		body.puedeSel=false
+		ocupadoIng[0]=true
+		$ScrollContainer/TextureRect/Container2/ingles.text=body.texto
+		body.queue_free()
+		if completas() ==6:
+			$CuadroDialogo.habilitar_dialogo()
+			$CuadroDialogo.sig_dialogo()
+
+
+func _on_ingles_2_body_entered(body):
+	if(body.is_in_group("ingles") and !ocupadoIng[1]  and body.puedeSel):
+		body.puedeSel=false
+		ocupadoIng[1]=true
+		$ScrollContainer/TextureRect/Container2/ingles2.text=body.texto
+		body.queue_free()
+		if completas() ==6:
+			$CuadroDialogo.habilitar_dialogo()
+			$CuadroDialogo.sig_dialogo()
+
+
+func _on_ingles_3_body_entered(body):
+	if(body.is_in_group("ingles") and !ocupadoIng[2]  and body.puedeSel):
+		body.puedeSel=false
+		ocupadoIng[2]=true
+		$ScrollContainer/TextureRect/Container2/ingles3.text=body.texto
+		body.queue_free()
+		if completas() ==6:
+			$CuadroDialogo.habilitar_dialogo()
+			$CuadroDialogo.sig_dialogo()

@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnjixa0jv5eus"]
+
+[ext_resource type="Script" path="res://scripts/arrastrarysoltar.gd" id="1_s35qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krufq"]
+size = Vector2(89, 20)
+
+[node name="texto_fisico" type="RigidBody2D"]
+position = Vector2(134, 106)
+input_pickable = true
+script = ExtResource("1_s35qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_krufq")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -41.0
+offset_top = -17.0
+offset_right = 48.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Feather"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
