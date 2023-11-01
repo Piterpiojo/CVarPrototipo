@@ -1,0 +1,12 @@
+[
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": "Esto es Mi CV Impreso, actualmente está en una etapa beta así que puede que esté algo inestable en ciertos momentos. Acá vamos a poder imprimir un CV completo con la información que obtuvimos al armar la cuenta de CVar. "
+	},
+	{
+		"emocion": "senalando",
+		"personaje": "IA",
+		"texto": "Esta es la pestaña de Actualización de CVs. Desde acá, presionando un botón podemos actualizar la información vieja con información que ya hayamos cargado en nuestra cuenta.\n"
+	}
+]

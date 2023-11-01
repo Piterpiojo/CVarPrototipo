@@ -105,11 +105,18 @@ texture = SubResource("CompressedTexture2D_poixm")
 script = ExtResource("1_pygju")
 
 [node name="DialogoText" type="Label" parent="."]
-layout_mode = 0
-offset_left = 290.0
-offset_top = 119.0
-offset_right = 1267.0
-offset_bottom = 383.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -396.5
+offset_top = -328.0
+offset_right = 580.5
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_font_sizes/font_size = 20
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor bibendum felis, vel scelerisque justo. Suspendisse potenti. Sed feugiat tincidunt nisi, a venenatis velit hendrerit sit amet. Vivamus ac nunc id orci fringilla vehicula. Proin euismod arcu at libero dictum, eu bibendum odio accumsan. Sed at mi sit amet purus tincidunt pellentesque id nec purus. Nulla auctor, est a fermentum efficitur, urna orci tincidunt ante, in eleifend eros turpis in tellus. Integer vel quam sed justo bibendum vulputate. Nulla facilisi. Sed nec ullamcorper elit."
 autowrap_mode = 3
@@ -147,8 +154,8 @@ offset_bottom = 59.5
 grow_vertical = 2
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Container"]
-position = Vector2(125, -71)
-scale = Vector2(0.5, 0.5)
+position = Vector2(126, -6.25)
+scale = Vector2(0.491667, 0.942593)
 sprite_frames = SubResource("SpriteFrames_u8deg")
 animation = &"senalando"
 
@@ -168,6 +175,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Usuario" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0

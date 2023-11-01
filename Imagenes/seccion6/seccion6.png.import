@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yg600vlhljh6"
-path="res://.godot/imported/asignarColaborador.png-dc3d454965339c4faf21b80940c344e8.ctex"
+uid="uid://ckjpvnxx6mlxs"
+path="res://.godot/imported/seccion6.png-bf673ba1fc30875ede8f1f46a16a5ae4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/Colaboradores/asignarColaborador.png"
-dest_files=["res://.godot/imported/asignarColaborador.png-dc3d454965339c4faf21b80940c344e8.ctex"]
+source_file="res://Imagenes/seccion6/seccion6.png"
+dest_files=["res://.godot/imported/seccion6.png-bf673ba1fc30875ede8f1f46a16a5ae4.ctex"]
 
 [params]
 

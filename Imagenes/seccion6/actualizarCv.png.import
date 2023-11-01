@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmspu1kh1rrvy"
-path="res://.godot/imported/Residencia.png-82d8f17f422e5bfb5d0947da09e33d8b.ctex"
+uid="uid://bkxy5qbmsejs0"
+path="res://.godot/imported/actualizarCv.png-f81bdfc44d4bc170d3668a47aae716bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/datos personales/Residencia.png"
-dest_files=["res://.godot/imported/Residencia.png-82d8f17f422e5bfb5d0947da09e33d8b.ctex"]
+source_file="res://Imagenes/seccion6/actualizarCv.png"
+dest_files=["res://.godot/imported/actualizarCv.png-f81bdfc44d4bc170d3668a47aae716bb.ctex"]
 
 [params]
 
