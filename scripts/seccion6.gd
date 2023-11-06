@@ -26,3 +26,8 @@ func _on_recargar_pressed():
 	contador +=1
 	if contador> 2:
 		$Node2D/TextureRect3/ColorRect.visible=true
+		$Node2D/TextureRect3/visualizar.disabled=false
+
+
+func _on_visualizar_pressed():
+	pass # Replace with function body.

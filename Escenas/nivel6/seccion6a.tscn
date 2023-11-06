@@ -1,10 +1,26 @@
-[gd_scene load_steps=10 format=3 uid="uid://3kqjgake2c7k"]
+[gd_scene load_steps=11 format=3 uid="uid://3kqjgake2c7k"]
 
 [ext_resource type="Texture2D" uid="uid://c125ntm1cehvk" path="res://Imagenes/seccion6/cvar.-imprimir-inicio.png" id="1_rh86s"]
 [ext_resource type="Script" path="res://scripts/seccion6.gd" id="1_tp1pa"]
 [ext_resource type="Texture2D" uid="uid://ckjpvnxx6mlxs" path="res://Imagenes/seccion6/seccion6.png" id="2_pcoug"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_i68o0"]
 [ext_resource type="Texture2D" uid="uid://bkxy5qbmsejs0" path="res://Imagenes/seccion6/actualizarCv.png" id="4_mhuds"]
+[ext_resource type="Texture2D" uid="uid://b3ol41ndrpmjv" path="res://Imagenes/seccion6/visualizarCv.png" id="6_7wukv"]
+
+[sub_resource type="Animation" id="Animation_yvi5q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_n5doa"]
 resource_name = "deslizar"
@@ -33,21 +49,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"eliminar_login"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_yvi5q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_fg6d5"]
@@ -147,6 +148,14 @@ offset_top = 555.0
 offset_right = 1498.0
 offset_bottom = 580.0
 
+[node name="visualizar" type="Button" parent="Node2D/TextureRect3"]
+layout_mode = 0
+offset_left = 1265.0
+offset_top = 714.0
+offset_right = 1610.0
+offset_bottom = 739.0
+disabled = true
+
 [node name="ColorRect" type="ColorRect" parent="Node2D/TextureRect3"]
 visible = false
 layout_mode = 0
@@ -171,12 +180,28 @@ libraries = {
 }
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("3_i68o0")]
-visible = false
 layout_mode = 1
 offset_left = -665.0
 offset_top = -435.0
 offset_right = 702.0
 offset_bottom = 10.0
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 3840.0
+offset_right = 5326.0
+offset_bottom = 766.0
+texture = ExtResource("6_7wukv")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 1160.0
+offset_top = 313.0
+offset_right = 1221.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Usuario"
+
 [connection signal="pressed" from="Node2D/TextureRect2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Node2D/TextureRect3/recargar" to="." method="_on_recargar_pressed"]
+[connection signal="pressed" from="Node2D/TextureRect3/visualizar" to="." method="_on_visualizar_pressed"]
