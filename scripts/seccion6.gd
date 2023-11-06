@@ -1,15 +1,23 @@
 extends Control
 var bandera1=false
 var contador=0
-
+var bandera2=false
+var bandera3=false
 func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("seccion6")
 	$CuadroDialogo.comenzar()
 
-func _process(delta):
+func _process(_delta):
 	if($CuadroDialogo.indice_dialogo ==1 and !bandera1):
 		$AnimationPlayer.play("deslizar")
 		bandera1=true
+	elif($CuadroDialogo.indice_dialogo ==5 and !bandera2):
+		$AnimationPlayer.play("deslizar4")
+		bandera2=true
+	elif($CuadroDialogo.indice_dialogo == 12 and !bandera3):
+		$AnimationPlayer.play("deslizar5")
+		bandera3=true
+	
 
 func eliminar_login():
 	$Node2D/TextureRect.queue_free()
@@ -30,4 +38,12 @@ func _on_recargar_pressed():
 
 
 func _on_visualizar_pressed():
-	pass # Replace with function body.
+	$AnimationPlayer.play("deslizar3")
+	$CuadroDialogo.indice_dialogo =0
+	$CuadroDialogo.dialogos=CargaArchivos.cargar("seccion6Ab")
+	$CuadroDialogo.comenzar()
+	$CuadroDialogo.habilitar_dialogo()
+
+
+func _on_imprimir_pressed():
+	get_tree().change_scene_to_file("res://Escenas/fin.tscn")

@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://3kqjgake2c7k"]
+[gd_scene load_steps=16 format=3 uid="uid://3kqjgake2c7k"]
 
-[ext_resource type="Texture2D" uid="uid://c125ntm1cehvk" path="res://Imagenes/seccion6/cvar.-imprimir-inicio.png" id="1_rh86s"]
 [ext_resource type="Script" path="res://scripts/seccion6.gd" id="1_tp1pa"]
 [ext_resource type="Texture2D" uid="uid://ckjpvnxx6mlxs" path="res://Imagenes/seccion6/seccion6.png" id="2_pcoug"]
+[ext_resource type="Texture2D" uid="uid://c125ntm1cehvk" path="res://Imagenes/cvar.-imprimir-inicio.png" id="3_i1wyd"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_i68o0"]
 [ext_resource type="Texture2D" uid="uid://bkxy5qbmsejs0" path="res://Imagenes/seccion6/actualizarCv.png" id="4_mhuds"]
 [ext_resource type="Texture2D" uid="uid://b3ol41ndrpmjv" path="res://Imagenes/seccion6/visualizarCv.png" id="6_7wukv"]
+[ext_resource type="Texture2D" uid="uid://dfpkuvh2npfoc" path="res://Imagenes/seccion6/screen.png" id="6_gfhw3"]
+[ext_resource type="Texture2D" uid="uid://wp0wt27hki5j" path="res://Imagenes/seccion6/imprimir cv.png" id="7_6ey2f"]
 
 [sub_resource type="Animation" id="Animation_yvi5q"]
 length = 0.001
@@ -80,11 +82,59 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_qam0t"]
+resource_name = "deslizar3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2560, 0), Vector2(-3840, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_73knj"]
+resource_name = "deslizar4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-3840, 0), Vector2(-5120, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dn3br"]
+resource_name = "deslizar5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5120, 0), Vector2(-6400, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1sflf"]
 _data = {
 "RESET": SubResource("Animation_yvi5q"),
 "deslizar": SubResource("Animation_n5doa"),
-"deslizar2": SubResource("Animation_fg6d5")
+"deslizar2": SubResource("Animation_fg6d5"),
+"deslizar3": SubResource("Animation_qam0t"),
+"deslizar4": SubResource("Animation_73knj"),
+"deslizar5": SubResource("Animation_dn3br")
 }
 
 [node name="seccion6" type="Control"]
@@ -98,6 +148,30 @@ script = ExtResource("1_tp1pa")
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[node name="TextureRect4" type="TextureRect" parent="Node2D"]
+offset_left = 3840.0
+offset_right = 5326.0
+offset_bottom = 766.0
+texture = ExtResource("6_7wukv")
+
+[node name="Label" type="Label" parent="Node2D/TextureRect4"]
+layout_mode = 0
+offset_left = 1160.0
+offset_top = 313.0
+offset_right = 1221.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Usuario"
+
+[node name="Label2" type="Label" parent="Node2D/TextureRect4"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 360.0
+offset_right = 1260.0
+offset_bottom = 460.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Rastreador Ícaro Junior Criptidos de aviación instrucciones fuerte en Estudio mi es el Instituto seguir."
+
 [node name="TextureRect2" type="TextureRect" parent="Node2D"]
 anchors_preset = 15
 anchor_right = 1.0
@@ -108,7 +182,7 @@ offset_bottom = 1212.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.417357, 0.594097)
-texture = ExtResource("1_rh86s")
+texture = ExtResource("3_i1wyd")
 
 [node name="Button" type="Button" parent="Node2D/TextureRect2"]
 layout_mode = 0
@@ -174,6 +248,25 @@ offset_bottom = 34.6262
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Curriculum Generado en 1000 ms"
 
+[node name="TextureRect5" type="TextureRect" parent="Node2D"]
+offset_left = 5120.0
+offset_right = 6399.0
+offset_bottom = 721.0
+texture = ExtResource("6_gfhw3")
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D"]
+offset_left = 6405.0
+offset_right = 7740.0
+offset_bottom = 725.0
+texture = ExtResource("7_6ey2f")
+
+[node name="imprimir" type="Button" parent="Node2D/TextureRect6"]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 190.0
+offset_right = 690.0
+offset_bottom = 230.0
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_1sflf")
@@ -186,22 +279,7 @@ offset_top = -435.0
 offset_right = 702.0
 offset_bottom = 10.0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 3840.0
-offset_right = 5326.0
-offset_bottom = 766.0
-texture = ExtResource("6_7wukv")
-
-[node name="Label" type="Label" parent="TextureRect"]
-layout_mode = 0
-offset_left = 1160.0
-offset_top = 313.0
-offset_right = 1221.0
-offset_bottom = 339.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Usuario"
-
 [connection signal="pressed" from="Node2D/TextureRect2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Node2D/TextureRect3/recargar" to="." method="_on_recargar_pressed"]
 [connection signal="pressed" from="Node2D/TextureRect3/visualizar" to="." method="_on_visualizar_pressed"]
+[connection signal="pressed" from="Node2D/TextureRect6/imprimir" to="." method="_on_imprimir_pressed"]

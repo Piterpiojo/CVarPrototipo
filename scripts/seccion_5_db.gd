@@ -53,6 +53,7 @@ var titulos = [
 var parte2=false
 var bandera1=false
 var bandera2=false
+var bandera3=false
 var uno= false
 var dos= false
 var tres=false
@@ -96,8 +97,13 @@ func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 4 and !bandera2 and parte2):
 		$CuadroDialogo.desactivar_dialogo()
 		bandera2=true
+	if($CuadroDialogo.indice_dialogo == 9 and !bandera3 and parte2):
+		$AnimationPlayer.play("anegro")
+		bandera3=true
+	
 
-
+func ir_al_nivel_seis():
+	get_tree().change_scene_to_file("res://Escenas/nivel6/seccion6a.tscn")
 func llenarCuadros():
 	limpiar()
 	cambiarValoresTitulos("--- Seleccionar ---")

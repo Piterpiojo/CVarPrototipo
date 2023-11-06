@@ -40,3 +40,7 @@ func _on_button_7_pressed():
 
 func _on_button_8_pressed():
 	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5d.tscn")
+
+
+func _on_button_9_pressed():
+	get_tree().change_scene_to_file("res://Escenas/nivel6/seccion6a.tscn")

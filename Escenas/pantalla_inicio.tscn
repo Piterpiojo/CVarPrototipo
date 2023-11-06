@@ -112,6 +112,14 @@ offset_right = 1204.0
 offset_bottom = 346.0
 text = "Probar nivel 5 (cronologico)"
 
+[node name="Button9" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 414.0
+offset_right = 1225.0
+offset_bottom = 488.0
+text = "Probar nivel 6"
+
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1016.0
@@ -143,6 +151,7 @@ text = "5d"
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button5" to="." method="_on_button_5_pressed"]
 [connection signal="pressed" from="Button6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button9" to="." method="_on_button_9_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button7" to="." method="_on_button_7_pressed"]
 [connection signal="pressed" from="Button8" to="." method="_on_button_8_pressed"]
