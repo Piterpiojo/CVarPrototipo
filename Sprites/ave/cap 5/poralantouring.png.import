@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ex0hxdbqj0ql"
-path="res://.godot/imported/Registro de Usuario-1.png-9c8bb675b7918adf38ad964f741dcd4a.ctex"
+uid="uid://cjqt8k0nmxlod"
+path="res://.godot/imported/poralantouring.png-39381f250d6085c016d40cbce2f08b05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/RegistroUsuario/Registro de Usuario-1.png"
-dest_files=["res://.godot/imported/Registro de Usuario-1.png-9c8bb675b7918adf38ad964f741dcd4a.ctex"]
+source_file="res://Sprites/ave/cap 5/poralantouring.png"
+dest_files=["res://.godot/imported/poralantouring.png-39381f250d6085c016d40cbce2f08b05.ctex"]
 
 [params]
 

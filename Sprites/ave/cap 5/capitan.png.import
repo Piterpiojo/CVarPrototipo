@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hdlqh8605850"
-path="res://.godot/imported/cambio_contrasenia.png-2998655566d3f4f6fc8b016fad0d667a.ctex"
+uid="uid://dxaexpb67e8vy"
+path="res://.godot/imported/capitan.png-223814362d25d082cbd5c58f57c82546.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/recuperar_contrasenia/cambio_contrasenia.png"
-dest_files=["res://.godot/imported/cambio_contrasenia.png-2998655566d3f4f6fc8b016fad0d667a.ctex"]
+source_file="res://Sprites/ave/cap 5/capitan.png"
+dest_files=["res://.godot/imported/capitan.png-223814362d25d082cbd5c58f57c82546.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false

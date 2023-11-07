@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8nxfq7lokenc"
-path="res://.godot/imported/seccion5d-1.png-34d565a6a3a5782ceec68f1f0360236b.ctex"
+uid="uid://dnflbexd55ec1"
+path="res://.godot/imported/tos.png-5f36c2766cd74d1234229dc5e5c5d221.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/seccion5/seccion5d-1.png"
-dest_files=["res://.godot/imported/seccion5d-1.png-34d565a6a3a5782ceec68f1f0360236b.ctex"]
+source_file="res://Sprites/ave/cap 3 y4/tos.png"
+dest_files=["res://.godot/imported/tos.png-5f36c2766cd74d1234229dc5e5c5d221.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false

@@ -1,15 +1,25 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=23 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
+[ext_resource type="Texture2D" uid="uid://d15er1lqdmpcx" path="res://Sprites/ave/cap 3 y4/arrogante.png" id="2_374og"]
 [ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_onbdu"]
+[ext_resource type="Texture2D" uid="uid://cn2ikbfgmr360" path="res://Sprites/ave/cap 5/bostezo.png" id="3_544sv"]
 [ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="3_vb4f6"]
+[ext_resource type="Texture2D" uid="uid://dxaexpb67e8vy" path="res://Sprites/ave/cap 5/capitan.png" id="4_2v6ki"]
 [ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/ave/descompuesta.png" id="4_4fa0e"]
 [ext_resource type="Texture2D" uid="uid://bssnsaxko8pgn" path="res://Sprites/ave/ensenando.png" id="5_y8t5c"]
 [ext_resource type="Texture2D" uid="uid://c4t3ymhtjv7hc" path="res://Sprites/ave/estatico.png" id="6_kgbrl"]
+[ext_resource type="Texture2D" uid="uid://c88e2i5d1elv4" path="res://Sprites/ave/cap 5/descanso.png" id="7_hp8ux"]
 [ext_resource type="Texture2D" uid="uid://c3kqts130606p" path="res://Sprites/ave/felicitaciones.png" id="7_qvh23"]
 [ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/ave/saludando.png" id="8_xmnx2"]
+[ext_resource type="Texture2D" uid="uid://ccjm6aiu560g7" path="res://Sprites/ave/cap 5/dinero.png" id="9_7k7em"]
 [ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/ave/seguime.png" id="9_v750b"]
 [ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/ave/senalando.png" id="10_eii8k"]
+[ext_resource type="Texture2D" uid="uid://23w38rl48xgk" path="res://Sprites/ave/cap 5/pensando.png" id="13_pqoks"]
+[ext_resource type="Texture2D" uid="uid://cjqt8k0nmxlod" path="res://Sprites/ave/cap 5/poralantouring.png" id="14_ubmsi"]
+[ext_resource type="Texture2D" uid="uid://dxa0bip2c5y4g" path="res://Sprites/ave/cap 3 y4/reloj.png" id="15_5hjuh"]
+[ext_resource type="Texture2D" uid="uid://bfn4x8corwogo" path="res://Sprites/ave/cap 5/starwars.png" id="19_sqipi"]
+[ext_resource type="Texture2D" uid="uid://dnflbexd55ec1" path="res://Sprites/ave/cap 3 y4/tos.png" id="20_os87x"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_poixm"]
 load_path = "res://.godot/imported/dialogopersonaje2.png-ae30b831c6e8e1bf7fdd467af64d9b10.ctex"
@@ -18,9 +28,38 @@ load_path = "res://.godot/imported/dialogopersonaje2.png-ae30b831c6e8e1bf7fdd467
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_374og")
+}],
+"loop": false,
+"name": &"arrogante",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"artista",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_544sv")
+}],
+"loop": false,
+"name": &"bostezo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2v6ki")
+}],
+"loop": false,
+"name": &"capitan",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_onbdu")
 }],
-"loop": true,
+"loop": false,
 "name": &"confiada",
 "speed": 5.0
 }, {
@@ -28,23 +67,39 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_vb4f6")
 }],
-"loop": true,
+"loop": false,
 "name": &"curiosa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_hp8ux")
+}],
+"loop": false,
+"name": &"descanso",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_4fa0e")
 }],
-"loop": true,
+"loop": false,
 "name": &"descompuesta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_7k7em")
+}],
+"loop": false,
+"name": &"dinero",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_y8t5c")
 }],
-"loop": true,
+"loop": false,
 "name": &"ensenando",
 "speed": 5.0
 }, {
@@ -52,7 +107,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("6_kgbrl")
 }],
-"loop": true,
+"loop": false,
 "name": &"estatico",
 "speed": 5.0
 }, {
@@ -60,15 +115,44 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_qvh23")
 }],
-"loop": true,
+"loop": false,
 "name": &"felicitaciones",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"molesta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pqoks")
+}],
+"loop": false,
+"name": &"pensando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ubmsi")
+}],
+"loop": false,
+"name": &"poralantouring",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_5hjuh")
+}],
+"loop": false,
+"name": &"reloj",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("8_xmnx2")
 }],
-"loop": true,
+"loop": false,
 "name": &"saludando",
 "speed": 5.0
 }, {
@@ -76,7 +160,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("9_v750b")
 }],
-"loop": true,
+"loop": false,
 "name": &"seguime",
 "speed": 5.0
 }, {
@@ -84,8 +168,24 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_eii8k")
 }],
-"loop": true,
+"loop": false,
 "name": &"senalando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_sqipi")
+}],
+"loop": false,
+"name": &"starwars",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_os87x")
+}],
+"loop": false,
+"name": &"tos",
 "speed": 5.0
 }]
 
@@ -154,10 +254,10 @@ offset_bottom = 59.5
 grow_vertical = 2
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Container"]
-position = Vector2(126, -6.25)
-scale = Vector2(0.491667, 0.942593)
+position = Vector2(126, -10.25)
+scale = Vector2(0.496, 0.95)
 sprite_frames = SubResource("SpriteFrames_u8deg")
-animation = &"senalando"
+animation = &"tos"
 
 [node name="personaje" type="Label" parent="."]
 layout_mode = 1

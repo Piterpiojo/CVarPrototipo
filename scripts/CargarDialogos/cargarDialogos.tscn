@@ -1,24 +1,63 @@
-[gd_scene load_steps=13 format=3 uid="uid://18ibinpmvwir"]
+[gd_scene load_steps=23 format=3 uid="uid://18ibinpmvwir"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/crearDialogos.gd" id="1_ywm8g"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_y28ju"]
+[ext_resource type="Texture2D" uid="uid://d15er1lqdmpcx" path="res://Sprites/ave/cap 3 y4/arrogante.png" id="3_5y5b8"]
 [ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="3_drbot"]
 [ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="4_mbxw2"]
+[ext_resource type="Texture2D" uid="uid://cn2ikbfgmr360" path="res://Sprites/ave/cap 5/bostezo.png" id="4_twmwq"]
 [ext_resource type="Texture2D" uid="uid://cs4en00t60iv0" path="res://Sprites/ave/descompuesta.png" id="5_5ba4k"]
+[ext_resource type="Texture2D" uid="uid://dxaexpb67e8vy" path="res://Sprites/ave/cap 5/capitan.png" id="5_mtm40"]
 [ext_resource type="Texture2D" uid="uid://bssnsaxko8pgn" path="res://Sprites/ave/ensenando.png" id="6_fdpg2"]
 [ext_resource type="Texture2D" uid="uid://c4t3ymhtjv7hc" path="res://Sprites/ave/estatico.png" id="7_7c14u"]
 [ext_resource type="Texture2D" uid="uid://c3kqts130606p" path="res://Sprites/ave/felicitaciones.png" id="8_8ayoq"]
+[ext_resource type="Texture2D" uid="uid://c88e2i5d1elv4" path="res://Sprites/ave/cap 5/descanso.png" id="8_otb4x"]
 [ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/ave/saludando.png" id="9_lihwc"]
+[ext_resource type="Texture2D" uid="uid://ccjm6aiu560g7" path="res://Sprites/ave/cap 5/dinero.png" id="10_5rjd2"]
 [ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/ave/seguime.png" id="10_7w7v2"]
 [ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/ave/senalando.png" id="11_6gb7f"]
+[ext_resource type="Texture2D" uid="uid://23w38rl48xgk" path="res://Sprites/ave/cap 5/pensando.png" id="14_rl4jq"]
+[ext_resource type="Texture2D" uid="uid://cjqt8k0nmxlod" path="res://Sprites/ave/cap 5/poralantouring.png" id="15_np43h"]
+[ext_resource type="Texture2D" uid="uid://dxa0bip2c5y4g" path="res://Sprites/ave/cap 3 y4/reloj.png" id="16_fynw1"]
+[ext_resource type="Texture2D" uid="uid://bfn4x8corwogo" path="res://Sprites/ave/cap 5/starwars.png" id="20_f8r5s"]
+[ext_resource type="Texture2D" uid="uid://dnflbexd55ec1" path="res://Sprites/ave/cap 3 y4/tos.png" id="21_imovx"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mvcxp"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_g00gj"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5y5b8")
+}],
+"loop": false,
+"name": &"arrogante",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"artista",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_twmwq")
+}],
+"loop": false,
+"name": &"bostezo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_mtm40")
+}],
+"loop": false,
+"name": &"capitan",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_drbot")
 }],
-"loop": true,
+"loop": false,
 "name": &"confiada",
 "speed": 5.0
 }, {
@@ -26,23 +65,39 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("4_mbxw2")
 }],
-"loop": true,
+"loop": false,
 "name": &"curiosa",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_otb4x")
+}],
+"loop": false,
+"name": &"descanso",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_5ba4k")
 }],
-"loop": true,
+"loop": false,
 "name": &"descompuesta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_5rjd2")
+}],
+"loop": false,
+"name": &"dinero",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_fdpg2")
 }],
-"loop": true,
+"loop": false,
 "name": &"ensenando",
 "speed": 5.0
 }, {
@@ -50,7 +105,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_7c14u")
 }],
-"loop": true,
+"loop": false,
 "name": &"estatico",
 "speed": 5.0
 }, {
@@ -58,15 +113,44 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("8_8ayoq")
 }],
-"loop": true,
+"loop": false,
 "name": &"felicitaciones",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"molesta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_rl4jq")
+}],
+"loop": false,
+"name": &"pensando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_np43h")
+}],
+"loop": false,
+"name": &"poralantouring",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_fynw1")
+}],
+"loop": false,
+"name": &"reloj",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("9_lihwc")
 }],
-"loop": true,
+"loop": false,
 "name": &"saludando",
 "speed": 5.0
 }, {
@@ -74,7 +158,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("10_7w7v2")
 }],
-"loop": true,
+"loop": false,
 "name": &"seguime",
 "speed": 5.0
 }, {
@@ -82,8 +166,24 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("11_6gb7f")
 }],
-"loop": true,
+"loop": false,
 "name": &"senalando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_f8r5s")
+}],
+"loop": false,
+"name": &"starwars",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_imovx")
+}],
+"loop": false,
+"name": &"tos",
 "speed": 5.0
 }]
 
@@ -144,7 +244,7 @@ offset_top = -15.0
 offset_right = 415.0
 offset_bottom = 16.0
 grow_vertical = 2
-item_count = 9
+item_count = 21
 selected = 0
 popup/item_0/text = "confiada"
 popup/item_0/id = 0
@@ -164,6 +264,30 @@ popup/item_7/text = "seguime"
 popup/item_7/id = 7
 popup/item_8/text = "senalando"
 popup/item_8/id = 8
+popup/item_9/text = "arrogante"
+popup/item_9/id = 9
+popup/item_10/text = "artista"
+popup/item_10/id = 10
+popup/item_11/text = "molesta"
+popup/item_11/id = 11
+popup/item_12/text = "reloj"
+popup/item_12/id = 12
+popup/item_13/text = "tos"
+popup/item_13/id = 13
+popup/item_14/text = "bostezo"
+popup/item_14/id = 14
+popup/item_15/text = "capitan"
+popup/item_15/id = 15
+popup/item_16/text = "descanso"
+popup/item_16/id = 16
+popup/item_17/text = "dinero"
+popup/item_17/id = 17
+popup/item_18/text = "pensando"
+popup/item_18/id = 18
+popup/item_19/text = "poralantouring"
+popup/item_19/id = 19
+popup/item_20/text = "starwars"
+popup/item_20/id = 20
 
 [node name="Label" type="Label" parent="emocion"]
 layout_mode = 0
@@ -243,10 +367,10 @@ Dialogo
 "
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(487, 368)
-scale = Vector2(0.228125, 0.315741)
-sprite_frames = SubResource("SpriteFrames_mvcxp")
-animation = &"senalando"
+position = Vector2(133, 590)
+scale = Vector2(0.49678, 0.95)
+sprite_frames = SubResource("SpriteFrames_g00gj")
+animation = &"tos"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://um6rccuorrvd"
-path="res://.godot/imported/senalando.png-5909fe6ec9750e3a0c569bb7ce2e83db.ctex"
+uid="uid://ccjm6aiu560g7"
+path="res://.godot/imported/dinero.png-9edf198c1b700654889aa27b9584ce8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ave/senalando.png"
-dest_files=["res://.godot/imported/senalando.png-5909fe6ec9750e3a0c569bb7ce2e83db.ctex"]
+source_file="res://Sprites/ave/cap 5/dinero.png"
+dest_files=["res://.godot/imported/dinero.png-9edf198c1b700654889aa27b9584ce8d.ctex"]
 
 [params]
 

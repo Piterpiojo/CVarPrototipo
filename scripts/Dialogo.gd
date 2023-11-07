@@ -7,7 +7,6 @@ var usuario = preload("res://ui/dialogousuario2.png")
 var ave = preload("res://ui/dialogopersonaje2.png")
 var cuadro
 
-
 func deshabilitar():
 	habilitado = false
 func habilitar():
@@ -34,6 +33,7 @@ func Mostrar_Linea(indice):
 		$personaje.visible=true
 		$Usuario.visible=false
 		cuadro.texture=ave
+
 
 
 func _process(_delta):

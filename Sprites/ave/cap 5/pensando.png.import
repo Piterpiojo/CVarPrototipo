@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qquae1b7mk6g"
-path="res://.godot/imported/Identificación de Usuario-1.png-06881c0f8fa3d63c25628ef4b04f91d9.ctex"
+uid="uid://23w38rl48xgk"
+path="res://.godot/imported/pensando.png-e61447cb2bdd4045b202ed212bc2cd7f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagenes/identificacion/Identificación de Usuario-1.png"
-dest_files=["res://.godot/imported/Identificación de Usuario-1.png-06881c0f8fa3d63c25628ef4b04f91d9.ctex"]
+source_file="res://Sprites/ave/cap 5/pensando.png"
+dest_files=["res://.godot/imported/pensando.png-e61447cb2bdd4045b202ed212bc2cd7f.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
