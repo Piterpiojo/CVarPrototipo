@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=25 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
 [ext_resource type="Texture2D" uid="uid://d15er1lqdmpcx" path="res://Sprites/ave/cap 3 y4/arrogante.png" id="2_374og"]
 [ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_onbdu"]
+[ext_resource type="Texture2D" uid="uid://b0bslcmrrle0x" path="res://Sprites/ave/cap 3 y4/artista.png" id="3_4u8wk"]
 [ext_resource type="Texture2D" uid="uid://cn2ikbfgmr360" path="res://Sprites/ave/cap 5/bostezo.png" id="3_544sv"]
 [ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="3_vb4f6"]
 [ext_resource type="Texture2D" uid="uid://dxaexpb67e8vy" path="res://Sprites/ave/cap 5/capitan.png" id="4_2v6ki"]
@@ -20,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://dxa0bip2c5y4g" path="res://Sprites/ave/cap 3 y4/reloj.png" id="15_5hjuh"]
 [ext_resource type="Texture2D" uid="uid://bfn4x8corwogo" path="res://Sprites/ave/cap 5/starwars.png" id="19_sqipi"]
 [ext_resource type="Texture2D" uid="uid://dnflbexd55ec1" path="res://Sprites/ave/cap 3 y4/tos.png" id="20_os87x"]
+[ext_resource type="Script" path="res://scripts/audio.gd" id="21_nxw17"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_poixm"]
 load_path = "res://.godot/imported/dialogopersonaje2.png-ae30b831c6e8e1bf7fdd467af64d9b10.ctex"
@@ -34,7 +36,10 @@ animations = [{
 "name": &"arrogante",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4u8wk")
+}],
 "loop": false,
 "name": &"artista",
 "speed": 5.0
@@ -257,7 +262,7 @@ grow_vertical = 2
 position = Vector2(126, -10.25)
 scale = Vector2(0.496, 0.95)
 sprite_frames = SubResource("SpriteFrames_u8deg")
-animation = &"tos"
+animation = &"artista"
 
 [node name="personaje" type="Label" parent="."]
 layout_mode = 1
@@ -292,3 +297,12 @@ theme_override_font_sizes/font_size = 30
 text = "Usuario"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
+script = ExtResource("21_nxw17")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

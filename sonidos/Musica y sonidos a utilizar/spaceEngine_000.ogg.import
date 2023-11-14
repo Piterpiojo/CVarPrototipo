@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://chdvku1g4p15r"
+path="res://.godot/imported/spaceEngine_000.ogg-5b9f05c6e404699914ec57e023802e6f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/spaceEngine_000.ogg"
+dest_files=["res://.godot/imported/spaceEngine_000.ogg-5b9f05c6e404699914ec57e023802e6f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

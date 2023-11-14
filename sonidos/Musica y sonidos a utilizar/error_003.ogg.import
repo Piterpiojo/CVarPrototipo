@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://m0jk4025llgk"
+path="res://.godot/imported/error_003.ogg-80dd42286dee72db0257cca3f5c36fea.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/error_003.ogg"
+dest_files=["res://.godot/imported/error_003.ogg-80dd42286dee72db0257cca3f5c36fea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

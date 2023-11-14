@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvmy6wx65rqmo"
+path="res://.godot/imported/toggle_002.ogg-794196f281cbd8c461ece17bca6f8b58.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/toggle_002.ogg"
+dest_files=["res://.godot/imported/toggle_002.ogg-794196f281cbd8c461ece17bca6f8b58.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

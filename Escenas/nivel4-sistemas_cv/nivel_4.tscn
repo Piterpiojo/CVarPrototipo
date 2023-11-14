@@ -185,6 +185,8 @@ libraries = {
 [node name="CuadroDialogo" parent="." instance=ExtResource("4_fpakq")]
 layout_mode = 1
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="body_entered" from="logo/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="input_event" from="logo/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="boton/Boton" to="." method="_on_boton_pressed"]

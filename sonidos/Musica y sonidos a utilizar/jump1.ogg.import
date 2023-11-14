@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjfval2ylsi3g"
+path="res://.godot/imported/jump1.ogg-c7c95288922855008fe2c4add392ec1c.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/jump1.ogg"
+dest_files=["res://.godot/imported/jump1.ogg-c7c95288922855008fe2c4add392ec1c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

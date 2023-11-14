@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dy7y54eygrup6"
+path="res://.godot/imported/impactMining_002.ogg-a57f582cccf7ae1372760d85fe73184b.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/impactMining_002.ogg"
+dest_files=["res://.godot/imported/impactMining_002.ogg-a57f582cccf7ae1372760d85fe73184b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c11ktc6sohg00"]
 
-[ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="1_aye7t"]
-[ext_resource type="Script" path="res://scripts/Nivel1.gd" id="1_q82me"]
-[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_610dh"]
+[ext_resource type="Script" path="res://scripts/Nivel1.gd" id="1_81eoj"]
+[ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="2_i7ux5"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_kx6dc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_q82me")
+script = ExtResource("1_81eoj")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -29,7 +29,7 @@ vertical_scroll_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
-texture = ExtResource("1_aye7t")
+texture = ExtResource("2_i7ux5")
 
 [node name="OlvidoContrasenia" type="Button" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -69,7 +69,7 @@ offset_top = 571.0
 offset_right = 789.0
 offset_bottom = 612.0
 
-[node name="CuadroDialogo" parent="." instance=ExtResource("2_610dh")]
+[node name="CuadroDialogo" parent="." instance=ExtResource("3_kx6dc")]
 layout_mode = 1
 offset_left = -655.0
 offset_top = -439.0

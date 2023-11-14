@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bd10hff03x2pv"
+path="res://.godot/imported/stoneDrag2.ogg-5dccfbd28f0917e6571ee7d99194a17f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/stoneDrag2.ogg"
+dest_files=["res://.godot/imported/stoneDrag2.ogg-5dccfbd28f0917e6571ee7d99194a17f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

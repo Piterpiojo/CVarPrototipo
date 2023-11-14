@@ -387,5 +387,7 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="gui_input" from="ScrollContainer/TextureRect/LineEdit16" to="." method="_on_line_edit_16_gui_input"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/guardar" to="." method="_on_guardar_pressed"]

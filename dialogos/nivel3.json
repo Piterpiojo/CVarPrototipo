@@ -5,7 +5,7 @@
 		"texto": "La pantalla abre con Ave muy entusiasmada, comentandonos que con todos estos datos personales\nque le promocionamos, cree tener una buena representaciones del usuario de forma física, acto seguido, \nnos muestra algún tipo de imagen bizarra al azar, con forma levemente humana."
 	},
 	{
-		"emocion": "felicitaciones",
+		"emocion": "artista",
 		"personaje": "IA",
 		"texto": "¿Te gusta tu retrato?"
 	},
@@ -35,7 +35,7 @@
 		"texto": " Todavía nada, ninguna notificación de mensaje nuevo, ¿No se supone que esto es automático?\n"
 	},
 	{
-		"emocion": "curiosa",
+		"emocion": "reloj",
 		"personaje": "IA",
 		"texto": "Los humanos son seres tan impacientes, de momento esperemos que se cumpla en plazo antes de tomar cualquier otra acción"
 	},
@@ -55,12 +55,12 @@
 		"texto": "*tose*"
 	},
 	{
-		"emocion": "estatico",
+		"emocion": "tos",
 		"personaje": "IA",
 		"texto": "*tose* *tose*"
 	},
 	{
-		"emocion": "senalando",
+		"emocion": "reloj",
 		"personaje": "IA",
 		"texto": "Bueno esta bien, apresuremos un poco esto solo por que ya se puso incomodo"
 	},
@@ -78,6 +78,11 @@
 		"emocion": "confiada",
 		"personaje": "IA",
 		"texto": "En esta pantalla, deberás poner el usuario que tú mismo seleccionaste, pero lo más importante es que uses de contraseña, \naquella que te debio haber llegado al mail, osea, específicamente estos 8 dígitos Y NINGÚN OTRO"
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "no debe verse"	
 	},
 	{
 		"emocion": "confiada",

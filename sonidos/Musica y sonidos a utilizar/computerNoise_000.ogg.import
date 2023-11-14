@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bmg5liwqafrwq"
+path="res://.godot/imported/computerNoise_000.ogg-0b7f8b5a2c246229c3f42b4696c81d8f.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/computerNoise_000.ogg"
+dest_files=["res://.godot/imported/computerNoise_000.ogg-0b7f8b5a2c246229c3f42b4696c81d8f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_iniciar_pressed():
-	get_tree().change_scene_to_file("res://Escenas/identificacion.tscn")
+	get_tree().change_scene_to_file("res://Escenas/nivel1/identificacion.tscn")
 
 
 func _on_salir_pressed():
@@ -15,7 +15,7 @@ func _on_button_pressed():
 
 
 func _on_button_3_pressed():
-	get_tree().change_scene_to_file("res://Escenas/Registro.tscn")
+	get_tree().change_scene_to_file("res://Escenas/nivel2/Registro.tscn")
 
 
 func _on_button_4_pressed():

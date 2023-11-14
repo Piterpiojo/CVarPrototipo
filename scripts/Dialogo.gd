@@ -6,7 +6,7 @@ var pausa : bool = false
 var usuario = preload("res://ui/dialogousuario2.png")
 var ave = preload("res://ui/dialogopersonaje2.png")
 var cuadro
-
+var letra = 0
 func deshabilitar():
 	habilitado = false
 func habilitar():
@@ -14,6 +14,7 @@ func habilitar():
 
 func _ready():
 	cuadro = get_node(".")
+	$DialogoText.text = ""
 	
 	
 
@@ -21,7 +22,7 @@ func comenzar():
 	Mostrar_Linea(indice_dialogo)
 	
 func Mostrar_Linea(indice):
-	$DialogoText.text = dialogos[indice]["texto"]
+	$Timer.start()
 	$Container/Sprite2D.play(dialogos[indice]["emocion"])
 	if(dialogos[indice]["personaje"]=="Usuario"):
 		$Container/Sprite2D.visible =false
@@ -39,6 +40,7 @@ func Mostrar_Linea(indice):
 func _process(_delta):
 	if(Input.is_action_just_pressed("click") and habilitado):
 		sig_dialogo()
+		letra = 0
 	if(pausa):
 		$IndicacionText.text="Esperando..."
 	else:
@@ -49,11 +51,14 @@ func dialogo_actual():
 
 func sig_dialogo():
 	if !pausa:
+		$DialogoText.text = ""
 		indice_dialogo += 1
 		if indice_dialogo < len(dialogos):
 			Mostrar_Linea(indice_dialogo)
 		else:
 			desactivar_dialogo()
+			$Timer.stop()
+			$AudioStreamPlayer.gameplay_play()
 
 func habilitar_dialogo():
 	pausa = false
@@ -78,4 +83,11 @@ func desactivar_dialogo():
 	pausa = true
 	self.visible = false
 	habilitado = false
+
+
+
+func _on_timer_timeout():
+	if(letra < dialogos[indice_dialogo]["texto"].length()):
+		$DialogoText.text +=  dialogos[indice_dialogo]["texto"][letra]
+		letra +=1 
 

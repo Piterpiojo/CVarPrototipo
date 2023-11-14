@@ -5,7 +5,8 @@ var respuesta_secreta
 var contador_recarga : int = 0
 var cuadros_texto=[]
 var i = 0
-
+var SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+var SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
 func _ready():
 	buscar_cuadros($ScrollContainer/TextureRect)
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
@@ -19,7 +20,7 @@ func buscar_cuadros(nodo):
 		if child is LineEdit:
 			cuadros_texto.append(child)
 
-func _process(delta):
+func _process(_delta):
 	if(!ya_ejecuto):
 		_ejecutar_evento()
 
@@ -61,14 +62,24 @@ func _on_enviar_pressed():
 				if($TextureRect/nombre9.text== "w62bc"):
 					llamar_dialogo("¡Felicidades!, pudiste poner toda tu información, ahora solo faltaría verificar tu contraseña. Acompañame.")
 					$Timer.start()
+					$AudioStreamPlayer.stream= SonidoExito
+					$AudioStreamPlayer.play()
 				else:
 					llamar_dialogo("el codigo de seguridad es incorrecto")
+					$AudioStreamPlayer.stream= SonidoFallo
+					$AudioStreamPlayer.play()
 			else:
 				llamar_dialogo("te falto algun campo")
+				$AudioStreamPlayer.stream= SonidoFallo
+				$AudioStreamPlayer.play()
 		else:
 			$CuadroDialogo.mostrar_dialogo_unico("error correo","Ave")
+			$AudioStreamPlayer.stream= SonidoFallo
+			$AudioStreamPlayer.play()
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta","Ave")
+		$AudioStreamPlayer.stream= SonidoFallo
+		$AudioStreamPlayer.play()
 
 func _on_respuesta_secreta_nuevamente_focus_entered():
 	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, MUCHO cuidado con hacer dos clicks dentro de un cuadro de texto.  Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
@@ -87,9 +98,6 @@ func _on_timer_timeout():
 func pasar_al_siguiente():
 	get_tree().change_scene_to_file("res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn")
 	
-func _on_animation_player_animation_finished(anim_name):
-	if(anim_name == "fin"):
-		get_tree().quit()
 
 func _on_nombre_2_gui_input(event):
 	if(event is InputEventMouseButton):

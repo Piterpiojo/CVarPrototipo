@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://5qn3pgkc4kd2"
+path="res://.godot/imported/lose4.ogg-17cef3d8da1106557efba9c92f414baf.oggvorbisstr"
+
+[deps]
+
+source_file="res://sonidos/Musica y sonidos a utilizar/lose4.ogg"
+dest_files=["res://.godot/imported/lose4.ogg-17cef3d8da1106557efba9c92f414baf.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
