@@ -6,6 +6,7 @@ var poder= 8000
 var contador_entrada = 0
 var bandera1= false
 var bandera2 = false
+var sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 
 
 func _ready():
@@ -66,6 +67,8 @@ func _on_area_2d_body_entered(body):
 		$CuadroDialogo.habilitar_dialogo()
 		$CuadroDialogo.sig_dialogo()
 		$CuadroDialogo.letra=0
+		$AudioStreamPlayer.stream= sondioExito
+		$AudioStreamPlayer.play()
 		ya_cayo=true
 
 func cambiar_escena():

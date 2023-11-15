@@ -140,7 +140,8 @@ var partido = [
 		"Zárate",
 		"OTRO"
 	]
-
+const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
+const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 func _ready():
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel5c")
 	$CuadroDialogo.comenzar()
@@ -197,10 +198,14 @@ func _on_buscar_pressed():
 		$ScrollContainer/TextureRect/buscar.freeze=true
 		$ScrollContainer/TextureRect/buscar.global_position = pos_inicial_bucar
 		$ScrollContainer/TextureRect/institucion.global_position = pos_inicial_insti
+		$AudioStreamPlayer.stream=sondioExito
+		$AudioStreamPlayer.play()
 		$CuadroDialogo.mostrar_dialogo_unico("Excelente habilidades de vuelo capitán! Muy bien, ahora solo queda seleccionar alguno de los departamentos, normalmente, tendrás que prestar atención a que fuera el que perteneces, trata de elegir el que más te llame la atención al menos 
 ","Ave")
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("Instituto de Aviación Ícaro es lo que hay que escribir","Ave")
+		$AudioStreamPlayer.stream=sonidoError
+		$AudioStreamPlayer.play()
 
 
 func _on_timer_timeout():

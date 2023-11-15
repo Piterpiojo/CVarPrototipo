@@ -7,23 +7,6 @@
 [ext_resource type="AudioStream" uid="uid://dowuj33tb8l8g" path="res://sonidos/Musica y sonidos a utilizar/spaceEngine_000 (1).ogg" id="5_uf3b2"]
 [ext_resource type="AudioStream" uid="uid://bs78swnce7m6t" path="res://sonidos/Musica y sonidos a utilizar/Serious ident.ogg" id="6_uoiuk"]
 
-[sub_resource type="Animation" id="Animation_ouexx"]
-resource_name = "el_temblor"
-length = 1.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ScrollContainer:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1, 1.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [-0.0349066, 0.0349066, -0.10472, 0.0349066]
-}
-
 [sub_resource type="Animation" id="Animation_ecsrl"]
 length = 0.001
 tracks/0/type = "value"
@@ -37,6 +20,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ouexx"]
+resource_name = "el_temblor"
+length = 1.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.7, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.0349066, 0.0349066, -0.10472, 0.0349066]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fi0vp"]
@@ -105,7 +105,7 @@ offset_right = 695.0
 offset_bottom = 5.0
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 60.0
 one_shot = true
 
 [node name="time" type="Label" parent="."]
@@ -128,7 +128,6 @@ stream = ExtResource("4_edcm7")
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_uf3b2")
-volume_db = 6.568
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_uoiuk")

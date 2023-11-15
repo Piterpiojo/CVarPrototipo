@@ -140,6 +140,8 @@ var cuadros_texto =[]
 var bandera1= false
 var bandera2= false
 var bandera3 = false
+const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
+const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 
 func _ready():
 	for i in provincias:
@@ -190,4 +192,6 @@ func _on_guardar_pressed():
 	if !hay_campos_vacios():
 		get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5_b.tscn")
 	else:
+		$AudioStreamPlayer.stream=sonidoError
+		$AudioStreamPlayer.play()
 		$CuadroDialogo.mostrar_dialogo_unico("te falto algun campo","Ave")

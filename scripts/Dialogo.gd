@@ -7,7 +7,7 @@ var usuario = preload("res://ui/dialogousuario2.png")
 var ave = preload("res://ui/dialogopersonaje2.png")
 var cuadro
 var letra = 0
-
+var modulateAcutal
 
 func deshabilitar():
 	habilitado = false
@@ -20,6 +20,8 @@ func acelerar_musica(valor):
 func _ready():
 	cuadro = get_node(".")
 	$DialogoText.text = ""
+	modulateAcutal=self.modulate.a
+
 	
 	
 
@@ -46,6 +48,10 @@ func _process(_delta):
 	if(Input.is_action_just_pressed("click") and habilitado):
 		sig_dialogo()
 		letra = 0
+	if(Input.is_action_pressed("click_derecho") and habilitado):
+		self.modulate.a = 0.20
+	else:
+		self.modulate.a=modulateAcutal
 	if(pausa):
 		$IndicacionText.text="Esperando..."
 	else:

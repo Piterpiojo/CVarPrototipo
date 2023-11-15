@@ -138,6 +138,9 @@ var partido = [
 		"Zárate",
 		"OTRO"
 	]
+	
+const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
+const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel5b")
 	$CuadroDialogo.comenzar()
@@ -164,8 +167,12 @@ func hay_campos_vacios():
 func _on_guardar_pressed():
 	if(!hay_campos_vacios()):
 		$CuadroDialogo.mostrar_dialogo_unico("Vaya ... y tu querías mi ayuda cuando lo llevabas bien claro…. Quizás en las siguientes secciones deberías hacer relevancia a  tu tremenda habilidad para localizar criptidos, estoy segura de que es un talento muy buscado en estas épocas modernas donde a uno le cuesta mucho discernir entre realidad y ficción, en fin, prosigamos.","Ave")
+		$AudioStreamPlayer.stream=sondioExito
+		$AudioStreamPlayer.play()
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("falta completar algun campo obligatorio","Ave")
+		$AudioStreamPlayer.stream=sonidoError
+		$AudioStreamPlayer.play()
 
 func cambiarEscena():
 	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5c.tscn")

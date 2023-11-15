@@ -551,6 +551,8 @@ libraries = {
 "": SubResource("AnimationLibrary_agbgw")
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="pressed" from="ScrollContainer/ca/Label/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/ca/Label2/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="ScrollContainer/ca/Label3/Button4" to="." method="_on_button_4_pressed"]

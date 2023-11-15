@@ -450,6 +450,7 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_rbxin")
+volume_db = 2.811
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("5_2820r")]
 layout_mode = 1
