@@ -16,10 +16,12 @@ func _ready():
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera1):
 		$CuadroDialogo.desactivar_dialogo()
+		$CuadroDialogo.letra=0
 		$boton/Area2D/CollisionShape2D.disabled = false
 		bandera1= true
 	elif ($CuadroDialogo.indice_dialogo == 13 and !bandera2):
 		$CuadroDialogo.desactivar_dialogo()
+		$CuadroDialogo.letra=0
 		bandera2 = true
 
 
@@ -33,6 +35,7 @@ func comprobar_evento_click():
 	if(cantidad_tocado > 2):
 		ya_cayo = true
 		$logo.freeze = false
+		$AudioStreamPlayer.play()
 
 		
 
@@ -53,6 +56,7 @@ func _on_area_2d_mouse_entered():
 		if(contador_entrada == 3):
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
+			$CuadroDialogo.letra=0
 
 
 func _on_area_2d_body_entered(body):
@@ -61,8 +65,12 @@ func _on_area_2d_body_entered(body):
 		body.get_child(1).disabled = false
 		$CuadroDialogo.habilitar_dialogo()
 		$CuadroDialogo.sig_dialogo()
+		$CuadroDialogo.letra=0
 		ya_cayo=true
 
+func cambiar_escena():
+	get_tree().change_scene_to_file("res://Escenas/nivel5/nivel5.tscn")
 
 func _on_boton_pressed():
 	$AnimationPlayer.play("fin")
+	

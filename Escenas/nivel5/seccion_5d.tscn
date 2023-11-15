@@ -1,8 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdtswavnwaub5"]
+[gd_scene load_steps=10 format=3 uid="uid://cdtswavnwaub5"]
 
 [ext_resource type="Texture2D" uid="uid://chjwu3a3gv1i3" path="res://Imagenes/seccion5/seccion5d-12.png" id="1_df02l"]
 [ext_resource type="Script" path="res://scripts/seccion_5d.gd" id="1_u65dd"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_71nft"]
+[ext_resource type="AudioStream" uid="uid://cxsjf6cenj077" path="res://sonidos/Musica y sonidos a utilizar/computerNoise_002.ogg" id="4_edcm7"]
+[ext_resource type="AudioStream" uid="uid://dowuj33tb8l8g" path="res://sonidos/Musica y sonidos a utilizar/spaceEngine_000 (1).ogg" id="5_uf3b2"]
+[ext_resource type="AudioStream" uid="uid://bs78swnce7m6t" path="res://sonidos/Musica y sonidos a utilizar/Serious ident.ogg" id="6_uoiuk"]
+
+[sub_resource type="Animation" id="Animation_ouexx"]
+resource_name = "el_temblor"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.0349066, 0.0349066, -0.10472, 0.0349066]
+}
+
+[sub_resource type="Animation" id="Animation_ecsrl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ScrollContainer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fi0vp"]
+_data = {
+"RESET": SubResource("Animation_ecsrl"),
+"el_temblor": SubResource("Animation_ouexx")
+}
 
 [node name="seccion5d" type="Control"]
 layout_mode = 3
@@ -18,8 +59,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(653, 359)
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
@@ -61,7 +105,7 @@ offset_right = 695.0
 offset_bottom = 5.0
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 20.0
 one_shot = true
 
 [node name="time" type="Label" parent="."]
@@ -80,5 +124,19 @@ theme_override_font_sizes/font_size = 23
 text = "Tiempo antes del Apocalipsis"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_edcm7")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uf3b2")
+volume_db = 6.568
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_uoiuk")
+volume_db = 3.285
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fi0vp")
+}
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

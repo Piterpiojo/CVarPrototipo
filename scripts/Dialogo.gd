@@ -7,10 +7,15 @@ var usuario = preload("res://ui/dialogousuario2.png")
 var ave = preload("res://ui/dialogopersonaje2.png")
 var cuadro
 var letra = 0
+
+
 func deshabilitar():
 	habilitado = false
 func habilitar():
 	habilitado = true
+
+func acelerar_musica(valor):
+	$AudioStreamPlayer.pitch_scale=valor
 
 func _ready():
 	cuadro = get_node(".")

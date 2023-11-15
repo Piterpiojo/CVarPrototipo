@@ -59,6 +59,8 @@ var dos= false
 var tres=false
 var ocupadoEsp=[false,false,false]
 var ocupadoIng=[false,false,false]
+
+var sonidoCaida= preload("res://sonidos/Musica y sonidos a utilizar/jump1.ogg")
 func _ready():
 	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5Db")
 	$CuadroDialogo.comenzar()
@@ -83,6 +85,7 @@ func congelar(bul):
 		if(i is RigidBody2D):
 			i.freeze=bul
 
+		
 func nuevo_dialogo():
 	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5dc")
 	$CuadroDialogo.indice_dialogo=0
@@ -138,6 +141,8 @@ func _on_siete_2_item_selected(_index):
 			uno=true
 	if uno and dos and tres:
 		congelar(false)
+		$AudioStreamPlayer.stream=sonidoCaida
+		$AudioStreamPlayer.play()
 		nuevo_dialogo()
 		
 func _on_seis_2_item_selected(_index):
@@ -146,6 +151,8 @@ func _on_seis_2_item_selected(_index):
 			dos=true
 	if uno and dos and tres:
 		congelar(false)
+		$AudioStreamPlayer.stream=sonidoCaida
+		$AudioStreamPlayer.play()
 		nuevo_dialogo()
 
 func _on_tres_2_item_selected(_index):
@@ -154,6 +161,8 @@ func _on_tres_2_item_selected(_index):
 			tres=true
 	if uno and dos and tres:
 		congelar(false)
+		$AudioStreamPlayer.stream=sonidoCaida
+		$AudioStreamPlayer.play()
 		nuevo_dialogo()
 
 
