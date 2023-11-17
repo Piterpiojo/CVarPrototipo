@@ -8,6 +8,7 @@ var ave = preload("res://ui/dialogopersonaje2.png")
 var cuadro
 var letra = 0
 var modulateAcutal
+var completo = false
 
 func deshabilitar():
 	habilitado = false
@@ -46,8 +47,13 @@ func Mostrar_Linea(indice):
 
 func _process(_delta):
 	if(Input.is_action_just_pressed("click") and habilitado):
-		sig_dialogo()
-		letra = 0
+		if completo:
+			sig_dialogo()
+			letra = 0
+		else:
+			$Timer.stop()
+			$DialogoText.text= dialogos[indice_dialogo]["texto"]
+			completo=true
 	if(Input.is_action_pressed("click_derecho") and habilitado):
 		self.modulate.a = 0.20
 	else:
@@ -99,6 +105,9 @@ func desactivar_dialogo():
 
 func _on_timer_timeout():
 	if(letra < dialogos[indice_dialogo]["texto"].length()):
+		completo = false
 		$DialogoText.text +=  dialogos[indice_dialogo]["texto"][letra]
 		letra +=1 
+	else:
+		completo = true
 
