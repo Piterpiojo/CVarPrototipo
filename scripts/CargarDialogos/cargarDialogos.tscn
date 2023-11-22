@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://18ibinpmvwir"]
+[gd_scene load_steps=24 format=3 uid="uid://18ibinpmvwir"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/crearDialogos.gd" id="1_ywm8g"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_y28ju"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ccjm6aiu560g7" path="res://Sprites/ave/cap 5/dinero.png" id="10_5rjd2"]
 [ext_resource type="Texture2D" uid="uid://wwrb7tqrfqj4" path="res://Sprites/ave/seguime.png" id="10_7w7v2"]
 [ext_resource type="Texture2D" uid="uid://um6rccuorrvd" path="res://Sprites/ave/senalando.png" id="11_6gb7f"]
+[ext_resource type="Texture2D" uid="uid://4vg73bbc1t16" path="res://Sprites/ave/cap 3 y4/molesta.png" id="14_hr6vr"]
 [ext_resource type="Texture2D" uid="uid://23w38rl48xgk" path="res://Sprites/ave/cap 5/pensando.png" id="14_rl4jq"]
 [ext_resource type="Texture2D" uid="uid://cjqt8k0nmxlod" path="res://Sprites/ave/cap 5/poralantouring.png" id="15_np43h"]
 [ext_resource type="Texture2D" uid="uid://dxa0bip2c5y4g" path="res://Sprites/ave/cap 3 y4/reloj.png" id="16_fynw1"]
@@ -117,7 +118,10 @@ animations = [{
 "name": &"felicitaciones",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_hr6vr")
+}],
 "loop": false,
 "name": &"molesta",
 "speed": 5.0
@@ -370,7 +374,7 @@ Dialogo
 position = Vector2(133, 590)
 scale = Vector2(0.49678, 0.95)
 sprite_frames = SubResource("SpriteFrames_g00gj")
-animation = &"tos"
+animation = &"artista"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

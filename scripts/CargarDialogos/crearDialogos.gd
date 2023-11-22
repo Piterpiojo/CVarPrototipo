@@ -10,6 +10,9 @@ func crear_mensaje(personaje,texto,emocion):
 	}
 	Dialogo_nivel.append(mensaje)
 
+func _ready():
+	$CuadroDialogo.habilitado= false
+
 func _on_cargar_pressed():
 	crear_mensaje($personaje.text,$dialogo.text,$emocion.text)
 	CargaArchivos.guardar(Dialogo_nivel,$nivel.text)

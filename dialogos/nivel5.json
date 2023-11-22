@@ -1,6 +1,6 @@
 [
 	{
-		"emocion": "saludando",
+		"emocion": "bostezo",
 		"personaje": "IA",
 		"texto": "*Bostezo* Que buena suspensión/Hibernación me pegue…. ¿Bueno, fue sencillo no?"
 	},
@@ -12,7 +12,7 @@
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "Bien, ya estamos listos para la sección más desafiante pero también la más gratificante y esta vez sí que lo digo con absolutamente\n0 sarcasmo; Bueno, siendo sincera nunca puedo asegurar un 0% Exacto de sarcasmo por como esta hecho mi propio código, \npero sí puedo asegurarte un 0,000000001% de sarcasmo máximo en la frase anterior. \nEn fin, a lo que vamos, Vas a tener que completar paso a paso la información solicitada, \nsin importar que tan vergonzosa sea, todo es necesario para armar un CV de la mejor forma!\n"
+		"texto": "Bien, ya estamos listos para la sección más desafiante pero también la más gratificante y esta vez sí que lo digo con absolutamente 0 sarcasmo; Bueno, siendo sincera nunca puedo asegurar un 0% Exacto de sarcasmo por como esta hecho mi propio código, pero sí puedo asegurarte un 0,000000001% de sarcasmo máximo en la frase anterior. En fin, a lo que vamos, Vas a tener que completar paso a paso la información solicitada, sin importar que tan vergonzosa sea, todo es necesario para armar un CV de la mejor forma!"
 	},
 	{
 		"emocion": "estatico",
@@ -50,7 +50,7 @@
 		"texto": "Vos..."
 	},
 	{
-		"emocion": "ensenando",
+		"emocion": "molesta",
 		"personaje": "IA",
 		"texto": "Entonces seguí lo que yo digo, que lo digo por experiencia."
 	},

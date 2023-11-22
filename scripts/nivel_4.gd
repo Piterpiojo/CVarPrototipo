@@ -7,12 +7,13 @@ var contador_entrada = 0
 var bandera1= false
 var bandera2 = false
 var sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
-
+var posInicial
 
 func _ready():
 	randomize()
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel4")
 	$CuadroDialogo.comenzar()
+	posInicial= $logo.global_position
 
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera1):
@@ -77,3 +78,10 @@ func cambiar_escena():
 func _on_boton_pressed():
 	$AnimationPlayer.play("fin")
 	
+func reset():
+	$logo.global_position=posInicial
+	ya_cayo=false
+	$logo.freeze=true
+ 
+func _on_button_pressed():
+	reset()

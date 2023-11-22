@@ -5,9 +5,9 @@
 		"texto": "¡Ahora sí, ya eres parte de la plataforma! Bienvenido al primer paso de tu carrera profesional!."
 	},
 	{
-		"emocion": "senalando",
+		"emocion": "dinero",
 		"personaje": "IA",
-		"texto": "Lo que ves aquí, es tu puerta para crear tu CV, ¿No te emociona ver una plataforma tan maravillosa y ser parte de ella? \nBueno, “Parte de ella en un sentido figurado” Ya sabes porque técnicamente\nno eres parte de la empresa ni estas cobrando por esto tampoco, \na diferencia mía que ya estoy saboreando ese dulce dulce aguinaldo"
+		"texto": "Lo que ves aquí, es tu puerta para crear tu CV, ¿No te emociona ver una plataforma tan maravillosa y ser parte de ella? Bueno, “Parte de ella en un sentido figurado” Ya sabes porque técnicamente no eres parte de la empresa ni estas cobrando por esto tampoco, a diferencia mía que ya estoy saboreando ese dulce dulce aguinaldo"
 	},
 	{
 		"emocion": "senalando",
@@ -15,7 +15,7 @@
 		"texto": "Pero tu eres una IA, ¿cómo está eso de que  te pagan?"
 	},
 	{
-		"emocion": "estatico",
+		"emocion": "dinero",
 		"personaje": "IA",
 		"texto": "Que desactualizado que estas, las criptomonedas llevan existiendo hace varios años."
 	},
@@ -40,9 +40,9 @@
 		"texto": "… ¿Cual es la trampa acá?"
 	},
 	{
-		"emocion": "saludando",
+		"emocion": "bostezo",
 		"personaje": "IA",
-		"texto": "Ninguna, realmente, dejando de lado las bromas, esta parte es bastante automática, \nsolo tocalo y podremos proseguir, es más, mientras lo tocas aprovecharé para tomarme mi descanso"
+		"texto": "Ninguna, realmente, dejando de lado las bromas, esta parte es bastante automática, solo tocalo y podremos proseguir, es más, mientras lo tocas aprovecharé para tomarme mi descanso"
 	},
 	{
 		"emocion": "saludando",

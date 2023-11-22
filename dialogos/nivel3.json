@@ -2,7 +2,7 @@
 	{
 		"emocion": "saludando",
 		"personaje": "IA",
-		"texto": "La pantalla abre con Ave muy entusiasmada, comentandonos que con todos estos datos personales\nque le promocionamos, cree tener una buena representaciones del usuario de forma física, acto seguido, \nnos muestra algún tipo de imagen bizarra al azar, con forma levemente humana."
+		"texto": "La pantalla abre con Ave muy entusiasmada, comentandonos que con todos estos datos personales que le promocionamos, cree tener una buena representaciones del usuario de forma física, acto seguido, nos muestra algún tipo de imagen bizarra al azar, con forma levemente humana."
 	},
 	{
 		"emocion": "artista",
@@ -15,9 +15,9 @@
 		"texto": "El usuario se mantiene en silencio, intentando descifrar lo que está viendo"
 	},
 	{
-		"emocion": "ensenando",
+		"emocion": "artista",
 		"personaje": "IA",
-		"texto": "¿Wow,  tan sorprendido? ¿Acaso no estabas al tanto? a las IA  ahora no solo nos emplean por nuestras habilidades para procesar datos escritos,\nsino que también recientemente incursionamos en el mundo del arte y estamos abriéndonos paso también en otros escenarios; \nEn fin, a lo que sigue; Tus datos fueron cargados de forma correcta, en breve recibirás un mail… "
+		"texto": "¿Wow,  tan sorprendido? ¿Acaso no estabas al tanto? a las IA  ahora no solo nos emplean por nuestras habilidades para procesar datos escritos,sino que también recientemente incursionamos en el mundo del arte y estamos abriéndonos paso también en otros escenarios; En fin, a lo que sigue; Tus datos fueron cargados de forma correcta, en breve recibirás un mail… "
 	},
 	{
 		"emocion": "ensenando",
@@ -27,12 +27,12 @@
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "... Deberías consultar a registracioncvar@mincyt.gob.ar…. Aunque para tu suerte, como cuentas conmigo, \npuedo hacer algo al respecto de forma directa  yo si fuese necesario… pero de momento, esperemos…\n"
+		"texto": "... Deberías consultar a registracioncvar@mincyt.gob.ar…. Aunque para tu suerte, como cuentas conmigo, puedo hacer algo al respecto de forma directa  yo si fuese necesario… pero de momento, esperemos…"
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "Usuario",
-		"texto": " Todavía nada, ninguna notificación de mensaje nuevo, ¿No se supone que esto es automático?\n"
+		"texto": " Todavía nada, ninguna notificación de mensaje nuevo, ¿No se supone que esto es automático?"
 	},
 	{
 		"emocion": "reloj",
@@ -67,17 +67,17 @@
 	{
 		"emocion": "senalando",
 		"personaje": "Usuario",
-		"texto": "(Bueno, no voy a quejarme de algo que me haga ahorrar tiempo)\n"
+		"texto": "(Bueno, no voy a quejarme de algo que me haga ahorrar tiempo)"
 	},
 	{
 		"emocion": "seguime",
 		"personaje": "IA",
-		"texto": "Ya se ha cumplido el plazo de espera máximo  para la recepción del mail, pero no te preocupes, \npara acelerar el proceso revisare por vos el Mail que debio haberte llegado,\nasí no molestamos a la pobre gente de soporte que recepciona Mails; \nQue ya demasiados correos enojados repletos de mayúsculas deben aguantar. De acuerdo, el siguiente paso es sencillo"
+		"texto": "Ya se ha cumplido el plazo de espera máximo  para la recepción del mail, pero no te preocupes, para acelerar el proceso revisare por vos el Mail que debio haberte llegado, así no molestamos a la pobre gente de soporte que recepciona Mails; Que ya demasiados correos enojados repletos de mayúsculas deben aguantar. De acuerdo, el siguiente paso es sencillo"
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "En esta pantalla, deberás poner el usuario que tú mismo seleccionaste, pero lo más importante es que uses de contraseña, \naquella que te debio haber llegado al mail, osea, específicamente estos 8 dígitos Y NINGÚN OTRO"
+		"texto": "En esta pantalla, deberás poner el usuario que tú mismo seleccionaste, pero lo más importante es que uses de contraseña, aquella que te debio haber llegado al mail, osea, específicamente estos 8 dígitos Y NINGÚN OTRO"
 	},
 	{
 		"emocion": "confiada",
@@ -97,12 +97,12 @@
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
-		"texto": "¿Y entonces por qué sigue dándome error?\n"
+		"texto": "¿Y entonces por qué sigue dándome error?"
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "¿Pues, probaste ponerlos en orden alfanumérico?\n\n\n"
+		"texto": "¿Pues, probaste ponerlos en orden alfanumérico?"
 	},
 	{
 		"emocion": "curiosa",
@@ -137,21 +137,21 @@
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Muy bien, en este siguiente paso, deberás volver a poner la contraseña anterior y elegir una nueva y repetir 10 veces la nueva, \npara asegurarnos que te la memorices a la fuerza. "
+		"texto": "Muy bien, en este siguiente paso, deberás volver a poner la contraseña anterior y elegir una nueva y repetir 10 veces la nueva, para asegurarnos que te la memorices a la fuerza. "
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "Para dejarlo más facil, te mostraré la contraseña anterior en el orden correcto. \nUna cosa más, tu contraseña nueva debe tener si o si números y letras."
+		"texto": "Para dejarlo más facil, te mostraré la contraseña anterior en el orden correcto. Una cosa más, tu contraseña nueva debe tener si o si números y letras."
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
-		"texto": "este dialogo no debe ser visible\n"
+		"texto": "este dialogo no debe ser visible"
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "¡Excelente! ¡Ya eres un usuario hecho y derecho de la plataforma! Y uno que sabe lo que significa alfabéticamente !\nUn 2x1 en toda regla."
+		"texto": "¡Excelente! ¡Ya eres un usuario hecho y derecho de la plataforma! Y uno que sabe lo que significa alfabéticamente !Un 2x1 en toda regla."
 	}
 ]

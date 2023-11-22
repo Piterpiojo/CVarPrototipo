@@ -170,6 +170,7 @@ func flotar():
 func _on_button_pressed():
 	$CuadroDialogo.mostrar_dialogo_unico("Qué aburrido eres, ni dan ganas de jugar contigo","ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label.text
+	
 	$Timer.start()
 
 func _on_button_2_pressed():
@@ -181,6 +182,7 @@ func _on_button_2_pressed():
 func _on_button_4_pressed():
 	$CuadroDialogo.mostrar_dialogo_unico("¡Cuidado con cruzar el espacio aéreo romano!","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label3.text
+	$CuadroDialogo.cambiar_anim("capitan")
 	$Timer.start()
 
 
@@ -188,6 +190,7 @@ func _on_button_4_pressed():
 func _on_button_3_pressed():
 	$CuadroDialogo.mostrar_dialogo_unico(" ¡Que la fuerza te acompañe!... Oh no… a nuestros abogados no les va a gustar esa referencia…","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label4.text
+	$CuadroDialogo.cambiar_anim("starwars")
 	$Timer.start()
 
 func _on_buscar_pressed():

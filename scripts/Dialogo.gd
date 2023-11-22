@@ -14,6 +14,10 @@ func deshabilitar():
 	habilitado = false
 func habilitar():
 	habilitado = true
+	
+	
+func cambiar_anim(nombre):
+	$Container/Sprite2D.play(nombre)
 
 func acelerar_musica(valor):
 	$AudioStreamPlayer.pitch_scale=valor
