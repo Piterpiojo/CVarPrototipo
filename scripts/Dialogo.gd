@@ -50,7 +50,7 @@ func Mostrar_Linea(indice):
 
 
 func _process(_delta):
-	if(Input.is_action_just_pressed("click") and habilitado):
+	if(Input.is_action_just_pressed("click") and habilitado and self.visible):
 		if completo:
 			sig_dialogo()
 			letra = 0

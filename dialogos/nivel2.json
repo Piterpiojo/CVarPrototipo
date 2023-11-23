@@ -22,6 +22,6 @@
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "¿Te parece bien esto? Son solo algunos datos personales que necesitamos para continuar. Ten cuidado al seleccionar país de emisión, solo deberías tocar la opción de País de Emisión si seleccionamos Pasaporte."
+		"texto": "¿Te parece bien esto? Son solo algunos datos personales que necesitamos para continuar. Ten cuidado al seleccionar país de emisión, solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b]."
 	}
 ]

@@ -209,7 +209,7 @@ grow_vertical = 0
 texture = SubResource("CompressedTexture2D_poixm")
 script = ExtResource("1_pygju")
 
-[node name="DialogoText" type="Label" parent="."]
+[node name="DialogoText" type="RichTextLabel" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -222,10 +222,14 @@ offset_right = 580.5
 offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor bibendum felis, vel scelerisque justo. Suspendisse potenti. Sed feugiat tincidunt nisi, a venenatis velit hendrerit sit amet. Vivamus ac nunc id orci fringilla vehicula. Proin euismod arcu at libero dictum, eu bibendum odio accumsan. Sed at mi sit amet purus tincidunt pellentesque id nec purus. Nulla auctor, est a fermentum efficitur, urna orci tincidunt ante, in eleifend eros turpis in tellus. Integer vel quam sed justo bibendum vulputate. Nulla facilisi. Sed nec ullamcorper elit."
-autowrap_mode = 3
-clip_text = true
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor bibendum felis, vel scelerisque justo. Suspendisse potenti. Sed feugiat tincidunt nisi, a venenatis velit hendrerit sit amet. Vivamus ac nunc id orci fringilla vehicula. Proin euismod arcu at libero dictum, eu bibendum odio accumsan. Sed at mi sit amet purus tincidunt pellentesque id nec purus. Nulla auctor, est a fermentum efficitur, urna orci tincidunt ante, in eleifend eros turpis in tellus. Integer vel quam sed justo bibendum vulputate. Nulla facilisi. Sed nec ullamcorper elit.
+[color=#f400fc]Example text[/color]"
+fit_content = true
 
 [node name="IndicacionText" type="Label" parent="."]
 layout_mode = 1

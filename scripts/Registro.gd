@@ -5,8 +5,8 @@ var respuesta_secreta
 var contador_recarga : int = 0
 var cuadros_texto=[]
 var i = 0
-var SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
-var SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
+const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
 func _ready():
 	buscar_cuadros($ScrollContainer/TextureRect)
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
@@ -82,10 +82,11 @@ func _on_enviar_pressed():
 		$AudioStreamPlayer.play()
 
 func _on_respuesta_secreta_nuevamente_focus_entered():
-	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, MUCHO cuidado con hacer dos clicks dentro de un cuadro de texto.  Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
+	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, [b]MUCHO[/b] cuidado con hacer dos clicks dentro de un cuadro de texto. Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
+	
 
 func llamar_dialogo(texto):
-	$CuadroDialogo.mostrar_dialogo_unico(texto)
+	$CuadroDialogo.mostrar_dialogo_unico(texto,"Ave")
 
 func _on_recargar_pressed():
 	contador_recarga +=1
@@ -103,7 +104,6 @@ func _on_nombre_2_gui_input(event):
 	if(event is InputEventMouseButton):
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
 			i+=1
-			print("tocado" + str(i))
 		if(i > 2):
 			vaciar_todo()
 			llamar_dialogo("lo lograste, vaciaste todo")

@@ -43,7 +43,7 @@ func comprobar_evento_click():
 
 
 
-func _on_area_2d_input_event(viewport, event, shape_idx):
+func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if(event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT ):
 		if event.pressed:
 			cantidad_tocado +=1 

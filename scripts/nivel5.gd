@@ -159,7 +159,7 @@ func buscar_cuadros(nodo):
 		if child is LineEdit:
 			cuadros_texto.append(child)
 
-func _process(delta):
+func _process(_delta):
 	if($CuadroDialogo.indice_dialogo==2 and !bandera1):
 		$AnimationPlayer.play("intro")
 		bandera1=true
@@ -174,7 +174,7 @@ func hay_campos_vacios():
 				return true
 	return false
 
-func _on_pais_pasaporte_toggled(button_pressed):
+func _on_pais_pasaporte_toggled(_button_pressed):
 	if($"ScrollContainer/seccion-a/tipoDocumento".text !="Pasaporte" and !bandera3):
 		$CuadroDialogo.habilitar_dialogo()
 		$CuadroDialogo.sig_dialogo()

@@ -37,7 +37,7 @@
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "No, fue un pequeño chiste. Bueno, para comenzar, tenemos que registrarte como un usuario en la página. \nPara eso, deberías entrar en el enlace que dice Si es un usuario nuevo presione aquí. \nEste botón te redirigirá al registro de usuario, que te permitirá crear la base de tu cuenta."
+		"texto": "No, fue un pequeño chiste. Bueno, para comenzar, tenemos que registrarte como un nuevo usuario. \nPara eso, deberías entrar en el enlace que dice [i][u]Si es un usuario nuevo presione aquí[/u][/i]. \nEste botón te redirigirá al registro de usuario, que te permitirá crear la base de tu cuenta."
 	},
 	{
 		"emocion": "confiada",
@@ -82,6 +82,6 @@
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "Realmente tienes suerte de tenerme contigo. Sin mi ayuda, podría haber resultado algo abrumador."
+		"texto": "Realmente tienes suerte de tenerme contigo. Sin mi ayuda, podría haber resultado algo [i]abrumador[/i]."
 	}
 ]
