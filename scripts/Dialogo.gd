@@ -3,8 +3,8 @@ var indice_dialogo = 0
 var habilitado :bool = true
 var dialogos = []
 var pausa : bool = false
-var usuario = preload("res://ui/dialogousuario2.png")
-var ave = preload("res://ui/dialogopersonaje2.png")
+const usuario = preload("res://ui/dialogousuario2.png")
+const ave = preload("res://ui/dialogopersonaje2.png")
 var cuadro
 var letra = 0
 var modulateAcutal
@@ -50,7 +50,7 @@ func Mostrar_Linea(indice):
 
 
 func _process(_delta):
-	if(Input.is_action_just_pressed("click") and habilitado and self.visible):
+	if(Input.is_action_just_pressed("click") and habilitado):
 		if completo:
 			sig_dialogo()
 			letra = 0
@@ -104,6 +104,7 @@ func desactivar_dialogo():
 	pausa = true
 	self.visible = false
 	habilitado = false
+	letra=0
 
 
 

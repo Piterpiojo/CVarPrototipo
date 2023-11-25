@@ -53,6 +53,7 @@ func eventos():
 		$espera.start()
 		$CuadroDialogo.pausa=true
 		$CuadroDialogo.habilitado= false
+		$CuadroDialogo.letra=0
 		bandera4=true
 	elif $CuadroDialogo.indice_dialogo == 12 and !bandera5:
 		acelerar()

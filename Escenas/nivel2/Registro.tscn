@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://p32ucbdoh3h8"]
+[gd_scene load_steps=13 format=3 uid="uid://p32ucbdoh3h8"]
 
 [ext_resource type="Script" path="res://scripts/Registro.gd" id="1_i41gf"]
 [ext_resource type="Texture2D" uid="uid://ct44731gqe5ya" path="res://Imagenes/RegistroUsuario/Registro de Usuario-12.png" id="2_d3p4k"]
@@ -6,6 +6,12 @@
 [ext_resource type="ButtonGroup" uid="uid://d3t5isdmghosp" path="res://Escenas/Cuil_cuitradio.tres" id="4_47ty6"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="5_0xrnp"]
 [ext_resource type="AudioStream" uid="uid://baectnpuaqc7f" path="res://sonidos/Musica y sonidos a utilizar/reparando.ogg" id="6_xqb5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sc8rw"]
+size = Vector2(138, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8lh1"]
+size = Vector2(1314, 175)
 
 [sub_resource type="Animation" id="Animation_44334"]
 length = 0.001
@@ -385,8 +391,7 @@ offset_top = 344.0
 offset_right = 969.0
 offset_bottom = 396.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "cantidad de Estrellas
-en el cielo"
+text = "Distancia al sol en km"
 
 [node name="TextEdit" type="TextEdit" parent="ScrollContainer/TextureRect/fake/Label9"]
 layout_mode = 0
@@ -693,6 +698,20 @@ offset_right = 1129.0
 offset_bottom = 1311.0
 text = "Salir"
 
+[node name="Area2D" type="Area2D" parent="ScrollContainer/TextureRect"]
+position = Vector2(625, 604)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/Area2D"]
+position = Vector2(59, -4.5)
+shape = SubResource("RectangleShape2D_sc8rw")
+
+[node name="advertencia" type="Area2D" parent="ScrollContainer/TextureRect"]
+position = Vector2(-946, 720)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/advertencia"]
+position = Vector2(1595, 41.5)
+shape = SubResource("RectangleShape2D_l8lh1")
+
 [node name="CuadroDialogo" parent="." instance=ExtResource("5_0xrnp")]
 layout_mode = 1
 
@@ -721,7 +740,6 @@ stream = ExtResource("6_xqb5y")
 [connection signal="gui_input" from="ScrollContainer/TextureRect/nombre6" to="." method="_on_nombre_2_gui_input"]
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/respuesta_secreta" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/respuesta_secreta" to="." method="_on_nombre_2_gui_input"]
-[connection signal="focus_entered" from="ScrollContainer/TextureRect/respuesta_secreta_nuevamente" to="." method="_on_respuesta_secreta_nuevamente_focus_entered"]
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/respuesta_secreta_nuevamente" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/nombre9" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/nombre9" to="." method="_on_nombre_2_gui_input"]
@@ -729,9 +747,10 @@ stream = ExtResource("6_xqb5y")
 [connection signal="gui_input" from="ScrollContainer/TextureRect/cuil" to="." method="_on_nombre_2_gui_input"]
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/apellido" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/apellido" to="." method="_on_nombre_2_gui_input"]
-[connection signal="pressed" from="ScrollContainer/TextureRect/pasaporte" to="." method="_on_pasaporte_pressed"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/recargar" to="." method="_on_recargar_pressed"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/repetir_repeticion/TextEdit" to="." method="_on_nombre_2_gui_input"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/Label19/TextEdit" to="." method="_on_nombre_2_gui_input"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/enviar" to="." method="_on_enviar_pressed"]
+[connection signal="mouse_entered" from="ScrollContainer/TextureRect/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="ScrollContainer/TextureRect/advertencia" to="." method="_on_advertencia_mouse_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

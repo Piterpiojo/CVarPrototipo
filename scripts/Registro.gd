@@ -38,10 +38,6 @@ func _ejecutar_evento():
 func cambiar_dialogo():
 	$CuadroDialogo.sig_dialogo()
 
-func _on_pasaporte_pressed():
-	if $ScrollContainer/TextureRect/cuilBox.button_pressed == true:
-		$CuadroDialogo.mostrar_dialogo_unico("solo deberías tocar la opción de País de Emisión si seleccionamos Pasaporte.","Ave")
-
 func hay_campos_vacios():
 	for text in cuadros_texto:
 		if text is LineEdit:
@@ -65,25 +61,23 @@ func _on_enviar_pressed():
 					$AudioStreamPlayer.stream= SonidoExito
 					$AudioStreamPlayer.play()
 				else:
-					llamar_dialogo("el codigo de seguridad es incorrecto")
+					llamar_dialogo("el [b]codigo de seguridad[/b] es incorrecto")
 					$AudioStreamPlayer.stream= SonidoFallo
 					$AudioStreamPlayer.play()
 			else:
-				llamar_dialogo("te falto algun campo")
+				llamar_dialogo("te falto completar algun campo")
 				$AudioStreamPlayer.stream= SonidoFallo
 				$AudioStreamPlayer.play()
 		else:
-			$CuadroDialogo.mostrar_dialogo_unico("error correo","Ave")
+			$CuadroDialogo.mostrar_dialogo_unico("error correo no coinciden","Ave")
 			$AudioStreamPlayer.stream= SonidoFallo
 			$AudioStreamPlayer.play()
 	else:
-		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta","Ave")
+		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta secreta no coinciden","Ave")
 		$AudioStreamPlayer.stream= SonidoFallo
 		$AudioStreamPlayer.play()
 
-func _on_respuesta_secreta_nuevamente_focus_entered():
-	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, [b]MUCHO[/b] cuidado con hacer dos clicks dentro de un cuadro de texto. Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
-	
+
 
 func llamar_dialogo(texto):
 	$CuadroDialogo.mostrar_dialogo_unico(texto,"Ave")
@@ -120,3 +114,12 @@ func _on_nombre_2_focus_exited():
 
 
 
+
+func _on_area_2d_mouse_entered():
+	$CuadroDialogo.mostrar_dialogo_unico("Solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].","Ave")
+	$ScrollContainer/TextureRect/Area2D.queue_free()
+
+
+func _on_advertencia_mouse_entered():
+	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, [b]MUCHO[/b] cuidado con hacer dos clicks dentro de un cuadro de texto. Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
+	$ScrollContainer/TextureRect/advertencia.queue_free()
