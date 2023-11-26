@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=26 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
 [ext_resource type="Texture2D" uid="uid://d15er1lqdmpcx" path="res://Sprites/ave/cap 3 y4/arrogante.png" id="2_374og"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bfn4x8corwogo" path="res://Sprites/ave/cap 5/starwars.png" id="19_sqipi"]
 [ext_resource type="Texture2D" uid="uid://dnflbexd55ec1" path="res://Sprites/ave/cap 3 y4/tos.png" id="20_os87x"]
 [ext_resource type="Script" path="res://scripts/audio.gd" id="21_nxw17"]
+[ext_resource type="AudioStream" uid="uid://cr4cfo7tb2qsh" path="res://sonidos/Musica y sonidos a utilizar/rollover1.ogg" id="23_blrmw"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_poixm"]
 load_path = "res://.godot/imported/dialogopersonaje2.png-ae30b831c6e8e1bf7fdd467af64d9b10.ctex"
@@ -308,5 +309,9 @@ wait_time = 0.05
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 autoplay = true
 script = ExtResource("21_nxw17")
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_blrmw")
+volume_db = 14.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

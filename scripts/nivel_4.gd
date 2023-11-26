@@ -14,6 +14,7 @@ func _ready():
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel4")
 	$CuadroDialogo.comenzar()
 	posInicial= $logo.global_position
+	CargaArchivos.guardar_avance(3)
 
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera1):

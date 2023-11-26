@@ -58,6 +58,8 @@ func _process(_delta):
 			$Timer.stop()
 			$DialogoText.text= dialogos[indice_dialogo]["texto"]
 			completo=true
+	if(Input.is_action_just_pressed("click")):
+		$click.play()
 	if(Input.is_action_pressed("click_derecho") and habilitado):
 		self.modulate.a = 0.20
 	else:

@@ -23,6 +23,7 @@ func _ready():
 	$reloj.text=str(horas) + ":"+ str(minutos) + ":"+ str(segundos)
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel3")
 	$CuadroDialogo.comenzar()
+	CargaArchivos.guardar_avance(2)
 
 func _process(_delta):
 	eventos()

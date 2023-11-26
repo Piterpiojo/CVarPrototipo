@@ -649,6 +649,10 @@ offset_top = 312.0
 offset_right = 713.0
 offset_bottom = 343.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 button_group = ExtResource("3_7wbqm")
 text = "Femenino"
 
@@ -659,6 +663,10 @@ offset_top = 312.0
 offset_right = 819.0
 offset_bottom = 343.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 button_group = ExtResource("3_7wbqm")
 text = "Masculino"
 
@@ -669,6 +677,10 @@ offset_top = 488.0
 offset_right = 713.0
 offset_bottom = 519.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 button_group = ExtResource("4_47ty6")
 text = "CUIL/CUIT"
 
@@ -679,6 +691,10 @@ offset_top = 488.0
 offset_right = 819.0
 offset_bottom = 519.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 button_group = ExtResource("4_47ty6")
 text = "Pasaporte"
 

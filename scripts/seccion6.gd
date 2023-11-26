@@ -8,6 +8,7 @@ const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.o
 func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("seccion6")
 	$CuadroDialogo.comenzar()
+	CargaArchivos.guardar_avance(5)
 
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo ==1 and !bandera1):

@@ -1,9 +1,17 @@
 extends Control
-
-
+const niveles = ["res://Escenas/nivel1/identificacion.tscn",
+"res://Escenas/nivel2/Registro.tscn",
+"res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn",
+"res://Escenas/nivel4-sistemas_cv/nivel_4.tscn",
+"res://Escenas/nivel5/nivel5.tscn",
+"res://Escenas/nivel6/seccion6a.tscn"
+]
+var nivel= 0
 
 func _on_iniciar_pressed():
-	get_tree().change_scene_to_file("res://Escenas/nivel1/identificacion.tscn")
+	nivel= CargaArchivos.cargar_avance()
+	print(nivel)
+	get_tree().change_scene_to_file(nivel)
 
 
 func _on_salir_pressed():
@@ -44,3 +52,13 @@ func _on_button_8_pressed():
 
 func _on_button_9_pressed():
 	get_tree().change_scene_to_file("res://Escenas/nivel6/seccion6a.tscn")
+
+
+func _on_inicio_pressed():
+	nivel= CargaArchivos.cargar_avance()
+	print(nivel)
+	get_tree().change_scene_to_file(niveles[nivel])
+
+
+func _on_opciones_pressed():
+	pass # Replace with function body.

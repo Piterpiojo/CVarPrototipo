@@ -152,6 +152,7 @@ func _ready():
 	$CuadroDialogo.comenzar()
 	buscar_cuadros($"ScrollContainer/seccion-a")
 	print(cuadros_texto.size())
+	CargaArchivos.guardar_avance(4)
 
 
 func buscar_cuadros(nodo):

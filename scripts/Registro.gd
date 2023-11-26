@@ -11,6 +11,7 @@ func _ready():
 	buscar_cuadros($ScrollContainer/TextureRect)
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()
+	CargaArchivos.guardar_avance(1)
 
 func eliminar_fake():
 	$ScrollContainer/TextureRect/fake.queue_free()
