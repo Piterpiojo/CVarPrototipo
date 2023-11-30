@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxckd85g2ymn4"]
+[gd_scene load_steps=13 format=3 uid="uid://dxckd85g2ymn4"]
 
 [ext_resource type="Texture2D" uid="uid://cxvxead0sl0em" path="res://Imagenes/seccion5/seccion5a-12.png" id="1_msmy0"]
 [ext_resource type="Script" path="res://scripts/nivel5.gd" id="1_wcpmf"]
 [ext_resource type="ButtonGroup" uid="uid://b6t1mkbmljs1r" path="res://Escenas/sexoradiobutton.tres" id="2_h5jej"]
+[ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="2_ofinn"]
 [ext_resource type="ButtonGroup" uid="uid://tdby67uagtd6" path="res://Escenas/nivel5/grupo_mas_vs_hijos.tres" id="3_v0510"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="5_2820r"]
 [ext_resource type="AudioStream" uid="uid://chdvku1g4p15r" path="res://sonidos/Musica y sonidos a utilizar/spaceEngine_000.ogg" id="5_rbxin"]
@@ -157,10 +158,10 @@ el dia de su nacimiento:"
 
 [node name="LineEdit17" type="LineEdit" parent="ScrollContainer/seccion-a"]
 layout_mode = 0
-offset_left = 944.0
-offset_top = 1191.0
-offset_right = 1011.06
-offset_bottom = 1222.0
+offset_left = 960.0
+offset_top = 888.0
+offset_right = 1027.06
+offset_bottom = 919.0
 
 [node name="Label2" type="Label" parent="ScrollContainer/seccion-a/LineEdit17"]
 layout_mode = 0
@@ -174,9 +175,9 @@ autowrap_mode = 2
 
 [node name="LineEdit18" type="LineEdit" parent="ScrollContainer/seccion-a"]
 layout_mode = 0
-offset_left = 838.0
+offset_left = 832.0
 offset_top = 1240.0
-offset_right = 1045.0
+offset_right = 1039.0
 offset_bottom = 1271.0
 
 [node name="Label2" type="Label" parent="ScrollContainer/seccion-a/LineEdit18"]
@@ -448,6 +449,9 @@ flat = true
 libraries = {
 "": SubResource("AnimationLibrary_pfd1q")
 }
+
+[node name="ayuda" parent="." instance=ExtResource("2_ofinn")]
+layout_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_rbxin")

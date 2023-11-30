@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bj6w7b8ehmjet"]
+[gd_scene load_steps=14 format=3 uid="uid://bj6w7b8ehmjet"]
 
 [ext_resource type="Script" path="res://scripts/seccion_5_db.gd" id="1_hmole"]
 [ext_resource type="Texture2D" uid="uid://clhv7n8c66h06" path="res://Imagenes/seccion5/seccion5dc-1.png" id="2_n6ktq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnjixa0jv5eus" path="res://rigid_body_2d.tscn" id="4_vq33t"]
 [ext_resource type="AudioStream" uid="uid://cjmuvikjwh6rp" path="res://sonidos/Musica y sonidos a utilizar/rumble2.ogg" id="5_brqfu"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="6_jhycl"]
+[ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="7_fn05h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgokq"]
 size = Vector2(381, 27)
@@ -424,9 +425,10 @@ theme_override_font_sizes/font_size = 24
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("3_37i6i")]
 offset_left = -28.0
-offset_top = 301.0
-offset_right = 1339.0
+offset_top = 386.0
+offset_right = 1335.0
 offset_bottom = 746.0
+metadata/_edit_horizontal_guides_ = [420.0]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -444,6 +446,8 @@ stream = ExtResource("5_brqfu")
 volume_db = 6.0
 
 [node name="Pausa" parent="." instance=ExtResource("6_jhycl")]
+
+[node name="ayuda" parent="." instance=ExtResource("7_fn05h")]
 
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete" to="." method="_on_siete_2_item_selected"]
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete2" to="." method="_on_siete_2_item_selected"]

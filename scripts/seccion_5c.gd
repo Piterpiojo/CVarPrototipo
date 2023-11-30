@@ -156,6 +156,8 @@ func _ready():
 func _process(_delta):
 	if$CuadroDialogo.indice_dialogo > 2 and !bandera:
 		flotar()
+		$ayuda.cambiar_texto("Busca 'Instituto de Aviación Ícaro'")
+		bandera=true
 
 func _on_static_body_2d_body_entered(body):
 	body.linear_velocity = body.linear_velocity * -1
@@ -210,6 +212,7 @@ func _on_buscar_pressed():
 		$AudioStreamPlayer.play()
 		$CuadroDialogo.mostrar_dialogo_unico("Excelente habilidades de vuelo capitán! Muy bien, ahora solo queda seleccionar alguno de los departamentos, normalmente, tendrás que prestar atención a que fuera el que perteneces, trata de elegir el que más te llame la atención al menos 
 ","Ave")
+		$ayuda.cambiar_texto("Selecciona el departamento al que perteneces Abajo")
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("Instituto de Aviación Ícaro es lo que hay que escribir","Ave")
 		$AudioStreamPlayer.stream=sonidoError
@@ -224,6 +227,7 @@ func cambiar_escena():
 func ultimo_dialogo():
 	$CuadroDialogo.mostrar_dialogo_unico("Termina de completar los datos así podremos avanzar mi estimado usuario de velas de cera, cuéntame un poco de tu experiencia en el instituto icaro y terminar de completar los datos, y como siempre, si algo no lo sabes ¡lo inventas! 
 ","Ave")
+	$ayuda.cambiar_texto("Termina de completar los campos")
 	puede_terminar=true
 
 

@@ -6,6 +6,7 @@ const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmat
 func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel1")
 	$CuadroDialogo.comenzar()
+	$ayuda.cambiar_texto("Da tu primer paso en Cvar, Regístrate")
 
 func _on_nuevo_usuario_pressed():
 	$AudioStreamPlayer2D.stream=SonidoExito

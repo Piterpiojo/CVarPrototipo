@@ -278,10 +278,11 @@ libraries = {
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("3_i68o0")]
 layout_mode = 1
-offset_left = -665.0
-offset_top = -435.0
-offset_right = 702.0
-offset_bottom = 10.0
+offset_left = -669.0
+offset_top = -341.0
+offset_right = 705.0
+offset_bottom = 19.0
+metadata/_edit_horizontal_guides_ = [420.0]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 6.0

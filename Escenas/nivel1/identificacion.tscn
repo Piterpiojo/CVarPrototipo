@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c11ktc6sohg00"]
+[gd_scene load_steps=9 format=3 uid="uid://c11ktc6sohg00"]
 
 [ext_resource type="Script" path="res://scripts/Nivel1.gd" id="1_81eoj"]
 [ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="2_i7ux5"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_kx6dc"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="4_hmhg2"]
+[ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="5_ohnen"]
 
 [sub_resource type="Animation" id="Animation_r1wqj"]
 length = 0.001
@@ -124,9 +125,10 @@ offset_bottom = 612.0
 [node name="CuadroDialogo" parent="." instance=ExtResource("3_kx6dc")]
 layout_mode = 1
 offset_left = -655.0
-offset_top = -439.0
-offset_right = 712.0
+offset_top = -354.0
+offset_right = 664.0
 offset_bottom = 6.0
+metadata/_edit_horizontal_guides_ = [420.0]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -136,7 +138,9 @@ libraries = {
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 
 [node name="Pausa" parent="." instance=ExtResource("4_hmhg2")]
-visible = false
+layout_mode = 1
+
+[node name="ayuda" parent="." instance=ExtResource("5_ohnen")]
 layout_mode = 1
 
 [connection signal="pressed" from="ScrollContainer/TextureRect/OlvidoContrasenia" to="." method="_on_olvido_contrasenia_pressed"]

@@ -370,6 +370,7 @@ flat = true
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("3_jbfj6")]
 layout_mode = 1
+metadata/_edit_horizontal_guides_ = [420.0]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0

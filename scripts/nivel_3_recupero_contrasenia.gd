@@ -50,6 +50,7 @@ func eventos():
 		$CuadroDialogo.pausa=true
 		$CuadroDialogo.habilitado= false
 		bandera3=true
+		$ayuda.cambiar_texto("Espera a que se complete el tiempo")
 	elif $CuadroDialogo.indice_dialogo == 11 and !bandera4:
 		$espera.start()
 		$CuadroDialogo.pausa=true
@@ -65,13 +66,15 @@ func eventos():
 		$contrasenia.visible=true
 		pausar_y_ocultar_dialogo()
 		bandera6 = true
+		$ayuda.cambiar_texto("ingresa la contraseña correctamente")
 	elif $CuadroDialogo.indice_dialogo == 26 and !bandera7:
 		bandera7=true
 		pausar_y_ocultar_dialogo()
-		
+	
 	elif $CuadroDialogo.indice_dialogo == 29 and !bandera8:
 		bandera8=true
 		pausar_y_ocultar_dialogo()
+		$ayuda.cambiar_texto("Crea una nueva contraseña")
 		
 	elif $CuadroDialogo.indice_dialogo == 30 and !banderaFin:
 		$AnimationPlayer.play("fin")

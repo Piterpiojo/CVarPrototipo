@@ -166,6 +166,7 @@ func _process(_delta):
 		bandera1=true
 	elif($CuadroDialogo.indice_dialogo==12 and !bandera2):
 		$CuadroDialogo.desactivar_dialogo()
+		$ayuda.cambiar_texto("Completa los campos")
 		bandera2=true
 
 func hay_campos_vacios():
@@ -201,4 +202,4 @@ func _on_guardar_pressed():
 	else:
 		$AudioStreamPlayer.stream=sonidoError
 		$AudioStreamPlayer.play()
-		$CuadroDialogo.mostrar_dialogo_unico("te falto algun campo","Ave")
+		$CuadroDialogo.mostrar_dialogo_unico("te falto completar algun campo","Ave")

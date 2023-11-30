@@ -73,37 +73,37 @@ texture = ExtResource("1_df02l")
 [node name="texto_usuario" type="TextEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
 offset_left = 320.0
-offset_top = 344.0
+offset_top = 305.0
 offset_right = 976.0
-offset_bottom = 464.0
+offset_bottom = 425.0
 
 [node name="OptionButton" type="OptionButton" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
-offset_left = 439.0
-offset_top = 589.0
-offset_right = 975.0
-offset_bottom = 613.0
+offset_left = 416.0
+offset_top = 576.0
+offset_right = 952.0
+offset_bottom = 600.0
 
 [node name="OptionButton2" type="OptionButton" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
-offset_left = 439.0
-offset_top = 615.0
-offset_right = 975.0
-offset_bottom = 639.0
+offset_left = 416.0
+offset_top = 602.0
+offset_right = 952.0
+offset_bottom = 626.0
 
 [node name="LineEdit" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
-offset_left = 439.0
-offset_top = 641.0
-offset_right = 975.0
-offset_bottom = 672.0
+offset_left = 416.0
+offset_top = 628.0
+offset_right = 952.0
+offset_bottom = 659.0
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("2_71nft")]
 layout_mode = 1
 offset_left = -672.0
-offset_top = -440.0
-offset_right = 695.0
-offset_bottom = 5.0
+offset_top = -357.0
+offset_right = 700.0
+offset_bottom = 3.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0

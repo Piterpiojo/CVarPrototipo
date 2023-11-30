@@ -97,9 +97,11 @@ func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 6 and !bandera1):
 		$AnimationPlayer.play("sacudelo")
 		bandera1=true
+		$ayuda.cambiar_texto("Organiza las áreas de actuación con los cuentos y su descripción, Quizá hay un orden")
 	if($CuadroDialogo.indice_dialogo == 4 and !bandera2 and parte2):
 		$CuadroDialogo.desactivar_dialogo()
 		bandera2=true
+		$ayuda.cambiar_texto("Arrasta las palabras clave relacionadas con las áreas de actuación")
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera3 and parte2):
 		$AnimationPlayer.play("anegro")
 		bandera3=true

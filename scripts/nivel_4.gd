@@ -21,10 +21,12 @@ func _process(_delta):
 		$CuadroDialogo.desactivar_dialogo()
 		$CuadroDialogo.letra=0
 		$boton/Area2D/CollisionShape2D.disabled = false
+		$ayuda.cambiar_texto("Presiona el boton")
 		bandera1= true
 	elif ($CuadroDialogo.indice_dialogo == 13 and !bandera2):
 		$CuadroDialogo.desactivar_dialogo()
 		$CuadroDialogo.letra=0
+		$ayuda.cambiar_texto("Atrapa ese boton, quizas podrias aplastarlo con algo...")
 		bandera2 = true
 
 

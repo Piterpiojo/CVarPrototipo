@@ -731,12 +731,13 @@ position = Vector2(1595, 41.5)
 shape = SubResource("RectangleShape2D_l8lh1")
 
 [node name="Capcha" type="Sprite2D" parent="ScrollContainer/TextureRect"]
-position = Vector2(287.875, 1159)
-scale = Vector2(0.558511, 0.797872)
+position = Vector2(287.5, 1159.5)
+scale = Vector2(0.418312, 0.652174)
 texture = ExtResource("5_gn0lg")
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("5_0xrnp")]
 layout_mode = 1
+metadata/_edit_horizontal_guides_ = [420.0]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
