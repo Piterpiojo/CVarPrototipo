@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://3kqjgake2c7k"]
+[gd_scene load_steps=17 format=3 uid="uid://3kqjgake2c7k"]
 
 [ext_resource type="Script" path="res://scripts/seccion6.gd" id="1_tp1pa"]
 [ext_resource type="Texture2D" uid="uid://ckjpvnxx6mlxs" path="res://Imagenes/seccion6/seccion6.png" id="2_pcoug"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b3ol41ndrpmjv" path="res://Imagenes/seccion6/visualizarCv.png" id="6_7wukv"]
 [ext_resource type="Texture2D" uid="uid://dfpkuvh2npfoc" path="res://Imagenes/seccion6/screen.png" id="6_gfhw3"]
 [ext_resource type="Texture2D" uid="uid://wp0wt27hki5j" path="res://Imagenes/seccion6/imprimir cv.png" id="7_6ey2f"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="9_nqxoc"]
 
 [sub_resource type="Animation" id="Animation_yvi5q"]
 length = 0.001
@@ -283,6 +284,10 @@ offset_right = 702.0
 offset_bottom = 10.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 6.0
+
+[node name="Pausa" parent="." instance=ExtResource("9_nqxoc")]
+layout_mode = 1
 
 [connection signal="pressed" from="Node2D/TextureRect2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Node2D/TextureRect3/recargar" to="." method="_on_recargar_pressed"]

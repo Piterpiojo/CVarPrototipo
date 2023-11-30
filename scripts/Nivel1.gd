@@ -16,6 +16,10 @@ func _on_nuevo_usuario_pressed():
 func cambiar_escena():
 	get_tree().change_scene_to_file("res://Escenas/nivel2/Registro.tscn")
 
+func _input(event):
+	if(event.is_action_pressed("ui_cancel")):
+		$Pausa.visible=true
+		get_tree().paused=true
 
 func _on_olvido_contrasenia_pressed():
 	$AudioStreamPlayer2D.stream=SonidoFallo

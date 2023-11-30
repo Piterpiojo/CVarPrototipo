@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://dmshaoi4drcid"]
+[gd_scene load_steps=13 format=3 uid="uid://dmshaoi4drcid"]
 
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_n0fm6"]
 [ext_resource type="Script" path="res://scripts/seccion_5c.gd" id="1_rta87"]
 [ext_resource type="Texture2D" uid="uid://ccncwv7r3nlc2" path="res://Imagenes/seccion5/seccion5ca-12.png" id="2_dubvf"]
 [ext_resource type="Texture2D" uid="uid://dngvv84y2htt2" path="res://Imagenes/seccion5/seccion5c-12.png" id="2_qmik0"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="5_orhl2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8j2sx"]
 size = Vector2(448, 30)
@@ -552,6 +553,10 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 6.0
+
+[node name="Pausa" parent="." instance=ExtResource("5_orhl2")]
+layout_mode = 1
 
 [connection signal="pressed" from="ScrollContainer/ca/Label/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/ca/Label2/Button2" to="." method="_on_button_2_pressed"]

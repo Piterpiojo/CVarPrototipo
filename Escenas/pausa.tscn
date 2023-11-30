@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://27d4ixo8lm6y"]
+
+[ext_resource type="Script" path="res://scripts/Pausa.gd" id="1_qhsst"]
+[ext_resource type="Texture2D" uid="uid://dxa0bip2c5y4g" path="res://Sprites/ave/cap 3 y4/reloj.png" id="2_k3ddt"]
+
+[node name="Pausa" type="Control"]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qhsst")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_top = 46.0
+offset_right = 69.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 46
+text = "Pausa"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="volver" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 112.0
+offset_right = 82.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+
+[node name="Menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = 240.0
+offset_right = 188.0
+offset_bottom = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Menu Principal"
+
+[node name="Reloj" type="Sprite2D" parent="."]
+position = Vector2(640, 280)
+texture = ExtResource("2_k3ddt")
+
+[connection signal="pressed" from="volver" to="." method="_on_volver_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

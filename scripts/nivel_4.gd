@@ -32,7 +32,11 @@ func mod_fuerza():
 	fuerza.x = randf_range(-poder,poder)
 	fuerza.y = randf_range(-poder,poder)
 	
-	
+func _input(event):
+	if(event.is_action_pressed("ui_cancel")):
+		get_tree().paused=true
+		$Pausa.visible=true
+
 	
 func comprobar_evento_click():
 	if(cantidad_tocado > 2):

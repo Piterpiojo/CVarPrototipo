@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlknlog2m1w1i"]
+[gd_scene load_steps=13 format=3 uid="uid://dlknlog2m1w1i"]
 
 [ext_resource type="FontFile" uid="uid://0smxyo876ro4" path="res://Sprites/fuentes/digital-7.ttf" id="1_1pygp"]
 [ext_resource type="Texture2D" uid="uid://cjjgeecnmxm23" path="res://Imagenes/recuperar_contrasenia/cambio_contrasenia12.png" id="1_g1oao"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bj844ikvy83d2" path="res://Sprites/NicePng_email-icon-png-transparent_903587.png" id="5_hs5fl"]
 [ext_resource type="Texture2D" uid="uid://b6syym0ycomal" path="res://Sprites/usuario.jpeg" id="6_8j1ev"]
 [ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="7_0ew3f"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="8_24p5a"]
 
 [sub_resource type="Animation" id="Animation_hfu2l"]
 length = 0.001
@@ -275,6 +276,10 @@ libraries = {
 wait_time = 15.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 6.0
+
+[node name="Pausa" parent="." instance=ExtResource("8_24p5a")]
+layout_mode = 1
 
 [connection signal="pressed" from="ScrollContainer/TextureRect/cambiar" to="." method="_on_cambiar_pressed"]
 [connection signal="pressed" from="ScrollContainer/identificacion/ingresar" to="." method="_on_ingresar_pressed"]

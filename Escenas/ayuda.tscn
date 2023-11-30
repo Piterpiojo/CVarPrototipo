@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://7y0gl8rhxmbi"]
+
+[ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="1_q5dyn"]
+[ext_resource type="Script" path="res://scripts/ayuda.gd" id="1_torki"]
+
+[node name="ayuda" type="Control"]
+layout_mode = 3
+anchor_right = 0.116
+anchor_bottom = 0.207
+offset_right = -0.480011
+offset_bottom = -0.0400085
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_torki")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+offset_top = 37.0
+offset_right = 488.0
+offset_bottom = 315.0
+scale = Vector2(0.215, 0.215)
+icon = ExtResource("1_q5dyn")
+flat = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+offset_left = 111.0
+offset_top = 3.0
+offset_right = 438.0
+offset_bottom = 126.0
+color = Color(1, 0.560784, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.5
+offset_top = -49.5
+offset_right = 149.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,5 +1,5 @@
 extends Node2D
-var titulos = [
+const titulos = [
 	"---------- Seleccionar ----------",
 	"1 CIENCIAS NATURALES Y EXACTAS",
 	"1.1 Matemáticas",
@@ -103,7 +103,8 @@ func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera3 and parte2):
 		$AnimationPlayer.play("anegro")
 		bandera3=true
-	
+
+
 
 func ir_al_nivel_seis():
 	get_tree().change_scene_to_file("res://Escenas/nivel6/seccion6a.tscn")
@@ -230,3 +231,5 @@ func _on_ingles_3_body_entered(body):
 		if completas() ==6:
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
+
+

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bj6w7b8ehmjet"]
+[gd_scene load_steps=13 format=3 uid="uid://bj6w7b8ehmjet"]
 
 [ext_resource type="Script" path="res://scripts/seccion_5_db.gd" id="1_hmole"]
 [ext_resource type="Texture2D" uid="uid://clhv7n8c66h06" path="res://Imagenes/seccion5/seccion5dc-1.png" id="2_n6ktq"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_37i6i"]
 [ext_resource type="PackedScene" uid="uid://dnjixa0jv5eus" path="res://rigid_body_2d.tscn" id="4_vq33t"]
 [ext_resource type="AudioStream" uid="uid://cjmuvikjwh6rp" path="res://sonidos/Musica y sonidos a utilizar/rumble2.ogg" id="5_brqfu"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="6_jhycl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgokq"]
 size = Vector2(381, 27)
@@ -440,9 +441,15 @@ shape = SubResource("RectangleShape2D_o436f")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_brqfu")
+volume_db = 6.0
 
+[node name="Pausa" parent="." instance=ExtResource("6_jhycl")]
+
+[connection signal="item_selected" from="ScrollContainer/TextureRect/siete" to="." method="_on_siete_2_item_selected"]
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete2" to="." method="_on_siete_2_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/TextureRect/seis" to="." method="_on_seis_2_item_selected"]
 [connection signal="item_selected" from="ScrollContainer/TextureRect/seis2" to="." method="_on_seis_2_item_selected"]
+[connection signal="item_selected" from="ScrollContainer/TextureRect/tres" to="." method="_on_tres_2_item_selected"]
 [connection signal="item_selected" from="ScrollContainer/TextureRect/tres2" to="." method="_on_tres_2_item_selected"]
 [connection signal="body_entered" from="ScrollContainer/TextureRect/Container/texto" to="." method="_on_texto_body_entered"]
 [connection signal="body_entered" from="ScrollContainer/TextureRect/Container/texto2" to="." method="_on_texto_2_body_entered"]

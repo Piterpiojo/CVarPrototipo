@@ -10,6 +10,12 @@ func _ready():
 	$CuadroDialogo.comenzar()
 	CargaArchivos.guardar_avance(5)
 
+func _input(event):
+	if(event.is_action_pressed("ui_cancel")):
+		get_tree().paused=true
+		$Pausa.visible=true
+
+
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo ==1 and !bandera1):
 		$AnimationPlayer.play("deslizar")
@@ -32,7 +38,7 @@ func _on_button_pressed():
 	$AudioStreamPlayer.stream=sonidoExito
 	$AudioStreamPlayer.play()
 	$AnimationPlayer.play("deslizar2")
-	$CuadroDialogo.mostrar_dialogo_unico("Presiona actualizar 3 veces","Ave")
+	$CuadroDialogo.mostrar_dialogo_unico("Presiona [b]Actualizá tu CV[/b] 3 veces, luego selecciona [b][u]Visualizá online tu CV[/u][/b] ","Ave")
 
 
 func _on_recargar_pressed():

@@ -102,6 +102,10 @@ func _on_segundos_timeout():
 	$AudioStreamPlayer.stream= SonidoReloj
 	$AudioStreamPlayer.play()
 
+func _input(event):
+	if(event.is_action_pressed("ui_cancel")):
+		get_tree().paused=true
+		$Pausa.visible=true
 
 func _on_minutos_timeout():
 	minutos-=1

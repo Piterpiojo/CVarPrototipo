@@ -13,6 +13,8 @@ func _on_iniciar_pressed():
 	print(nivel)
 	get_tree().change_scene_to_file(nivel)
 
+func cambiar():
+	get_tree().change_scene_to_file(niveles[nivel])
 
 func _on_salir_pressed():
 	get_tree().quit()
@@ -56,8 +58,8 @@ func _on_button_9_pressed():
 
 func _on_inicio_pressed():
 	nivel= CargaArchivos.cargar_avance()
-	print(nivel)
-	get_tree().change_scene_to_file(niveles[nivel])
+	$AnimationPlayer.play("splash")
+
 
 
 func _on_opciones_pressed():

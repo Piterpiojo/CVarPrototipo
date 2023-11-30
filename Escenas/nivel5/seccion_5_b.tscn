@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://owao3l8xso4f"]
+[gd_scene load_steps=10 format=3 uid="uid://owao3l8xso4f"]
 
 [ext_resource type="Texture2D" uid="uid://cc88p371wiv4b" path="res://Imagenes/seccion5/seccion5b-12.png" id="1_gnlaj"]
 [ext_resource type="Script" path="res://scripts/seccion_5_b.gd" id="1_v4s2q"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_jbfj6"]
 [ext_resource type="AudioStream" uid="uid://dtm6gbb5w1ud8" path="res://sonidos/Musica y sonidos a utilizar/switch_003.ogg" id="4_3i8cs"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="5_3susf"]
 
 [sub_resource type="Animation" id="Animation_c3amr"]
 length = 0.001
@@ -414,6 +415,10 @@ libraries = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_3i8cs")
+volume_db = 6.0
+
+[node name="Pausa" parent="." instance=ExtResource("5_3susf")]
+layout_mode = 1
 
 [connection signal="gui_input" from="ScrollContainer/TextureRect/LineEdit16" to="." method="_on_line_edit_16_gui_input"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/guardar" to="." method="_on_guardar_pressed"]

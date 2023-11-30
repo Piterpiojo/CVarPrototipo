@@ -8,6 +8,13 @@ func _ready():
 	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5d")
 	$CuadroDialogo.comenzar()
 
+func _input(event):
+	if(event.is_action_pressed("ui_cancel")):
+		get_tree().paused=true
+		$Pausa.visible=true
+
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if actualizarLabel:

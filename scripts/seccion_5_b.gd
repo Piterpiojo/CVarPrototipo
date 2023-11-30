@@ -163,6 +163,11 @@ func hay_campos_vacios():
 				return true
 	return false
 
+func _input(event):
+	if(event.is_action_pressed("ui_cancel")):
+		get_tree().paused=true
+		$Pausa.visible=true
+
 
 func _on_guardar_pressed():
 	if(!hay_campos_vacios()):

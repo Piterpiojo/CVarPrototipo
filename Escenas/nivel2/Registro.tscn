@@ -1,11 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://p32ucbdoh3h8"]
+[gd_scene load_steps=16 format=3 uid="uid://p32ucbdoh3h8"]
 
 [ext_resource type="Script" path="res://scripts/Registro.gd" id="1_i41gf"]
 [ext_resource type="Texture2D" uid="uid://ct44731gqe5ya" path="res://Imagenes/RegistroUsuario/Registro de Usuario-12.png" id="2_d3p4k"]
 [ext_resource type="ButtonGroup" uid="uid://b6t1mkbmljs1r" path="res://Escenas/sexoradiobutton.tres" id="3_7wbqm"]
 [ext_resource type="ButtonGroup" uid="uid://d3t5isdmghosp" path="res://Escenas/Cuil_cuitradio.tres" id="4_47ty6"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="5_0xrnp"]
+[ext_resource type="Texture2D" uid="uid://oofx3r2ol3d4" path="res://Imagenes/capcha.jpeg" id="5_gn0lg"]
 [ext_resource type="AudioStream" uid="uid://baectnpuaqc7f" path="res://sonidos/Musica y sonidos a utilizar/reparando.ogg" id="6_xqb5y"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="8_ibty7"]
+[ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="9_6bmav"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sc8rw"]
 size = Vector2(138, 29)
@@ -264,9 +267,9 @@ offset_bottom = 20.0
 [node name="Label13" type="Label" parent="ScrollContainer/TextureRect/fake"]
 layout_mode = 0
 offset_left = 856.0
-offset_top = 488.0
+offset_top = 520.0
 offset_right = 950.0
-offset_bottom = 514.0
+offset_bottom = 546.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Dias de vida
 "
@@ -279,10 +282,10 @@ offset_bottom = 20.0
 
 [node name="Label14" type="Label" parent="ScrollContainer/TextureRect/fake"]
 layout_mode = 0
-offset_left = 848.0
-offset_top = 528.0
-offset_right = 951.0
-offset_bottom = 554.0
+offset_left = 112.0
+offset_top = 608.0
+offset_right = 215.0
+offset_bottom = 634.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Pierna buena"
 horizontal_alignment = 2
@@ -594,10 +597,10 @@ flat = true
 
 [node name="Label18" type="Label" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
-offset_left = 928.0
-offset_top = 496.0
-offset_right = 1021.0
-offset_bottom = 522.0
+offset_left = 856.0
+offset_top = 480.0
+offset_right = 949.0
+offset_bottom = 506.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Talle zapato"
 
@@ -626,14 +629,13 @@ offset_bottom = 39.0
 
 [node name="Label19" type="Label" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
-offset_left = 824.0
-offset_top = 576.0
-offset_right = 1018.0
-offset_bottom = 628.0
+offset_left = 896.0
+offset_top = 704.0
+offset_right = 1090.0
+offset_bottom = 756.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Cumpleaños del tio 
 de la vecina del hermano"
-horizontal_alignment = 2
 
 [node name="TextEdit" type="LineEdit" parent="ScrollContainer/TextureRect/Label19"]
 layout_mode = 0
@@ -728,6 +730,11 @@ position = Vector2(-946, 720)
 position = Vector2(1595, 41.5)
 shape = SubResource("RectangleShape2D_l8lh1")
 
+[node name="Capcha" type="Sprite2D" parent="ScrollContainer/TextureRect"]
+position = Vector2(287.875, 1159)
+scale = Vector2(0.558511, 0.797872)
+texture = ExtResource("5_gn0lg")
+
 [node name="CuadroDialogo" parent="." instance=ExtResource("5_0xrnp")]
 layout_mode = 1
 
@@ -741,6 +748,13 @@ wait_time = 3.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_xqb5y")
+volume_db = 3.0
+
+[node name="ayuda" parent="." instance=ExtResource("9_6bmav")]
+layout_mode = 1
+
+[node name="Pausa" parent="." instance=ExtResource("8_ibty7")]
+layout_mode = 1
 
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/nombre2" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/nombre2" to="." method="_on_nombre_2_gui_input"]
@@ -763,6 +777,12 @@ stream = ExtResource("6_xqb5y")
 [connection signal="gui_input" from="ScrollContainer/TextureRect/cuil" to="." method="_on_nombre_2_gui_input"]
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/apellido" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/apellido" to="." method="_on_nombre_2_gui_input"]
+[connection signal="focus_exited" from="ScrollContainer/TextureRect/fecha/TextEdit3" to="." method="_on_nombre_2_focus_exited"]
+[connection signal="gui_input" from="ScrollContainer/TextureRect/fecha/TextEdit3" to="." method="_on_nombre_2_gui_input"]
+[connection signal="focus_exited" from="ScrollContainer/TextureRect/fecha/TextEdit4" to="." method="_on_nombre_2_focus_exited"]
+[connection signal="gui_input" from="ScrollContainer/TextureRect/fecha/TextEdit4" to="." method="_on_nombre_2_gui_input"]
+[connection signal="focus_exited" from="ScrollContainer/TextureRect/fecha/TextEdit5" to="." method="_on_nombre_2_focus_exited"]
+[connection signal="gui_input" from="ScrollContainer/TextureRect/fecha/TextEdit5" to="." method="_on_nombre_2_gui_input"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/recargar" to="." method="_on_recargar_pressed"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/repetir_repeticion/TextEdit" to="." method="_on_nombre_2_gui_input"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/Label19/TextEdit" to="." method="_on_nombre_2_gui_input"]

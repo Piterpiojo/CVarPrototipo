@@ -1,6 +1,6 @@
 extends Node
 const path = "res://dialogos/"
-const save= "res://guardado.json"
+const save= "user://guardado.json"
 var data = []
 var nivel= {"nivel":0}
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bdhbfpnq83ybt"]
+[gd_scene load_steps=18 format=3 uid="uid://bdhbfpnq83ybt"]
 
 [ext_resource type="Texture2D" uid="uid://d4e0xqbettcgg" path="res://Imagenes/Sistemas_CV/Sistemas-12.png" id="1_nh3oo"]
 [ext_resource type="Script" path="res://scripts/nivel_4.gd" id="1_xry6i"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="4_fpakq"]
 [ext_resource type="AudioStream" uid="uid://c7qhiswdht680" path="res://sonidos/Musica y sonidos a utilizar/explosionCrunch_001.ogg" id="5_0edy7"]
 [ext_resource type="Texture2D" uid="uid://b6un735f3c3vh" path="res://Imagenes/recarga.png" id="6_p08a0"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="7_26887"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk3fy"]
 size = Vector2(731.429, 65.7876)
@@ -204,6 +205,7 @@ layout_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_0edy7")
+volume_db = 6.0
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -214,6 +216,9 @@ offset_bottom = 517.0
 scale = Vector2(0.15, 0.15)
 icon = ExtResource("6_p08a0")
 flat = true
+
+[node name="Pausa" parent="." instance=ExtResource("7_26887")]
+layout_mode = 1
 
 [connection signal="body_entered" from="logo/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="input_event" from="logo/Area2D" to="." method="_on_area_2d_input_event"]

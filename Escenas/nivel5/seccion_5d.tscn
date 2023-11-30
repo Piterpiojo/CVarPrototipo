@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cdtswavnwaub5"]
+[gd_scene load_steps=11 format=3 uid="uid://cdtswavnwaub5"]
 
 [ext_resource type="Texture2D" uid="uid://chjwu3a3gv1i3" path="res://Imagenes/seccion5/seccion5d-12.png" id="1_df02l"]
 [ext_resource type="Script" path="res://scripts/seccion_5d.gd" id="1_u65dd"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://cxsjf6cenj077" path="res://sonidos/Musica y sonidos a utilizar/computerNoise_002.ogg" id="4_edcm7"]
 [ext_resource type="AudioStream" uid="uid://dowuj33tb8l8g" path="res://sonidos/Musica y sonidos a utilizar/spaceEngine_000 (1).ogg" id="5_uf3b2"]
 [ext_resource type="AudioStream" uid="uid://bs78swnce7m6t" path="res://sonidos/Musica y sonidos a utilizar/Serious ident.ogg" id="6_uoiuk"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="7_r0yw2"]
 
 [sub_resource type="Animation" id="Animation_ecsrl"]
 length = 0.001
@@ -125,17 +126,22 @@ text = "Tiempo antes del Apocalipsis"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_edcm7")
+volume_db = 6.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_uf3b2")
+volume_db = 6.0
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_uoiuk")
-volume_db = 3.285
+volume_db = 6.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_fi0vp")
 }
+
+[node name="Pausa" parent="." instance=ExtResource("7_r0yw2")]
+layout_mode = 1
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

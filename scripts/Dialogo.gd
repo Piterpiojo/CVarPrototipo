@@ -108,7 +108,10 @@ func desactivar_dialogo():
 	habilitado = false
 	letra=0
 
-
+func bajar_volumen():
+	$AudioStreamPlayer.volume_db-=20
+	await(get_tree().create_timer(3).timeout)
+	$AudioStreamPlayer.volume_db += 20
 
 func _on_timer_timeout():
 	if(letra < dialogos[indice_dialogo]["texto"].length()):

@@ -25,16 +25,31 @@ func _process(_delta):
 	if(!ya_ejecuto):
 		_ejecutar_evento()
 
+func _input(event):
+	if(event.is_action_pressed("ui_cancel")):
+		get_tree().paused=true
+		$Pausa.visible=true
+
 func vaciar_todo():
 	for cuadro in cuadros_texto:
 		if cuadro is LineEdit:
 			cuadro.clear()
+	vaciar_especificos()
+
+func vaciar_especificos():
+	$ScrollContainer/TextureRect/fecha/TextEdit3.clear()
+	$ScrollContainer/TextureRect/fecha/TextEdit4.clear()
+	$ScrollContainer/TextureRect/fecha/TextEdit5.clear()
+	$ScrollContainer/TextureRect/Label18/TextEdit.clear()
+	$ScrollContainer/TextureRect/repetir_repeticion/TextEdit.clear()
+	$ScrollContainer/TextureRect/Label19/TextEdit.clear()
 
 func _ejecutar_evento():
 	if $CuadroDialogo.dialogo_actual() == 3:
 		$CuadroDialogo.habilitado = false
 		$AnimationPlayer.play("arreglar")
 		ya_ejecuto = true
+		$ayuda.cambiar_texto("Completa todos los campos y envialo para crear tu cuenta")
 
 func cambiar_dialogo():
 	$CuadroDialogo.sig_dialogo()
@@ -56,7 +71,7 @@ func _on_enviar_pressed():
 	if comprobar_respuesta():
 		if(comprobar_correo()):
 			if(!hay_campos_vacios()):
-				if($TextureRect/nombre9.text== "w62bc"):
+				if($ScrollContainer/TextureRect/nombre9.text== "w62bc"):
 					llamar_dialogo("¡Felicidades!, pudiste poner toda tu información, ahora solo faltaría verificar tu contraseña. Acompañame.")
 					$Timer.start()
 					$AudioStreamPlayer.stream= SonidoExito
@@ -85,8 +100,10 @@ func llamar_dialogo(texto):
 
 func _on_recargar_pressed():
 	contador_recarga +=1
-	if contador_recarga >3:
-		$CuadroDialogo.mostrar_dialogo_unico("deberia mostrar lo correcto","Ave")
+	if contador_recarga ==3:
+		$ScrollContainer/TextureRect/Capcha.queue_free()
+		$AudioStreamPlayer.stream= SonidoExito
+		$AudioStreamPlayer.play()
 
 func _on_timer_timeout():
 	$AnimationPlayer.play("fin")
@@ -101,7 +118,8 @@ func _on_nombre_2_gui_input(event):
 			i+=1
 		if(i > 2):
 			vaciar_todo()
-			llamar_dialogo("lo lograste, vaciaste todo")
+			$AudioStreamPlayer.stream= SonidoFallo
+			$AudioStreamPlayer.play()
 			i = 0
 
 func deshabilitar_entrada():
@@ -117,10 +135,17 @@ func _on_nombre_2_focus_exited():
 
 
 func _on_area_2d_mouse_entered():
-	$CuadroDialogo.mostrar_dialogo_unico("Solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].","Ave")
-	$ScrollContainer/TextureRect/Area2D.queue_free()
+	if(!$CuadroDialogo.visible):
+		$CuadroDialogo.mostrar_dialogo_unico("Solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].","Ave")
+		$ScrollContainer/TextureRect/Area2D.queue_free()
 
 
 func _on_advertencia_mouse_entered():
-	$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, [b]MUCHO[/b] cuidado con hacer dos clicks dentro de un cuadro de texto. Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
-	$ScrollContainer/TextureRect/advertencia.queue_free()
+	if(!$CuadroDialogo.visible):
+		$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, [b]MUCHO[/b] cuidado con hacer dos clicks dentro de un cuadro de texto. Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
+		$CuadroDialogo.bajar_volumen()
+		$ScrollContainer/TextureRect/advertencia.queue_free()
+	
+
+
+
