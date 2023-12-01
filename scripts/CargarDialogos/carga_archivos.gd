@@ -30,6 +30,7 @@ func cargar_avance():
 		return nivel["nivel"]
 	else:
 		guardar_avance(0)
+		return 0
 	
 func guardar_avance(_nivel):
 	nivel["nivel"]=_nivel

@@ -1,8 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://yytfetroh3on"]
+[gd_scene load_steps=8 format=3 uid="uid://yytfetroh3on"]
 
-[ext_resource type="Texture2D" uid="uid://d0ypbu2tr0ni8" path="res://ui/bocetomenu.png" id="1_d0120"]
 [ext_resource type="Script" path="res://scripts/PantallaInicio.gd" id="1_hffsb"]
+[ext_resource type="Texture2D" uid="uid://dryiby420vsd3" path="res://Imagenes/bocetomenu2.png" id="2_8x45b"]
 [ext_resource type="AudioStream" uid="uid://cxq25h0kbevpp" path="res://sonidos/Musica y sonidos a utilizar/Night at the Beach.ogg" id="3_5blns"]
+[ext_resource type="Texture2D" uid="uid://c5alryoepobp2" path="res://ui/continuar.png" id="4_1wfax"]
+
+[sub_resource type="Animation" id="Animation_mqyjm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_vyw2r"]
 resource_name = "splash"
@@ -34,21 +50,6 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_mqyjm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8btjr"]
 _data = {
 "RESET": SubResource("Animation_mqyjm"),
@@ -74,29 +75,29 @@ offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.67, 0.67)
-texture = ExtResource("1_d0120")
+texture = ExtResource("2_8x45b")
 
 [node name="inicio" type="Button" parent="."]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 232.0
-offset_right = 792.0
-offset_bottom = 336.0
+offset_left = 416.0
+offset_top = 88.0
+offset_right = 832.0
+offset_bottom = 192.0
 flat = true
 
 [node name="opciones" type="Button" parent="."]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 384.0
-offset_right = 792.0
-offset_bottom = 488.0
+offset_left = 168.0
+offset_top = 528.0
+offset_right = 584.0
+offset_bottom = 632.0
 flat = true
 
 [node name="salir" type="Button" parent="."]
 layout_mode = 0
-offset_left = 376.0
+offset_left = 696.0
 offset_top = 528.0
-offset_right = 792.0
+offset_right = 1112.0
 offset_bottom = 632.0
 flat = true
 
@@ -108,6 +109,11 @@ autoplay = true
 libraries = {
 "": SubResource("AnimationLibrary_8btjr")
 }
+
+[node name="Continuar" type="Sprite2D" parent="."]
+position = Vector2(370, 579.5)
+scale = Vector2(0.56875, 0.583334)
+texture = ExtResource("4_1wfax")
 
 [connection signal="pressed" from="inicio" to="." method="_on_inicio_pressed"]
 [connection signal="pressed" from="opciones" to="." method="_on_opciones_pressed"]

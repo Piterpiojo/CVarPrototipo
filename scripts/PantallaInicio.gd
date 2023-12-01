@@ -57,10 +57,10 @@ func _on_button_9_pressed():
 
 
 func _on_inicio_pressed():
-	nivel= CargaArchivos.cargar_avance()
+	nivel = 0
 	$AnimationPlayer.play("splash")
 
 
-
 func _on_opciones_pressed():
-	pass # Replace with function body.
+	nivel= CargaArchivos.cargar_avance()
+	$AnimationPlayer.play("splash")

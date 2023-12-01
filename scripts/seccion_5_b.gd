@@ -1,8 +1,8 @@
 extends Control
 var cuadros_texto=[]
 var ya_lanzo=false
-var provincias =['--- Seleccionar ---', 'Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
-var partido = [
+const provincias =['--- Seleccionar ---', 'Buenos Aires', 'Capital Federal', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán']
+const partido = [
 		"---------- Seleccionar ----------",
 		"25 de Mayo",
 		"9 de Julio",
@@ -182,7 +182,9 @@ func _on_guardar_pressed():
 func cambiarEscena():
 	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5c.tscn")
 
-func _on_line_edit_16_gui_input(event):
-	if(!ya_lanzo):
+
+
+func _on_line_edit_16_focus_entered():
+	if(!ya_lanzo and $ScrollContainer/TextureRect/calle.text != "" and $ScrollContainer/TextureRect/partido.text != "---------- Seleccionar ----------"):
 		$ColorRect/Label2.text="¡¡¡Ultimo momento!!! La Luz mala fue avistada en la calle " + $ScrollContainer/TextureRect/calle.text + " en el partido de " + $ScrollContainer/TextureRect/partido.text 
 		$AnimationPlayer.play("publicidad")

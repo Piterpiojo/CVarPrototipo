@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Retro Comedy.ogg-795305cb4bd577e1dc95b2eebebd
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

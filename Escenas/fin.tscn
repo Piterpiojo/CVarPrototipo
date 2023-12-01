@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6haro1xbwqah"]
+[gd_scene load_steps=7 format=3 uid="uid://c6haro1xbwqah"]
 
 [ext_resource type="Script" path="res://scripts/fin.gd" id="1_1deth"]
 [ext_resource type="Texture2D" uid="uid://cy72wec41kcps" path="res://Imagenes/1131w-yPFB16IJZPY.png" id="1_ak7wj"]
+[ext_resource type="AudioStream" uid="uid://bcgnvemgir6qt" path="res://sonidos/Musica y sonidos a utilizar/Retro Comedy.ogg" id="3_0kcc7"]
 
 [sub_resource type="Animation" id="Animation_t3s31"]
 length = 0.001
@@ -93,3 +94,7 @@ offset_bottom = 1675.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 41
 text = "Creditos"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0kcc7")
+autoplay = true
