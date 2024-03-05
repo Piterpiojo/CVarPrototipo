@@ -391,6 +391,15 @@ grow_vertical = 2
 text = "Vista previa
 dialogo actual"
 
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 394.0
+offset_right = 152.0
+offset_bottom = 425.0
+scale = Vector2(2, 2)
+text = "Es Importante"
+
 [connection signal="item_selected" from="emocion" to="." method="_on_emocion_item_selected"]
 [connection signal="pressed" from="cargar" to="." method="_on_cargar_pressed"]
 [connection signal="pressed" from="verprueba" to="." method="_on_verprueba_pressed"]

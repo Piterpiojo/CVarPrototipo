@@ -315,4 +315,19 @@ script = ExtResource("21_nxw17")
 stream = ExtResource("23_blrmw")
 volume_db = 14.0
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -69.0
+offset_right = 160.0
+offset_bottom = -38.0
+grow_vertical = 0
+text = "Importante"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

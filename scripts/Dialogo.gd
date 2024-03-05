@@ -121,3 +121,34 @@ func _on_timer_timeout():
 	else:
 		completo = true
 
+
+
+func _on_button_pressed():
+	var i=0
+	for dialogo in dialogos:
+		i+=1
+		indice_dialogo=i
+		print(str(indice_dialogo) + " " + dialogo["texto"])
+		if dialogo["importante"]:
+			mostrar_dialogo_unico(dialogo["texto"],dialogo["personaje"])
+			habilitado=true
+			dialogo["importante"]=false
+			break
+		saltar_dialogo()
+
+func saltar_dialogo():
+	if !pausa:
+		$DialogoText.text = ""
+		if indice_dialogo < len(dialogos):
+			pass
+		else:
+			desactivar_dialogo()
+			$Timer.stop()
+			$AudioStreamPlayer.gameplay_play()
+
+func _on_button_mouse_entered():
+	habilitado= false
+
+
+func _on_button_mouse_exited():
+	habilitado = true

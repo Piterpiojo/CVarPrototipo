@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl3lbndj2qinp"]
+
+[ext_resource type="Script" path="res://prueb.gd" id="1_we1fu"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_jxcnn"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_we1fu")
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("2_jxcnn")]
+anchors_preset = 2
+anchor_left = 0.0
+anchor_right = 0.0
+offset_left = 0.0
+offset_top = 358.0
+offset_right = 1335.0
+offset_bottom = 718.0
+grow_horizontal = 1
