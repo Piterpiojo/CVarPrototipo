@@ -327,6 +327,14 @@ offset_bottom = -38.0
 grow_vertical = 0
 text = "Importante"
 
+[node name="prueba" type="Label" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 298.0
+offset_right = 384.0
+offset_bottom = 321.0
+text = "prueba, borrar"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]

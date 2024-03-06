@@ -50,6 +50,7 @@ func Mostrar_Linea(indice):
 
 
 func _process(_delta):
+	$prueba.text = "Id :" + str(indice_dialogo)
 	if(Input.is_action_just_pressed("click") and habilitado):
 		if completo:
 			sig_dialogo()
@@ -124,17 +125,21 @@ func _on_timer_timeout():
 
 
 func _on_button_pressed():
-	var i=0
-	for dialogo in dialogos:
-		i+=1
-		indice_dialogo=i
-		print(str(indice_dialogo) + " " + dialogo["texto"])
-		if dialogo["importante"]:
-			mostrar_dialogo_unico(dialogo["texto"],dialogo["personaje"])
-			habilitado=true
-			dialogo["importante"]=false
-			break
-		saltar_dialogo()
+	if(contiene_importante()):
+		var i=0
+		for dialogo in dialogos:
+
+			print(str(indice_dialogo) + " " + dialogo["texto"] + " " + str(dialogo["importante"]))
+			if dialogo["importante"]:
+				mostrar_dialogo_unico(dialogo["texto"],dialogo["personaje"])
+				habilitado=true
+				dialogo["importante"]=false
+				break
+			i+=1
+			indice_dialogo=i
+			saltar_dialogo()
+	else:
+		$Button.disabled=true
 
 func saltar_dialogo():
 	if !pausa:
@@ -148,6 +153,14 @@ func saltar_dialogo():
 
 func _on_button_mouse_entered():
 	habilitado= false
+
+func contiene_importante():
+	
+	for dialogo in dialogos:
+		if dialogo["importante"]:
+			return true
+		
+	return false
 
 
 func _on_button_mouse_exited():
