@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=27 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
 [ext_resource type="Texture2D" uid="uid://d15er1lqdmpcx" path="res://Sprites/ave/cap 3 y4/arrogante.png" id="2_374og"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dnflbexd55ec1" path="res://Sprites/ave/cap 3 y4/tos.png" id="20_os87x"]
 [ext_resource type="Script" path="res://scripts/audio.gd" id="21_nxw17"]
 [ext_resource type="AudioStream" uid="uid://cr4cfo7tb2qsh" path="res://sonidos/Musica y sonidos a utilizar/rollover1.ogg" id="23_blrmw"]
+[ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="24_eofib"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_poixm"]
 load_path = "res://.godot/imported/dialogopersonaje2.png-ae30b831c6e8e1bf7fdd467af64d9b10.ctex"
@@ -201,15 +202,20 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -656.0
-offset_top = -340.0
-offset_right = 679.0
-offset_bottom = 20.0
+offset_left = -666.0
+offset_top = -350.0
+offset_right = 669.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = SubResource("CompressedTexture2D_poixm")
 script = ExtResource("1_pygju")
 metadata/_edit_horizontal_guides_ = [415.0]
+
+[node name="Logro" parent="." instance=ExtResource("24_eofib")]
+layout_mode = 1
+offset_top = 385.0
+offset_bottom = 475.0
 
 [node name="DialogoText" type="RichTextLabel" parent="."]
 layout_mode = 1

@@ -9,7 +9,7 @@ var cuadro
 var letra = 0
 var modulateAcutal
 var completo = false
-
+var logro = false
 func deshabilitar():
 	habilitado = false
 func habilitar():
@@ -90,6 +90,8 @@ func habilitar_dialogo():
 	habilitado = true
 
 func mostrar_dialogo_unico(texto,pj):
+	if !logro:
+		logro=true
 	habilitar_dialogo()
 	$DialogoText.text = texto
 	if(pj=="Usuario"):
@@ -125,10 +127,11 @@ func _on_timer_timeout():
 
 
 func _on_button_pressed():
+	if !logro:
+		mostrar_logro("No hay tiempo que perder", "Saltaste a un dialogo importante")
 	if(contiene_importante()):
 		var i=0
 		for dialogo in dialogos:
-
 			print(str(indice_dialogo) + " " + dialogo["texto"] + " " + str(dialogo["importante"]))
 			if dialogo["importante"]:
 				mostrar_dialogo_unico(dialogo["texto"],dialogo["personaje"])
@@ -162,6 +165,9 @@ func contiene_importante():
 		
 	return false
 
+func mostrar_logro(titulo, mensaje):
+	print(get_child(0).name)
+	get_child(0).fijar_logro(titulo, mensaje)
 
 func _on_button_mouse_exited():
 	habilitado = true

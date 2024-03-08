@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c11ktc6sohg00"]
+[gd_scene load_steps=10 format=3 uid="uid://c11ktc6sohg00"]
 
 [ext_resource type="Script" path="res://scripts/Nivel1.gd" id="1_81eoj"]
+[ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="2_6tw8c"]
 [ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="2_i7ux5"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_kx6dc"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="4_hmhg2"]
@@ -23,7 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_l3tpb"]
 resource_name = "negro"
-length = 2.0
+length = 6.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -31,10 +32,10 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 4.1, 6.2),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -43,7 +44,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2),
+"times": PackedFloat32Array(6.2),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -136,6 +137,9 @@ libraries = {
 }
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+
+[node name="Logro" parent="." instance=ExtResource("2_6tw8c")]
+layout_mode = 1
 
 [node name="Pausa" parent="." instance=ExtResource("4_hmhg2")]
 layout_mode = 1

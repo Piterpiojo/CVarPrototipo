@@ -9,6 +9,7 @@ func _ready():
 	$ayuda.cambiar_texto("Da tu primer paso en Cvar, Regístrate")
 
 func _on_nuevo_usuario_pressed():
+	get_parent().get_child(1).get_child(4).fijar_logro("El Comienzo", "Diste el primer paso para completar tu CVAR")
 	$AudioStreamPlayer2D.stream=SonidoExito
 	$AudioStreamPlayer2D.play()
 	$AnimationPlayer.play("negro")
