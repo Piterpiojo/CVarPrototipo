@@ -10,6 +10,7 @@ var letra = 0
 var modulateAcutal
 var completo = false
 var logro = false
+
 func deshabilitar():
 	habilitado = false
 func habilitar():
@@ -127,8 +128,6 @@ func _on_timer_timeout():
 
 
 func _on_button_pressed():
-	if !logro:
-		mostrar_logro("No hay tiempo que perder", "Saltaste a un dialogo importante")
 	if(contiene_importante()):
 		var i=0
 		for dialogo in dialogos:
@@ -165,9 +164,7 @@ func contiene_importante():
 		
 	return false
 
-func mostrar_logro(titulo, mensaje):
-	print(get_child(0).name)
-	get_child(0).fijar_logro(titulo, mensaje)
+
 
 func _on_button_mouse_exited():
 	habilitado = true

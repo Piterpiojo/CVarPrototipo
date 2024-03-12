@@ -13,8 +13,8 @@ func _on_nuevo_usuario_pressed():
 	$AudioStreamPlayer2D.stream=SonidoExito
 	$AudioStreamPlayer2D.play()
 	$AnimationPlayer.play("negro")
-	
-	
+
+
 func cambiar_escena():
 	get_tree().change_scene_to_file("res://Escenas/nivel2/Registro.tscn")
 

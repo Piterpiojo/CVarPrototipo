@@ -1,0 +1,187 @@
+[gd_scene load_steps=3 format=3 uid="uid://cla13vr5u1pva"]
+
+[ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="1_dpqod"]
+[ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_i4lbn"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -72.0
+offset_right = 72.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 46
+text = "Selector de niveles
+"
+
+[node name="1" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 216.0
+offset_right = 88.0
+offset_bottom = 240.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="1"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="2" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 88.0
+offset_bottom = 280.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="2"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="3" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 296.0
+offset_right = 88.0
+offset_bottom = 320.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="3"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="4" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 336.0
+offset_right = 88.0
+offset_bottom = 360.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="4"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="5" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 376.0
+offset_right = 88.0
+offset_bottom = 400.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="5"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="6" type="CheckBox" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 416.0
+offset_right = 88.0
+offset_bottom = 440.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="6"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 170.0
+offset_right = 1224.0
+offset_bottom = 540.0
+texture = ExtResource("1_dpqod")
+expand_mode = 1
+
+[node name="Objectivo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 121.0
+offset_right = 1224.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 24
+text = "Objetivo del nivel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 717.0
+offset_top = -180.0
+offset_right = 1853.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.18, 0.18)
+
+[node name="1" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_i4lbn")
+
+[node name="2" type="TextureRect" parent="VBoxContainer"]
+modulate = Color(0.27451, 0.27451, 0.27451, 1)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_i4lbn")
+
+[node name="3" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_i4lbn")
+
+[node name="4" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_i4lbn")
+
+[node name="5" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_i4lbn")
