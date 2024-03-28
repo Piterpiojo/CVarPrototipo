@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://p32ucbdoh3h8"]
+[gd_scene load_steps=17 format=3 uid="uid://p32ucbdoh3h8"]
 
 [ext_resource type="Script" path="res://scripts/Registro.gd" id="1_i41gf"]
 [ext_resource type="Texture2D" uid="uid://ct44731gqe5ya" path="res://Imagenes/RegistroUsuario/Registro de Usuario-12.png" id="2_d3p4k"]
@@ -124,8 +124,25 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_ra763"]
+resource_name = "Entrada"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5yacj"]
 _data = {
+"Entrada": SubResource("Animation_ra763"),
 "RESET": SubResource("Animation_44334"),
 "arreglar": SubResource("Animation_wva0c"),
 "fin": SubResource("Animation_vcppx")

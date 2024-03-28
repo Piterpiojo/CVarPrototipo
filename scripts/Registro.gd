@@ -8,6 +8,7 @@ var i = 0
 const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
 func _ready():
+	$AnimationPlayer.play("Entrada")
 	buscar_cuadros($ScrollContainer/TextureRect)
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()

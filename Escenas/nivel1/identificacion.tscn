@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c11ktc6sohg00"]
+[gd_scene load_steps=11 format=3 uid="uid://c11ktc6sohg00"]
 
 [ext_resource type="Script" path="res://scripts/Nivel1.gd" id="1_81eoj"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="2_6tw8c"]
@@ -52,8 +52,25 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_xamk2"]
+resource_name = "Entrada"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5x7ke"]
 _data = {
+"Entrada": SubResource("Animation_xamk2"),
 "RESET": SubResource("Animation_r1wqj"),
 "negro": SubResource("Animation_l3tpb")
 }
@@ -140,8 +157,6 @@ libraries = {
 
 [node name="Logro" parent="." instance=ExtResource("2_6tw8c")]
 layout_mode = 1
-offset_top = 25.0
-offset_bottom = 115.0
 
 [node name="Pausa" parent="." instance=ExtResource("4_hmhg2")]
 layout_mode = 1

@@ -221,7 +221,7 @@ anchor_bottom = 1.0
 offset_left = -383.5
 offset_top = -258.0
 offset_right = 558.5
-offset_bottom = -64.0
+offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 17
@@ -315,7 +315,8 @@ script = ExtResource("21_nxw17")
 stream = ExtResource("23_blrmw")
 volume_db = 14.0
 
-[node name="Button" type="Button" parent="."]
+[node name="Importante" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -328,6 +329,7 @@ grow_vertical = 0
 text = "Importante"
 
 [node name="prueba" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 344.0
 offset_top = 298.0
@@ -336,6 +338,6 @@ offset_bottom = 321.0
 text = "prueba, borrar"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
-[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Importante" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Importante" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Importante" to="." method="_on_button_pressed"]

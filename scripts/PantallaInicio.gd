@@ -64,3 +64,7 @@ func _on_inicio_pressed():
 func _on_opciones_pressed():
 	nivel= CargaArchivos.cargar_avance()
 	$AnimationPlayer.play("splash")
+
+
+func _on_abrir_explorer_pressed():
+	OS.shell_open("https://virtual.unpaz.edu.ar/")
