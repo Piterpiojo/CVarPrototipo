@@ -142,6 +142,7 @@ const partido = [
 	]
 const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+var progreso = 0
 func _ready():
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel5c")
 	$CuadroDialogo.comenzar()
@@ -151,8 +152,11 @@ func _ready():
 		$ScrollContainer/TextureRect/provincia.add_item(i)
 	for i in partido:
 		$ScrollContainer/TextureRect/partido.add_item(i)
-
-
+	guardar_avances()
+		
+func guardar_avances():
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo, 50)
+	
 func _process(_delta):
 	if$CuadroDialogo.indice_dialogo > 2 and !bandera:
 		flotar()

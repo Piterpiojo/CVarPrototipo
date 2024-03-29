@@ -6,13 +6,20 @@ var contador_recarga : int = 0
 var cuadros_texto=[]
 var i = 0
 const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
-const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
+const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
+var progreso= 0;
+
 func _ready():
 	$AnimationPlayer.play("Entrada")
 	buscar_cuadros($ScrollContainer/TextureRect)
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()
-	CargaArchivos.guardar_avance(1)
+	guardar_avances()
+	
+
+func guardar_avances():
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(1,progreso)
 
 func eliminar_fake():
 	$ScrollContainer/TextureRect/fake.queue_free()
@@ -77,22 +84,27 @@ func _on_enviar_pressed():
 					$Timer.start()
 					$AudioStreamPlayer.stream= SonidoExito
 					$AudioStreamPlayer.play()
+					progreso = 80
 				else:
 					llamar_dialogo("el [b]codigo de seguridad[/b] es incorrecto")
 					$AudioStreamPlayer.stream= SonidoFallo
 					$AudioStreamPlayer.play()
+					progreso = 80
 			else:
 				llamar_dialogo("te falto completar algun campo")
 				$AudioStreamPlayer.stream= SonidoFallo
 				$AudioStreamPlayer.play()
+				progreso = 80
 		else:
 			$CuadroDialogo.mostrar_dialogo_unico("error correo no coinciden","Ave")
 			$AudioStreamPlayer.stream= SonidoFallo
 			$AudioStreamPlayer.play()
+			progreso = 80
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta secreta no coinciden","Ave")
 		$AudioStreamPlayer.stream= SonidoFallo
 		$AudioStreamPlayer.play()
+		progreso = 80
 
 
 

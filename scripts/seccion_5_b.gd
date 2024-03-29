@@ -150,7 +150,10 @@ func _ready():
 		$ScrollContainer/TextureRect/provincia.add_item(i)
 	for i in partido:
 		$ScrollContainer/TextureRect/partido.add_item(i)
+	guardar_avances()
 
+func guardar_avances():
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo, 25)
 func buscar_cuadros(nodo):
 	for child in nodo.get_children():
 		if child is LineEdit and child.is_in_group("obligatorio"):

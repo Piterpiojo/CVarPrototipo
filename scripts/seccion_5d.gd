@@ -7,13 +7,15 @@ var eventoTimer=false
 func _ready():
 	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5d")
 	$CuadroDialogo.comenzar()
+	guardar_avances()
 
 func _input(event):
 	if(event.is_action_pressed("ui_cancel")):
 		get_tree().paused=true
 		$Pausa.visible=true
 
-
+func guardar_avances():
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo,75)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

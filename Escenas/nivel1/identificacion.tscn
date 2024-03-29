@@ -7,6 +7,22 @@
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="4_hmhg2"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="5_ohnen"]
 
+[sub_resource type="Animation" id="Animation_xamk2"]
+resource_name = "Entrada"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_r1wqj"]
 length = 0.001
 tracks/0/type = "value"
@@ -50,22 +66,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"cambiar_escena"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_xamk2"]
-resource_name = "Entrada"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6, 2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5x7ke"]

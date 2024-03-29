@@ -14,6 +14,7 @@ func _on_nuevo_usuario_pressed():
 	get_parent().get_child(1).get_child(4).fijar_logro("El Comienzo", "Diste el primer paso para completar tu CVAR")
 	$AudioStreamPlayer2D.stream=SonidoExito
 	$AudioStreamPlayer2D.play()
+	CargaArchivos.establecer_progreso(1,100)
 	$AnimationPlayer.play("negro")
 
 

@@ -142,6 +142,7 @@ var bandera2= false
 var bandera3 = false
 const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+var progreso = 0
 
 func _ready():
 	for i in provincias:
@@ -152,8 +153,10 @@ func _ready():
 	$CuadroDialogo.comenzar()
 	buscar_cuadros($"ScrollContainer/seccion-a")
 	print(cuadros_texto.size())
-	CargaArchivos.guardar_avance(4)
+	guardar_avances()
 
+func guardar_avances():
+	CargaArchivos.guardar_avance(5, $CuadroDialogo.indice_dialogo, 0)
 
 func buscar_cuadros(nodo):
 	for child in nodo.get_children():

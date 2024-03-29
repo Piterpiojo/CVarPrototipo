@@ -57,8 +57,7 @@ func _on_button_9_pressed():
 
 
 func _on_inicio_pressed():
-	nivel = 0
-	$AnimationPlayer.play("splash")
+	get_tree().change_scene_to_file("res://Escenas/Selector_niveles.tscn")
 
 
 func _on_opciones_pressed():
@@ -67,4 +66,4 @@ func _on_opciones_pressed():
 
 
 func _on_abrir_explorer_pressed():
-	OS.shell_open("https://virtual.unpaz.edu.ar/")
+	OS.shell_open("https://www.unpaz.edu.ar/")

@@ -69,6 +69,10 @@ func _ready():
 		$ScrollContainer/TextureRect/siete.add_item(i)
 		$ScrollContainer/TextureRect/seis.add_item(i)
 		$ScrollContainer/TextureRect/tres.add_item(i)
+	guardar_avances()
+
+func guardar_avances():
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo, 80)
 
 func completas():
 	var cantidad=0

@@ -13,20 +13,25 @@ var bandera7 : bool = false
 var bandera8 : bool = false
 var banderaMail:bool = false
 var banderaFin : bool = false
-var SonidoReloj= preload("res://sonidos/Musica y sonidos a utilizar/toggle_004.ogg")
-var SonidoMail=preload("res://sonidos/Musica y sonidos a utilizar/toggle_002.ogg")
-var SonidoFoto = preload("res://sonidos/Musica y sonidos a utilizar/error_007.ogg")
-var SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
-var SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
+const SonidoReloj= preload("res://sonidos/Musica y sonidos a utilizar/toggle_004.ogg")
+const SonidoMail=preload("res://sonidos/Musica y sonidos a utilizar/toggle_002.ogg")
+const SonidoFoto = preload("res://sonidos/Musica y sonidos a utilizar/error_007.ogg")
+const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
+var progreso=0
 
 func _ready():
 	$reloj.text=str(horas) + ":"+ str(minutos) + ":"+ str(segundos)
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel3")
 	$CuadroDialogo.comenzar()
-	CargaArchivos.guardar_avance(2)
+	guardar_avances()
 
 func _process(_delta):
 	eventos()
+
+func guardar_avances():
+	CargaArchivos.guardar_avance(3, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(3,progreso)
 
 func eventos():
 	if $CuadroDialogo.indice_dialogo ==1 and !bandera1:
@@ -35,6 +40,7 @@ func eventos():
 		$AudioStreamPlayer.stream=SonidoFoto
 		$AudioStreamPlayer.play()
 		bandera1= true
+		progreso = 10
 	elif $CuadroDialogo.indice_dialogo == 3 and !banderaMail:
 		$AnimationPlayer.stop()
 		$Usuario.visible=false
@@ -42,24 +48,29 @@ func eventos():
 		$AudioStreamPlayer.stream=SonidoMail
 		$AudioStreamPlayer.play()
 		banderaMail=true
+		progreso = 20
 	elif $CuadroDialogo.indice_dialogo == 4 and !bandera2:
 		tiempo()
 		bandera2=true
+		progreso = 30
 	elif $CuadroDialogo.indice_dialogo == 7 and !bandera3:
 		$espera.start()
 		$CuadroDialogo.pausa=true
 		$CuadroDialogo.habilitado= false
 		bandera3=true
 		$ayuda.cambiar_texto("Espera a que se complete el tiempo")
+		progreso = 40
 	elif $CuadroDialogo.indice_dialogo == 11 and !bandera4:
 		$espera.start()
 		$CuadroDialogo.pausa=true
 		$CuadroDialogo.habilitado= false
 		$CuadroDialogo.letra=0
 		bandera4=true
+		progreso = 50
 	elif $CuadroDialogo.indice_dialogo == 12 and !bandera5:
 		acelerar()
 		bandera5=true
+		progreso = 60
 	elif $CuadroDialogo.indice_dialogo== 16 and !bandera6:
 		$reloj.visible= false
 		$"NicePngEmail-icon-png-transparent903587".visible = false
@@ -67,19 +78,20 @@ func eventos():
 		pausar_y_ocultar_dialogo()
 		bandera6 = true
 		$ayuda.cambiar_texto("ingresa la contraseña correctamente")
+		progreso = 70
 	elif $CuadroDialogo.indice_dialogo == 26 and !bandera7:
 		bandera7=true
 		pausar_y_ocultar_dialogo()
-	
+		progreso = 80
 	elif $CuadroDialogo.indice_dialogo == 29 and !bandera8:
 		bandera8=true
 		pausar_y_ocultar_dialogo()
 		$ayuda.cambiar_texto("Crea una nueva contraseña")
-		
+		progreso = 90
 	elif $CuadroDialogo.indice_dialogo == 30 and !banderaFin:
 		$AnimationPlayer.play("fin")
 		banderaFin=true
-
+		progreso=100
 
 func pausar_y_ocultar_dialogo():
 	$CuadroDialogo.pausa= true

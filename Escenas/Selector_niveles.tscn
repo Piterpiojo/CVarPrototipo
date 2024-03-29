@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cla13vr5u1pva"]
+[gd_scene load_steps=4 format=3 uid="uid://cla13vr5u1pva"]
 
 [ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="1_dpqod"]
+[ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
 [ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_i4lbn"]
 
 [node name="Control" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gfbry")
 
 [node name="titulo" type="Label" parent="."]
 layout_mode = 1
@@ -23,108 +25,6 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 46
 text = "Selector de niveles
 "
-
-[node name="1" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 216.0
-offset_right = 88.0
-offset_bottom = 240.0
-disabled = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="ProgressBar" type="ProgressBar" parent="1"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 26.0
-
-[node name="2" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 256.0
-offset_right = 88.0
-offset_bottom = 280.0
-disabled = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="ProgressBar" type="ProgressBar" parent="2"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 26.0
-
-[node name="3" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 296.0
-offset_right = 88.0
-offset_bottom = 320.0
-disabled = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="ProgressBar" type="ProgressBar" parent="3"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 26.0
-
-[node name="4" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 336.0
-offset_right = 88.0
-offset_bottom = 360.0
-disabled = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="ProgressBar" type="ProgressBar" parent="4"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 26.0
-
-[node name="5" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 376.0
-offset_right = 88.0
-offset_bottom = 400.0
-disabled = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="ProgressBar" type="ProgressBar" parent="5"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 26.0
-
-[node name="6" type="CheckBox" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 416.0
-offset_right = 88.0
-offset_bottom = 440.0
-disabled = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="ProgressBar" type="ProgressBar" parent="6"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 26.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -163,12 +63,14 @@ scale = Vector2(0.18, 0.18)
 [node name="1" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
+tooltip_text = "Registrate"
 texture = ExtResource("2_i4lbn")
 
 [node name="2" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.27451, 0.27451, 0.27451, 1)
 layout_mode = 2
 size_flags_vertical = 0
+tooltip_text = "logro bloqueado"
 texture = ExtResource("2_i4lbn")
 
 [node name="3" type="TextureRect" parent="VBoxContainer"]
@@ -185,3 +87,171 @@ texture = ExtResource("2_i4lbn")
 layout_mode = 2
 size_flags_vertical = 0
 texture = ExtResource("2_i4lbn")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="1" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 216.0
+offset_right = 88.0
+offset_bottom = 240.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b1" type="ProgressBar" parent="Control/1"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="2" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 256.0
+offset_right = 88.0
+offset_bottom = 280.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b2" type="ProgressBar" parent="Control/2"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="3" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 296.0
+offset_right = 88.0
+offset_bottom = 320.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b3" type="ProgressBar" parent="Control/3"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="4" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 336.0
+offset_right = 88.0
+offset_bottom = 360.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b4" type="ProgressBar" parent="Control/4"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="5" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 376.0
+offset_right = 88.0
+offset_bottom = 400.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b5" type="ProgressBar" parent="Control/5"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="6" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 416.0
+offset_right = 88.0
+offset_bottom = 440.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b6" type="ProgressBar" parent="Control/6"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="c1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 213.0
+offset_right = 567.0
+offset_bottom = 243.0
+flat = true
+
+[node name="c2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 251.0
+offset_right = 568.0
+offset_bottom = 281.0
+flat = true
+
+[node name="c3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 294.0
+offset_right = 566.0
+offset_bottom = 324.0
+flat = true
+
+[node name="c4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 335.0
+offset_right = 567.0
+offset_bottom = 365.0
+flat = true
+
+[node name="c5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 374.0
+offset_right = 569.0
+offset_bottom = 404.0
+flat = true
+
+[node name="c6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 414.0
+offset_right = 569.0
+offset_bottom = 444.0
+flat = true
+
+[connection signal="mouse_entered" from="c1" to="." method="_on_c_1_mouse_entered"]
+[connection signal="pressed" from="c1" to="." method="_on_c_1_pressed"]
+[connection signal="mouse_entered" from="c2" to="." method="_on_c_2_mouse_entered"]
+[connection signal="pressed" from="c2" to="." method="_on_c_2_pressed"]
+[connection signal="mouse_entered" from="c3" to="." method="_on_c_3_mouse_entered"]
+[connection signal="pressed" from="c3" to="." method="_on_c_3_pressed"]
+[connection signal="mouse_entered" from="c4" to="." method="_on_c_4_mouse_entered"]
+[connection signal="pressed" from="c4" to="." method="_on_c_4_pressed"]
+[connection signal="mouse_entered" from="c5" to="." method="_on_c_5_mouse_entered"]
+[connection signal="pressed" from="c5" to="." method="_on_c_5_pressed"]
+[connection signal="mouse_entered" from="c6" to="." method="_on_c_6_mouse_entered"]
+[connection signal="pressed" from="c6" to="." method="_on_c_6_pressed"]
