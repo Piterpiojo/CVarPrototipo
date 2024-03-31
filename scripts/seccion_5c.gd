@@ -155,8 +155,8 @@ func _ready():
 	guardar_avances()
 		
 func guardar_avances():
-	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo, 50)
-	
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(5,50)
 func _process(_delta):
 	if$CuadroDialogo.indice_dialogo > 2 and !bandera:
 		flotar()

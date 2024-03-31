@@ -89,9 +89,11 @@ func eventos():
 		$ayuda.cambiar_texto("Crea una nueva contraseña")
 		progreso = 90
 	elif $CuadroDialogo.indice_dialogo == 30 and !banderaFin:
-		$AnimationPlayer.play("fin")
 		banderaFin=true
 		progreso=100
+		guardar_avances()
+		$AnimationPlayer.play("fin")
+		
 
 func pausar_y_ocultar_dialogo():
 	$CuadroDialogo.pausa= true

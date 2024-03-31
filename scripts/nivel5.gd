@@ -152,11 +152,11 @@ func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel5")
 	$CuadroDialogo.comenzar()
 	buscar_cuadros($"ScrollContainer/seccion-a")
-	print(cuadros_texto.size())
 	guardar_avances()
 
 func guardar_avances():
-	CargaArchivos.guardar_avance(5, $CuadroDialogo.indice_dialogo, 0)
+	CargaArchivos.guardar_avance(5, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(5,progreso)
 
 func buscar_cuadros(nodo):
 	for child in nodo.get_children():
@@ -201,6 +201,8 @@ func _on_timer_timeout():
 
 func _on_guardar_pressed():
 	if !hay_campos_vacios():
+		progreso = 25
+		guardar_avances()
 		get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5_b.tscn")
 	else:
 		$AudioStreamPlayer.stream=sonidoError

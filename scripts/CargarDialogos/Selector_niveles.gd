@@ -20,6 +20,9 @@ func _ready():
 	if(avances == null):
 		get_tree().reload_current_scene()
 	mover_porcentaje()
+	CargaArchivos.cargar_logros()
+	
+	
 	
 	
 func mover_porcentaje():
@@ -50,7 +53,17 @@ func _on_c_4_pressed():
 
 
 func _on_c_5_pressed():
-	cargar(niveles[4])
+	var progreso5 = CargaArchivos.cargar_avance()["5"]
+	if progreso5 == 0:
+		cargar(niveles[4])
+	elif progreso5 >= 25 and progreso5 < 50:
+		cargar("res://Escenas/nivel5/seccion_5_b.tscn")
+	elif progreso5 >= 50 and progreso5 < 75:
+		cargar("res://Escenas/nivel5/seccion_5c.tscn")
+	elif progreso5 >= 75 and progreso5 < 80:
+		cargar("res://Escenas/nivel5/seccion_5d.tscn")
+	else:
+		cargar("res://Escenas/nivel5/seccion_5_db.tscn")
 
 
 func _on_c_6_pressed():
@@ -59,22 +72,37 @@ func _on_c_6_pressed():
 
 func _on_c_1_mouse_entered():
 	$TextureRect.texture = preload(imagenes[0])
-	
+	vista_logros(1)
 
 func _on_c_2_mouse_entered():
 	$TextureRect.texture = preload(imagenes[1])
+	vista_logros(2)
 
 func _on_c_3_mouse_entered():
 	$TextureRect.texture = preload(imagenes[2])
+	vista_logros(3)
 
 
 func _on_c_4_mouse_entered():
 	$TextureRect.texture = preload(imagenes[3])
+	vista_logros(4)
 
 
 func _on_c_5_mouse_entered():
 	$TextureRect.texture = preload(imagenes[4])
+	vista_logros(5)
 
 
 func _on_c_6_mouse_entered():
 	$TextureRect.texture = preload(imagenes[5])
+	vista_logros(6)
+
+func vista_logros(index):
+	var indice= 0
+	var logros = CargaArchivos.logros[str(index)]
+	for i in $VBoxContainer.get_children():
+		if(logros[indice]):
+			i.modulate = "ffffff"
+		else:
+			i.modulate ="5c5c5c"
+		indice+=1

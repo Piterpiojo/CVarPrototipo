@@ -18,8 +18,8 @@ func _ready():
 	
 
 func guardar_avances():
-	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
-	CargaArchivos.establecer_progreso(1,progreso)
+	CargaArchivos.guardar_avance(2, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(2,progreso)
 
 func eliminar_fake():
 	$ScrollContainer/TextureRect/fake.queue_free()

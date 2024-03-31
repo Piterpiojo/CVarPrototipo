@@ -3,12 +3,17 @@ var bandera1=false
 var contador=0
 var bandera2=false
 var bandera3=false
+var progreso = 0
 const sonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("seccion6")
 	$CuadroDialogo.comenzar()
-	CargaArchivos.guardar_avance(5)
+	guardar_avances()
+
+func guardar_avances():
+	CargaArchivos.guardar_avance(6, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(6,progreso)
 
 func _input(event):
 	if(event.is_action_pressed("ui_cancel")):
@@ -19,12 +24,15 @@ func _input(event):
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo ==1 and !bandera1):
 		$AnimationPlayer.play("deslizar")
+		progreso = 25
 		bandera1=true
 	elif($CuadroDialogo.indice_dialogo ==5 and !bandera2):
 		$AnimationPlayer.play("deslizar4")
+		progreso = 50
 		bandera2=true
 	elif($CuadroDialogo.indice_dialogo == 12 and !bandera3):
 		$AnimationPlayer.play("deslizar5")
+		progreso = 75
 		bandera3=true
 	
 
@@ -61,4 +69,6 @@ func _on_visualizar_pressed():
 
 
 func _on_imprimir_pressed():
+	progreso= 100
+	guardar_avances()
 	get_tree().change_scene_to_file("res://Escenas/fin.tscn")

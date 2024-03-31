@@ -19,7 +19,8 @@ func _ready():
 
 
 func guardar_avances():
-	CargaArchivos.guardar_avance(4, $CuadroDialogo.indice_dialogo, progreso)
+	CargaArchivos.guardar_avance(4, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(4,progreso)
 
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera1):
@@ -27,12 +28,14 @@ func _process(_delta):
 		$CuadroDialogo.letra=0
 		$boton/Area2D/CollisionShape2D.disabled = false
 		$ayuda.cambiar_texto("Presiona el boton")
+		progreso = 33
 		bandera1= true
 	elif ($CuadroDialogo.indice_dialogo == 13 and !bandera2):
 		$CuadroDialogo.desactivar_dialogo()
 		$CuadroDialogo.letra=0
 		$ayuda.cambiar_texto("Atrapa ese boton, quizas podrias aplastarlo con algo...")
 		bandera2 = true
+		progreso = 66
 
 
 func mod_fuerza():
@@ -88,6 +91,8 @@ func cambiar_escena():
 	get_tree().change_scene_to_file("res://Escenas/nivel5/nivel5.tscn")
 
 func _on_boton_pressed():
+	progreso = 100
+	guardar_avances()
 	$AnimationPlayer.play("fin")
 	
 func reset():

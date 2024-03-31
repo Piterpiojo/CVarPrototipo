@@ -2,7 +2,15 @@ extends Node
 const path = "res://dialogos/"
 const save= "user://guardado.json"
 var data = []
-var nivel= {"nivel":0,1:0,2:0,3:0,4:0,5:0,6:0}
+var nivel= {"nivel":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0}
+var logros = {
+1: [false, false, false, false, false, false],
+2: [false, false, false, false, false, false],
+3: [false, false, false, false, false, false],
+4: [false, false, false, false, false, false],
+5: [false, false, false, false, false, false],
+6: [false, false, false, false, false, false]
+}
 
 func cargar(nombre):
 	if(FileAccess.file_exists(path + nombre + ".json")):
@@ -41,4 +49,20 @@ func guardar_avance(_nivel, i_dialogo):
 	archivo.close()
 
 func establecer_progreso(_nivel, porcentaje):
-	nivel[_nivel]=porcentaje
+	nivel[str(_nivel)]=porcentaje
+
+func guardar_logros():
+	var archivo
+	archivo = FileAccess.open("user://logros.json",FileAccess.WRITE)
+	archivo.store_string(JSON.stringify(logros))
+	archivo.close()
+	
+func cargar_logros():
+	if(FileAccess.file_exists("user://logros.json")):
+		var archivo = FileAccess.open("user://logros.json",FileAccess.READ)
+		var text = archivo.get_as_text()
+		logros=JSON.parse_string(text)
+		archivo.close()
+		return logros
+	else:
+		guardar_logros()

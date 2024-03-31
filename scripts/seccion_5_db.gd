@@ -72,7 +72,8 @@ func _ready():
 	guardar_avances()
 
 func guardar_avances():
-	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo, 80)
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(5,80)
 
 func completas():
 	var cantidad=0
@@ -113,6 +114,7 @@ func _process(_delta):
 
 
 func ir_al_nivel_seis():
+	CargaArchivos.establecer_progreso(5,100)
 	get_tree().change_scene_to_file("res://Escenas/nivel6/seccion6a.tscn")
 func llenarCuadros():
 	limpiar()

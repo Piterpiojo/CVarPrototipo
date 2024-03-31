@@ -15,7 +15,8 @@ func _input(event):
 		$Pausa.visible=true
 
 func guardar_avances():
-	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo,75)
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(5,75)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

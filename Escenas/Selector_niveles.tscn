@@ -61,29 +61,33 @@ grow_vertical = 0
 scale = Vector2(0.18, 0.18)
 
 [node name="1" type="TextureRect" parent="VBoxContainer"]
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 tooltip_text = "Registrate"
 texture = ExtResource("2_i4lbn")
 
 [node name="2" type="TextureRect" parent="VBoxContainer"]
-modulate = Color(0.27451, 0.27451, 0.27451, 1)
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 tooltip_text = "logro bloqueado"
 texture = ExtResource("2_i4lbn")
 
 [node name="3" type="TextureRect" parent="VBoxContainer"]
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 texture = ExtResource("2_i4lbn")
 
 [node name="4" type="TextureRect" parent="VBoxContainer"]
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 texture = ExtResource("2_i4lbn")
 
 [node name="5" type="TextureRect" parent="VBoxContainer"]
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 texture = ExtResource("2_i4lbn")

@@ -153,7 +153,8 @@ func _ready():
 	guardar_avances()
 
 func guardar_avances():
-	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo, 25)
+	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
+	CargaArchivos.establecer_progreso(5,25)
 func buscar_cuadros(nodo):
 	for child in nodo.get_children():
 		if child is LineEdit and child.is_in_group("obligatorio"):
