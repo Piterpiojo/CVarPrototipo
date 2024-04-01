@@ -1,0 +1,146 @@
+[gd_scene load_steps=10 format=3 uid="uid://ciiet6p2rriac"]
+
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_diia6"]
+[ext_resource type="Script" path="res://scripts/nivel_0.gd" id="1_vkic3"]
+[ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="2_wwqp0"]
+[ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="3_nqo8w"]
+
+[sub_resource type="Animation" id="Animation_xglfy"]
+resource_name = "al_centro"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuadroDialogo/Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(36, 199.5), Vector2(542, -58)]
+}
+
+[sub_resource type="Animation" id="Animation_xa2yi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuadroDialogo/Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(36, 199.5)]
+}
+
+[sub_resource type="Animation" id="Animation_7awu8"]
+resource_name = "a_izq"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuadroDialogo/Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(542, -58), Vector2(25, -66)]
+}
+
+[sub_resource type="Animation" id="Animation_gw3ra"]
+resource_name = "a_der"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuadroDialogo/Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(25, -66), Vector2(1072, -66)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ek8v0"]
+_data = {
+"RESET": SubResource("Animation_xa2yi"),
+"a_der": SubResource("Animation_gw3ra"),
+"a_izq": SubResource("Animation_7awu8"),
+"al_centro": SubResource("Animation_xglfy")
+}
+
+[node name="nivel0" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vkic3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("1_diia6")]
+layout_mode = 1
+offset_left = -662.0
+offset_right = 673.0
+
+[node name="Importante" parent="CuadroDialogo" index="8"]
+visible = true
+
+[node name="prueba" parent="CuadroDialogo" index="9"]
+visible = true
+
+[node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
+layout_mode = 1
+offset_top = 25.0
+offset_bottom = 115.0
+
+[node name="Pausa" parent="." instance=ExtResource("3_nqo8w")]
+layout_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ek8v0")
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 477.0
+offset_top = 192.0
+offset_right = 797.0
+offset_bottom = 320.0
+color = Color(0, 0, 0.372549, 1)
+
+[node name="si" type="Button" parent="ColorRect2"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 120.0
+offset_bottom = 80.0
+text = "Si"
+
+[node name="no" type="Button" parent="ColorRect2"]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 48.0
+offset_right = 304.0
+offset_bottom = 80.0
+text = "No"
+
+[connection signal="mouse_entered" from="ColorRect2" to="." method="_on_color_rect_2_mouse_entered"]
+
+[editable path="CuadroDialogo"]

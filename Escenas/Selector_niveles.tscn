@@ -114,6 +114,23 @@ offset_top = -1.0
 offset_right = 505.0
 offset_bottom = 26.0
 
+[node name="0" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 175.0
+offset_right = 88.0
+offset_bottom = 199.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b0" type="ProgressBar" parent="Control/0"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
 [node name="2" type="CheckBox" parent="Control"]
 layout_mode = 0
 offset_left = 64.0

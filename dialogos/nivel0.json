@@ -1,0 +1,314 @@
+[
+	{
+		"emocion": "saludando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "¡Hola! Soy Ave, tu asistente virtual, una inteligencia artificial diseñada por un grupo de científicos de la CONICET para colaborar para que puedas realizar la carga de tus datos en el CVar [b]porque la Ciencia te necesita.[/b]"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Este juego te permitirá tener más información acerca de los Sistemas informáticos utilizados por los científicos y estudiantes de Argentina y mejorar la carga de tus datos. "
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Un momento, ¡recién me doy cuenta de que no te explique qué es el CVar!"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "El CVar es el Registro Unificado y Normalizado a nivel nacional de los Datos Curriculares del personal científico y tecnológico que se desempeña en las distintas instituciones argentinas."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "En criollo, es donde todo el personal científico y tecnológico del país se registra."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Dentro de este, los beneficios más importantes que hay son:"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones.\n- La promoción del intercambio de información entre individuos, grupos e instituciones.\n"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "-Recibir información valiosa para la planificación y la toma de decisiones.\n-La promoción del intercambio de información entre individuos, grupos e instituciones.\n-Poder consultar qué, quién, cuándo, dónde y cómo se realiza investigación y desarrollo en Argentina.\n"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones.\n- La promoción del intercambio de información entre individuos, grupos e instituciones.\n- Poder consultar qué, quién, cuándo, dónde y cómo se realiza investigación y desarrollo en Argentina.\n- La posibilidad de realizar y participar en convocatorias institucionales, \n¡incluyendo las de financiamiento para proyectos!, utilizando información cargada en el CVar y evitando que el investigador tenga que subir y completar todo una y otra vez."
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Capaz te estés preguntando “Bueno, ¿Quiénes deberían participar?”"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "La respuesta es simple: [b]todas[/b] aquellas personas que desarrollan actividades científicas y tecnológicas en instituciones argentinas, sean oficiales o privadas, residan actualmente en el país o los que se encuentren realizando una estancia afuera."
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Mis notas dicen que también hay algo muy importante que tengo que explicarte ¡y eso es el sistema SIGEVA!"
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": " SIGEVA son las siglas que usamos para hablar del Sistema Integral de Gestión y Evaluación."
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "En pocas palabras es un conjunto de aplicaciones informáticas a las que podemos acceder por medio de un navegador de internet."
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Fue hecho por la Dirección de informática de la Gerencia de Organización y del CONICET."
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Tiene diferentes módulos pero hay uno solo que se vincula de forma directa con el CVar"
+	},
+	{
+		"emocion": "pensando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Ese es el [b]¡módulo de banco de actividades de CyT![/b]"
+	},
+	{
+		"emocion": "curiosa",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "¿Queres saber que contiene? [b]¿Seguro?[/b]"
+	},
+	{
+		"emocion": "curiosa",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Bueno, este módulo cuenta con formularios importantes que componen tu CV, tales como:"
+	},
+	{
+		"emocion": "curiosa",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Datos Personales: Identificación; Dirección residencial; "
+	},
+	{
+		"emocion": "curiosa",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Lugar de trabajo; "
+	},
+	{
+		"emocion": "curiosa",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Experticia en CyT."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Formación académica; Formación complementaria.\n"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Cargos: Docencia; Cargos I+D; Cargos en gestión institucional; Otros cargos.\n"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Antecedentes: Financiamiento C-T; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Formación RRHH; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Extensión; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Evaluación; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Becas; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Otras actividades CyT."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Producción Científica: Artículos publicados en revistas; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Libros; Partes de libros; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Trabajos en eventos C-T publicados y no publicados; \n"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Tesis; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Demás producciones C-T."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Producción Tecnológica: Con título de propiedad intelectual;"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Servicios C-T; Informes técnicos."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Producción Artística: Musical-sonora; Visual; Audiovisual; Teatral; Género literario "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "dramático, poético o ensayo, guión; Otros tipos."
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Participación en eventos C-T; "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Premios "
+	},
+	{
+		"emocion": "ensenando",
+		"importante": false,
+		"personaje": "IA",
+		"texto": "Membresías."
+	},
+	{
+		"emocion": "felicitaciones",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Creo que hablé demasiado. ¿Te parece ir cerrando este encuentro con un juego?"
+	},
+	{
+		"emocion": "felicitaciones",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "¡Obviamente que sí!"
+	},
+	{
+		"emocion": "estatico",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Te presento a la Pirámide del Conocimiento. O “Conicetmiento”, todavía estamos trabajando en un nombre."
+	},
+	{
+		"emocion": "estatico",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "La premisa es simple: lo que ves en pantalla son diferentes frases que describen qué es el CVar, la mitad dice la verdad y la otra mitad no. \n"
+	},
+	{
+		"emocion": "estatico",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Necesito que ordenes las correctas dentro de la pirámide, una vez lo hagas podemos continuar."
+	},
+	{
+		"emocion": "estatico",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "aca esta jugando, no se ve."
+	},
+	{
+		"emocion": "estatico",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Felicidades, completaste este capítulo, ¡es increíble que hayas aprendido las bases tan rápido! Te estás yendo de este nivel sabiendo que es el SIGEVA, que es el CVar y cuales son los beneficios que te traen!"
+	},
+	{
+		"emocion": "estatico",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "A continuación, te invito a que completes los otros niveles que faltan para que puedas aprender incluso más sobre cómo navegar por CVar."
+	},
+	{
+		"emocion": "saludando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "¡Nos vemos pronto!"
+	}
+]

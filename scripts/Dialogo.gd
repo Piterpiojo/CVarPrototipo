@@ -76,6 +76,7 @@ func dialogo_actual():
 
 func sig_dialogo():
 	if !pausa:
+		letra=0
 		$DialogoText.text = ""
 		indice_dialogo += 1
 		if indice_dialogo < len(dialogos):
