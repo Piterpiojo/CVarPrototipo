@@ -139,8 +139,10 @@ const partido = [
 		"OTRO"
 	]
 	
+var logrosNivel
 const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+
 func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel5b")
 	$CuadroDialogo.comenzar()
@@ -151,6 +153,7 @@ func _ready():
 	for i in partido:
 		$ScrollContainer/TextureRect/partido.add_item(i)
 	guardar_avances()
+	logrosNivel=CargaArchivos.logros["5"]
 
 func guardar_avances():
 	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
@@ -178,13 +181,19 @@ func _on_guardar_pressed():
 		$CuadroDialogo.mostrar_dialogo_unico("Vaya ... y tu querías mi ayuda cuando lo llevabas bien claro…. Quizás en las siguientes secciones deberías hacer relevancia a  tu tremenda habilidad para localizar criptidos, estoy segura de que es un talento muy buscado en estas épocas modernas donde a uno le cuesta mucho discernir entre realidad y ficción, en fin, prosigamos.","Ave")
 		$AudioStreamPlayer.stream=sondioExito
 		$AudioStreamPlayer.play()
+		if(!logrosNivel[1]):
+			$Logro.fijar_logro("Criptozoología", "Completar los datos de residencia.")
+			logrosNivel[1]= true
+			CargaArchivos.logros["5"]= logrosNivel
+			CargaArchivos.guardar_logros()
+		cambiarEscena()
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("falta completar algun campo obligatorio","Ave")
 		$AudioStreamPlayer.stream=sonidoError
 		$AudioStreamPlayer.play()
 
 func cambiarEscena():
-	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5c.tscn")
+	$Timer.start()
 
 
 
@@ -192,3 +201,7 @@ func _on_line_edit_16_focus_entered():
 	if(!ya_lanzo and $ScrollContainer/TextureRect/calle.text != "" and $ScrollContainer/TextureRect/partido.text != "---------- Seleccionar ----------"):
 		$ColorRect/Label2.text="¡¡¡Ultimo momento!!! La Luz mala fue avistada en la calle " + $ScrollContainer/TextureRect/calle.text + " en el partido de " + $ScrollContainer/TextureRect/partido.text 
 		$AnimationPlayer.play("publicidad")
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5c.tscn")

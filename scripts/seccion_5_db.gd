@@ -59,6 +59,7 @@ var dos= false
 var tres=false
 var ocupadoEsp=[false,false,false]
 var ocupadoIng=[false,false,false]
+var logrosNivel
 
 var sonidoCaida= preload("res://sonidos/Musica y sonidos a utilizar/jump1.ogg")
 func _ready():
@@ -70,6 +71,7 @@ func _ready():
 		$ScrollContainer/TextureRect/seis.add_item(i)
 		$ScrollContainer/TextureRect/tres.add_item(i)
 	guardar_avances()
+	logrosNivel=CargaArchivos.logros["5"]
 
 func guardar_avances():
 	CargaArchivos.guardar_avance(1, $CuadroDialogo.indice_dialogo)
@@ -108,6 +110,11 @@ func _process(_delta):
 		bandera2=true
 		$ayuda.cambiar_texto("Arrasta las palabras clave relacionadas con las áreas de actuación")
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera3 and parte2):
+		if(!logrosNivel[3]):
+			$Logro.fijar_logro("¡La historia de mi vida!", "Completar el nivel 4 y 5")
+			logrosNivel[3]= true
+			CargaArchivos.logros["5"]= logrosNivel
+			CargaArchivos.guardar_logros()
 		$AnimationPlayer.play("anegro")
 		bandera3=true
 

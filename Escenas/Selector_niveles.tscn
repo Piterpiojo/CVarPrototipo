@@ -28,23 +28,25 @@ text = "Selector de niveles
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 641.0
-offset_top = 170.0
-offset_right = 1224.0
-offset_bottom = 540.0
+offset_left = 648.0
+offset_top = 280.0
+offset_right = 1231.0
+offset_bottom = 650.0
 texture = ExtResource("1_dpqod")
 expand_mode = 1
 
 [node name="Objectivo" type="Label" parent="."]
 layout_mode = 0
-offset_left = 641.0
-offset_top = 121.0
-offset_right = 1224.0
-offset_bottom = 170.0
+offset_left = 584.0
+offset_top = 88.0
+offset_right = 1279.0
+offset_bottom = 270.0
 theme_override_font_sizes/font_size = 24
-text = "Objetivo del nivel"
+text = "Teoría básica. En este nivel aprenderemos todos los datos concernientes a cómo la plataforma llegó a ser lo que es hoy en día.
+"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -52,10 +54,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 717.0
-offset_top = -180.0
-offset_right = 1853.0
-offset_bottom = 90.0
+offset_left = 678.0
+offset_top = -70.0001
+offset_right = 2298.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.18, 0.18)
@@ -92,27 +94,16 @@ layout_mode = 2
 size_flags_vertical = 0
 texture = ExtResource("2_i4lbn")
 
+[node name="6" type="TextureRect" parent="VBoxContainer"]
+modulate = Color(0.360784, 0.360784, 0.360784, 1)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("2_i4lbn")
+
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="1" type="CheckBox" parent="Control"]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 216.0
-offset_right = 88.0
-offset_bottom = 240.0
-disabled = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="b1" type="ProgressBar" parent="Control/1"]
-layout_mode = 0
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 505.0
-offset_bottom = 26.0
 
 [node name="0" type="CheckBox" parent="Control"]
 layout_mode = 0
@@ -125,6 +116,23 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="b0" type="ProgressBar" parent="Control/0"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = -1.0
+offset_right = 505.0
+offset_bottom = 26.0
+
+[node name="1" type="CheckBox" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 216.0
+offset_right = 88.0
+offset_bottom = 240.0
+disabled = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="b1" type="ProgressBar" parent="Control/1"]
 layout_mode = 0
 offset_left = 31.0
 offset_top = -1.0
@@ -216,7 +224,20 @@ offset_top = -1.0
 offset_right = 505.0
 offset_bottom = 26.0
 
-[node name="c1" type="Button" parent="."]
+[node name="botones" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="c0" type="Button" parent="botones"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 172.0
+offset_right = 568.0
+offset_bottom = 202.0
+flat = true
+
+[node name="c1" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 213.0
@@ -224,7 +245,7 @@ offset_right = 567.0
 offset_bottom = 243.0
 flat = true
 
-[node name="c2" type="Button" parent="."]
+[node name="c2" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 96.0
 offset_top = 251.0
@@ -232,7 +253,7 @@ offset_right = 568.0
 offset_bottom = 281.0
 flat = true
 
-[node name="c3" type="Button" parent="."]
+[node name="c3" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 94.0
 offset_top = 294.0
@@ -240,7 +261,7 @@ offset_right = 566.0
 offset_bottom = 324.0
 flat = true
 
-[node name="c4" type="Button" parent="."]
+[node name="c4" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 95.0
 offset_top = 335.0
@@ -248,7 +269,7 @@ offset_right = 567.0
 offset_bottom = 365.0
 flat = true
 
-[node name="c5" type="Button" parent="."]
+[node name="c5" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 97.0
 offset_top = 374.0
@@ -256,7 +277,7 @@ offset_right = 569.0
 offset_bottom = 404.0
 flat = true
 
-[node name="c6" type="Button" parent="."]
+[node name="c6" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 97.0
 offset_top = 414.0
@@ -264,15 +285,17 @@ offset_right = 569.0
 offset_bottom = 444.0
 flat = true
 
-[connection signal="mouse_entered" from="c1" to="." method="_on_c_1_mouse_entered"]
-[connection signal="pressed" from="c1" to="." method="_on_c_1_pressed"]
-[connection signal="mouse_entered" from="c2" to="." method="_on_c_2_mouse_entered"]
-[connection signal="pressed" from="c2" to="." method="_on_c_2_pressed"]
-[connection signal="mouse_entered" from="c3" to="." method="_on_c_3_mouse_entered"]
-[connection signal="pressed" from="c3" to="." method="_on_c_3_pressed"]
-[connection signal="mouse_entered" from="c4" to="." method="_on_c_4_mouse_entered"]
-[connection signal="pressed" from="c4" to="." method="_on_c_4_pressed"]
-[connection signal="mouse_entered" from="c5" to="." method="_on_c_5_mouse_entered"]
-[connection signal="pressed" from="c5" to="." method="_on_c_5_pressed"]
-[connection signal="mouse_entered" from="c6" to="." method="_on_c_6_mouse_entered"]
-[connection signal="pressed" from="c6" to="." method="_on_c_6_pressed"]
+[connection signal="mouse_entered" from="botones/c0" to="." method="_on_c_0_mouse_entered"]
+[connection signal="pressed" from="botones/c0" to="." method="_on_c_0_pressed"]
+[connection signal="mouse_entered" from="botones/c1" to="." method="_on_c_1_mouse_entered"]
+[connection signal="pressed" from="botones/c1" to="." method="_on_c_1_pressed"]
+[connection signal="mouse_entered" from="botones/c2" to="." method="_on_c_2_mouse_entered"]
+[connection signal="pressed" from="botones/c2" to="." method="_on_c_2_pressed"]
+[connection signal="mouse_entered" from="botones/c3" to="." method="_on_c_3_mouse_entered"]
+[connection signal="pressed" from="botones/c3" to="." method="_on_c_3_pressed"]
+[connection signal="mouse_entered" from="botones/c4" to="." method="_on_c_4_mouse_entered"]
+[connection signal="pressed" from="botones/c4" to="." method="_on_c_4_pressed"]
+[connection signal="mouse_entered" from="botones/c5" to="." method="_on_c_5_mouse_entered"]
+[connection signal="pressed" from="botones/c5" to="." method="_on_c_5_pressed"]
+[connection signal="mouse_entered" from="botones/c6" to="." method="_on_c_6_mouse_entered"]
+[connection signal="pressed" from="botones/c6" to="." method="_on_c_6_pressed"]

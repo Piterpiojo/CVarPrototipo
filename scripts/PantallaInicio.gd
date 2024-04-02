@@ -19,3 +19,7 @@ func _on_opciones_pressed():
 
 func _on_abrir_explorer_pressed():
 	OS.shell_open("https://www.unpaz.edu.ar/")
+
+
+func _on_button_pressed():
+	OS.shell_open("https://cvar.sicytar.mincyt.gob.ar/auth/index.jsp")

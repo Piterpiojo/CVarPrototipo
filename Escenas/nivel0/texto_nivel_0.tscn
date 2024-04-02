@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://er7fqx8w6ual"]
+
+[ext_resource type="Script" path="res://scripts/Texto_nivel0.gd" id="1_bfq5s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j60vc"]
+size = Vector2(370, 82)
+
+[node name="texto_nivel0" type="Area2D"]
+script = ExtResource("1_bfq5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(183, 55)
+shape = SubResource("RectangleShape2D_j60vc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -176.0
+offset_top = -56.0
+offset_right = 184.0
+offset_bottom = 45.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

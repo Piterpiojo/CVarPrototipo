@@ -3,11 +3,12 @@ var bandera1=false
 var actualizarLabel= false
 var fase2= false
 var eventoTimer=false
-# Called when the node enters the scene tree for the first time.
+var logrosNivel
 func _ready():
 	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5d")
 	$CuadroDialogo.comenzar()
 	guardar_avances()
+	logrosNivel=CargaArchivos.logros["5"]
 
 func _input(event):
 	if(event.is_action_pressed("ui_cancel")):
@@ -59,6 +60,11 @@ func evaluar_texto():
 	if(texto.length() > 256):
 		$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5d-257")
 		$CuadroDialogo.comenzar()
+	if(!logrosNivel[2]):
+		$Logro.fijar_logro("Sobreviviente del apocalipsis", "Pasa la prueba de escribir rápido de Ave de cualquier forma.")
+		logrosNivel[2]= true
+		CargaArchivos.logros["5"]= logrosNivel
+		CargaArchivos.guardar_logros()
 	fase2 =true
 
 	

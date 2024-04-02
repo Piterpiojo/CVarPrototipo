@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bj6w7b8ehmjet"]
+[gd_scene load_steps=15 format=3 uid="uid://bj6w7b8ehmjet"]
 
 [ext_resource type="Script" path="res://scripts/seccion_5_db.gd" id="1_hmole"]
 [ext_resource type="Texture2D" uid="uid://clhv7n8c66h06" path="res://Imagenes/seccion5/seccion5dc-1.png" id="2_n6ktq"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cjmuvikjwh6rp" path="res://sonidos/Musica y sonidos a utilizar/rumble2.ogg" id="5_brqfu"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="6_jhycl"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="7_fn05h"]
+[ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="8_78nnp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgokq"]
 size = Vector2(381, 27)
@@ -187,6 +188,7 @@ offset_left = 416.0
 offset_top = 632.0
 offset_right = 1024.0
 offset_bottom = 663.0
+editable = false
 
 [node name="seis" type="OptionButton" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -216,6 +218,7 @@ offset_left = 416.0
 offset_top = 723.0
 offset_right = 1024.0
 offset_bottom = 754.0
+editable = false
 
 [node name="tres" type="OptionButton" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -245,6 +248,7 @@ offset_left = 416.0
 offset_top = 816.0
 offset_right = 1024.0
 offset_bottom = 847.0
+editable = false
 
 [node name="Container" type="Container" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -448,6 +452,8 @@ volume_db = 6.0
 [node name="Pausa" parent="." instance=ExtResource("6_jhycl")]
 
 [node name="ayuda" parent="." instance=ExtResource("7_fn05h")]
+
+[node name="Logro" parent="." instance=ExtResource("8_78nnp")]
 
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete" to="." method="_on_siete_2_item_selected"]
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete2" to="." method="_on_siete_2_item_selected"]

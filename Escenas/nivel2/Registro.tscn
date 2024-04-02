@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://p32ucbdoh3h8"]
+[gd_scene load_steps=18 format=3 uid="uid://p32ucbdoh3h8"]
 
 [ext_resource type="Script" path="res://scripts/Registro.gd" id="1_i41gf"]
 [ext_resource type="Texture2D" uid="uid://ct44731gqe5ya" path="res://Imagenes/RegistroUsuario/Registro de Usuario-12.png" id="2_d3p4k"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://baectnpuaqc7f" path="res://sonidos/Musica y sonidos a utilizar/reparando.ogg" id="6_xqb5y"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="8_ibty7"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="9_6bmav"]
+[ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="10_f66m4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sc8rw"]
 size = Vector2(138, 29)
@@ -772,6 +773,9 @@ volume_db = 3.0
 layout_mode = 1
 
 [node name="Pausa" parent="." instance=ExtResource("8_ibty7")]
+layout_mode = 1
+
+[node name="Logro" parent="." instance=ExtResource("10_f66m4")]
 layout_mode = 1
 
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/nombre2" to="." method="_on_nombre_2_focus_exited"]

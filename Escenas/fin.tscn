@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6haro1xbwqah"]
+[gd_scene load_steps=8 format=3 uid="uid://c6haro1xbwqah"]
 
 [ext_resource type="Script" path="res://scripts/fin.gd" id="1_1deth"]
 [ext_resource type="Texture2D" uid="uid://cy72wec41kcps" path="res://Imagenes/1131w-yPFB16IJZPY.png" id="1_ak7wj"]
 [ext_resource type="AudioStream" uid="uid://bcgnvemgir6qt" path="res://sonidos/Musica y sonidos a utilizar/Retro Comedy.ogg" id="3_0kcc7"]
+[ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="4_eyaoy"]
 
 [sub_resource type="Animation" id="Animation_t3s31"]
 length = 0.001
@@ -89,12 +90,20 @@ texture = ExtResource("1_ak7wj")
 layout_mode = 0
 offset_left = 530.0
 offset_top = 1615.0
-offset_right = 696.0
-offset_bottom = 1675.0
+offset_right = 926.0
+offset_bottom = 1852.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 41
-text = "Creditos"
+text = "Creditos
+
+El Equipo De UNPAZ
+Completar?"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0kcc7")
 autoplay = true
+
+[node name="Logro" parent="." instance=ExtResource("4_eyaoy")]
+layout_mode = 1

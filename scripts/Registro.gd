@@ -8,6 +8,7 @@ var i = 0
 const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 var progreso= 0;
+var logrosNivel
 
 func _ready():
 	$AnimationPlayer.play("Entrada")
@@ -15,6 +16,7 @@ func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()
 	guardar_avances()
+	logrosNivel = CargaArchivos.logros["2"]
 	
 
 func guardar_avances():
@@ -22,6 +24,11 @@ func guardar_avances():
 	CargaArchivos.establecer_progreso(2,progreso)
 
 func eliminar_fake():
+	if(!logrosNivel[0]):
+		$Logro.fijar_logro("Vamos al punto","Hacer que Ave limpie la pantalla de información.")
+		logrosNivel[0]= true
+		CargaArchivos.logros["2"]= logrosNivel
+		CargaArchivos.guardar_logros()
 	$ScrollContainer/TextureRect/fake.queue_free()
 	
 func buscar_cuadros(nodo):
@@ -85,26 +92,42 @@ func _on_enviar_pressed():
 					$AudioStreamPlayer.stream= SonidoExito
 					$AudioStreamPlayer.play()
 					progreso = 80
+					guardar_avances()
+					if(!logrosNivel[1]):
+						$Logro.fijar_logro("Completista","Completar un formulario con la información solicitada.")
+						logrosNivel[1]= true
+						CargaArchivos.logros["2"]= logrosNivel
+						CargaArchivos.guardar_logros()
+
 				else:
 					llamar_dialogo("el [b]codigo de seguridad[/b] es incorrecto")
 					$AudioStreamPlayer.stream= SonidoFallo
 					$AudioStreamPlayer.play()
 					progreso = 80
+					guardar_avances()
+					if(!logrosNivel[2]):
+						$Logro.fijar_logro("Del error se aprende","Intentar resolver el captcha sin éxito.")
+						logrosNivel[2]= true
+						CargaArchivos.logros["2"]= logrosNivel
+						CargaArchivos.guardar_logros()
 			else:
 				llamar_dialogo("te falto completar algun campo")
 				$AudioStreamPlayer.stream= SonidoFallo
 				$AudioStreamPlayer.play()
 				progreso = 80
+				guardar_avances()
 		else:
 			$CuadroDialogo.mostrar_dialogo_unico("error correo no coinciden","Ave")
 			$AudioStreamPlayer.stream= SonidoFallo
 			$AudioStreamPlayer.play()
 			progreso = 80
+			guardar_avances()
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta secreta no coinciden","Ave")
 		$AudioStreamPlayer.stream= SonidoFallo
 		$AudioStreamPlayer.play()
 		progreso = 80
+		guardar_avances()
 
 
 
@@ -119,7 +142,19 @@ func _on_recargar_pressed():
 		$AudioStreamPlayer.play()
 
 func _on_timer_timeout():
+	if(!logrosNivel[3]):
+		$Logro.fijar_logro("Completista","Completar un formulario con la información solicitada.")
+		logrosNivel[3]= true
+		CargaArchivos.logros["2"]= logrosNivel
+		CargaArchivos.guardar_logros()
 	$AnimationPlayer.play("fin")
+	if(!logrosNivel[4]):
+		$Logro.fijar_logro("Que individuo interesante","Completar el nivel 2")
+		logrosNivel[4]= true
+		CargaArchivos.logros["2"]= logrosNivel
+		CargaArchivos.guardar_logros()
+	progreso = 100
+	guardar_avances()
 
 func pasar_al_siguiente():
 	get_tree().change_scene_to_file("res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn")
@@ -151,6 +186,8 @@ func _on_area_2d_mouse_entered():
 	if(!$CuadroDialogo.visible):
 		$CuadroDialogo.mostrar_dialogo_unico("Solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].","Ave")
 		$ScrollContainer/TextureRect/Area2D.queue_free()
+		progreso = 20
+		guardar_avances()
 
 
 func _on_advertencia_mouse_entered():
@@ -158,6 +195,8 @@ func _on_advertencia_mouse_entered():
 		$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, [b]MUCHO[/b] cuidado con hacer dos clicks dentro de un cuadro de texto. Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
 		$CuadroDialogo.bajar_volumen()
 		$ScrollContainer/TextureRect/advertencia.queue_free()
+		progreso=40
+		guardar_avances()
 	
 
 

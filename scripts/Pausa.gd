@@ -3,7 +3,7 @@ extends Control
 
 func _input(event):
 	if(event.is_action_pressed("ui_cancel")):
-		_on_volver_pressed()
+		volver()
 
 func _on_menu_pressed():
 	get_tree().paused=false
@@ -11,7 +11,9 @@ func _on_menu_pressed():
 	get_tree().change_scene_to_file("res://Escenas/menuFinal.tscn")
 	
 
-
-func _on_volver_pressed():
+func volver():
 	get_tree().paused=false
 	self.visible=false
+	
+func _on_volver_pressed():
+	volver()

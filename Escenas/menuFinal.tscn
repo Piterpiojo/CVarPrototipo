@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://yytfetroh3on"]
+[gd_scene load_steps=13 format=3 uid="uid://yytfetroh3on"]
 
 [ext_resource type="Script" path="res://scripts/PantallaInicio.gd" id="1_hffsb"]
 [ext_resource type="Texture2D" uid="uid://dryiby420vsd3" path="res://Imagenes/bocetomenu2.png" id="2_8x45b"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://6pm5tm10vqdy" path="res://fuentes/Super Ocean Personal Use.ttf" id="5_gd2gx"]
 [ext_resource type="Texture2D" uid="uid://b2iwi87swplbp" path="res://ui/images.jpeg" id="6_nielk"]
 [ext_resource type="Texture2D" uid="uid://c4t3ymhtjv7hc" path="res://Sprites/ave/estatico.png" id="7_to0hx"]
+[ext_resource type="Texture2D" uid="uid://dol1fxom58epf" path="res://ui/Sicty.png" id="8_hk0ol"]
 
 [sub_resource type="Animation" id="Animation_mqyjm"]
 length = 0.001
@@ -159,6 +160,7 @@ offset_left = -76.0
 offset_top = -79.0
 offset_right = 76.0
 offset_bottom = 73.0
+tooltip_text = "https://www.unpaz.edu.ar/"
 flat = true
 
 [node name="Estatico" type="Sprite2D" parent="."]
@@ -166,6 +168,19 @@ position = Vector2(628, 362)
 scale = Vector2(0.5, 1)
 texture = ExtResource("7_to0hx")
 
+[node name="Sicty" type="Sprite2D" parent="."]
+position = Vector2(1160, 488)
+texture = ExtResource("8_hk0ol")
+
+[node name="Button" type="Button" parent="Sicty"]
+offset_left = -81.0
+offset_top = -47.0
+offset_right = 77.0
+offset_bottom = 47.0
+tooltip_text = "https://cvar.sicytar.mincyt.gob.ar/auth/index.jsp"
+flat = true
+
 [connection signal="pressed" from="inicio" to="." method="_on_inicio_pressed"]
 [connection signal="pressed" from="salir" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Images/AbrirExplorer" to="." method="_on_abrir_explorer_pressed"]
+[connection signal="pressed" from="Sicty/Button" to="." method="_on_button_pressed"]

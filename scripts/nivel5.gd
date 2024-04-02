@@ -143,6 +143,7 @@ var bandera3 = false
 const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 var progreso = 0
+var logrosNivel
 
 func _ready():
 	for i in provincias:
@@ -152,6 +153,7 @@ func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel5")
 	$CuadroDialogo.comenzar()
 	buscar_cuadros($"ScrollContainer/seccion-a")
+	logrosNivel=CargaArchivos.logros["5"]
 	guardar_avances()
 
 func guardar_avances():
@@ -203,8 +205,17 @@ func _on_guardar_pressed():
 	if !hay_campos_vacios():
 		progreso = 25
 		guardar_avances()
-		get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5_b.tscn")
+		if(!logrosNivel[0]):
+			$Logro.fijar_logro("Identidad nacional", "Selecciona correctamente el país de emisión teniendo en cuenta el pasaporte.")
+			logrosNivel[0]= true
+			CargaArchivos.logros["5"]= logrosNivel
+			CargaArchivos.guardar_logros()
+		$logroTimer.start()
 	else:
 		$AudioStreamPlayer.stream=sonidoError
 		$AudioStreamPlayer.play()
 		$CuadroDialogo.mostrar_dialogo_unico("te falto completar algun campo","Ave")
+
+
+func _on_logro_timer_timeout():
+	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5_b.tscn")

@@ -10,13 +10,17 @@ func _ready():
 	$CuadroDialogo.comenzar()
 	$ayuda.cambiar_texto("Da tu primer paso en Cvar, Regístrate")
 	logrosNivel = CargaArchivos.logros["1"]
-	print(logrosNivel)
-	
+	if(!logrosNivel[0]):
+		$Logro.fijar_logro("Ahora si es hora de actuar", " Iniciar el nivel 1.")
+		logrosNivel[0]= true
+		CargaArchivos.logros["1"]= logrosNivel
+		CargaArchivos.guardar_logros()
+		
 
 func _on_nuevo_usuario_pressed():
-	if(!logrosNivel[0]):
-		get_parent().get_child(1).get_child(4).fijar_logro("El Comienzo", "Diste el primer paso para completar tu CVAR")
-		logrosNivel[0]= true
+	if(!logrosNivel[1]):
+		$Logro.fijar_logro("Novato", "Presionar el botón de usuarios nuevos")
+		logrosNivel[1]= true
 		CargaArchivos.logros["1"]= logrosNivel
 		CargaArchivos.guardar_logros()
 	$AudioStreamPlayer2D.stream=SonidoExito
@@ -26,6 +30,11 @@ func _on_nuevo_usuario_pressed():
 
 
 func cambiar_escena():
+	if(!logrosNivel[3]):
+		$Logro.fijar_logro("¡Bienvenido!", "Completar el nivel 1")
+		logrosNivel[3]= true
+		CargaArchivos.logros["1"]= logrosNivel
+		CargaArchivos.guardar_logros()
 	get_tree().change_scene_to_file("res://Escenas/nivel2/Registro.tscn")
 
 func _input(event):

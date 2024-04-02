@@ -2,16 +2,20 @@ extends Node
 const path = "res://dialogos/"
 const save= "user://guardado.json"
 var data = []
-var nivel= {"nivel":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0}
-var logros = {
-"1": [false, false, false, false, false, false],
-"2": [false, false, false, false, false, false],
+var nivel= {"nivel":0,"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0}
+var logros = {"0":[false],
+"1": [false, false, false, false],
+"2": [false, false, false, false, false],
 "3": [false, false, false, false, false, false],
-"4": [false, false, false, false, false, false],
-"5": [false, false, false, false, false, false],
-"6": [false, false, false, false, false, false]
+"4": [false],
+"5": [false, false, false, false],
+"6": [false, false, false, false, false]
 }
 
+func _ready():
+	cargar_avance()
+	cargar_logros()
+	
 func cargar(nombre):
 	if(FileAccess.file_exists(path + nombre + ".json")):
 		var archivo = FileAccess.open(path + nombre + ".json",FileAccess.READ);

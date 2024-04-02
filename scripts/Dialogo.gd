@@ -51,6 +51,7 @@ func Mostrar_Linea(indice):
 
 
 func _process(_delta):
+	print(habilitado)
 	$prueba.text = "Id :" + str(indice_dialogo)
 	if(Input.is_action_just_pressed("click") and habilitado):
 		if completo:
@@ -107,6 +108,19 @@ func mostrar_dialogo_unico(texto,pj):
 		$Usuario.visible=false
 		cuadro.texture=ave
 
+func mostrar_sin_habilitar(texto,pj):
+	$DialogoText.text = texto
+	if(pj=="Usuario"):
+		$Container/Sprite2D.visible =false
+		$personaje.visible=false
+		$Usuario.visible=true
+		cuadro.texture= usuario
+	else:
+		$Container/Sprite2D.visible =true
+		$personaje.visible=true
+		$Usuario.visible=false
+		cuadro.texture=ave
+		
 func desactivar_dialogo():
 	pausa = true
 	self.visible = false
@@ -129,20 +143,21 @@ func _on_timer_timeout():
 
 
 func _on_button_pressed():
+	habilitado=false
 	if(contiene_importante()):
 		var i=0
 		for dialogo in dialogos:
-			print(str(indice_dialogo) + " " + dialogo["texto"] + " " + str(dialogo["importante"]))
 			if dialogo["importante"]:
-				mostrar_dialogo_unico(dialogo["texto"],dialogo["personaje"])
-				habilitado=true
+				mostrar_sin_habilitar(dialogo["texto"],dialogo["personaje"])
+				letra = 0
 				dialogo["importante"]=false
+				$Timer.stop()
 				break
 			i+=1
 			indice_dialogo=i
 			saltar_dialogo()
 	else:
-		$Button.disabled=true
+		$Importante.disabled=true
 
 func saltar_dialogo():
 	if !pausa:

@@ -9,13 +9,14 @@ var bandera2 = false
 const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 var posInicial
 var progreso = 0
-
+var logrosNivel
 func _ready():
 	randomize()
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel4")
 	$CuadroDialogo.comenzar()
 	posInicial= $logo.global_position
 	guardar_avances()
+	logrosNivel=CargaArchivos.logros["4"]
 
 
 func guardar_avances():
@@ -93,6 +94,11 @@ func cambiar_escena():
 func _on_boton_pressed():
 	progreso = 100
 	guardar_avances()
+	if(!logrosNivel[0]):
+		$Logro.fijar_logro("Captura completada", "Tocar el botón esquivo.")
+		logrosNivel[0]= true
+		CargaArchivos.logros["4"]= logrosNivel
+		CargaArchivos.guardar_logros()
 	$AnimationPlayer.play("fin")
 	
 func reset():

@@ -143,6 +143,7 @@ const partido = [
 const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 const sonidoError=preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 var progreso = 0
+
 func _ready():
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel5c")
 	$CuadroDialogo.comenzar()
@@ -224,6 +225,7 @@ func _on_buscar_pressed():
 
 
 func _on_timer_timeout():
+	
 	$AnimationPlayer.play("anegro")
 	
 func cambiar_escena():

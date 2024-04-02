@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/arrastrarysoltar.gd" id="1_s35qf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krufq"]
-size = Vector2(89, 20)
+size = Vector2(96, 24)
 
 [node name="texto_fisico" type="RigidBody2D"]
 position = Vector2(134, 106)
@@ -11,7 +11,7 @@ input_pickable = true
 script = ExtResource("1_s35qf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_krufq")
 
 [node name="Label" type="Label" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bdhbfpnq83ybt"]
+[gd_scene load_steps=20 format=3 uid="uid://bdhbfpnq83ybt"]
 
 [ext_resource type="Texture2D" uid="uid://d4e0xqbettcgg" path="res://Imagenes/Sistemas_CV/Sistemas-12.png" id="1_nh3oo"]
 [ext_resource type="Script" path="res://scripts/nivel_4.gd" id="1_xry6i"]
@@ -8,9 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://b6un735f3c3vh" path="res://Imagenes/recarga.png" id="6_p08a0"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="7_26887"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="8_01bs6"]
+[ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="9_gdnjo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk3fy"]
-size = Vector2(731.429, 65.7876)
+size = Vector2(768, 65.7876)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfl5o"]
 size = Vector2(20, 1488)
@@ -133,7 +134,7 @@ position = Vector2(-3.43323e-05, 16.0002)
 shape = SubResource("RectangleShape2D_qk3fy")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="suelo"]
-position = Vector2(9.14285, -1488)
+position = Vector2(0, -1488)
 shape = SubResource("RectangleShape2D_qk3fy")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="suelo"]
@@ -222,6 +223,11 @@ layout_mode = 1
 
 [node name="ayuda" parent="." instance=ExtResource("8_01bs6")]
 layout_mode = 1
+
+[node name="Logro" parent="." instance=ExtResource("9_gdnjo")]
+layout_mode = 1
+offset_top = 25.0
+offset_bottom = 115.0
 
 [connection signal="body_entered" from="logo/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="input_event" from="logo/Area2D" to="." method="_on_area_2d_input_event"]
