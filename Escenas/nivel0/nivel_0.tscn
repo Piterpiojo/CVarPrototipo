@@ -63,22 +63,6 @@ tracks/0/keys = {
 "values": [Vector2(542, -58), Vector2(25, -66)]
 }
 
-[sub_resource type="Animation" id="Animation_xglfy"]
-resource_name = "al_centro"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CuadroDialogo/Container:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [Vector2(36, 199.5), Vector2(542, -58)]
-}
-
 [sub_resource type="Animation" id="Animation_mmeeg"]
 resource_name = "a_negro"
 length = 2.0
@@ -107,6 +91,22 @@ tracks/1/keys = {
 "args": [],
 "method": &"pasar_menu"
 }]
+}
+
+[sub_resource type="Animation" id="Animation_xglfy"]
+resource_name = "al_centro"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CuadroDialogo/Container:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(36, 199.5), Vector2(542, -58)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ek8v0"]
@@ -142,14 +142,7 @@ offset_right = 1319.0
 offset_bottom = 728.0
 grow_horizontal = 0
 
-[node name="Container" parent="CuadroDialogo" index="2"]
-offset_top = 199.5
-offset_bottom = 239.5
-
-[node name="Importante" parent="CuadroDialogo" index="8"]
-visible = true
-
-[node name="prueba" parent="CuadroDialogo" index="9"]
+[node name="prueba" parent="CuadroDialogo" index="10"]
 visible = true
 
 [node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
@@ -222,29 +215,26 @@ offset_top = -184.0
 offset_right = 672.0
 offset_bottom = 536.0
 
-[node name="Label" parent="Pausa" index="1"]
-offset_left = -112.0
-offset_top = -136.0
-offset_right = 121.0
-offset_bottom = -34.0
-
-[node name="volver" parent="Pausa" index="2"]
+[node name="volver" parent="Pausa" index="1"]
 offset_left = 112.0
 offset_top = 312.0
 offset_right = 424.0
 offset_bottom = 458.0
 
-[node name="Menu" parent="Pausa" index="3"]
+[node name="Menu" parent="Pausa" index="2"]
 offset_left = -384.0
 offset_top = 312.0
 offset_right = -80.0
 offset_bottom = 458.0
 
-[node name="Reloj" parent="Pausa" index="4"]
-position = Vector2(8, 112)
-
-[node name="Images" parent="Pausa" index="5"]
+[node name="Images" parent="Pausa" index="3"]
 position = Vector2(568, 392)
+
+[node name="Descanso" parent="Pausa" index="4"]
+position = Vector2(27.25, 188.5)
+
+[node name="Cartelpausa" parent="Pausa" index="5"]
+position = Vector2(32, 181.5)
 
 [connection signal="mouse_entered" from="ColorRect2" to="." method="_on_color_rect_2_mouse_entered"]
 

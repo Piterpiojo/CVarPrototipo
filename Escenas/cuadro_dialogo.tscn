@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b7jonfd41k68h"]
+[gd_scene load_steps=28 format=3 uid="uid://b7jonfd41k68h"]
 
 [ext_resource type="Script" path="res://scripts/Dialogo.gd" id="1_pygju"]
 [ext_resource type="Texture2D" uid="uid://d15er1lqdmpcx" path="res://Sprites/ave/cap 3 y4/arrogante.png" id="2_374og"]
@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://dnflbexd55ec1" path="res://Sprites/ave/cap 3 y4/tos.png" id="20_os87x"]
 [ext_resource type="Script" path="res://scripts/audio.gd" id="21_nxw17"]
 [ext_resource type="AudioStream" uid="uid://cr4cfo7tb2qsh" path="res://sonidos/Musica y sonidos a utilizar/rollover1.ogg" id="23_blrmw"]
+[ext_resource type="Texture2D" uid="uid://b2enk31qwk61u" path="res://ui/botoncuriosidad.png" id="24_2dbt4"]
+[ext_resource type="Texture2D" uid="uid://2g1ncpywsqpo" path="res://ui/botonpasoclave.png" id="25_tm32y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_poixm"]
 load_path = "res://.godot/imported/dialogopersonaje2.png-ae30b831c6e8e1bf7fdd467af64d9b10.ctex"
@@ -218,10 +220,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -383.5
-offset_top = -258.0
-offset_right = 558.5
-offset_bottom = -65.0
+offset_left = -426.5
+offset_top = -267.0
+offset_right = 334.5
+offset_bottom = -51.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/normal_font_size = 17
@@ -265,7 +267,7 @@ offset_bottom = 59.5
 grow_vertical = 2
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Container"]
-position = Vector2(126, -10.25)
+position = Vector2(106, -4.5)
 scale = Vector2(0.376, 0.72)
 sprite_frames = SubResource("SpriteFrames_u8deg")
 animation = &"artista"
@@ -315,18 +317,29 @@ script = ExtResource("21_nxw17")
 stream = ExtResource("23_blrmw")
 volume_db = 14.0
 
+[node name="Curiosidad" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1002.0
+offset_top = 174.0
+offset_right = 1224.0
+offset_bottom = 289.0
+icon = ExtResource("24_2dbt4")
+flat = true
+expand_icon = true
+
 [node name="Importante" type="Button" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = -69.0
-offset_right = 160.0
-offset_bottom = -38.0
+offset_left = 1002.0
+offset_top = -274.0
+offset_right = 1225.0
+offset_bottom = -158.0
 grow_vertical = 0
-text = "Importante"
+icon = ExtResource("25_tm32y")
+flat = true
+expand_icon = true
 
 [node name="prueba" type="Label" parent="."]
 visible = false

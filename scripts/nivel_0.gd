@@ -34,6 +34,7 @@ func _process(delta):
 	elif($CuadroDialogo.indice_dialogo==43 and !banderas[3]):
 		banderas[3]=true
 		$ColorRect2.visible = true
+		$CuadroDialogo.pausa =true
 		progreso = 60
 		guardar_avances()
 	elif($CuadroDialogo.indice_dialogo==48 and !banderas[4]):
@@ -58,5 +59,6 @@ func guardar_avances():
 	CargaArchivos.establecer_progreso(0,progreso)
 	
 func _on_color_rect_2_mouse_entered():
+	$CuadroDialogo.pausa =false
 	$ColorRect2.visible = false
 	$CuadroDialogo.sig_dialogo()

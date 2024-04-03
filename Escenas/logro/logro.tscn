@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbp86ksvxsnrj"]
+[gd_scene load_steps=9 format=3 uid="uid://cbp86ksvxsnrj"]
 
 [ext_resource type="Script" path="res://scripts/Logro.gd" id="1_iu1lg"]
 [ext_resource type="Texture2D" uid="uid://c3kqts130606p" path="res://Sprites/ave/felicitaciones.png" id="2_26adr"]
+[ext_resource type="Texture2D" uid="uid://du7kgsv15vn5f" path="res://ui/cajalogro.png" id="2_n3j6e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5kgxu"]
 shadow_size = 4
@@ -154,6 +155,11 @@ offset_bottom = 835.0
 grow_vertical = 0
 color = Color(0, 0, 0.270588, 1)
 script = ExtResource("1_iu1lg")
+
+[node name="Cajalogro" type="Sprite2D" parent="."]
+position = Vector2(169, 51.25)
+scale = Vector2(0.590625, 0.398611)
+texture = ExtResource("2_n3j6e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(37, 47)

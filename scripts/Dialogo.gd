@@ -144,7 +144,7 @@ func _on_timer_timeout():
 
 func _on_button_pressed():
 	habilitado=false
-	if(contiene_importante()):
+	if(contiene_importante() and !pausa):
 		var i=0
 		for dialogo in dialogos:
 			if dialogo["importante"]:
@@ -156,7 +156,7 @@ func _on_button_pressed():
 			i+=1
 			indice_dialogo=i
 			saltar_dialogo()
-	else:
+	elif(!contiene_importante()):
 		$Importante.disabled=true
 
 func saltar_dialogo():

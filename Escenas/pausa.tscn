@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://27d4ixo8lm6y"]
+[gd_scene load_steps=7 format=3 uid="uid://27d4ixo8lm6y"]
 
 [ext_resource type="Script" path="res://scripts/Pausa.gd" id="1_qhsst"]
-[ext_resource type="Texture2D" uid="uid://dxa0bip2c5y4g" path="res://Sprites/ave/cap 3 y4/reloj.png" id="2_k3ddt"]
+[ext_resource type="Texture2D" uid="uid://oynwryv2mkrn" path="res://ui/botoncontinuar.png" id="2_3tjna"]
 [ext_resource type="Texture2D" uid="uid://b2iwi87swplbp" path="res://ui/images.jpeg" id="3_3f1fp"]
+[ext_resource type="Texture2D" uid="uid://brxidly53s8h2" path="res://ui/botonsalir.png" id="3_ac6s3"]
+[ext_resource type="Texture2D" uid="uid://c88e2i5d1elv4" path="res://Sprites/ave/cap 5/descanso.png" id="5_cs1t0"]
+[ext_resource type="Texture2D" uid="uid://0csoobqf0dn8" path="res://ui/cartelpausa.png" id="6_tmjcd"]
 
 [node name="Pausa" type="Control"]
 process_mode = 2
@@ -26,21 +29,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -120.0
-offset_top = 96.0
-offset_right = 113.0
-offset_bottom = 198.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 72
-text = "Pausa"
-horizontal_alignment = 1
-uppercase = true
-
 [node name="volver" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -48,15 +36,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 48.0
-offset_top = 152.0
-offset_right = 360.0
-offset_bottom = 298.0
+offset_left = -358.0
+offset_top = 150.0
+offset_right = -30.0
+offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
-text = "Volver 
-Al Juego"
+icon = ExtResource("2_3tjna")
+flat = true
+expand_icon = true
 
 [node name="Menu" type="Button" parent="."]
 layout_mode = 1
@@ -65,24 +54,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -352.0
-offset_top = 152.0
-offset_right = -48.0
-offset_bottom = 298.0
+offset_left = 32.0
+offset_top = 126.0
+offset_right = 360.0
+offset_bottom = 278.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
-text = "Menu 
-Principal"
-
-[node name="Reloj" type="Sprite2D" parent="."]
-position = Vector2(632, 344)
-scale = Vector2(0.482796, 1)
-texture = ExtResource("2_k3ddt")
+icon = ExtResource("3_ac6s3")
+flat = true
+expand_icon = true
 
 [node name="Images" type="Sprite2D" parent="."]
 position = Vector2(1164, 608)
 texture = ExtResource("3_3f1fp")
+
+[node name="Descanso" type="Sprite2D" parent="."]
+position = Vector2(635.25, 367)
+scale = Vector2(0.768817, 1)
+texture = ExtResource("5_cs1t0")
+
+[node name="Cartelpausa" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.825, 0.750926)
+texture = ExtResource("6_tmjcd")
 
 [connection signal="pressed" from="volver" to="." method="_on_volver_pressed"]
 [connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
