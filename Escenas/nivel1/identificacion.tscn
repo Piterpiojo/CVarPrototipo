@@ -140,6 +140,44 @@ offset_top = 571.0
 offset_right = 789.0
 offset_bottom = 612.0
 
+[node name="emails" type="Control" parent="ScrollContainer/TextureRect"]
+visible = false
+anchors_preset = 0
+offset_left = 35.0
+offset_top = 21.0
+offset_right = 75.0
+offset_bottom = 61.0
+
+[node name="Label" type="Label" parent="ScrollContainer/TextureRect/emails"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 384.0
+offset_right = 479.0
+offset_bottom = 407.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "johndoe@email.com"
+
+[node name="Label3" type="Label" parent="ScrollContainer/TextureRect/emails"]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 384.0
+offset_right = 1032.0
+offset_bottom = 407.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "tuberculo@mail.com"
+
+[node name="Label2" type="Label" parent="ScrollContainer/TextureRect/emails"]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 384.0
+offset_right = 818.0
+offset_bottom = 407.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "abcdefghijklmnopqrstuvwxyz@email.com"
+
 [node name="CuadroDialogo" parent="." instance=ExtResource("3_kx6dc")]
 layout_mode = 1
 offset_left = -655.0
@@ -166,4 +204,5 @@ layout_mode = 1
 
 [connection signal="pressed" from="ScrollContainer/TextureRect/OlvidoContrasenia" to="." method="_on_olvido_contrasenia_pressed"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/NuevoUsuario" to="." method="_on_nuevo_usuario_pressed"]
+[connection signal="text_changed" from="ScrollContainer/TextureRect/usuario" to="." method="_on_usuario_text_changed"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/ingresar" to="." method="_on_ingresar_pressed"]

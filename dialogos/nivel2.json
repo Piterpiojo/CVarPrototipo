@@ -2,26 +2,61 @@
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "Ahora que la página está de vuelta, ¡vamos a crear tu cuenta! Solo necesitamos llenar algunos datos personales primero"
+		"texto": "Ahora que la página está de vuelta, ¡vamos a crear tu cuenta! Solo necesitamos llenar algunos datos personales primero",
+		"importante": true
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "Usuario",
-		"texto": "..."
+		"texto": "...",
+		"importante": true
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "¿Eso? Ni siquiera te preocupes, yo me encargo de eso en un parpadeo."
+		"texto": "¿Eso? Ni siquiera te preocupes, yo me encargo de eso en un parpadeo.",
+		"importante": true
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": ""
+		"texto": "",
+		"importante": true
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "¿Te parece bien esto? Son solo algunos datos personales que necesitamos para continuar. Ten cuidado al seleccionar país de emisión, solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b]."
-	}
+		"texto": "¿Te parece bien esto? Son solo algunos datos personales que necesitamos para continuar. Ten cuidado al seleccionar país de emisión, solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].",
+		"importante": true
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "IA",
+		"texto": " ¡Felicidades!, pudiste poner toda tu información en un tiempo récord. Creo. Tengo una tarea rápida para vos, no nos va a llevar más de un minuto.",
+		"importante": true
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "Usuario",
+		"texto": "Realmente no tengo tiempo para más acti…",
+		"importante": true
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "Usuario",
+		"texto": " Perfecto, te explico lo que hay que hacer.",
+		"importante": true
+	},
+	{
+		"emocion": "felicitaciones",
+		"personaje": "Usuario",
+		"texto": " Solamente para verificar que entendiste lo que estuvimos hablando, hace de cuenta que sos esta persona que ves al lado mio. Completa la ficha, nos vemos en un parpadeo.",
+		"importante": true
+	},
+		{
+		"emocion": "felicitaciones",
+		"personaje": "Usuario",
+		"texto": "¡Te dije que era algo rápido, felicidades! Ahora, continuemos, tenemos más cosas interesantes por delante.",
+		"importante": true
+	},
 ]

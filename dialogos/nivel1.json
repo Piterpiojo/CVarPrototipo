@@ -2,86 +2,97 @@
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
-		"texto": "Tengo que dejar de posponer esto, ¡Vamos a ver si puedo crear una cuenta de una vez por todas!"
+		"texto": "Tengo que dejar de posponer esto, ¡Vamos a ver si puedo crear una cuenta de una vez por todas!",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "IA",
-		"texto": "¡Hola! Soy Ave, tu asistente virtual. Estoy aquí para facilitar la creación de tu cuenta ¿En qué puedo ayudarte hoy?"
+		"texto": "¡Hola! Soy Ave, tu asistente virtual. Estoy aquí para facilitar la creación de tu cuenta ¿En qué puedo ayudarte hoy?",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "Usuario",
-		"texto": "Necesito una cuenta, pero realmente es mi primera vez utilizando este programa. ¿Te molestaría enseñarme cómo seguir?"
+		"texto": "Necesito una cuenta, pero realmente es mi primera vez utilizando este programa. ¿Te molestaría enseñarme cómo seguir?",
+		"importante": true
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "¡En lo absoluto, no hay problema! Mi trabajo es asistirte con lo que pueda ayudarte!"
+		"texto": "¡En lo absoluto, no hay problema! Mi trabajo es asistirte con lo que pueda ayudarte!",
+		"importante": false
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "..."
+		"texto": "...",
+		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "Oh, parece que la página está caída."
+		"texto": "Oh, parece que la página está caída.",
+		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "Usuario",
-		"texto": "¿En serio?"
+		"texto": "¿En serio?",
+		"importante": false
+	},
+		{
+		"emocion": "senalando",
+		"personaje": "IA",
+		"texto": "No, fue un pequeño chiste. ",
+		"importante": false
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "No, fue un pequeño chiste. Bueno, para comenzar, tenemos que registrarte como un nuevo usuario. \nPara eso, deberías entrar en el enlace que dice [i][u]Si es un usuario nuevo presione aquí[/u][/i]. \nEste botón te redirigirá al registro de usuario, que te permitirá crear la base de tu cuenta."
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
-		"texto": "blabla blabla blabla"
-	},
-	{
-		"emocion": "felicitaciones",
-		"personaje": "IA",
-		"texto": "blabla blabla blabla"
+		"texto": "Bueno, para comenzar, tenemos que registrarte como un nuevo usuario. \nPara eso, deberías entrar en el enlace que dice [i][u]Si es un usuario nuevo presione aquí[/u][/i]. \nEste botón te redirigirá al registro de usuario, que te permitirá crear la base de tu cuenta.",
+		"importante": true
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "blabla blabla blabla"
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
-		"texto": "blabla blabla blabla blabla blabla blabla"
-	},
-	{
-		"emocion": "seguime",
-		"personaje": "IA",
-		"texto": "blabla blabla blabla blabla"
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "... y esa es la razón por la que se eligió ese tono de azul para la pantalla principal."
+		"texto": "... y esa es la razón por la que se eligió ese tono de azul para la pantalla principal.",
+		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "Usuario",
-		"texto": "¿En serio? Wow, jamás me lo hubiera esperado. ¿Podríamos continuar con la creación de la cuenta?"
+		"texto": "¿En serio? Wow, jamás me lo hubiera esperado. ¿Podríamos continuar con la creación de la cuenta?",
+		"importante": false
 	},
 	{
 		"emocion": "seguime",
 		"personaje": "IA",
-		"texto": "Sí, definitivamente, ya mismo."
+		"texto": "Sí, definitivamente, ya mismo. pero antes tengo una actividad rápida para vos.",
+		"importante": true
+	},
+	{
+		"emocion": "seguime",
+		"personaje": "Usuario",
+		"texto": "Solamente si es algo rápido.",
+		"importante": true
+	},
+	{
+		"emocion": "seguime",
+		"personaje": "IA",
+		"texto": "Lo prometo, lo prometo.",
+		"importante": true
+	},
+	{
+		"emocion": "seguime",
+		"personaje": "IA",
+		"texto": "Algo rápido para testear,  simplemente elegí entre estos correos el que se considera apropiado para la plataforma y para una [b]carrera profesional[/b] en general, cuando termines podremos avanzar.",
+		"importante": true
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "Realmente tienes suerte de tenerme contigo. Sin mi ayuda, podría haber resultado algo [i]abrumador[/i]."
+		"texto": "Felicidades, tenés un ápice de sentido común. Es algo que no podemos dar por sentado en estos tiempos, mucho menos en este lugar. Sentite libre de continuar con el resto de los capítulos, yo voy a refrescar mis bytes.",
+		"importante": true
 	}
 ]

@@ -14,7 +14,7 @@ config/name="CVarPrototipo"
 run/main_scene="res://Escenas/menuFinal.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/image="res://ui/logo para web-01_1.png"
-config/icon="res://icon.svg"
+config/icon="res://Sprites/ave/saludando.png"
 
 [autoload]
 

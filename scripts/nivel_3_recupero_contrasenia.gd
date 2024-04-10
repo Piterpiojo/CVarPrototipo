@@ -14,6 +14,7 @@ var bandera7 : bool = false
 var bandera8 : bool = false
 var banderaMail:bool = false
 var banderaFin : bool = false
+var bandera16 = false
 const SonidoReloj= preload("res://sonidos/Musica y sonidos a utilizar/toggle_004.ogg")
 const SonidoMail=preload("res://sonidos/Musica y sonidos a utilizar/toggle_002.ogg")
 const SonidoFoto = preload("res://sonidos/Musica y sonidos a utilizar/error_007.ogg")
@@ -37,15 +38,14 @@ func guardar_avances():
 	CargaArchivos.establecer_progreso(3,progreso)
 
 func eventos():
-	if $CuadroDialogo.indice_dialogo ==1 and !bandera1:
+	if $CuadroDialogo.indice_dialogo ==0 and !bandera1:
 		$AnimationPlayer.play("mostrar_foto")
 		$Usuario.visible = true
 		$AudioStreamPlayer.stream=SonidoFoto
 		$AudioStreamPlayer.play()
 		bandera1= true
 		progreso = 10
-
-	elif $CuadroDialogo.indice_dialogo == 3 and !banderaMail:
+	elif $CuadroDialogo.indice_dialogo == 2 and !banderaMail:
 		$AnimationPlayer.stop()
 		$Usuario.visible=false
 		$"NicePngEmail-icon-png-transparent903587".visible=true
@@ -59,12 +59,12 @@ func eventos():
 			CargaArchivos.logros["3"]= logrosNivel
 			CargaArchivos.guardar_logros()
 		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo == 4 and !bandera2:
+	elif $CuadroDialogo.indice_dialogo == 3 and !bandera2:
 		tiempo()
 		bandera2=true
 		progreso = 30
 		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo == 7 and !bandera3:
+	elif $CuadroDialogo.indice_dialogo == 6 and !bandera3:
 		$espera.start()
 		$CuadroDialogo.pausa=true
 		$CuadroDialogo.habilitado= false
@@ -72,23 +72,22 @@ func eventos():
 		$ayuda.cambiar_texto("Espera a que se complete el tiempo")
 		progreso = 40
 		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo == 11 and !bandera4:
+	elif $CuadroDialogo.indice_dialogo == 10 and !bandera4:
 		$espera.start()
 		$CuadroDialogo.pausa=true
 		$CuadroDialogo.habilitado= false
 		$CuadroDialogo.letra=0
 		bandera4=true
 		progreso = 50
-	elif $CuadroDialogo.indice_dialogo == 12 and !bandera5:
+	elif $CuadroDialogo.indice_dialogo == 11 and !bandera5:
 		acelerar()
 		bandera5=true
 		progreso = 60
 		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo== 16 and !bandera6:
+	elif $CuadroDialogo.indice_dialogo== 15 and !bandera6:
 		$reloj.visible= false
 		$"NicePngEmail-icon-png-transparent903587".visible = false
 		$contrasenia.visible=true
-		pausar_y_ocultar_dialogo()
 		bandera6 = true
 		if(!logrosNivel[1]):
 			$Logro.fijar_logro("La paciencia es la clave", "Esperar el tiempo necesario para recibir el correo electrónico.")
@@ -98,16 +97,19 @@ func eventos():
 		$ayuda.cambiar_texto("ingresa la contraseña correctamente")
 		progreso = 70
 		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo == 26 and !bandera7:
+	elif $CuadroDialogo.indice_dialogo== 16 and !bandera16:
+		pausar_y_ocultar_dialogo()
+		bandera16=true
+	elif $CuadroDialogo.indice_dialogo == 25 and !bandera7:
 		bandera7=true
 		pausar_y_ocultar_dialogo()
 		progreso = 80
-	elif $CuadroDialogo.indice_dialogo == 29 and !bandera8:
+	elif $CuadroDialogo.indice_dialogo == 28 and !bandera8:
 		bandera8=true
 		pausar_y_ocultar_dialogo()
 		$ayuda.cambiar_texto("Crea una nueva contraseña")
 		progreso = 90
-	elif $CuadroDialogo.indice_dialogo == 30 and !banderaFin:
+	elif $CuadroDialogo.indice_dialogo == 29 and !banderaFin:
 		if(!logrosNivel[5]):
 			$Logro.fijar_logro("¡Que nadie se entere!", "Completar el nivel 3.")
 			logrosNivel[5]= true
@@ -117,6 +119,8 @@ func eventos():
 		progreso=100
 		guardar_avances()
 		$AnimationPlayer.play("fin")
+	elif $CuadroDialogo.indice_dialogo >2:
+		$Usuario.visible=false
 		
 
 func pausar_y_ocultar_dialogo():
@@ -164,7 +168,6 @@ func _on_espera_timeout():
 func reanudar_dialogo():
 	$CuadroDialogo.visible=true
 	$CuadroDialogo.pausa=false
-	$CuadroDialogo.sig_dialogo()
 
 func _on_horas_timeout():
 	horas-=1
@@ -178,10 +181,10 @@ func _on_horas_timeout():
 
 
 func _on_ingresar_pressed():
-	if$ScrollContainer/identificacion/contrasenia.text == "9O6LiNE5":
+	if$ScrollContainer/identificacion/contrasenia.text == "ABDeyZ":
 		$ScrollContainer/identificacion.queue_free()
 		$ScrollContainer/TextureRect.visible=true
-		$contrasenia.text= "9O6LiNE5"
+		$contrasenia.text= "ABDeyZ"
 		$CuadroDialogo.letra=0
 		$AudioStreamPlayer.stream= SonidoExito
 		$AudioStreamPlayer.play()
@@ -210,7 +213,7 @@ func pasar_al_siguiente():
 	get_tree().change_scene_to_file("res://Escenas/nivel4-sistemas_cv/nivel_4.tscn")
 
 func _on_cambiar_pressed():
-	if($ScrollContainer/TextureRect/contrasenia_anterior.text == "9O6LiNE5"):
+	if($ScrollContainer/TextureRect/contrasenia_anterior.text == "ABDeyZ"):
 		if($ScrollContainer/TextureRect/nueva.text == $ScrollContainer/TextureRect/repetir.text):
 			repeticiones +=1
 			$AudioStreamPlayer.stream= SonidoExito

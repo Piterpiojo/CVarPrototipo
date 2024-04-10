@@ -342,7 +342,6 @@ flat = true
 expand_icon = true
 
 [node name="prueba" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 344.0
 offset_top = 298.0

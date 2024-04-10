@@ -51,7 +51,6 @@ func Mostrar_Linea(indice):
 
 
 func _process(_delta):
-	print(habilitado)
 	$prueba.text = "Id :" + str(indice_dialogo)
 	if(Input.is_action_just_pressed("click") and habilitado):
 		if completo:

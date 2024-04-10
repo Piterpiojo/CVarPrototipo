@@ -1,157 +1,170 @@
 [
 	{
-		"emocion": "saludando",
-		"personaje": "IA",
-		"texto": "La pantalla abre con Ave muy entusiasmada, comentandonos que con todos estos datos personales que le promocionamos, cree tener una buena representaciones del usuario de forma física, acto seguido, nos muestra algún tipo de imagen bizarra al azar, con forma levemente humana."
-	},
-	{
 		"emocion": "artista",
 		"personaje": "IA",
-		"texto": "¿Te gusta tu retrato?"
+		"texto": "¿Te gusta tu retrato?",
+		"importante": true
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "Usuario",
-		"texto": "El usuario se mantiene en silencio, intentando descifrar lo que está viendo"
+		"texto": "¡...! ",
+		"importante": false
 	},
 	{
 		"emocion": "artista",
 		"personaje": "IA",
-		"texto": "¿Wow,  tan sorprendido? ¿Acaso no estabas al tanto? a las IA  ahora no solo nos emplean por nuestras habilidades para procesar datos escritos,sino que también recientemente incursionamos en el mundo del arte y estamos abriéndonos paso también en otros escenarios; En fin, a lo que sigue; Tus datos fueron cargados de forma correcta, en breve recibirás un mail… "
+		"texto": "¿Wow,  tan sorprendido? ¿Acaso no estabas al tanto? a las IA  ahora no solo nos emplean por nuestras habilidades para procesar datos escritos,sino que también recientemente incursionamos en el mundo del arte y estamos abriéndonos paso también en otros escenarios; En fin, a lo que sigue; Tus datos fueron cargados de forma correcta, en breve recibirás un mail… ",
+		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Con instrucciones de cómo continuar, en caso de no recibirlo dentro de las próximas 48 horas…"
+		"texto": "Con instrucciones de cómo continuar, en caso de no recibirlo dentro de las próximas 48 horas…",
+		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "... Deberías consultar a [u]registracioncvar@mincyt.gob.ar[/u]. Aunque para tu suerte, como cuentas conmigo, puedo hacer algo al respecto de forma directa  yo si fuese necesario… pero de momento, esperemos…"
+		"texto": "... Deberías consultar a [u]registracioncvar@mincyt.gob.ar[/u]. Aunque para tu suerte, como cuentas conmigo, puedo hacer algo al respecto de forma directa  yo si fuese necesario… pero de momento, esperemos…",
+		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "Usuario",
-		"texto": " Todavía nada, ninguna notificación de mensaje nuevo, ¿No se supone que esto es automático?"
+		"texto": " Todavía nada, ninguna notificación de mensaje nuevo, ¿No se supone que esto es automático?",
+		"importante": false
 	},
 	{
 		"emocion": "reloj",
 		"personaje": "IA",
-		"texto": "Los humanos son seres tan impacientes, de momento esperemos que se cumpla en plazo antes de tomar cualquier otra acción"
+		"texto": "Los humanos son seres tan impacientes, de momento esperemos que se cumpla en plazo antes de tomar cualquier otra acción",
+		"importante": false
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "Usuario",
-		"texto": "..."
+		"texto": "…",
+		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "..."
+		"texto": "…",
+		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "Usuario",
-		"texto": "*tose*"
+		"texto": "*tose*",
+		"importante": false
 	},
 	{
 		"emocion": "tos",
 		"personaje": "IA",
-		"texto": "*tose* *tose*"
+		"texto": "*tose* *tose*",
+		"importante": false
 	},
 	{
 		"emocion": "reloj",
 		"personaje": "IA",
-		"texto": "Bueno esta bien, apresuremos un poco esto solo por que ya se puso incomodo"
+		"texto": "Bueno esta bien, apresuremos un poco esto solo por que ya se puso incomodo",
+		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "Usuario",
-		"texto": "(Bueno, no voy a quejarme de algo que me haga ahorrar tiempo)"
+		"texto": "(Bueno, no voy a quejarme de algo que me haga ahorrar tiempo)",
+		"importante": false
 	},
 	{
 		"emocion": "seguime",
 		"personaje": "IA",
-		"texto": "Ya se ha cumplido el plazo de espera máximo  para la recepción del mail, pero no te preocupes, para acelerar el proceso revisare por vos el Mail que debio haberte llegado, así no molestamos a la pobre gente de soporte que recepciona Mails; Que ya demasiados correos enojados repletos de mayúsculas deben aguantar. De acuerdo, el siguiente paso es sencillo"
+		"texto": "Ya se ha cumplido el plazo de espera máximo para la recepción del mail, para acelerar el proceso revisare por vos el Mail que debio haberte llegado, así no molestamos a la pobre gente de soporte.",
+		"importante": true
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "En esta pantalla, deberás poner el usuario que tú mismo seleccionaste, pero lo más importante es que uses de contraseña, aquella que te debio haber llegado al mail, osea, específicamente estos 8 dígitos Y NINGÚN OTRO"
+		"texto": "De acuerdo, el siguiente paso es sencillo",
+		"importante": true
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "no debe verse"	
+		"texto": "En esta pantalla, deberás poner el usuario que tú mismo seleccionaste, pero lo más importante es que uses de contraseña, aquella que te debio haber llegado al mail, osea, específicamente estos 8 dígitos Y NINGÚN OTRO",
+		"importante": true
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
-		"texto": "¿Estás segura que me la pasaste bien? "
+		"texto": "¿Estás segura que me la pasaste bien? ",
+		"importante": false
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "Por supuesto, mi código no comete fallas de ese tipo, te aseguro que estos dígitos, son los necesarios para acceder con tu usuario,\n"
+		"texto": "Por supuesto, mi código no comete fallas de ese tipo, te aseguro que estos dígitos, son los necesarios para acceder con tu usuario,\n",
+		"importante": false
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
-		"texto": "¿Y entonces por qué sigue dándome error?"
+		"texto": "¿Y entonces por qué sigue dándome error?",
+		"importante": false
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "¿Pues, probaste ponerlos en orden alfanumérico?"
+		"texto": "¿Pues, probaste ponerlos en orden alfabético?",
+		"importante": false
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "Usuario",
-		"texto": "...\n\n"
+		"texto": "...\n\n",
+		"importante": false
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "...\n\n"
+		"texto": "...\n\n",
+		"importante": false
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "Usuario",
-		"texto": "Por qué razón yo deb-"
+		"texto": "Por qué razón yo deb-",
+		"importante": false
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "Dije que esos eran los dígitos exactos, no que los envíe en el orden que debían ir."
+		"texto": "Dije que esos eran los dígitos exactos, no que los envíe en el orden que debían ir.",
+		"importante":false
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
-		"texto": " *Suspiro* Solo acabemos con esta sección ¿si?\n"
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "Usuario",
-		"texto": "este dialogo no debe ser visible\n"
+		"texto": " *Suspiro* Solo acabemos con esta sección ¿si?\n",
+		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Muy bien, en este siguiente paso, deberás volver a poner la contraseña anterior y elegir una nueva y repetir 10 veces la nueva, para asegurarnos que te la memorices a la fuerza. "
+		"texto": "Muy bien, en este siguiente paso, deberás volver a poner la contraseña anterior y elegir una nueva y repetir 10 veces la nueva, para asegurarnos que te la memorices a la fuerza. ",
+		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "Para dejarlo más facil, te mostraré la contraseña anterior en el orden correcto. Una cosa más, tu contraseña nueva debe tener si o si números y letras."
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "Usuario",
-		"texto": "este dialogo no debe ser visible"
+		"texto": "Para dejarlo más facil, te mostraré la contraseña anterior en el orden correcto. Una cosa más, tu contraseña nueva debe tener si o si números y letras.",
+		"importante": false
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "¡Excelente! ¡Ya eres un usuario hecho y derecho de la plataforma! Y uno que sabe lo que significa alfabéticamente !Un 2x1 en toda regla."
+		"texto": "¡Excelente! ¡Ya eres un usuario hecho y derecho de la plataforma! Y uno que sabe lo que significa alfabéticamente !Un 2x1 en toda regla.",
+		"importante": false
 	}
 ]

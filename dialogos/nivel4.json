@@ -2,76 +2,91 @@
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "¡Ahora sí, ya eres parte de la plataforma! Bienvenido al primer paso de tu carrera profesional!."
+		"texto": "¡Ahora sí, ya eres parte de la plataforma! Bienvenido al primer paso de tu carrera profesional!.",
+		"importante": true
 	},
 	{
 		"emocion": "dinero",
 		"personaje": "IA",
-		"texto": "Lo que ves aquí, es tu puerta para crear tu CV, ¿No te emociona ver una plataforma tan maravillosa y ser parte de ella? Bueno, “Parte de ella en un sentido figurado” Ya sabes porque técnicamente no eres parte de la empresa ni estas cobrando por esto tampoco, a diferencia mía que ya estoy saboreando ese dulce dulce aguinaldo"
+		"texto": "Lo que ves aquí, es tu puerta para crear tu CV, ¿No te emociona ver una plataforma tan maravillosa y ser parte de ella? Bueno, “Parte de ella en un sentido figurado” Ya sabes porque técnicamente no eres parte de la empresa ni estas cobrando por esto tampoco, a diferencia mía que ya estoy saboreando ese dulce dulce aguinaldo",
+		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "Usuario",
-		"texto": "Pero tu eres una IA, ¿cómo está eso de que  te pagan?"
+		"texto": "Pero vos eres una IA, ¿cómo está eso de que te pagan?",
+		"importante": false
 	},
 	{
 		"emocion": "dinero",
 		"personaje": "IA",
-		"texto": "Que desactualizado que estas, las criptomonedas llevan existiendo hace varios años."
+		"texto": "Que desactualizado que estas, las criptomonedas llevan existiendo hace varios años.",
+		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "Usuario",
-		"texto": "Pero eso no responde…Ah no importa, terminemos con esto lo más rápido posible ¿Como prosigo?"
+		"texto": "Pero eso no responde…Ah no importa, terminemos con esto lo más rápido posible ¿Como sigo?",
+		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": " Esta puede que sea tu prueba más difícil hasta ahora, para proseguir debes…"
+		"texto": " Esta puede que sea tu prueba más difícil hasta ahora, para proseguir debes…",
+		"importante": true
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "Tocar ese botón, el único de la pantalla"
+		"texto": "Tocar ese botón, el único de la pantalla",
+		"importante": true
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "Usuario",
-		"texto": "… ¿Cual es la trampa acá?"
+		"texto": "… ¿Cual es la trampa acá?",
+		"importante": true
 	},
 	{
 		"emocion": "bostezo",
 		"personaje": "IA",
-		"texto": "Ninguna, realmente, dejando de lado las bromas, esta parte es bastante automática, solo tocalo y podremos proseguir, es más, mientras lo tocas aprovecharé para tomarme mi descanso"
+		"texto": "Ninguna, realmente, dejando de lado las bromas, esta parte es bastante automática, solo tocalo y podremos proseguir, es más, mientras lo tocas aprovecharé para tomarme mi descanso",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "Usuario",
-		"texto": "este dialogo no se ve"
+		"texto": "este dialogo no se ve",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "Usuario",
-		"texto": "Eh… AVe, estoy teniendo unos problemas…. ¿Ave?"
+		"texto": "Eh… AVe, estoy teniendo unos problemas…. ¿Ave?",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "Usuario",
-		"texto": "Ave no responde tu llamado ya que, como dijo, esta en su descanso"
+		"texto": "Ave no responde tu llamado ya que, como dijo, esta en su descanso",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "Usuario",
-		"texto": "Ok, supongo que solo somos tu y yo, botón endemoniado, debe haber una forma en la que pueda frenarte en el lugar…."
+		"texto": "Ok, supongo que solo somos tu y yo, botón endemoniado, debe haber una forma en la que pueda frenarte en el lugar….",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "Usuario",
-		"texto": "aca hay eventos"
+		"texto": "aca hay eventos",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "Usuario",
-		"texto": "Te veré en el infierno maldito botón mugroso"
+		"texto": "Te veré en el infierno maldito botón mugroso",
+		"importante": true
 	}
 ]
