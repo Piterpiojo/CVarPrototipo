@@ -169,7 +169,7 @@ func _process(_delta):
 	if($CuadroDialogo.indice_dialogo==2 and !bandera1):
 		$AnimationPlayer.play("intro")
 		bandera1=true
-	elif($CuadroDialogo.indice_dialogo==12 and !bandera2):
+	elif($CuadroDialogo.indice_dialogo==13 and !bandera2):
 		$CuadroDialogo.desactivar_dialogo()
 		$ayuda.cambiar_texto("Completa los campos")
 		bandera2=true
@@ -210,7 +210,7 @@ func _on_guardar_pressed():
 			logrosNivel[0]= true
 			CargaArchivos.logros["5"]= logrosNivel
 			CargaArchivos.guardar_logros()
-		$logroTimer.start()
+		$CuadroDialogo.mostrar_dialogo_unico("¡Creo que esto fue lo más difícil que hicimos hasta ahora, así que felicidades. Necesito un poco de agua virtual, nos vemos en el próximo capítulo.","IA")
 	else:
 		$AudioStreamPlayer.stream=sonidoError
 		$AudioStreamPlayer.play()

@@ -2,46 +2,61 @@
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "Wow, eso fue bastante rápido. Pensé que no entendías. Capaz no sos tan obtuso como pensé."
+		"texto": "Wow, eso fue bastante rápido. Pensé que no entendías. Capaz no sos tan obtuso como pensé.",
+		"importante": true
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "Usuario",
-		"texto": "..."
+		"texto": "...",
+		"importante": true
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Bueno, esta es la sección de Palabras Clave. Realmente no hay mucha ciencia detrás, acá es donde pones palabras que estén relacionadas con tu área. Como en este caso no entendías lo suficiente y usamos títulos de obras infantiles, tenes que discernir qué palabras se relacionan a las obras y cuáles no. De vuelta, voy a volver cuando termines, ¡Suerte!\n"
+		"texto": "Bueno, esta es la sección de Palabras Clave. Realmente no hay mucha ciencia detrás, acá es donde pones palabras que estén relacionadas con tu área.",
+		"importante": true
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "Como en este caso no entendías lo suficiente y usamos títulos de obras infantiles, tenes que discernir qué palabras se relacionan a las obras y cuáles no. De vuelta, voy a volver cuando termines, ¡Suerte!\n",
+		"importante": true
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "Usuario",
-		"texto": "PERO…"
+		"texto": "PERO…",
+		"importante": true
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "Usuario",
-		"texto": "esto no se ve"
+		"texto": "esto no se ve",
+		"importante": true
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "¡FELICIDADES! ¡Por fin terminaste de crear tu cuenta! ¡Toda esa dedicación, toda esa enorme cantidad de esfuerzo y cerebros dieron sus frutos y es un logro que merece ser celebrado!. Antes de terminar, ¡tengo un regalo para vos!\n"
+		"texto": "¡FELICIDADES! ¡Por fin terminaste de crear tu cuenta! ¡Toda esa dedicación, toda esa enorme cantidad de esfuerzo y cerebros dieron sus frutos y es un logro que merece ser celebrado!. Antes de terminar, ¡tengo un regalo para vos!\n",
+		"importante": true
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "De mi autoría, para vos, por haber hecho este trayecto junto a mi. No creo que haya forma de que puedas probarla, pero te aseguro que no está del todo mal. \n"
+		"texto": "De mi autoría, para vos, por haber hecho este trayecto junto a mi. No creo que haya forma de que puedas probarla, pero te aseguro que no está del todo mal. \n",
+		"importante": true
 	},
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
-		"texto": "Gracias, Ave. Realmente me cuesta admitirlo pero fuiste de gran ayuda en este recorrido y estoy muy feliz de por fin haber completado esto de una vez por todas."
+		"texto": "Gracias, Ave. Realmente me cuesta admitirlo pero fuiste de gran ayuda en este recorrido y estoy muy feliz de por fin haber completado esto de una vez por todas.",
+		"importante": true
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "“Completado”, eso me recuerda: antes de irte, quiero mostrarte algo."
+		"texto": "“Completado”, eso me recuerda: antes de irte, quiero mostrarte algo.",
+		"importante": true
 	}
 ]

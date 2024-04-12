@@ -2,36 +2,44 @@
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "..."
+		"texto": "...",
+		"importante": true
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "Usuario",
-		"texto": "..."
+		"texto": "...",
+		"importante": true
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "Guau. ¿Ni siquiera tu almuerzo? Es algo nuevo para mi. Puedo derivarte a clases de manejo de la ansiedad si lo sentis necesario…\n"
+		"texto": "Guau. ¿Ni siquiera tu almuerzo? Es algo nuevo para mi. Puedo derivarte a clases de manejo de la ansiedad si lo sentis necesario…\n",
+		"importante": true
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "Usuario",
-		"texto": "Estoy bien. ¿Podemos continuar?"
+		"texto": "Estoy bien. ¿Podemos continuar?",
+		"importante": true
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "¿Podemos?"
+		"texto": "¿Podemos?",
+		"importante": true
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "Usuario",
-		"texto": "..."
+		"texto": "...",
+		"importante": true
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "... Ok."
+		"texto": "... Ok.",
+		"importante": true
 	}
 ]
+

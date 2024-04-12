@@ -180,19 +180,19 @@ func flotar():
 
 
 func _on_button_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico("Qué aburrido eres, ni dan ganas de jugar contigo","ave")
+	$CuadroDialogo.mostrar_dialogo_unico("Una elección bastante sobria.","ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label.text
 	
 	$Timer.start()
 
 func _on_button_2_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico("Lo sabía, es tu destino!","Ave")
+	$CuadroDialogo.mostrar_dialogo_unico("Sabía que algo ocultabas.","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label2.text
 	$Timer.start()
 
 
 func _on_button_4_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico("¡Cuidado con cruzar el espacio aéreo romano!","Ave")
+	$CuadroDialogo.mostrar_dialogo_unico("¡Cuidado con cruzar el espacio aéreo en zonas peligrosas!","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label3.text
 	$CuadroDialogo.cambiar_anim("capitan")
 	$Timer.start()
@@ -200,7 +200,7 @@ func _on_button_4_pressed():
 
 
 func _on_button_3_pressed():
-	$CuadroDialogo.mostrar_dialogo_unico(" ¡Que la fuerza te acompañe!... Oh no… a nuestros abogados no les va a gustar esa referencia…","Ave")
+	$CuadroDialogo.mostrar_dialogo_unico("¡Que la fuerza te acompañe!","Ave")
 	$ScrollContainer/TextureRect/institucionSeleccionada.text = $ScrollContainer/ca/Label4.text
 	$CuadroDialogo.cambiar_anim("starwars")
 	$Timer.start()
@@ -225,7 +225,7 @@ func _on_buscar_pressed():
 
 
 func _on_timer_timeout():
-	
+	$CuadroDialogo.mostrar_dialogo_unico("Gracias por completar esto tan rápidamente, ¡ya cada vez falta menos para que terminemos!","Ave")
 	$AnimationPlayer.play("anegro")
 	
 func cambiar_escena():

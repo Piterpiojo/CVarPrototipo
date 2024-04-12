@@ -1,57 +1,75 @@
 [
-	{
-		"emocion": "felicitaciones",
-		"personaje": "IA",
-		"texto": "Felicidades por estar tan TAN cerca de terminar con todo este proceso. ¿Estás listo para continuar?"
-	},
-	{
-		"emocion": "felicitaciones",
-		"personaje": "Usuario",
-		"texto": "Si, estoy inexplicablemente motivado a tener esta cuenta de una vez por todas."
-	},
-	{
-		"emocion": "senalando",
-		"personaje": "IA",
-		"texto": "Perfecto, me encanta escuchar eso. Ahora, ya estamos en la etapa final, solamente necesito que elijas tus áreas de actuación más relevantes y las órdenes en función de su importancia y después quiero que elijas hasta tres líneas de investigación en las que has estado involucrado dentro de cada una de esas áreas."
-	},
-	{
-		"emocion": "senalando",
-		"personaje": "Usuario",
-		"texto": "¿Uh? No entendí una palabra de lo que dijiste."
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "No es muy difícil: elegir tu área de actuación, de manera jerárquica y después elegir hasta 3 líneas de investigación en las que hayas estado involucrado. "
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "Usuario",
-		"texto": "Perdón, es que sigo sin entender, ¿podrías hacer que sea un poco más fácil?\n"
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "Hmm. Ok.\n"
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "IA",
-		"texto": "Ahora creo que está un poco más a tu nivel. Simplemente acomoda esto y podremos pasar a lo que sigue."
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "Usuario",
-		"texto": "Sigo sin entender qué es lo que tengo que…"
-	},
-	{
-		"emocion": "descanso",
-		"personaje": "IA",
-		"texto": "Vuelvo cuando termines. No te olvides: elegí de manera jerárquica y después unirlos con lo que investigaste sobre el tema."
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "Usuario",
-		"texto": "Creo que entiendo menos que antes, ¿Podrías expl…"
-	}
+    {
+        "emocion": "felicitaciones",
+        "personaje": "IA",
+        "texto": "Felicidades por estar tan TAN cerca de terminar con todo este proceso. ¿Estás listo para continuar?",
+        "importante": true
+    },
+    {
+        "emocion": "felicitaciones",
+        "personaje": "Usuario",
+        "texto": "Si, estoy inexplicablemente motivado a tener esta cuenta de una vez por todas.",
+        "importante": true
+    },
+    {
+        "emocion": "senalando",
+        "personaje": "IA",
+        "texto": "Perfecto, me encanta escuchar eso.",
+        "importante": true
+    },
+    {
+        "emocion": "senalando",
+        "personaje": "IA",
+        "texto": "Ahora, ya estamos en la etapa final, solamente necesito que elijas tus áreas de actuación más relevantes y las órdenes en función de su importancia y después quiero que elijas hasta tres líneas de investigación en las que has estado involucrado dentro de cada una de esas áreas.",
+        "importante": true
+    },
+    {
+        "emocion": "senalando",
+        "personaje": "Usuario",
+        "texto": "¿Uh? No entendí una palabra de lo que dijiste.",
+        "importante": true
+    },
+    {
+        "emocion": "ensenando",
+        "personaje": "IA",
+        "texto": "No es muy difícil: elegir tu área de actuación, de manera jerárquica y después elegir hasta 3 líneas de investigación en las que hayas estado involucrado.",
+        "importante": true
+    },
+    {
+        "emocion": "ensenando",
+        "personaje": "Usuario",
+        "texto": "Perdón, es que sigo sin entender, ¿podrías hacer que sea un poco más fácil?\n",
+        "importante": true
+    },
+    {
+        "emocion": "ensenando",
+        "personaje": "IA",
+        "texto": "Hmm.\n",
+        "importante": true
+    },
+    {
+        "emocion": "estatico",
+        "personaje": "IA",
+        "texto": "Ahora creo que está un poco más a tu nivel. Simplemente acomoda esto y podremos pasar a lo que sigue.",
+        "importante": true
+    },
+    {
+        "emocion": "estatico",
+        "personaje": "Usuario",
+        "texto": "Sigo sin entender qué es lo que tengo que…",
+        "importante": true
+    },
+    {
+        "emocion": "descanso",
+        "personaje": "IA",
+        "texto": "Vuelvo cuando termines. No te olvides: elegí de manera jerárquica y después unirlos con lo que investigaste sobre el tema.",
+        "importante": true
+    },
+    {
+        "emocion": "estatico",
+        "personaje": "Usuario",
+        "texto": "Creo que entiendo menos que antes, ¿Podrías expl…",
+        "importante": true
+    }
 ]
+

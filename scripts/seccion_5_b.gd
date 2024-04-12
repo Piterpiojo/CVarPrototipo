@@ -178,7 +178,8 @@ func _input(event):
 
 func _on_guardar_pressed():
 	if(!hay_campos_vacios()):
-		$CuadroDialogo.mostrar_dialogo_unico("Vaya ... y tu querías mi ayuda cuando lo llevabas bien claro…. Quizás en las siguientes secciones deberías hacer relevancia a  tu tremenda habilidad para localizar criptidos, estoy segura de que es un talento muy buscado en estas épocas modernas donde a uno le cuesta mucho discernir entre realidad y ficción, en fin, prosigamos.","Ave")
+		$CuadroDialogo.mostrar_dialogo_unico("Vaya ... y tu querías mi ayuda cuando lo llevabas bien claro…. Quizás en las siguientes secciones deberías hacer relevancia a  tu tremenda habilidad para localizar criptidos, estoy segura de que es un talento muy buscado en estas épocas modernas donde a uno le cuesta mucho discernir entre realidad y ficción\n\nEn fin, felicidades por el empeño, prosigamos. Tengo un buen sentimiento de tu parte.
+","Ave")
 		$AudioStreamPlayer.stream=sondioExito
 		$AudioStreamPlayer.play()
 		if(!logrosNivel[1]):
@@ -186,14 +187,14 @@ func _on_guardar_pressed():
 			logrosNivel[1]= true
 			CargaArchivos.logros["5"]= logrosNivel
 			CargaArchivos.guardar_logros()
-		cambiarEscena()
+		$Timer.start()
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("falta completar algun campo obligatorio","Ave")
 		$AudioStreamPlayer.stream=sonidoError
 		$AudioStreamPlayer.play()
 
 func cambiarEscena():
-	$Timer.start()
+	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5c.tscn")
 
 
 
@@ -204,4 +205,5 @@ func _on_line_edit_16_focus_entered():
 
 
 func _on_timer_timeout():
-	get_tree().change_scene_to_file("res://Escenas/nivel5/seccion_5c.tscn")
+	$AnimationPlayer.play("fin")
+	

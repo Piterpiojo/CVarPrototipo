@@ -105,7 +105,7 @@ func _process(_delta):
 		$AnimationPlayer.play("sacudelo")
 		bandera1=true
 		$ayuda.cambiar_texto("Organiza las áreas de actuación con los cuentos y su descripción, Quizá hay un orden")
-	if($CuadroDialogo.indice_dialogo == 4 and !bandera2 and parte2):
+	if($CuadroDialogo.indice_dialogo == 5 and !bandera2 and parte2):
 		$CuadroDialogo.desactivar_dialogo()
 		bandera2=true
 		$ayuda.cambiar_texto("Arrasta las palabras clave relacionadas con las áreas de actuación")
