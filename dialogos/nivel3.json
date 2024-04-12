@@ -152,14 +152,38 @@
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Muy bien, en este siguiente paso, deberás volver a poner la contraseña anterior y elegir una nueva y repetir 10 veces la nueva, para asegurarnos que te la memorices a la fuerza. ",
-		"importante": false
+		"texto": "Muy bien, para terminar con este capítulo, ¡algo rápido! ",
+		"importante": true
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "Para dejarlo más facil, te mostraré la contraseña anterior en el orden correcto. Una cosa más, tu contraseña nueva debe tener si o si números y letras.",
-		"importante": false
+		"texto": "Esto es simple, agarrá todas las contraseñas que cumplan con las normas de una buena contraseña, que son…",
+		"importante": true
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "...\n\n",
+		"importante": true
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "De menos de 16 caracteres…",
+		"importante": true
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "...\n\n",
+		"importante": true
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "Está bien, lo digo yo: De menos de 16 caracteres, primera letra mayúscula y algún símbolo. No es muy difícil, te tendría que tomar menos de un minuto. Probablemente.",
+		"importante": true
 	},
 	{
 		"emocion": "felicitaciones",

@@ -177,6 +177,67 @@ offset_right = 1160.0
 offset_bottom = 775.0
 text = "Cancelar"
 
+[node name="contrasenias" type="ColorRect" parent="ScrollContainer/TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 112.0
+offset_top = 368.0
+offset_right = 416.0
+offset_bottom = 512.0
+color = Color(0.0156863, 0.4, 0.470588, 1)
+
+[node name="Button" type="Button" parent="ScrollContainer/TextureRect/contrasenias"]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 96.0
+offset_right = 295.0
+offset_bottom = 127.0
+text = "canui785$"
+
+[node name="Button2" type="Button" parent="ScrollContainer/TextureRect/contrasenias"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 96.0
+offset_right = 184.0
+offset_bottom = 127.0
+text = "Allstarsriverclub2003!"
+
+[node name="Button3" type="Button" parent="ScrollContainer/TextureRect/contrasenias"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 147.0
+offset_bottom = 87.0
+theme_override_colors/font_disabled_color = Color(0, 0.8, 0, 1)
+text = "Gtasanandreas5!"
+
+[node name="Button4" type="Button" parent="ScrollContainer/TextureRect/contrasenias"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 110.0
+offset_bottom = 47.0
+theme_override_colors/font_disabled_color = Color(0, 0.8, 0, 1)
+text = "lOpool/7899"
+
+[node name="Button5" type="Button" parent="ScrollContainer/TextureRect/contrasenias"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 296.0
+offset_bottom = 47.0
+theme_override_colors/font_disabled_color = Color(0, 0.8, 0, 1)
+text = "Locomiatu12?"
+
+[node name="Button6" type="Button" parent="ScrollContainer/TextureRect/contrasenias"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 56.0
+offset_right = 296.0
+offset_bottom = 87.0
+theme_override_colors/font_disabled_color = Color(0, 0.8, 0, 1)
+text = "Ratisitica_19"
+
 [node name="identificacion" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
 texture = ExtResource("7_0ew3f")
@@ -289,8 +350,14 @@ layout_mode = 1
 
 [node name="Logro" parent="." instance=ExtResource("10_5qhq3")]
 layout_mode = 1
+offset_top = 25.0
+offset_bottom = 115.0
 
 [connection signal="pressed" from="ScrollContainer/TextureRect/cambiar" to="." method="_on_cambiar_pressed"]
+[connection signal="pressed" from="ScrollContainer/TextureRect/contrasenias/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/TextureRect/contrasenias/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="ScrollContainer/TextureRect/contrasenias/Button5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="ScrollContainer/TextureRect/contrasenias/Button6" to="." method="_on_button_6_pressed"]
 [connection signal="pressed" from="ScrollContainer/identificacion/ingresar" to="." method="_on_ingresar_pressed"]
 [connection signal="timeout" from="minutos" to="." method="_on_minutos_timeout"]
 [connection signal="timeout" from="horas" to="." method="_on_horas_timeout"]

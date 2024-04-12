@@ -143,7 +143,7 @@ offset_bottom = 728.0
 grow_horizontal = 0
 
 [node name="prueba" parent="CuadroDialogo" index="10"]
-visible = true
+visible = false
 
 [node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
 

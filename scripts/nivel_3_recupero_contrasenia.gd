@@ -13,8 +13,9 @@ var bandera6 : bool = false
 var bandera7 : bool = false
 var bandera8 : bool = false
 var banderaMail:bool = false
-var banderaFin : bool = false
+var banderaFin : bool = true
 var bandera16 = false
+var contrasenias=0
 const SonidoReloj= preload("res://sonidos/Musica y sonidos a utilizar/toggle_004.ogg")
 const SonidoMail=preload("res://sonidos/Musica y sonidos a utilizar/toggle_002.ogg")
 const SonidoFoto = preload("res://sonidos/Musica y sonidos a utilizar/error_007.ogg")
@@ -89,6 +90,7 @@ func eventos():
 		$"NicePngEmail-icon-png-transparent903587".visible = false
 		$contrasenia.visible=true
 		bandera6 = true
+		$CuadroDialogo/Importante.disabled =true
 		if(!logrosNivel[1]):
 			$Logro.fijar_logro("La paciencia es la clave", "Esperar el tiempo necesario para recibir el correo electrónico.")
 			logrosNivel[1]= true
@@ -99,17 +101,19 @@ func eventos():
 		guardar_avances()
 	elif $CuadroDialogo.indice_dialogo== 16 and !bandera16:
 		pausar_y_ocultar_dialogo()
+		
 		bandera16=true
 	elif $CuadroDialogo.indice_dialogo == 25 and !bandera7:
 		bandera7=true
 		pausar_y_ocultar_dialogo()
+		$CuadroDialogo/Importante.disabled =false
 		progreso = 80
-	elif $CuadroDialogo.indice_dialogo == 28 and !bandera8:
+	elif $CuadroDialogo.indice_dialogo == 31 and !bandera8:
 		bandera8=true
 		pausar_y_ocultar_dialogo()
 		$ayuda.cambiar_texto("Crea una nueva contraseña")
 		progreso = 90
-	elif $CuadroDialogo.indice_dialogo == 29 and !banderaFin:
+	elif $CuadroDialogo.indice_dialogo == 31 and !banderaFin:
 		if(!logrosNivel[5]):
 			$Logro.fijar_logro("¡Que nadie se entere!", "Completar el nivel 3.")
 			logrosNivel[5]= true
@@ -119,6 +123,9 @@ func eventos():
 		progreso=100
 		guardar_avances()
 		$AnimationPlayer.play("fin")
+	elif contrasenias == 4:
+		reanudar_dialogo()
+		banderaFin=false
 	elif $CuadroDialogo.indice_dialogo >2:
 		$Usuario.visible=false
 		
@@ -162,6 +169,7 @@ func _on_minutos_timeout():
 
 func _on_espera_timeout():
 	reanudar_dialogo()
+	$CuadroDialogo.sig_dialogo()
 	$espera.stop()
 	$CuadroDialogo.habilitado= true
 
@@ -184,7 +192,8 @@ func _on_ingresar_pressed():
 	if$ScrollContainer/identificacion/contrasenia.text == "ABDeyZ":
 		$ScrollContainer/identificacion.queue_free()
 		$ScrollContainer/TextureRect.visible=true
-		$contrasenia.text= "ABDeyZ"
+		$contrasenia.queue_free()
+		$ScrollContainer/TextureRect/contrasenias.visible=true
 		$CuadroDialogo.letra=0
 		$AudioStreamPlayer.stream= SonidoExito
 		$AudioStreamPlayer.play()
@@ -237,3 +246,23 @@ func _on_cambiar_pressed():
 		$AudioStreamPlayer.stream= SonidoFallo
 		$AudioStreamPlayer.play()
 		$ScrollContainer/TextureRect/error2.text = "contraseña Actual no coincide"
+
+
+func _on_button_3_pressed():
+	$ScrollContainer/TextureRect/contrasenias/Button3.disabled=true
+	contrasenias+=1
+
+
+func _on_button_5_pressed():
+	$ScrollContainer/TextureRect/contrasenias/Button5.disabled=true
+	contrasenias+=1
+
+
+func _on_button_6_pressed():
+	$ScrollContainer/TextureRect/contrasenias/Button6.disabled=true
+	contrasenias+=1
+
+
+func _on_button_4_pressed():
+	$ScrollContainer/TextureRect/contrasenias/Button4.disabled=true
+	contrasenias+=1
