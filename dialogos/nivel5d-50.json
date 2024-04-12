@@ -1,75 +1,75 @@
 [
-    {
-        "emocion": "confiada",
-        "personaje": "IA",
-        "texto": "¡Increíble! Corto, conciso y…todo eso. Definitivamente es un resumen perfecto de lo que sos vos!",
-        "importante": true
-    },
-    {
-        "emocion": "confiada",
-        "personaje": "Usuario",
-        "texto": "¿EL MUNDO ESTÁ A SALVO?",
-        "importante": true
-    },
-    {
-        "emocion": "confiada",
-        "personaje": "IA",
-        "texto": "¿Qué? Ah…eso. Según mis estudios una persona se expresa mejor cuando se establece una amenaza inminente y toda la responsabilidad recae sobre esa persona.",
-        "importante": true
-    },
-    {
-        "emocion": "confiada",
-        "personaje": "Usuario",
-        "texto": "¿QUE?¿QUÉ ESTUDIOS?",
-        "importante": true
-    },
-    {
-        "emocion": "ensenando",
-        "personaje": "IA",
-        "texto": "Estudios. Que hice yo. Que iba a hacer, en unos días. Restale importancia, ¡Acá la clave es que pudiste completar información sobre vos!",
-        "importante": true
-    },
-    {
-        "emocion": "ensenando",
-        "personaje": "Usuario",
-        "texto": "...",
-        "importante": true
-    },
-    {
-        "emocion": "ensenando",
-        "personaje": "IA",
-        "texto": "...",
-        "importante": true
-    },
-    {
-        "emocion": "estatico",
-        "personaje": "Usuario",
-        "texto": "...",
-        "importante": true
-    },
-    {
-        "emocion": "curiosa",
-        "personaje": "IA",
-        "texto": "Perdón. ¿Podemos continuar?",
-        "importante": true
-    },
-    {
-        "emocion": "curiosa",
-        "personaje": "Usuario",
-        "texto": "¿Podemos?",
-        "importante": true
-    },
-    {
-        "emocion": "curiosa",
-        "personaje": "Usuario",
-        "texto": "...",
-        "importante": true
-    },
-    {
-        "emocion": "seguime",
-        "personaje": "IA",
-        "texto": "... Ok.",
-        "importante": true
-    }
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "¡Increíble! Corto, conciso y…todo eso. Definitivamente es un resumen perfecto de lo que sos vos!",
+		"importante": true
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "Usuario",
+		"texto": "¿EL MUNDO ESTÁ A SALVO?",
+		"importante": true
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "IA",
+		"texto": "¿Qué? Ah…eso. Según mis estudios una persona se expresa mejor cuando se establece una amenaza inminente y toda la responsabilidad recae sobre esa persona.",
+		"importante": true
+	},
+	{
+		"emocion": "confiada",
+		"personaje": "Usuario",
+		"texto": "¿QUE?¿QUÉ ESTUDIOS?",
+		"importante": true
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "Estudios. Que hice yo. Que iba a hacer, en unos días. Restale importancia, ¡Acá la clave es que pudiste completar información sobre vos!",
+		"importante": true
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "Usuario",
+		"texto": "...",
+		"importante": true
+	},
+	{
+		"emocion": "ensenando",
+		"personaje": "IA",
+		"texto": "...",
+		"importante": true
+	},
+	{
+		"emocion": "estatico",
+		"personaje": "Usuario",
+		"texto": "...",
+		"importante": true
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "IA",
+		"texto": "Perdón. ¿Podemos continuar?",
+		"importante": true
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "¿Podemos?",
+		"importante": true
+	},
+	{
+		"emocion": "curiosa",
+		"personaje": "Usuario",
+		"texto": "...",
+		"importante": true
+	},
+	{
+		"emocion": "seguime",
+		"personaje": "IA",
+		"texto": "... Ok.",
+		"importante": true
+	}
 ]
 

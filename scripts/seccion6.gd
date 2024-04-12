@@ -84,6 +84,7 @@ func _on_visualizar_pressed():
 	$AnimationPlayer.play("deslizar3")
 	$CuadroDialogo.indice_dialogo =0
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("seccion6Ab")
+	#$CuadroDialogo.Importante.disable=false
 	$CuadroDialogo.comenzar()
 	$CuadroDialogo.habilitar_dialogo()
 

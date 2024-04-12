@@ -350,8 +350,6 @@ layout_mode = 1
 
 [node name="Logro" parent="." instance=ExtResource("10_5qhq3")]
 layout_mode = 1
-offset_top = 25.0
-offset_bottom = 115.0
 
 [connection signal="pressed" from="ScrollContainer/TextureRect/cambiar" to="." method="_on_cambiar_pressed"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/contrasenias/Button3" to="." method="_on_button_3_pressed"]

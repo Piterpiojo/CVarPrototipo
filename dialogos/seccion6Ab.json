@@ -2,96 +2,115 @@
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Esto de acá es la visualización previa de los CVs. En esta pestaña vamos a ver cómo está nuestro currículum antes de descargarlo. \n"
+		"texto": "Esto de acá es la visualización previa de los CVs. En esta pestaña vamos a ver cómo está nuestro currículum antes de descargarlo. \n",
+		"importante": true
 	},
 	{
 		"emocion": "descompuesta",
 		"personaje": "IA",
-		"texto": "Uh. las palabras no tendrían que verse así realmente. Creo que fue culpa tuya por girar demasiado el CV al actualizarlo, fuiste muy rápido.\n"
+		"texto": "Uh. las palabras no tendrían que verse así realmente. Creo que fue culpa tuya por girar demasiado el CV al actualizarlo, fuiste muy rápido.\n",
+		"importante": false
 	},
 	{
 		"emocion": "descompuesta",
 		"personaje": "Usuario",
-		"texto": "...\n"
+		"texto": "...\n",
+		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "...\n"
+		"texto": "...\n",
+		"importante": false
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "... Chiste\n"
+		"texto": "... Chiste\n",
+		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Esto es una función que realmente no está dirigida a usuarios nuevos, ya que está pensada para mostrar las publicaciones, libros, tesis, y otras cosas que tengas subidos, pero no quería perder la oportunidad de mostrarte lo mucho que abarca esto."
+		"texto": "Esto es una función que realmente no está dirigida a usuarios nuevos, ya que está pensada para mostrar las publicaciones, libros, tesis, y otras cosas que tengas subidos, pero no quería perder la oportunidad de mostrarte lo mucho que abarca esto.",
+		"importante": true
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "Usuario",
-		"texto": "Guau, es un muy lindo gesto Ave, muchas gracias."
+		"texto": "Guau, es un muy lindo gesto Ave, muchas gracias.",
+		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "De nada, con mucho esfuerzo seguramente vas a tener uno o dos trabajos publicados acá en el futuro."
+		"texto": "De nada, con mucho esfuerzo seguramente vas a tener uno o dos trabajos publicados acá en el futuro.",
+		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "Usuario",
-		"texto": "¿Solo eso?¿Es realmente tan difícil escribir algo en relación a lo que estudio?\n"
+		"texto": "¿Solo eso?¿Es realmente tan difícil escribir algo en relación a lo que estudio?\n",
+		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "No, no realmente, pero tuve que explicarle que era un área de actuación con cuentos para chicos."
+		"texto": "No, no realmente, pero tuve que explicarle que era un área de actuación con cuentos para chicos.",
+		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "Usuario",
-		"texto": "..."
+		"texto": "...",
+		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "Tengo la vara muy baja."
+		"texto": "Tengo la vara muy baja.",
+		"importante": false
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "Bueno, por fin llegamos.\n"
+		"texto": "Bueno, por fin llegamos.\n",
+		"importante": true
 	},
 	{
 		"emocion": "felicitaciones",
 		"personaje": "Usuario",
-		"texto": " Si, por fin llegamos.\n"
+		"texto": " Si, por fin llegamos.\n",
+		"importante": true
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Ese botón de ahí es el último paso a seguir. Una vez que imprimas esto, oficialmente vas a haber aprendido cómo se usa [b]CVar Y CV Impreso[/b].\n"
+		"texto": "Ese botón de ahí es el último paso a seguir. Una vez que imprimas esto, oficialmente vas a haber aprendido cómo se usa [b]CVar Y CV Impreso[/b].\n",
+		"importante": true
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "Usuario",
-		"texto": " Fue un trayecto muy lindo. Aunque para la próxima recomiendo muchos menos acertijos y pautas absurdas."
+		"texto": " Fue un trayecto muy lindo. Aunque para la próxima recomiendo muchos menos acertijos y pautas absurdas.",
+		"importante": true
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "Tu recomendación fue recibida y eventualmente será revisada por un administrador. El tiempo de espera es de 78 días. Por el momento, ¿Querés que imprimamos el CV juntos?"
+		"texto": "Tu recomendación fue recibida y eventualmente será revisada por un administrador. El tiempo de espera es de 78 días. Por el momento, ¿Querés que imprimamos el CV juntos?",
+		"importante": true
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "Usuario",
-		"texto": "Me encantaría. Gracias por todo Ave."
+		"texto": "Me encantaría. Gracias por todo Ave.",
+		"importante": true
 	},
 	{
 		"emocion": "saludando",
 		"personaje": "IA",
-		"texto": "Fue un placer, Usuario. ¡Hasta la próxima!."
+		"texto": "Fue un placer, Usuario. ¡Hasta la próxima!.",
+		"importante": true
 	}
 ]
