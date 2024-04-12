@@ -146,9 +146,6 @@ grow_horizontal = 0
 offset_top = 199.5
 offset_bottom = 239.5
 
-[node name="prueba" parent="CuadroDialogo" index="10"]
-visible = false
-
 [node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

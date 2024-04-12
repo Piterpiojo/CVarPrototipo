@@ -111,34 +111,40 @@ func _on_c_1_mouse_entered():
 	$TextureRect.texture = preload(imagenes[0])
 	$Objectivo.text= objetivos[1]
 	vista_logros(1)
+	$AnimationPlayer.play("fade")
 
 func _on_c_2_mouse_entered():
 	$TextureRect.texture = preload(imagenes[1])
 	vista_logros(2)
 	$Objectivo.text= objetivos[2]
+	$AnimationPlayer.play("fade")
 
 func _on_c_3_mouse_entered():
 	$TextureRect.texture = preload(imagenes[2])
 	vista_logros(3)
 	$Objectivo.text= objetivos[3]
+	$AnimationPlayer.play("fade")
 
 
 func _on_c_4_mouse_entered():
 	$TextureRect.texture = preload(imagenes[3])
 	vista_logros(4)
 	$Objectivo.text= objetivos[4]
+	$AnimationPlayer.play("fade")
 
 
 func _on_c_5_mouse_entered():
 	$TextureRect.texture = preload(imagenes[4])
 	vista_logros(5)
 	$Objectivo.text= objetivos[5]
+	$AnimationPlayer.play("fade")
 
 
 func _on_c_6_mouse_entered():
 	$TextureRect.texture = preload(imagenes[5])
 	vista_logros(6)
 	$Objectivo.text= objetivos[6]
+	$AnimationPlayer.play("fade")
 
 func vista_logros(index):
 	var indice= 0
@@ -169,3 +175,4 @@ func _on_c_0_mouse_entered():
 	$TextureRect.texture = preload(imagenes[1])
 	vista_logros(0)
 	$Objectivo.text= objetivos[0]
+	$AnimationPlayer.play("fade")

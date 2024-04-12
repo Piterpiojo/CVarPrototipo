@@ -1,8 +1,97 @@
-[gd_scene load_steps=4 format=3 uid="uid://cla13vr5u1pva"]
+[gd_scene load_steps=8 format=3 uid="uid://cla13vr5u1pva"]
 
 [ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="1_dpqod"]
 [ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
 [ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_i4lbn"]
+
+[sub_resource type="Animation" id="Animation_jgxf8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cwxao"]
+resource_name = "fade"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.156863), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.156863), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2h8l8"]
+resource_name = "siguiente_nivel"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsijw"]
+_data = {
+"RESET": SubResource("Animation_jgxf8"),
+"fade": SubResource("Animation_cwxao"),
+"siguiente_nivel": SubResource("Animation_2h8l8")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -49,6 +138,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -235,6 +325,7 @@ offset_left = 96.0
 offset_top = 172.0
 offset_right = 568.0
 offset_bottom = 202.0
+focus_mode = 0
 flat = true
 
 [node name="c1" type="Button" parent="botones"]
@@ -243,6 +334,7 @@ offset_left = 95.0
 offset_top = 213.0
 offset_right = 567.0
 offset_bottom = 243.0
+focus_mode = 0
 flat = true
 
 [node name="c2" type="Button" parent="botones"]
@@ -251,6 +343,7 @@ offset_left = 96.0
 offset_top = 251.0
 offset_right = 568.0
 offset_bottom = 281.0
+focus_mode = 0
 flat = true
 
 [node name="c3" type="Button" parent="botones"]
@@ -259,6 +352,7 @@ offset_left = 94.0
 offset_top = 294.0
 offset_right = 566.0
 offset_bottom = 324.0
+focus_mode = 0
 flat = true
 
 [node name="c4" type="Button" parent="botones"]
@@ -267,6 +361,7 @@ offset_left = 95.0
 offset_top = 335.0
 offset_right = 567.0
 offset_bottom = 365.0
+focus_mode = 0
 flat = true
 
 [node name="c5" type="Button" parent="botones"]
@@ -275,6 +370,7 @@ offset_left = 97.0
 offset_top = 374.0
 offset_right = 569.0
 offset_bottom = 404.0
+focus_mode = 0
 flat = true
 
 [node name="c6" type="Button" parent="botones"]
@@ -283,7 +379,13 @@ offset_left = 97.0
 offset_top = 414.0
 offset_right = 569.0
 offset_bottom = 444.0
+focus_mode = 0
 flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qsijw")
+}
 
 [connection signal="mouse_entered" from="botones/c0" to="." method="_on_c_0_mouse_entered"]
 [connection signal="pressed" from="botones/c0" to="." method="_on_c_0_pressed"]

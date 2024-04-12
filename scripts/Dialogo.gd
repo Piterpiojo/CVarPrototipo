@@ -183,3 +183,11 @@ func contiene_importante():
 
 func _on_button_mouse_exited():
 	habilitado = true
+
+
+func _on_curiosidad_mouse_entered():
+	habilitado = false
+
+
+func _on_curiosidad_mouse_exited():
+	habilitado = true
