@@ -11,13 +11,11 @@ func _on_salir_pressed():
 
 
 func _on_inicio_pressed():
-	get_tree().change_scene_to_file("res://Escenas/Selector_niveles.tscn")
-
-
-func _on_opciones_pressed():
-	nivel= CargaArchivos.cargar_avance()
 	$AnimationPlayer.play("splash")
 
+
+func cambiar():
+	get_tree().change_scene_to_file("res://Escenas/Selector_niveles.tscn")
 
 func _on_abrir_explorer_pressed():
 	OS.shell_open("https://www.unpaz.edu.ar/")
