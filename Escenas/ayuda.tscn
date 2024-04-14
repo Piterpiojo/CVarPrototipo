@@ -1,7 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://7y0gl8rhxmbi"]
+[gd_scene load_steps=6 format=3 uid="uid://7y0gl8rhxmbi"]
 
-[ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="1_q5dyn"]
 [ext_resource type="Script" path="res://scripts/ayuda.gd" id="1_torki"]
+[ext_resource type="Texture2D" uid="uid://d0ovtd74sm2i6" path="res://Sprites/ave/curiosa3.png" id="2_kksv6"]
+[ext_resource type="Texture2D" uid="uid://cmtgnvcckiwnd" path="res://ui/recuadrogenerico.png" id="2_xsfsa"]
+[ext_resource type="Texture2D" uid="uid://b2nbveibyliin" path="res://Sprites/ave/curiosa2.png" id="3_s00du"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpbmk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kksv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s00du")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="ayuda" type="Control"]
 layout_mode = 3
@@ -15,23 +31,24 @@ script = ExtResource("1_torki")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
-offset_top = 37.0
-offset_right = 488.0
-offset_bottom = 315.0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 442.0
+offset_bottom = 286.0
 scale = Vector2(0.215, 0.215)
-icon = ExtResource("1_q5dyn")
 flat = true
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
-offset_left = 111.0
-offset_top = 3.0
-offset_right = 438.0
-offset_bottom = 126.0
-color = Color(1, 0.560784, 0, 1)
+offset_left = 104.0
+offset_top = -8.0
+offset_right = 472.0
+offset_bottom = 133.0
+texture = ExtResource("2_xsfsa")
+expand_mode = 1
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Label" type="RichTextLabel" parent="ColorRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -44,14 +61,18 @@ offset_right = 149.5
 offset_bottom = 49.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 16
-text = "Escucha a Ave"
-autowrap_mode = 3
+bbcode_enabled = true
+text = "Escucha a [i]Ave[/i]"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(64, 40)
+scale = Vector2(0.185484, 0.2)
+sprite_frames = SubResource("SpriteFrames_qpbmk")
+frame_progress = 0.765329
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

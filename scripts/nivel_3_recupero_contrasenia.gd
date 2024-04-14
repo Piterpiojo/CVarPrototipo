@@ -90,7 +90,7 @@ func eventos():
 		$"NicePngEmail-icon-png-transparent903587".visible = false
 		$contrasenia.visible=true
 		bandera6 = true
-		$CuadroDialogo/Importante.disabled =true
+		$CuadroDialogo.desactivar_importante(true)
 		if(!logrosNivel[1]):
 			$Logro.fijar_logro("La paciencia es la clave", "Esperar el tiempo necesario para recibir el correo electrónico.")
 			logrosNivel[1]= true
@@ -99,19 +99,21 @@ func eventos():
 		$ayuda.cambiar_texto("ingresa la contraseña correctamente")
 		progreso = 70
 		guardar_avances()
+		
 	elif $CuadroDialogo.indice_dialogo== 16 and !bandera16:
 		pausar_y_ocultar_dialogo()
-		
 		bandera16=true
+		
 	elif $CuadroDialogo.indice_dialogo == 25 and !bandera7:
 		bandera7=true
+		$CuadroDialogo.desactivar_importante(false)
 		pausar_y_ocultar_dialogo()
 		$CuadroDialogo/Importante.disabled =false
 		progreso = 80
 	elif $CuadroDialogo.indice_dialogo == 31 and !bandera8:
 		bandera8=true
 		pausar_y_ocultar_dialogo()
-		$ayuda.cambiar_texto("Crea una nueva contraseña")
+		$ayuda.cambiar_texto("Selecciona Buenas contraseñas")
 		progreso = 90
 	elif $CuadroDialogo.indice_dialogo == 31 and !banderaFin:
 		if(!logrosNivel[5]):
@@ -123,9 +125,11 @@ func eventos():
 		progreso=100
 		guardar_avances()
 		$AnimationPlayer.play("fin")
-	elif contrasenias == 4:
+	elif contrasenias == 4 and banderaFin:
 		reanudar_dialogo()
 		banderaFin=false
+		$AudioStreamPlayer.stream= SonidoExito
+		$AudioStreamPlayer.play()
 	elif $CuadroDialogo.indice_dialogo >2:
 		$Usuario.visible=false
 		

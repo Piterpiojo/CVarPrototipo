@@ -70,6 +70,15 @@ func _process(_delta):
 		$IndicacionText.text="Esperando..."
 	else:
 		$IndicacionText.text="Click para continuar"
+		
+	control_progress_bar()
+	
+func control_progress_bar():
+	$Importante/ProgressBar.value=$enfriamiento_importante.time_left
+	if($Importante/ProgressBar.value == 0):
+		$Importante/ProgressBar.visible=false
+	else:
+		$Importante/ProgressBar.visible = true
 
 func dialogo_actual():
 	return indice_dialogo
@@ -155,6 +164,8 @@ func _on_button_pressed():
 			i+=1
 			indice_dialogo=i
 			saltar_dialogo()
+		$enfriamiento_importante.start()
+		$Importante.disabled=true
 	elif(!contiene_importante()):
 		$Importante.disabled=true
 
@@ -191,3 +202,12 @@ func _on_curiosidad_mouse_entered():
 
 func _on_curiosidad_mouse_exited():
 	habilitado = true
+
+
+func desactivar_importante(valor:bool):
+	$Importante.disabled = valor
+	if(valor):
+		$enfriamiento_importante.stop()
+
+func _on_enfriamiento_importante_timeout():
+	$Importante.disabled=false

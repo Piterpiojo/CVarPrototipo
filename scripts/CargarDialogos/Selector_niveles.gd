@@ -146,17 +146,16 @@ func _on_c_6_mouse_entered():
 	$Objectivo.text= objetivos[6]
 	$AnimationPlayer.play("fade")
 
-func vista_logros(index):
+func vista_logros(_index):
 	var indice= 0
 	var temp = 0
-	var logros = CargaArchivos.logros[str(index)]
-	var tooltipnivel = tooltips[str(index)]
+	var logros = CargaArchivos.logros[str(_index)]
+	var tooltipnivel = tooltips[str(_index)]
 	for i in $VBoxContainer.get_children():
 		i.visible= false
 		if(temp < logros.size()):
 			i.visible = true
 			i.tooltip_text = tooltipnivel[temp]
-			print(temp)
 			if(logros[temp]):
 				i.modulate = "ffffff"
 			else:
@@ -164,8 +163,6 @@ func vista_logros(index):
 			temp +=1
 		indice+=1
 
-func fijar_tooltip():
-	pass
 
 func _on_c_0_pressed():
 	get_tree().change_scene_to_file("res://Escenas/nivel0/nivel_0.tscn")

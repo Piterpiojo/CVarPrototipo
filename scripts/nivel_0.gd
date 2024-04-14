@@ -17,7 +17,7 @@ func _input(event):
 func logro(titulo, descripcion):
 	$Logro.fijar_logro(titulo,descripcion)
 
-func _process(delta):
+func _process(_delta):
 	if($CuadroDialogo.indice_dialogo == 1 and !banderas[0]):
 		banderas[0]=true
 		$AnimationPlayer.play("a_izq")

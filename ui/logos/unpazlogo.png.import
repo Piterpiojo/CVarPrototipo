@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2iwi87swplbp"
-path="res://.godot/imported/images.jpeg-1bd3674261f2a24e3c263ea99b6fc894.ctex"
+uid="uid://bk52ndqgi1bui"
+path="res://.godot/imported/unpazlogo.png-1f5ed6a73365cca823520ef9a215561d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/images.jpeg"
-dest_files=["res://.godot/imported/images.jpeg-1bd3674261f2a24e3c263ea99b6fc894.ctex"]
+source_file="res://ui/logos/unpazlogo.png"
+dest_files=["res://.godot/imported/unpazlogo.png-1f5ed6a73365cca823520ef9a215561d.ctex"]
 
 [params]
 

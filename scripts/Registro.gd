@@ -3,6 +3,7 @@ var cuadros_llenos : int = 0
 var ya_ejecuto : bool = false
 var respuesta_secreta
 var contador_recarga : int = 0
+var evento2=false
 var cuadros_texto=[]
 var i = 0
 const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
@@ -39,7 +40,14 @@ func buscar_cuadros(nodo):
 func _process(_delta):
 	if(!ya_ejecuto):
 		_ejecutar_evento()
-
+	if(!evento2 and $CuadroDialogo.indice_dialogo == 5):
+		pausar_y_ocultar_dialogo()
+		evento2=true
+		
+func pausar_y_ocultar_dialogo():
+	$CuadroDialogo.pausa= true
+	$CuadroDialogo.visible = false
+	$CuadroDialogo.letra=0
 func _input(event):
 	if(event.is_action_pressed("ui_cancel")):
 		get_tree().paused=true
@@ -65,6 +73,7 @@ func _ejecutar_evento():
 		$AnimationPlayer.play("arreglar")
 		ya_ejecuto = true
 		$ayuda.cambiar_texto("Completa todos los campos y envialo para crear tu cuenta")
+		$CuadroDialogo.desactivar_importante(true)
 
 func cambiar_dialogo():
 	$CuadroDialogo.sig_dialogo()

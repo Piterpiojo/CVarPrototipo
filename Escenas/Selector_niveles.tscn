@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cla13vr5u1pva"]
+[gd_scene load_steps=9 format=3 uid="uid://cla13vr5u1pva"]
 
 [ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="1_dpqod"]
 [ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
-[ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="2_i4lbn"]
+[ext_resource type="Texture2D" uid="uid://b67wa71b8pnnn" path="res://ui/Fondos/fondo4.png" id="2_h2fc3"]
+[ext_resource type="Texture2D" uid="uid://2y27gws8gv4j" path="res://ui/genericstar.png" id="3_edi36"]
 
 [sub_resource type="Animation" id="Animation_jgxf8"]
 length = 0.001
@@ -102,6 +103,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gfbry")
 
+[node name="Fondo4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h2fc3")
+
 [node name="titulo" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 5
@@ -118,18 +134,18 @@ text = "Selector de niveles
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 648.0
-offset_top = 280.0
+offset_top = 235.0
 offset_right = 1231.0
-offset_bottom = 650.0
+offset_bottom = 605.0
 texture = ExtResource("1_dpqod")
 expand_mode = 1
 
 [node name="Objectivo" type="Label" parent="."]
 layout_mode = 0
 offset_left = 584.0
-offset_top = 88.0
+offset_top = 74.0
 offset_right = 1279.0
-offset_bottom = 270.0
+offset_bottom = 256.0
 theme_override_font_sizes/font_size = 24
 text = "Teoría básica. En este nivel aprenderemos todos los datos concernientes a cómo la plataforma llegó a ser lo que es hoy en día.
 "
@@ -144,10 +160,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 678.0
-offset_top = -70.0001
-offset_right = 2298.0
-offset_bottom = 200.0
+offset_left = 601.0
+offset_top = -84.0
+offset_right = 3061.0
+offset_bottom = 276.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.18, 0.18)
@@ -157,43 +173,45 @@ modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 tooltip_text = "Registrate"
-texture = ExtResource("2_i4lbn")
+texture = ExtResource("3_edi36")
 
 [node name="2" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 tooltip_text = "logro bloqueado"
-texture = ExtResource("2_i4lbn")
+texture = ExtResource("3_edi36")
 
 [node name="3" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("2_i4lbn")
+texture = ExtResource("3_edi36")
 
 [node name="4" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("2_i4lbn")
+texture = ExtResource("3_edi36")
 
 [node name="5" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("2_i4lbn")
+texture = ExtResource("3_edi36")
 
 [node name="6" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("2_i4lbn")
+texture = ExtResource("3_edi36")
 
 [node name="Control" type="Control" parent="."]
+layout_mode = 1
 anchors_preset = 0
+offset_top = 90.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 130.0
 
 [node name="0" type="CheckBox" parent="Control"]
 layout_mode = 0
@@ -315,9 +333,11 @@ offset_right = 505.0
 offset_bottom = 26.0
 
 [node name="botones" type="Control" parent="."]
+layout_mode = 1
 anchors_preset = 0
+offset_top = 90.0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 130.0
 
 [node name="c0" type="Button" parent="botones"]
 layout_mode = 0
@@ -386,6 +406,21 @@ flat = true
 libraries = {
 "": SubResource("AnimationLibrary_qsijw")
 }
+
+[node name="Logros" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -629.0
+offset_top = -110.0
+offset_right = -505.0
+offset_bottom = -87.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Logros del Nivel: "
 
 [connection signal="mouse_entered" from="botones/c0" to="." method="_on_c_0_mouse_entered"]
 [connection signal="pressed" from="botones/c0" to="." method="_on_c_0_pressed"]

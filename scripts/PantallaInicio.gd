@@ -3,6 +3,8 @@ var nivel= 0
 
 func _ready():
 	CargaArchivos.cargar_logros()
+	$Estatico.play("default")
+	$AnimationPlayer.play("inicio")
 
 func _on_salir_pressed():
 	get_tree().quit()

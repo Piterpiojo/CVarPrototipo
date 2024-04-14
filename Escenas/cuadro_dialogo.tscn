@@ -326,6 +326,7 @@ offset_bottom = 265.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(0.478431, 0.478431, 0.478431, 1)
 theme_override_colors/icon_hover_color = Color(0, 1, 0.392157, 1)
+disabled = true
 icon = ExtResource("24_2dbt4")
 flat = true
 expand_icon = true
@@ -347,8 +348,17 @@ icon = ExtResource("25_tm32y")
 flat = true
 expand_icon = true
 
+[node name="ProgressBar" type="ProgressBar" parent="Importante"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 217.0
+offset_bottom = 70.0
+max_value = 0.55
+fill_mode = 2
+show_percentage = false
+
 [node name="prueba" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 344.0
 offset_top = 298.0
@@ -356,9 +366,16 @@ offset_right = 384.0
 offset_bottom = 321.0
 text = "prueba, borrar"
 
+[node name="enfriamiento_importante" type="Timer" parent="."]
+wait_time = 0.55
+one_shot = true
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="Curiosidad" to="." method="_on_curiosidad_mouse_entered"]
 [connection signal="mouse_exited" from="Curiosidad" to="." method="_on_curiosidad_mouse_exited"]
 [connection signal="mouse_entered" from="Importante" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="Importante" to="." method="_on_button_mouse_exited"]
 [connection signal="pressed" from="Importante" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Importante/ProgressBar" to="." method="_on_curiosidad_mouse_entered"]
+[connection signal="mouse_exited" from="Importante/ProgressBar" to="." method="_on_curiosidad_mouse_exited"]
+[connection signal="timeout" from="enfriamiento_importante" to="." method="_on_enfriamiento_importante_timeout"]

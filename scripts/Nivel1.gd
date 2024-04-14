@@ -74,6 +74,7 @@ func guardar_avances():
 	
 func _on_usuario_text_changed():
 	if($ScrollContainer/TextureRect/usuario.text == "johndoe@email.com"):
+		$ayuda.cambiar_texto("Presiona [i]'Si es un usuario nuevo presione aquí'[/i] para [b]crear[/b] tu cuenta")
 		banderas[2]=true
 		$CuadroDialogo.habilitar_dialogo()
 		$AudioStreamPlayer2D.stream=SonidoExito

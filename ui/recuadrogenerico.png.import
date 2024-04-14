@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dol1fxom58epf"
-path="res://.godot/imported/Sicty.png-ce586b27e1b95244e24c4e2b3bf34b1c.ctex"
+uid="uid://cmtgnvcckiwnd"
+path="res://.godot/imported/recuadrogenerico.png-c0143fa46aa1cf745a02a78eab63cb36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/Sicty.png"
-dest_files=["res://.godot/imported/Sicty.png-ce586b27e1b95244e24c4e2b3bf34b1c.ctex"]
+source_file="res://ui/recuadrogenerico.png"
+dest_files=["res://.godot/imported/recuadrogenerico.png-c0143fa46aa1cf745a02a78eab63cb36.ctex"]
 
 [params]
 

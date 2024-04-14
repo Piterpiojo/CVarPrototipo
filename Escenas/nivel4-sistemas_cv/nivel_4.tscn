@@ -226,8 +226,6 @@ layout_mode = 1
 
 [node name="Logro" parent="." instance=ExtResource("9_gdnjo")]
 layout_mode = 1
-offset_top = 25.0
-offset_bottom = 115.0
 
 [connection signal="body_entered" from="logo/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="input_event" from="logo/Area2D" to="." method="_on_area_2d_input_event"]
