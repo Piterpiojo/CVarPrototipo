@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://yytfetroh3on"]
+[gd_scene load_steps=19 format=3 uid="uid://yytfetroh3on"]
 
 [ext_resource type="Script" path="res://scripts/PantallaInicio.gd" id="1_hffsb"]
 [ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="2_8aa3w"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://6pm5tm10vqdy" path="res://fuentes/Super Ocean Personal Use.ttf" id="5_gd2gx"]
 [ext_resource type="Texture2D" uid="uid://brxidly53s8h2" path="res://ui/botonsalir.png" id="5_qvra4"]
 [ext_resource type="Texture2D" uid="uid://bk52ndqgi1bui" path="res://ui/logos/unpazlogo.png" id="8_2a8qb"]
+[ext_resource type="Texture2D" uid="uid://cr8o76itkswtr" path="res://Sprites/ave/estatico definitivo.png" id="8_hssrd"]
 [ext_resource type="Texture2D" uid="uid://bch0sqdvdtx71" path="res://ui/Ave inicio/estatico2.png" id="9_pv400"]
 [ext_resource type="Texture2D" uid="uid://d053htothnn1b" path="res://ui/logos/sicytarlogo.png" id="10_1rs67"]
 [ext_resource type="Texture2D" uid="uid://ca7hbvo2xf45c" path="res://ui/Ave inicio/estatico3.png" id="10_nxvcr"]
@@ -148,6 +149,9 @@ font_size = 67
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("8_hssrd")
+}, {
+"duration": 1.0,
 "texture": ExtResource("9_pv400")
 }, {
 "duration": 1.0,
@@ -155,7 +159,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 2.0
+"speed": 3.0
 }]
 
 [node name="menuFinal" type="Control"]
@@ -259,7 +263,7 @@ horizontal_alignment = 1
 position = Vector2(640, 358)
 scale = Vector2(0.398387, 0.847222)
 sprite_frames = SubResource("SpriteFrames_u5ck8")
-frame_progress = 0.0597064
+frame_progress = 0.877933
 
 [node name="logos" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
