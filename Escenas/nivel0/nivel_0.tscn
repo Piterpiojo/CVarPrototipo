@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://mx5clyvrtq7v"]
+[gd_scene load_steps=17 format=3 uid="uid://mx5clyvrtq7v"]
 
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_diia6"]
 [ext_resource type="Script" path="res://scripts/nivel_0.gd" id="1_vkic3"]
@@ -6,6 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="3_nqo8w"]
 [ext_resource type="Texture2D" uid="uid://cmtgnvcckiwnd" path="res://ui/recuadrogenerico.png" id="4_dop4d"]
 [ext_resource type="PackedScene" uid="uid://er7fqx8w6ual" path="res://Escenas/nivel0/texto_nivel_0.tscn" id="5_2n522"]
+[ext_resource type="Texture2D" uid="uid://1csbe6golevm" path="res://ui/Elementos/triangulo.png" id="7_wb0yf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk1hi"]
+size = Vector2(435, 83.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wymmh"]
+size = Vector2(205.5, 159.5)
 
 [sub_resource type="Animation" id="Animation_xa2yi"]
 length = 0.001
@@ -32,6 +39,54 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("frases:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Triangulo:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("frases:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Triangulo:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_gw3ra"]
@@ -110,9 +165,62 @@ tracks/0/keys = {
 "values": [Vector2(36, 199.5), Vector2(542, -58)]
 }
 
+[sub_resource type="Animation" id="Animation_3rjpx"]
+resource_name = "Triangulo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("frases:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Triangulo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("frases:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Triangulo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ek8v0"]
 _data = {
 "RESET": SubResource("Animation_xa2yi"),
+"Triangulo": SubResource("Animation_3rjpx"),
 "a_der": SubResource("Animation_gw3ra"),
 "a_izq": SubResource("Animation_7awu8"),
 "a_negro": SubResource("Animation_mmeeg"),
@@ -133,6 +241,68 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Triangulo" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(607, 245)
+texture = ExtResource("7_wb0yf")
+
+[node name="1" type="Area2D" parent="Triangulo"]
+position = Vector2(9, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangulo/1"]
+position = Vector2(-4.5, 183)
+shape = SubResource("RectangleShape2D_dk1hi")
+
+[node name="Texto" type="Label" parent="Triangulo/1"]
+offset_left = -197.0
+offset_top = 134.0
+offset_right = 179.0
+offset_bottom = 221.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="2" type="Area2D" parent="Triangulo"]
+position = Vector2(9, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangulo/2"]
+position = Vector2(-4, 52)
+shape = SubResource("RectangleShape2D_dk1hi")
+
+[node name="Texto" type="Label" parent="Triangulo/2"]
+offset_left = -190.0
+offset_top = 14.0
+offset_right = 186.0
+offset_bottom = 89.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="3" type="Area2D" parent="Triangulo"]
+position = Vector2(-7, -5)
+
+[node name="Texto" type="Label" parent="Triangulo/3"]
+offset_left = -95.0
+offset_top = -194.0
+offset_right = 99.0
+offset_bottom = 37.0
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangulo/3"]
+position = Vector2(6, -82)
+shape = SubResource("RectangleShape2D_wymmh")
+
+[node name="Line2D" type="Line2D" parent="Triangulo"]
+position = Vector2(-607, -245)
+points = PackedVector2Array(392, 376, 824, 376)
+
+[node name="Line2D2" type="Line2D" parent="Triangulo"]
+position = Vector2(-615, -365)
+points = PackedVector2Array(472, 376, 760, 376)
+
 [node name="CuadroDialogo" parent="." instance=ExtResource("1_diia6")]
 anchors_preset = 3
 anchor_left = 1.0
@@ -142,10 +312,6 @@ offset_top = 368.0
 offset_right = 1319.0
 offset_bottom = 728.0
 grow_horizontal = 0
-
-[node name="Container" parent="CuadroDialogo" index="2"]
-offset_top = 199.5
-offset_bottom = 239.5
 
 [node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
 
@@ -181,17 +347,18 @@ text = "No"
 
 [node name="frases" type="Node2D" parent="."]
 visible = false
+modulate = Color(1, 1, 1, 0)
 
-[node name="correcto1" parent="frases" instance=ExtResource("5_2n522")]
-position = Vector2(192, 64)
+[node name="correcto1" parent="frases" groups=["correcto"] instance=ExtResource("5_2n522")]
+position = Vector2(1088, 264)
 texto = "El CVar es el Registro Unificado y Normalizado a nivel nacional de los Datos Curriculares del personal científico y tecnológico."
 
-[node name="corecto2" parent="frases" instance=ExtResource("5_2n522")]
+[node name="corecto2" parent="frases" groups=["correcto"] instance=ExtResource("5_2n522")]
 position = Vector2(192, 160)
 texto = "El CVar está destinado a todas las personas que desarrollan actividades científicas y tecnológicas en instituciones argentinas."
 
-[node name="correcto3" parent="frases" instance=ExtResource("5_2n522")]
-position = Vector2(192, 256)
+[node name="correcto3" parent="frases" groups=["correcto"] instance=ExtResource("5_2n522")]
+position = Vector2(191, 262)
 texto = "El SIGEVA es un conjunto de aplicaciones informáticas a las que podemos acceder por medio de un navegador de internet."
 
 [node name="falso" parent="frases" instance=ExtResource("5_2n522")]
@@ -199,11 +366,11 @@ position = Vector2(1088, 64)
 texto = "El CVar es el Registro Unificado y Normalizado a nivel nacional de los Datos Curriculares del personal científico y tecnológico."
 
 [node name="falso2" parent="frases" instance=ExtResource("5_2n522")]
-position = Vector2(1088, 160)
+position = Vector2(1088, 162)
 texto = "El uso de CVar está restringido sólo a las personas que desarrollan actividades científicas y tecnológicas en instituciones de Buenos Aires."
 
 [node name="falso3" parent="frases" instance=ExtResource("5_2n522")]
-position = Vector2(1088, 256)
+position = Vector2(192, 56)
 texto = "El SIGEVA es un movimiento popular al que podemos acceder a través de un correo electrónico."
 
 [node name="Pausa" parent="." instance=ExtResource("3_nqo8w")]
@@ -239,6 +406,11 @@ position = Vector2(27.25, 188.5)
 [node name="Cartelpausa" parent="Pausa" index="5"]
 position = Vector2(32, 181.5)
 
+[node name="Sonidos" type="AudioStreamPlayer" parent="."]
+
+[connection signal="area_shape_entered" from="Triangulo/1" to="." method="_on__area_shape_entered"]
+[connection signal="area_entered" from="Triangulo/2" to="." method="_on__area_entered"]
+[connection signal="area_entered" from="Triangulo/3" to="." method="_on__area3_entered"]
 [connection signal="mouse_entered" from="ColorRect2" to="." method="_on_color_rect_2_mouse_entered"]
 
 [editable path="CuadroDialogo"]

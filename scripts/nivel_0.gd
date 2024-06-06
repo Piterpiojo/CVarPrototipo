@@ -2,6 +2,10 @@ extends Node2D
 var banderas=[false,false,false,false,false,false]
 var logrosNivel
 var progreso = 0
+var EspaciosTriangulo=[false,false,false]
+var banderaTriangulo= false
+const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel0")
@@ -37,8 +41,13 @@ func _process(_delta):
 		$CuadroDialogo.pausa =true
 		progreso = 60
 		guardar_avances()
+	elif($CuadroDialogo.indice_dialogo==45 and !banderaTriangulo):
+		$AnimationPlayer.play("Triangulo")
+		banderaTriangulo=true
 	elif($CuadroDialogo.indice_dialogo==48 and !banderas[4]):
-		pass #para hacer la piramide
+		$CuadroDialogo.sig_dialogo()
+		$CuadroDialogo.desactivar_dialogo()
+		banderas[4]=true
 	elif($CuadroDialogo.indice_dialogo == 51 and ! banderas[5]):
 		progreso = 100
 		guardar_avances()
@@ -49,8 +58,13 @@ func _process(_delta):
 			CargaArchivos.guardar_logros()
 			CargaArchivos.establecer_progreso(0,100)
 		$AnimationPlayer.play("a_negro")
+	elif(comprobar_triangulo()):
+		$CuadroDialogo.habilitar_dialogo()
 		
 
+
+func comprobar_triangulo():
+	return EspaciosTriangulo[0] and EspaciosTriangulo[1] and EspaciosTriangulo[2]
 func pasar_menu():
 	get_tree().change_scene_to_file("res://Escenas/Selector_niveles.tscn")
 
@@ -62,3 +76,42 @@ func _on_color_rect_2_mouse_entered():
 	$CuadroDialogo.pausa =false
 	$ColorRect2.visible = false
 	$CuadroDialogo.sig_dialogo()
+
+
+func _on__area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	if(area.is_in_group("correcto") and !EspaciosTriangulo[0] and !area.seleccionado):
+		$"Triangulo/1/Texto".text=area.texto
+		area.queue_free()
+		EspaciosTriangulo[0]=true
+		reproducir_exito()
+	else:
+		area.global_position= area.pos_inicial
+
+
+func _on__area_entered(area):
+	if(area.is_in_group("correcto") and !EspaciosTriangulo[1] and !area.seleccionado):
+		$"Triangulo/2/Texto".text=area.texto
+		area.queue_free()
+		EspaciosTriangulo[1]=true
+		reproducir_exito()
+	else:
+		area.global_position= area.pos_inicial
+
+
+func reproducir_exito():
+	$Sonidos.stream=SonidoExito
+	$Sonidos.play()
+
+func reproducir_fallo():
+	$Sonidos.stream=SonidoFallo
+	if !$Sonidos.playing:
+		$Sonidos.play()
+func _on__area3_entered(area):
+	if(area.is_in_group("correcto") and !EspaciosTriangulo[2] and  !area.seleccionado):
+		$"Triangulo/3/Texto".text=area.texto
+		area.queue_free()
+		EspaciosTriangulo[2]=true
+		reproducir_exito()
+	else:
+		area.global_position= area.pos_inicial
+

@@ -777,8 +777,6 @@ layout_mode = 1
 
 [node name="Logro" parent="." instance=ExtResource("10_f66m4")]
 layout_mode = 1
-offset_top = 25.0
-offset_bottom = 115.0
 
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/nombre2" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/nombre2" to="." method="_on_nombre_2_gui_input"]
