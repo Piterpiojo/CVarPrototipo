@@ -43,19 +43,19 @@
 	},
 	{
 		"emocion": "felicitaciones",
-		"personaje": "Usuario",
+		"personaje": "IA",
 		"texto": " Perfecto, te explico lo que hay que hacer.",
 		"importante": true
 	},
 	{
-		"emocion": "felicitaciones",
-		"personaje": "Usuario",
+		"emocion": "ensenando",
+		"personaje": "IA",
 		"texto": " Solamente para verificar que entendiste lo que estuvimos hablando, hace de cuenta que sos esta persona que ves al lado mio. Completa la ficha, nos vemos en un parpadeo.",
 		"importante": true
 	},
 		{
 		"emocion": "felicitaciones",
-		"personaje": "Usuario",
+		"personaje": "IA",
 		"texto": "¡Te dije que era algo rápido, felicidades! Ahora, continuemos, tenemos más cosas interesantes por delante.",
 		"importante": true
 	},

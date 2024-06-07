@@ -54,6 +54,7 @@ var parte2=false
 var bandera1=false
 var bandera2=false
 var bandera3=false
+var bandera4=false
 var uno= false
 var dos= false
 var tres=false
@@ -61,7 +62,10 @@ var ocupadoEsp=[false,false,false]
 var ocupadoIng=[false,false,false]
 var logrosNivel
 
-var sonidoCaida= preload("res://sonidos/Musica y sonidos a utilizar/jump1.ogg")
+const sonidoCaida= preload("res://sonidos/Musica y sonidos a utilizar/jump1.ogg")
+const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
+const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg")
+const SonidoCorneta = preload("res://sonidos/corneta.mp3")
 func _ready():
 	$CuadroDialogo.dialogos = CargaArchivos.cargar("nivel5Db")
 	$CuadroDialogo.comenzar()
@@ -109,6 +113,11 @@ func _process(_delta):
 		$CuadroDialogo.desactivar_dialogo()
 		bandera2=true
 		$ayuda.cambiar_texto("Arrasta las palabras clave relacionadas con las áreas de actuación")
+	elif($CuadroDialogo.indice_dialogo == 7 and !bandera4 and parte2):
+		bandera4=true
+		$Torta.visible=true
+		reproducir(SonidoCorneta)
+		pass
 	if($CuadroDialogo.indice_dialogo == 9 and !bandera3 and parte2):
 		if(!logrosNivel[3]):
 			$Logro.fijar_logro("¡La historia de mi vida!", "Completar el nivel 4 y 5")
@@ -181,6 +190,9 @@ func _on_tres_2_item_selected(_index):
 		$AudioStreamPlayer.play()
 		nuevo_dialogo()
 
+func reproducir(sonido):
+	$AudioStreamPlayer.stream=sonido
+	$AudioStreamPlayer.play()
 
 func _on_texto_body_entered(body):
 	if(body.is_in_group("espaniol") and !ocupadoEsp[0] and body.puedeSel):
@@ -189,6 +201,7 @@ func _on_texto_body_entered(body):
 		$ScrollContainer/TextureRect/Container2/texto.text=body.texto
 		body.queue_free()
 		if completas() ==6:
+			reproducir(SonidoExito)
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
 
@@ -199,6 +212,7 @@ func _on_texto_2_body_entered(body):
 		$ScrollContainer/TextureRect/Container2/texto2.text=body.texto
 		body.queue_free()
 		if completas() ==6:
+			reproducir(SonidoExito)
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
 		
@@ -209,6 +223,7 @@ func _on_texto_3_body_entered(body):
 		$ScrollContainer/TextureRect/Container2/texto3.text=body.texto
 		body.queue_free()
 		if completas() ==6:
+			reproducir(SonidoExito)
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
 
@@ -222,6 +237,7 @@ func _on_ingles_body_entered(body):
 		$ScrollContainer/TextureRect/Container2/ingles.text=body.texto
 		body.queue_free()
 		if completas() ==6:
+			reproducir(SonidoExito)
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
 
@@ -233,6 +249,7 @@ func _on_ingles_2_body_entered(body):
 		$ScrollContainer/TextureRect/Container2/ingles2.text=body.texto
 		body.queue_free()
 		if completas() ==6:
+			reproducir(SonidoExito)
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
 
@@ -244,6 +261,7 @@ func _on_ingles_3_body_entered(body):
 		$ScrollContainer/TextureRect/Container2/ingles3.text=body.texto
 		body.queue_free()
 		if completas() ==6:
+			reproducir(SonidoExito)
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
 

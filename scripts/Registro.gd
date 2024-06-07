@@ -4,6 +4,8 @@ var ya_ejecuto : bool = false
 var respuesta_secreta
 var contador_recarga : int = 0
 var evento2=false
+var evento3=false
+var evento4=false
 var cuadros_texto=[]
 var i = 0
 const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
@@ -41,8 +43,14 @@ func _process(_delta):
 	if(!ya_ejecuto):
 		_ejecutar_evento()
 	if(!evento2 and $CuadroDialogo.indice_dialogo == 5):
-		pausar_y_ocultar_dialogo()
+		$CuadroDialogo.desactivar_dialogo()
 		evento2=true
+	elif $CuadroDialogo.indice_dialogo==8 and !evento4:
+		$AnimationPlayer.play("ficha")
+		evento4=true
+	elif !evento3 and $CuadroDialogo.indice_dialogo==9:
+		evento3=true
+		$CuadroDialogo.desactivar_dialogo()
 		
 func pausar_y_ocultar_dialogo():
 	$CuadroDialogo.pausa= true
@@ -96,8 +104,13 @@ func _on_enviar_pressed():
 		if(comprobar_correo()):
 			if(!hay_campos_vacios()):
 				if($ScrollContainer/TextureRect/nombre9.text== "w62bc"):
-					llamar_dialogo("¡Felicidades!, pudiste poner toda tu información, ahora solo faltaría verificar tu contraseña. Acompañame.")
-					$Timer.start()
+					if(comprobar_ficha()):
+						$CuadroDialogo.habilitar_dialogo()
+						$Timer.start()
+						$Ficha.visible=false
+						$AudioStreamPlayer.stream= SonidoExito
+						$AudioStreamPlayer.play()
+					$CuadroDialogo.habilitar_dialogo()
 					$AudioStreamPlayer.stream= SonidoExito
 					$AudioStreamPlayer.play()
 					progreso = 80
@@ -197,6 +210,9 @@ func _on_area_2d_mouse_entered():
 		$ScrollContainer/TextureRect/Area2D.queue_free()
 		progreso = 20
 		guardar_avances()
+
+func comprobar_ficha():
+	return $ScrollContainer/TextureRect/nombre.text=="Juan" and $ScrollContainer/TextureRect/CheckBox2.button_pressed and $ScrollContainer/TextureRect/OptionButton.text== "Argentina" and $ScrollContainer/TextureRect/cuil.text=="20-99493923-3"
 
 
 func _on_advertencia_mouse_entered():

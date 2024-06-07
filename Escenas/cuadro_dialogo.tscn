@@ -359,6 +359,7 @@ fill_mode = 2
 show_percentage = false
 
 [node name="prueba" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 344.0
 offset_top = 298.0

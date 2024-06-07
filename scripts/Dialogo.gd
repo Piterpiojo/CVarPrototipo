@@ -10,6 +10,7 @@ var letra = 0
 var modulateAcutal
 var completo = false
 var logro = false
+var esUnico=false
 
 func deshabilitar():
 	habilitado = false
@@ -52,7 +53,7 @@ func Mostrar_Linea(indice):
 
 func _process(_delta):
 	$prueba.text = "Id :" + str(indice_dialogo)
-	if(Input.is_action_just_pressed("click") and habilitado):
+	if(Input.is_action_just_pressed("click") and habilitado and !esUnico):
 		if completo:
 			sig_dialogo()
 			letra = 0
@@ -62,6 +63,10 @@ func _process(_delta):
 			completo=true
 	if(Input.is_action_just_pressed("click")):
 		$click.play()
+	if(Input.is_action_just_pressed("click") and esUnico):
+		$DialogoText.text = ""
+		desactivar_dialogo()
+		esUnico=false
 	if(Input.is_action_pressed("click_derecho") and habilitado):
 		self.modulate.a = 0.20
 	else:
@@ -99,11 +104,13 @@ func habilitar_dialogo():
 	pausa = false
 	self.visible= true
 	habilitado = true
+	$Timer.start()
 
 func mostrar_dialogo_unico(texto,pj):
 	if !logro:
 		logro=true
-	habilitar_dialogo()
+	esUnico=true
+	self.visible=true
 	$DialogoText.text = texto
 	if(pj=="Usuario"):
 		$Container/Sprite2D.visible =false
@@ -130,6 +137,7 @@ func mostrar_sin_habilitar(texto,pj):
 		cuadro.texture=ave
 		
 func desactivar_dialogo():
+	$Timer.stop()
 	pausa = true
 	self.visible = false
 	habilitado = false

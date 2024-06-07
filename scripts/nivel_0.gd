@@ -1,5 +1,5 @@
 extends Node2D
-var banderas=[false,false,false,false,false,false]
+var banderas=[false,false,false,false,false,false,false]
 var logrosNivel
 var progreso = 0
 var EspaciosTriangulo=[false,false,false]
@@ -58,8 +58,9 @@ func _process(_delta):
 			CargaArchivos.guardar_logros()
 			CargaArchivos.establecer_progreso(0,100)
 		$AnimationPlayer.play("a_negro")
-	elif(comprobar_triangulo()):
+	elif(comprobar_triangulo() and !banderas[6]):
 		$CuadroDialogo.habilitar_dialogo()
+		banderas[6]=true
 		
 
 
@@ -78,7 +79,7 @@ func _on_color_rect_2_mouse_entered():
 	$CuadroDialogo.sig_dialogo()
 
 
-func _on__area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+func _on__area_shape_entered(_area_rid, area, _area_shape_index, _local_shape_index):
 	if(area.is_in_group("correcto") and !EspaciosTriangulo[0] and !area.seleccionado):
 		$"Triangulo/1/Texto".text=area.texto
 		area.queue_free()

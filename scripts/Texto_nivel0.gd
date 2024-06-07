@@ -23,6 +23,6 @@ func _on_input_event(_viewport, event, _shape_idx):
 		if event.pressed:
 			seleccionado = true
 
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed==false:
+	if event is InputEventMouseButton :
+		if !event.pressed:
 			seleccionado = false
