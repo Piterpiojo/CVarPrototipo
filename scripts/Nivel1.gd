@@ -4,6 +4,7 @@ var banderas=[false,false,false]
 const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
 const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
 var progreso = 0
+
 func _ready():
 	$AnimationPlayer.play("Entrada")
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel1")

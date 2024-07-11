@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cla13vr5u1pva"]
+[gd_scene load_steps=14 format=3 uid="uid://cla13vr5u1pva"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
 [ext_resource type="Texture2D" uid="uid://b67wa71b8pnnn" path="res://ui/Fondos/fondo4.png" id="2_h2fc3"]
@@ -82,7 +82,13 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 0.156863), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_2h8l8"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsijw"]
+_data = {
+"RESET": SubResource("Animation_jgxf8"),
+"fade": SubResource("Animation_cwxao")
+}
+
+[sub_resource type="Animation" id="Animation_wu72s"]
 resource_name = "siguiente_nivel"
 length = 1.5
 tracks/0/type = "value"
@@ -112,11 +118,9 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qsijw"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okgyy"]
 _data = {
-"RESET": SubResource("Animation_jgxf8"),
-"fade": SubResource("Animation_cwxao"),
-"siguiente_nivel": SubResource("Animation_2h8l8")
+"siguiente_nivel": SubResource("Animation_wu72s")
 }
 
 [node name="Control" type="Control"]
@@ -477,6 +481,11 @@ offset_bottom = -87.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Logros del Nivel: "
+
+[node name="CambiarNivel" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_okgyy")
+}
 
 [connection signal="mouse_entered" from="botones/c0" to="." method="_on_c_0_mouse_entered"]
 [connection signal="pressed" from="botones/c0" to="." method="_on_c_0_pressed"]

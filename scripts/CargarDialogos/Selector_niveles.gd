@@ -13,7 +13,8 @@ const niveles = ["res://Escenas/nivel1/identificacion.tscn",
 "res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn",
 "res://Escenas/nivel4-sistemas_cv/nivel_4.tscn",
 "res://Escenas/nivel5/nivel5.tscn",
-"res://Escenas/nivel6/seccion6a.tscn"
+"res://Escenas/nivel6/seccion6a.tscn",
+"res://Escenas/nivel0/nivel_0.tscn"
 ]
 
 const objetivos=[" En este nivel aprenderemos todos los datos concernientes a cómo la plataforma llegó a ser lo que es hoy en día.
@@ -74,33 +75,33 @@ func cargar():
 	get_tree().change_scene_to_file(niveles[nivel_a_cargar])
 
 func _on_c_1_pressed():
-	$AnimationPlayer.play("siguiente_nivel")
+	$CambiarNivel.play("siguiente_nivel")
 	nivel_a_cargar=0
 
 
 func _on_c_2_pressed():
-	$AnimationPlayer.play("siguiente_nivel")
+	$CambiarNivel.play("siguiente_nivel")
 	nivel_a_cargar=1
 
 
 func _on_c_3_pressed():
-	$AnimationPlayer.play("siguiente_nivel")
+	$CambiarNivel.play("siguiente_nivel")
 	nivel_a_cargar=2
 
 
 func _on_c_4_pressed():
-	$AnimationPlayer.play("siguiente_nivel")
+	$CambiarNivel.play("siguiente_nivel")
 	nivel_a_cargar=3
 
 
 func _on_c_5_pressed():
-	$AnimationPlayer.play("siguiente_nivel")
+	$CambiarNivel.play("siguiente_nivel")
 	var progreso5 = CargaArchivos.cargar_avance()["5"]
 	nivel_a_cargar=4
 
 
 func _on_c_6_pressed():
-	$AnimationPlayer.play("siguiente_nivel")
+	$CambiarNivel.play("siguiente_nivel")
 	nivel_a_cargar=5
 	vista_logros(0)
 
@@ -163,7 +164,8 @@ func vista_logros(_index):
 
 
 func _on_c_0_pressed():
-	get_tree().change_scene_to_file("res://Escenas/nivel0/nivel_0.tscn")
+	$CambiarNivel.play("siguiente_nivel")
+	nivel_a_cargar=6
 
 
 func _on_c_0_mouse_entered():
