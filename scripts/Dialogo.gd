@@ -100,6 +100,13 @@ func sig_dialogo():
 			$Timer.stop()
 			$AudioStreamPlayer.gameplay_play()
 
+func dialogo_anterior():
+	if !pausa and indice_dialogo >0:
+		letra=0
+		$DialogoText.text = ""
+		indice_dialogo -=1
+		Mostrar_Linea(indice_dialogo)
+
 func habilitar_dialogo():
 	pausa = false
 	self.visible= true

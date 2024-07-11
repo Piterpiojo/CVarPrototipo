@@ -1,12 +1,12 @@
 [gd_scene load_steps=15 format=3 uid="uid://dlknlog2m1w1i"]
 
 [ext_resource type="FontFile" uid="uid://0smxyo876ro4" path="res://Sprites/fuentes/digital-7.ttf" id="1_1pygp"]
-[ext_resource type="Texture2D" uid="uid://cjjgeecnmxm23" path="res://Imagenes/recuperar_contrasenia/cambio_contrasenia12.png" id="1_g1oao"]
 [ext_resource type="Script" path="res://scripts/nivel_3_recupero_contrasenia.gd" id="1_jtls3"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="2_ro64f"]
+[ext_resource type="Texture2D" uid="uid://cagagj3p8e5qr" path="res://Imagenes/recuperar_contrasenia/cambio_contrasenia12-recortad.png" id="3_ihqpb"]
+[ext_resource type="Texture2D" uid="uid://2iaqkwjyoqky" path="res://Imagenes/identificacion/Identificación de Usuario-recortado.png" id="4_eijwe"]
 [ext_resource type="Texture2D" uid="uid://bj844ikvy83d2" path="res://Sprites/NicePng_email-icon-png-transparent_903587.png" id="5_hs5fl"]
 [ext_resource type="Texture2D" uid="uid://b6syym0ycomal" path="res://Sprites/usuario.jpeg" id="6_8j1ev"]
-[ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="7_0ew3f"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="8_24p5a"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="9_w0kps"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="10_5qhq3"]
@@ -124,7 +124,7 @@ vertical_scroll_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
-texture = ExtResource("1_g1oao")
+texture = ExtResource("3_ihqpb")
 
 [node name="contrasenia_anterior" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -240,7 +240,7 @@ text = "Ratisitica_19"
 
 [node name="identificacion" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
-texture = ExtResource("7_0ew3f")
+texture = ExtResource("4_eijwe")
 
 [node name="OlvidoContrasenia" type="Button" parent="ScrollContainer/identificacion"]
 layout_mode = 0

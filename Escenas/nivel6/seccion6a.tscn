@@ -219,7 +219,7 @@ texture = ExtResource("4_mhuds")
 
 [node name="recargar" type="Button" parent="Node2D/TextureRect3"]
 layout_mode = 0
-offset_left = 1258.0
+offset_left = 1102.0
 offset_top = 555.0
 offset_right = 1498.0
 offset_bottom = 580.0
@@ -227,9 +227,9 @@ flat = true
 
 [node name="visualizar" type="Button" parent="Node2D/TextureRect3"]
 layout_mode = 0
-offset_left = 1265.0
+offset_left = 1119.0
 offset_top = 714.0
-offset_right = 1610.0
+offset_right = 1629.0
 offset_bottom = 739.0
 disabled = true
 flat = true

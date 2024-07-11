@@ -371,6 +371,14 @@ text = "prueba, borrar"
 wait_time = 0.55
 one_shot = true
 
+[node name="Volver_Dialogo" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 286.0
+offset_right = 81.0
+offset_bottom = 317.0
+text = "<--"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="mouse_entered" from="Curiosidad" to="." method="_on_curiosidad_mouse_entered"]
 [connection signal="mouse_exited" from="Curiosidad" to="." method="_on_curiosidad_mouse_exited"]
@@ -380,3 +388,6 @@ one_shot = true
 [connection signal="mouse_entered" from="Importante/ProgressBar" to="." method="_on_curiosidad_mouse_entered"]
 [connection signal="mouse_exited" from="Importante/ProgressBar" to="." method="_on_curiosidad_mouse_exited"]
 [connection signal="timeout" from="enfriamiento_importante" to="." method="_on_enfriamiento_importante_timeout"]
+[connection signal="mouse_entered" from="Volver_Dialogo" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Volver_Dialogo" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Volver_Dialogo" to="." method="dialogo_anterior"]

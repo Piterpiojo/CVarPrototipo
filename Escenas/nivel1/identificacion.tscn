@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Nivel1.gd" id="1_81eoj"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="2_6tw8c"]
-[ext_resource type="Texture2D" uid="uid://dwy8ofng255ix" path="res://Imagenes/identificacion/Identificación de Usuario-12.png" id="2_i7ux5"]
+[ext_resource type="Texture2D" uid="uid://2iaqkwjyoqky" path="res://Imagenes/identificacion/Identificación de Usuario-recortado.png" id="2_obvmb"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="3_kx6dc"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="4_hmhg2"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="5_ohnen"]
@@ -101,7 +101,7 @@ vertical_scroll_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
-texture = ExtResource("2_i7ux5")
+texture = ExtResource("2_obvmb")
 
 [node name="OlvidoContrasenia" type="Button" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
