@@ -17,6 +17,7 @@ offset_left = -186.0
 offset_top = -41.0
 offset_right = 182.0
 offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "csczxc"
 horizontal_alignment = 1
 vertical_alignment = 1

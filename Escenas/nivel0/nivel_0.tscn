@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://mx5clyvrtq7v"]
+[gd_scene load_steps=18 format=3 uid="uid://mx5clyvrtq7v"]
 
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_diia6"]
 [ext_resource type="Script" path="res://scripts/nivel_0.gd" id="1_vkic3"]
+[ext_resource type="Texture2D" uid="uid://2iaqkwjyoqky" path="res://Imagenes/identificacion/Identificación de Usuario-recortado.png" id="2_sjba5"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="2_wwqp0"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="3_nqo8w"]
 [ext_resource type="Texture2D" uid="uid://cmtgnvcckiwnd" path="res://ui/recuadrogenerico.png" id="4_dop4d"]
@@ -230,16 +231,11 @@ _data = {
 [node name="nivel0" type="Node2D"]
 script = ExtResource("1_vkic3")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1280.0
-offset_bottom = 720.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -24.0
+offset_right = 1292.0
+offset_bottom = 1302.0
+texture = ExtResource("2_sjba5")
 
 [node name="Triangulo" type="Sprite2D" parent="."]
 visible = false
@@ -312,10 +308,6 @@ offset_top = 368.0
 offset_right = 1319.0
 offset_bottom = 728.0
 grow_horizontal = 0
-
-[node name="Container" parent="CuadroDialogo" index="2"]
-offset_top = 199.5
-offset_bottom = 239.5
 
 [node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
 
