@@ -28,6 +28,7 @@ func _ready():
 	cuadro = get_node(".")
 	$DialogoText.text = ""
 	modulateAcutal=self.modulate.a
+	$AudioStreamPlayer.volume_db= CargaArchivos.config["volumen"]
 
 	
 	

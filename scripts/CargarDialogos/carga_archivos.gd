@@ -11,10 +11,16 @@ var logros = {"0":[false],
 "5": [false, false, false, false],
 "6": [false, false, false, false, false]
 }
+var config = {"volumen":0,"mute":false};
+
+func guardar_config():
+	guardar_conf(config,"configuracion")
 
 func _ready():
 	cargar_avance()
 	cargar_logros()
+	config = cargar_conf("configuracion")
+	
 	
 func cargar(nombre):
 	if(FileAccess.file_exists(path + nombre + ".json")):
@@ -26,11 +32,25 @@ func cargar(nombre):
 	else:
 		return
 
+func cargar_conf(nombre):
+	if(FileAccess.file_exists("user://" + nombre + ".json")):
+		var archivo = FileAccess.open("user://" + nombre + ".json",FileAccess.READ);
+		var text = archivo.get_as_text()
+		data = JSON.parse_string(text)
+		archivo.close()
+		return data
+	else:
+		return  {"volumen":0,"mute":false}
 func guardar(Data,nombre):
 	var archivo
 	archivo = FileAccess.open(path + nombre +".json",FileAccess.WRITE)
 	archivo.store_string(JSON.stringify(Data,"\t"))
-	print("guardado con exito")
+	archivo.close()
+	
+func guardar_conf(Data,nombre):
+	var archivo
+	archivo = FileAccess.open("user://" + nombre +".json",FileAccess.WRITE)
+	archivo.store_string(JSON.stringify(Data,"\t"))
 	archivo.close()
 
 func cargar_avance():
