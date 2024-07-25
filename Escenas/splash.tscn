@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://umliwrg24w6l"]
+
+[ext_resource type="Script" path="res://splash.gd" id="1_txfn8"]
+[ext_resource type="Texture2D" uid="uid://dre1jvb5n52wa" path="res://ui/logo para web-01_1.png" id="2_bo5tg"]
+[ext_resource type="Texture2D" uid="uid://ct34lf7wnlix5" path="res://ui/CUDI-principal-1.png" id="3_3348o"]
+
+[sub_resource type="Animation" id="Animation_hyker"]
+resource_name = "splash"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ir_al_menu"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_slxt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jubyr"]
+_data = {
+"RESET": SubResource("Animation_slxt5"),
+"splash": SubResource("Animation_hyker")
+}
+
+[node name="splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_txfn8")
+metadata/_edit_vertical_guides_ = [635.0]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bo5tg")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Cudi-principal-1" type="Sprite2D" parent="TextureRect"]
+position = Vector2(634, 631)
+scale = Vector2(0.772, 0.730415)
+texture = ExtResource("3_3348o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jubyr")
+}

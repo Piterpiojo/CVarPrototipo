@@ -1,8 +1,9 @@
 extends Control
 var nivel= 0
 var mute=false
-const mute_ui = "res://ui/mute.png"
-const unmute_ui="res://ui/unmute.png"
+const mute_ui = "res://ui/botonvolumenoff.png"
+const unmute_ui="res://ui/botonvolumenon.png"
+var preaudio
 
 func _ready():
 	CargaArchivos.cargar_logros()
@@ -11,6 +12,7 @@ func _ready():
 	inicializar()
 	mute = CargaArchivos.config["mute"]
 	$AudioStreamPlayer.playing=!mute
+	preaudio= CargaArchivos.config["volumen"]
 
 func inicializar():
 	$AudioStreamPlayer.volume_db = CargaArchivos.config["volumen"]
@@ -42,10 +44,11 @@ func _on_mutear_pressed():
 	if mute:
 		$mutear.icon= preload(mute_ui)
 		$AudioStreamPlayer.stop()
+		CargaArchivos.config["volumen"]=-81
 	else:
 		$mutear.icon = preload(unmute_ui)
 		$AudioStreamPlayer.play()
-	CargaArchivos.config["mute"]=mute
+		CargaArchivos.config["volumen"]=preaudio
 	CargaArchivos.guardar_config()
 
 
@@ -61,5 +64,6 @@ func _on_h_slider_value_changed(value):
 	$AudioStreamPlayer.volume_db=value
 	CargaArchivos.config["volumen"]=value
 	CargaArchivos.guardar_config()
+	preaudio=value
 	if(value < -30):
 		$AudioStreamPlayer.volume_db=-81

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://yytfetroh3on"]
+[gd_scene load_steps=22 format=3 uid="uid://yytfetroh3on"]
 
 [ext_resource type="Script" path="res://scripts/PantallaInicio.gd" id="1_hffsb"]
 [ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="2_8aa3w"]
@@ -12,7 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bch0sqdvdtx71" path="res://ui/Ave inicio/estatico2.png" id="9_pv400"]
 [ext_resource type="Texture2D" uid="uid://d053htothnn1b" path="res://ui/logos/sicytarlogo.png" id="10_1rs67"]
 [ext_resource type="Texture2D" uid="uid://ca7hbvo2xf45c" path="res://ui/Ave inicio/estatico3.png" id="10_nxvcr"]
-[ext_resource type="Texture2D" uid="uid://clyn8j5u0imiq" path="res://ui/unmute.png" id="13_l1oap"]
+[ext_resource type="Texture2D" uid="uid://c61a1hsiu7dun" path="res://ui/botonvolumenon.png" id="13_nu8fm"]
+[ext_resource type="Texture2D" uid="uid://8yhlkchvcjjf" path="res://ui/splash2.png" id="14_fr5rd"]
 
 [sub_resource type="Animation" id="Animation_mqyjm"]
 length = 0.001
@@ -64,6 +65,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Splash2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_bxhny"]
 resource_name = "inicio"
@@ -105,6 +118,48 @@ tracks/2/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_rv70m"]
+resource_name = "salir"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cerrar"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Splash2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
 [sub_resource type="Animation" id="Animation_vyw2r"]
 resource_name = "splash"
 length = 2.1
@@ -132,36 +187,6 @@ tracks/1/keys = {
 "values": [{
 "args": [],
 "method": &"cambiar"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_rv70m"]
-resource_name = "salir"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.5),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"cerrar"
 }]
 }
 
@@ -369,12 +394,13 @@ layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -72.0
-offset_right = 72.0
+offset_top = -63.0
+offset_right = 93.0
 grow_vertical = 0
 focus_mode = 0
-icon = ExtResource("13_l1oap")
+icon = ExtResource("13_nu8fm")
 flat = true
+expand_icon = true
 
 [node name="opciones" type="ColorRect" parent="."]
 visible = false
@@ -433,6 +459,11 @@ grow_horizontal = 2
 grow_vertical = 2
 min_value = -31.0
 max_value = 0.0
+
+[node name="Splash2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(707, 428)
+texture = ExtResource("14_fr5rd")
 
 [connection signal="pressed" from="Control/inicio" to="." method="_on_inicio_pressed"]
 [connection signal="pressed" from="Control/opciones" to="." method="_on_opciones_pressed"]

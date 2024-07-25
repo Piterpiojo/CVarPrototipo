@@ -174,7 +174,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_mmeeg"]
 resource_name = "a_negro"
-length = 2.0
+length = 7.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -182,7 +182,7 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(5, 7),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
@@ -194,7 +194,7 @@ tracks/1/path = NodePath(".")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(2),
+"times": PackedFloat32Array(7),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -308,6 +308,10 @@ offset_top = 368.0
 offset_right = 1319.0
 offset_bottom = 728.0
 grow_horizontal = 0
+
+[node name="Container" parent="CuadroDialogo" index="2"]
+offset_top = 199.5
+offset_bottom = 239.5
 
 [node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
 
