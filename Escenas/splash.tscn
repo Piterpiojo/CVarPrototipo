@@ -4,6 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://dre1jvb5n52wa" path="res://ui/logo para web-01_1.png" id="2_bo5tg"]
 [ext_resource type="Texture2D" uid="uid://ct34lf7wnlix5" path="res://ui/CUDI-principal-1.png" id="3_3348o"]
 
+[sub_resource type="Animation" id="Animation_slxt5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_hyker"]
 resource_name = "splash"
 length = 2.0
@@ -32,21 +47,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"ir_al_menu"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_slxt5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jubyr"]
