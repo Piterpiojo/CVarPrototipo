@@ -29,7 +29,7 @@ func _on_inicio_pressed():
 
 
 func cambiar():
-	get_tree().change_scene_to_file("res://Escenas/Selector_niveles.tscn")
+	get_tree().change_scene_to_file("res://Escenas/introduccion.tscn")
 
 func _on_abrir_explorer_pressed():
 	OS.shell_open("https://www.unpaz.edu.ar/")

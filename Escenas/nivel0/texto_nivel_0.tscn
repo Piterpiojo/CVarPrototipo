@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://er7fqx8w6ual"]
+[gd_scene load_steps=4 format=3 uid="uid://er7fqx8w6ual"]
 
 [ext_resource type="Script" path="res://scripts/Texto_nivel0.gd" id="1_bfq5s"]
+[ext_resource type="Texture2D" uid="uid://bpt100gnw0ger" path="res://ui/portapapeles/papel1.png" id="2_33j1s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j60vc"]
 size = Vector2(370, 82)
@@ -11,6 +12,11 @@ script = ExtResource("1_bfq5s")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 2)
 shape = SubResource("RectangleShape2D_j60vc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.99998, 4)
+scale = Vector2(0.63125, 0.333333)
+texture = ExtResource("2_33j1s")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -186.0

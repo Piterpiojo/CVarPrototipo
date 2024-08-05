@@ -1,0 +1,20 @@
+[
+	{
+		"emocion": "saludando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "¡Hola! Soy Clementina, tu asistente virtual, una inteligencia artificial diseñada por un grupo de estudiantes para colaborar y que puedas realizar la carga de tus datos en el CVar"
+	},
+	{
+		"emocion": "ensenando",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "Este juego te permitirá tener más información acerca de los Sistemas informáticos utilizados por los científicos y estudiantes de Argentina y mejorar la carga de tus datos. "
+	},
+	{
+		"emocion": "felicitaciones",
+		"importante": true,
+		"personaje": "IA",
+		"texto": "[b]La Ciencia te necesita[/b]"
+	}
+]

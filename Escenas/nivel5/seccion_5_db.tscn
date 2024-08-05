@@ -62,10 +62,10 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 5, 6),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 2, 5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -144,7 +144,6 @@ offset_right = 1280.0
 offset_bottom = 724.0
 grow_horizontal = 2
 grow_vertical = 2
-scroll_vertical = 100
 
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer"]
 layout_mode = 2
@@ -376,55 +375,55 @@ grow_vertical = 2
 
 [node name="texto" type="Label" parent="ScrollContainer/TextureRect/Container2"]
 layout_mode = 0
-offset_left = 494.0
-offset_top = 897.0
-offset_right = 583.0
-offset_bottom = 934.0
+offset_left = 707.0
+offset_top = 1169.0
+offset_right = 796.0
+offset_bottom = 1206.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 
 [node name="texto2" type="Label" parent="ScrollContainer/TextureRect/Container2"]
 layout_mode = 0
-offset_left = 495.0
-offset_top = 929.0
-offset_right = 584.0
-offset_bottom = 966.0
+offset_left = 708.0
+offset_top = 1201.0
+offset_right = 797.0
+offset_bottom = 1238.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 
 [node name="texto3" type="Label" parent="ScrollContainer/TextureRect/Container2"]
 layout_mode = 0
-offset_left = 496.0
-offset_top = 963.0
-offset_right = 585.0
-offset_bottom = 1000.0
+offset_left = 709.0
+offset_top = 1235.0
+offset_right = 798.0
+offset_bottom = 1272.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 
 [node name="ingles" type="Label" parent="ScrollContainer/TextureRect/Container2"]
 layout_mode = 0
-offset_left = 492.0
-offset_top = 1094.0
-offset_right = 581.0
-offset_bottom = 1131.0
+offset_left = 705.0
+offset_top = 1366.0
+offset_right = 794.0
+offset_bottom = 1403.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 
 [node name="ingles2" type="Label" parent="ScrollContainer/TextureRect/Container2"]
 layout_mode = 0
-offset_left = 492.0
-offset_top = 1127.0
-offset_right = 581.0
-offset_bottom = 1164.0
+offset_left = 705.0
+offset_top = 1399.0
+offset_right = 794.0
+offset_bottom = 1436.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 
 [node name="ingles3" type="Label" parent="ScrollContainer/TextureRect/Container2"]
 layout_mode = 0
-offset_left = 492.0
-offset_top = 1160.0
-offset_right = 581.0
-offset_bottom = 1197.0
+offset_left = 705.0
+offset_top = 1432.0
+offset_right = 794.0
+offset_bottom = 1469.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 

@@ -206,7 +206,7 @@ func _on_nombre_2_focus_exited():
 
 func _on_area_2d_mouse_entered():
 	if(!$CuadroDialogo.visible):
-		$CuadroDialogo.mostrar_dialogo_unico("Solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].","Ave")
+		$CuadroDialogo.mostrar_dialogo_unico("[font_size=50]Solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].[/font_size]","Ave")
 		$ScrollContainer/TextureRect/Area2D.queue_free()
 		progreso = 20
 		guardar_avances()

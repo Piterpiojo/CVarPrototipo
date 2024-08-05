@@ -1,19 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://cla13vr5u1pva"]
+[gd_scene load_steps=18 format=3 uid="uid://cla13vr5u1pva"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
 [ext_resource type="Texture2D" uid="uid://b67wa71b8pnnn" path="res://ui/Fondos/fondo4.png" id="2_h2fc3"]
 [ext_resource type="Texture2D" uid="uid://hrkv16yw4g5d" path="res://ui/separadoresnivel/todonegro.png" id="3_8ey22"]
-[ext_resource type="Texture2D" uid="uid://b05tujj2nrvre" path="res://ui/separadoresnivel/separador0.png" id="3_16vxd"]
 [ext_resource type="Texture2D" uid="uid://2y27gws8gv4j" path="res://ui/genericstar.png" id="3_edi36"]
+[ext_resource type="Texture2D" uid="uid://dyma3j2lr1jmo" path="res://ui/Nueva Seleccion/botonmenu1.png" id="6_busb0"]
+[ext_resource type="Texture2D" uid="uid://c137av0yj1ljb" path="res://ui/Nueva Seleccion/botonmenu2.png" id="7_mbslg"]
+[ext_resource type="Texture2D" uid="uid://f2brp2x58kgj" path="res://ui/Nueva Seleccion/botonmenu3.png" id="8_fgx24"]
+[ext_resource type="Texture2D" uid="uid://b5q8gcsu87xlf" path="res://ui/Nueva Seleccion/botonmenu4.png" id="9_3xpb5"]
+[ext_resource type="Texture2D" uid="uid://fkmyp3ufo3ot" path="res://ui/Nueva Seleccion/botonmenu5.png" id="10_fshvs"]
+[ext_resource type="Texture2D" uid="uid://suag6w0oxpev" path="res://ui/Nueva Seleccion/botonmenu6.png" id="11_g0pet"]
+[ext_resource type="Texture2D" uid="uid://i781dhmil1kf" path="res://ui/Nueva Seleccion/botonmenu7.png" id="12_ca37f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncwed"]
 bg_color = Color(0, 0.72549, 0.152941, 0.623529)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdj7f"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhy03"]
-bg_color = Color(0.0235294, 0.4, 0.415686, 0.521569)
 
 [sub_resource type="Animation" id="Animation_jgxf8"]
 length = 0.001
@@ -176,7 +176,7 @@ offset_left = 648.0
 offset_top = 235.0
 offset_right = 1231.0
 offset_bottom = 605.0
-texture = ExtResource("3_16vxd")
+texture = ExtResource("3_8ey22")
 expand_mode = 1
 
 [node name="Objectivo" type="Label" parent="."]
@@ -186,8 +186,6 @@ offset_top = 74.0
 offset_right = 1279.0
 offset_bottom = 256.0
 theme_override_font_sizes/font_size = 24
-text = "Teoría básica. En este nivel aprenderemos todos los datos concernientes a cómo la plataforma llegó a ser lo que es hoy en día.
-"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -246,6 +244,7 @@ size_flags_vertical = 0
 texture = ExtResource("3_edi36")
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 0
 offset_top = 90.0
@@ -394,73 +393,80 @@ offset_bottom = 130.0
 
 [node name="c0" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 96.0
-offset_top = 172.0
-offset_right = 568.0
-offset_bottom = 202.0
+offset_left = 48.0
+offset_top = 78.0
+offset_right = 168.0
+offset_bottom = 157.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_bdj7f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uhy03")
+icon = ExtResource("6_busb0")
+flat = true
+expand_icon = true
 
 [node name="c1" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 213.0
-offset_right = 567.0
-offset_bottom = 243.0
+offset_left = 224.0
+offset_top = 78.0
+offset_right = 344.0
+offset_bottom = 157.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_bdj7f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uhy03")
+icon = ExtResource("7_mbslg")
+flat = true
+expand_icon = true
 
 [node name="c2" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 96.0
-offset_top = 251.0
-offset_right = 568.0
-offset_bottom = 281.0
+offset_left = 48.0
+offset_top = 198.0
+offset_right = 168.0
+offset_bottom = 277.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_bdj7f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uhy03")
+icon = ExtResource("8_fgx24")
+flat = true
+expand_icon = true
 
 [node name="c3" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 94.0
-offset_top = 294.0
-offset_right = 566.0
-offset_bottom = 324.0
+offset_left = 224.0
+offset_top = 198.0
+offset_right = 344.0
+offset_bottom = 277.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_bdj7f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uhy03")
+icon = ExtResource("9_3xpb5")
+flat = true
+expand_icon = true
 
 [node name="c4" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 335.0
-offset_right = 567.0
-offset_bottom = 365.0
+offset_left = 48.0
+offset_top = 318.0
+offset_right = 168.0
+offset_bottom = 397.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_bdj7f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uhy03")
+icon = ExtResource("10_fshvs")
+flat = true
+expand_icon = true
 
 [node name="c5" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 97.0
-offset_top = 374.0
-offset_right = 569.0
-offset_bottom = 404.0
+offset_left = 224.0
+offset_top = 318.0
+offset_right = 344.0
+offset_bottom = 397.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_bdj7f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uhy03")
+icon = ExtResource("11_g0pet")
+flat = true
+expand_icon = true
 
 [node name="c6" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 97.0
-offset_top = 414.0
-offset_right = 569.0
-offset_bottom = 444.0
+offset_left = 48.0
+offset_top = 430.0
+offset_right = 168.0
+offset_bottom = 509.0
 focus_mode = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_bdj7f")
-theme_override_styles/hover = SubResource("StyleBoxFlat_uhy03")
+icon = ExtResource("12_ca37f")
+flat = true
+expand_icon = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

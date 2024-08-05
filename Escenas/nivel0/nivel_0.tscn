@@ -5,15 +5,15 @@
 [ext_resource type="Texture2D" uid="uid://2iaqkwjyoqky" path="res://Imagenes/identificacion/Identificación de Usuario-recortado.png" id="2_sjba5"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="2_wwqp0"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="3_nqo8w"]
+[ext_resource type="Texture2D" uid="uid://dxdtqld8bv815" path="res://ui/portapapeles/portapapeles.png" id="3_w2fnc"]
 [ext_resource type="Texture2D" uid="uid://cmtgnvcckiwnd" path="res://ui/recuadrogenerico.png" id="4_dop4d"]
 [ext_resource type="PackedScene" uid="uid://er7fqx8w6ual" path="res://Escenas/nivel0/texto_nivel_0.tscn" id="5_2n522"]
-[ext_resource type="Texture2D" uid="uid://1csbe6golevm" path="res://ui/Elementos/triangulo.png" id="7_wb0yf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dk1hi"]
-size = Vector2(435, 83.5)
+size = Vector2(304, 96.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wymmh"]
-size = Vector2(205.5, 159.5)
+size = Vector2(288, 104)
 
 [sub_resource type="Animation" id="Animation_xa2yi"]
 length = 0.001
@@ -240,8 +240,8 @@ texture = ExtResource("2_sjba5")
 [node name="Triangulo" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
-position = Vector2(607, 245)
-texture = ExtResource("7_wb0yf")
+position = Vector2(616, 296)
+texture = ExtResource("3_w2fnc")
 
 [node name="1" type="Area2D" parent="Triangulo"]
 position = Vector2(9, 3)
@@ -250,54 +250,19 @@ position = Vector2(9, 3)
 position = Vector2(-4.5, 183)
 shape = SubResource("RectangleShape2D_dk1hi")
 
-[node name="Texto" type="Label" parent="Triangulo/1"]
-offset_left = -197.0
-offset_top = 134.0
-offset_right = 179.0
-offset_bottom = 221.0
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
 [node name="2" type="Area2D" parent="Triangulo"]
-position = Vector2(9, 19)
+position = Vector2(8, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triangulo/2"]
-position = Vector2(-4, 52)
+position = Vector2(-9, 45.375)
 shape = SubResource("RectangleShape2D_dk1hi")
-
-[node name="Texto" type="Label" parent="Triangulo/2"]
-offset_left = -190.0
-offset_top = 14.0
-offset_right = 186.0
-offset_bottom = 89.0
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
 
 [node name="3" type="Area2D" parent="Triangulo"]
 position = Vector2(-7, -5)
 
-[node name="Texto" type="Label" parent="Triangulo/3"]
-offset_left = -95.0
-offset_top = -194.0
-offset_right = 99.0
-offset_bottom = 37.0
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 3
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Triangulo/3"]
-position = Vector2(6, -82)
+position = Vector2(7, -99)
 shape = SubResource("RectangleShape2D_wymmh")
-
-[node name="Line2D" type="Line2D" parent="Triangulo"]
-position = Vector2(-607, -245)
-points = PackedVector2Array(392, 376, 824, 376)
-
-[node name="Line2D2" type="Line2D" parent="Triangulo"]
-position = Vector2(-615, -365)
-points = PackedVector2Array(472, 376, 760, 376)
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("1_diia6")]
 anchors_preset = 3

@@ -1,17 +1,5 @@
 [
 	{
-		"emocion": "saludando",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "¡Hola! Soy Ave, tu asistente virtual, una inteligencia artificial diseñada por un grupo de científicos de la CONICET para colaborar para que puedas realizar la carga de tus datos en el CVar [b]porque la Ciencia te necesita.[/b]"
-	},
-	{
-		"emocion": "ensenando",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "Este juego te permitirá tener más información acerca de los Sistemas informáticos utilizados por los científicos y estudiantes de Argentina y mejorar la carga de tus datos. "
-	},
-	{
 		"emocion": "pensando",
 		"importante": true,
 		"personaje": "IA",
@@ -27,7 +15,7 @@
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "En criollo, es donde todo el personal científico y tecnológico del país se registra."
+		"texto": "En criollo, [b]es donde todo el personal científico y tecnológico del país se registra.[/b]"
 	},
 	{
 		"emocion": "ensenando",
@@ -57,7 +45,7 @@
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones.\n- La promoción del intercambio de información entre individuos, grupos e instituciones.\n- Poder consultar qué, quién, cuándo, dónde y cómo se realiza investigación y desarrollo en Argentina.\n- La posibilidad de realizar y participar en convocatorias institucionales, \n¡incluyendo las de financiamiento para proyectos!, utilizando información cargada en el CVar y evitando que el investigador tenga que subir y completar todo una y otra vez."
+		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones.\n- La promoción del intercambio de información entre individuos, grupos e instituciones.\n- Poder consultar qué, quién, cuándo, dónde y cómo se realiza investigación y desarrollo en Argentina.\n- La posibilidad de realizar y participar en convocatorias institucionales, \n [b]¡incluyendo las de financiamiento para proyectos![/b], utilizando información cargada en el CVar y evitando que el investigador tenga que subir y completar todo una y otra vez."
 	},
 	{
 		"emocion": "pensando",
@@ -69,13 +57,13 @@
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "La respuesta es simple: [b]todas[/b] aquellas personas que desarrollan actividades científicas y tecnológicas en instituciones argentinas, sean oficiales o privadas, residan actualmente en el país o los que se encuentren realizando una estancia afuera."
+		"texto": "La respuesta es simple: [b]todas[/b] aquellas personas que desarrollan actividades científicas y tecnológicas en instituciones argentinas, sean oficiales o privadas, residan actualmente en el país o los que se encuentren realizando una estancia afuera. Básicamente todos los y las que desarrollamos actividades científicas en el país."
 	},
 	{
 		"emocion": "pensando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "Mis notas dicen que también hay algo muy importante que tengo que explicarte ¡y eso es el sistema SIGEVA!"
+		"texto": "Mis notas dicen que también hay algo muy importante que tengo que explicarte [b]¡y eso es el sistema SIGEVA![/b]"
 	},
 	{
 		"emocion": "pensando",
@@ -87,19 +75,13 @@
 		"emocion": "pensando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "En pocas palabras es un conjunto de aplicaciones informáticas a las que podemos acceder por medio de un navegador de internet."
+		"texto": "En corto, es un conjunto de aplicaciones informáticas a las que podemos acceder por medio de internet. Fue hecho por la Dirección de informática de la Gerencia de Organización y del CONICET."
 	},
 	{
 		"emocion": "pensando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "Fue hecho por la Dirección de informática de la Gerencia de Organización y del CONICET."
-	},
-	{
-		"emocion": "pensando",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "Tiene diferentes módulos pero hay uno solo que se vincula de forma directa con el CVar"
+		"texto": "tiene diferentes módulos pero hay uno solo que se vincula de forma directa con el CVar"
 	},
 	{
 		"emocion": "pensando",
@@ -273,19 +255,7 @@
 		"emocion": "estatico",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "Te presento a la Pirámide del Conocimiento. O “Conicetmiento”, todavía estamos trabajando en un nombre."
-	},
-	{
-		"emocion": "estatico",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "La premisa es simple: lo que ves en pantalla son diferentes frases que describen qué es el CVar, la mitad dice la verdad y la otra mitad no. \n"
-	},
-	{
-		"emocion": "estatico",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "Necesito que ordenes las correctas dentro de la pirámide, una vez lo hagas podemos continuar."
+		"texto": "Te presento el Portapapeles. Mi portapapeles. La premisa es facilita: en pantalla hay varias notas que describen qué es el CVar. De estas notas, tres son correctas y otras tres, no. Tu tarea es arrastrar las notas correctas al portapapeles central. Una vez que hayas terminado, podemos continuar."
 	},
 	{
 		"emocion": "estatico",
@@ -293,22 +263,4 @@
 		"personaje": "IA",
 		"texto": "..."
 	},
-	{
-		"emocion": "estatico",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "Felicidades, completaste este capítulo, ¡es increíble que hayas aprendido las bases tan rápido! Te estás yendo de este nivel sabiendo que es el SIGEVA, que es el CVar y cuales son los beneficios que te traen!"
-	},
-	{
-		"emocion": "estatico",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "A continuación, te invito a que completes los otros niveles que faltan para que puedas aprender incluso más sobre cómo navegar por CVar."
-	},
-	{
-		"emocion": "saludando",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "¡Nos vemos pronto!"
-	}
 ]

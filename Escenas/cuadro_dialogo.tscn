@@ -231,8 +231,7 @@ theme_override_font_sizes/bold_font_size = 20
 theme_override_font_sizes/italics_font_size = 20
 theme_override_font_sizes/bold_italics_font_size = 20
 bbcode_enabled = true
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor bibendum felis, vel scelerisque justo. Suspendisse potenti. Sed feugiat tincidunt nisi, a venenatis velit hendrerit sit amet. Vivamus ac nunc id orci fringilla vehicula. Proin euismod arcu at libero dictum, eu bibendum odio accumsan. Sed at mi sit amet purus tincidunt pellentesque id nec purus. Nulla auctor, est a fermentum efficitur, urna orci tincidunt ante, in eleifend eros turpis in tellus. Integer vel quam sed justo bibendum vulputate. Nulla facilisi. Sed n
-
+text = "[font_size=50]Lorem ipsum dolor sit a[/font_size]met, consectetur adipiscing elit. Nullam auctor bibendum felis, vel scelerisque justo. Suspendisse potenti. Sed feugiat tincidunt nisi, a venenatis velit hendrerit sit amet. Vivamus ac nunc id orci fringilla vehicula. Proin euismod arcu at libero dictum, eu bibendum odio accumsan. Sed at mi sit amet purus tincidunt pellentesque id nec p
 
 
 
@@ -363,7 +362,6 @@ fill_mode = 2
 show_percentage = false
 
 [node name="prueba" type="Label" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 344.0
 offset_top = 298.0

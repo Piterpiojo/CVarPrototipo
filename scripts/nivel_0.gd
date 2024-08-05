@@ -35,20 +35,20 @@ func _process(_delta):
 		progreso = 10
 		$AnimationPlayer.play("RESET")
 		guardar_avances()
-	elif($CuadroDialogo.indice_dialogo==43 and !banderas[3]):
+	elif($CuadroDialogo.indice_dialogo==40 and !banderas[3]):
 		banderas[3]=true
 		$ColorRect2.visible = true
 		$CuadroDialogo.pausa =true
 		progreso = 60
 		guardar_avances()
-	elif($CuadroDialogo.indice_dialogo==45 and !banderaTriangulo):
+	elif($CuadroDialogo.indice_dialogo==41 and !banderaTriangulo):
 		$AnimationPlayer.play("Triangulo")
 		banderaTriangulo=true
-	elif($CuadroDialogo.indice_dialogo==48 and !banderas[4]):
+	elif($CuadroDialogo.indice_dialogo==43 and !banderas[4]):
 		$CuadroDialogo.sig_dialogo()
 		$CuadroDialogo.desactivar_dialogo()
 		banderas[4]=true
-	elif($CuadroDialogo.indice_dialogo == 51 and ! banderas[5]):
+	elif(comprobar_triangulo()and ! banderas[5]):
 		progreso = 100
 		guardar_avances()
 		if(!logrosNivel[0]):
@@ -58,9 +58,8 @@ func _process(_delta):
 			CargaArchivos.guardar_logros()
 			CargaArchivos.establecer_progreso(0,100)
 		$AnimationPlayer.play("a_negro")
-	elif(comprobar_triangulo() and !banderas[6]):
-		$CuadroDialogo.habilitar_dialogo()
-		banderas[6]=true
+
+
 		
 
 
@@ -81,8 +80,7 @@ func _on_color_rect_2_mouse_entered():
 
 func _on__area_shape_entered(_area_rid, area, _area_shape_index, _local_shape_index):
 	if(area.is_in_group("correcto") and !EspaciosTriangulo[0] and !area.seleccionado):
-		$"Triangulo/1/Texto".text=area.texto
-		area.queue_free()
+		area.puedeSel=false
 		EspaciosTriangulo[0]=true
 		reproducir_exito()
 	else:
@@ -91,8 +89,7 @@ func _on__area_shape_entered(_area_rid, area, _area_shape_index, _local_shape_in
 
 func _on__area_entered(area):
 	if(area.is_in_group("correcto") and !EspaciosTriangulo[1] and !area.seleccionado):
-		$"Triangulo/2/Texto".text=area.texto
-		area.queue_free()
+		area.puedeSel=false
 		EspaciosTriangulo[1]=true
 		reproducir_exito()
 	else:
@@ -107,10 +104,10 @@ func reproducir_fallo():
 	$Sonidos.stream=SonidoFallo
 	if !$Sonidos.playing:
 		$Sonidos.play()
+		
 func _on__area3_entered(area):
 	if(area.is_in_group("correcto") and !EspaciosTriangulo[2] and  !area.seleccionado):
-		$"Triangulo/3/Texto".text=area.texto
-		area.queue_free()
+		area.puedeSel=false
 		EspaciosTriangulo[2]=true
 		reproducir_exito()
 	else:

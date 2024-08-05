@@ -14,7 +14,7 @@
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Bueno, esta es la sección de Palabras Clave. Realmente no hay mucha ciencia detrás, acá es donde pones palabras que estén relacionadas con tu área.",
+		"texto": "Bueno, esta es la sección de Palabras Clave. Acá es donde pones palabras que estén relacionadas con tu área.",
 		"importante": true
 	},
 	{
@@ -38,25 +38,13 @@
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": "¡FELICIDADES! ¡Por fin terminaste de crear tu cuenta! ¡Toda esa dedicación, toda esa enorme cantidad de esfuerzo y cerebros dieron sus frutos y es un logro que merece ser celebrado!. Antes de terminar, ¡tengo un regalo para vos!\n",
-		"importante": true
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
-		"texto": "De mi autoría, para vos, por haber hecho este trayecto junto a mi. No creo que haya forma de que puedas probarla, pero te aseguro que no está del todo mal. \n",
-		"importante": true
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "Usuario",
-		"texto": "Gracias, Ave. Realmente me cuesta admitirlo pero fuiste de gran ayuda en este recorrido y estoy muy feliz de por fin haber completado esto de una vez por todas.",
+		"texto": "¡FELICIDADES! ¡Por fin terminaste de crear tu cuenta! ¡Toda esa dedicación, toda esa enorme cantidad de esfuerzo y cerebros dieron sus frutos",
 		"importante": true
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "“Completado”, eso me recuerda: antes de irte, quiero mostrarte algo.",
+		"texto": "Pero antes de irte, quiero mostrarte algo.",
 		"importante": true
 	}
 ]

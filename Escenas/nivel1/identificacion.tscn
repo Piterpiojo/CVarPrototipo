@@ -167,7 +167,7 @@ offset_right = 1032.0
 offset_bottom = 407.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "tuberculo@mail.com"
+text = "ElMejor@mail.com"
 
 [node name="Label2" type="Label" parent="ScrollContainer/TextureRect/emails"]
 layout_mode = 0

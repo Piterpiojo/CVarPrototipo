@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=3 uid="uid://hivy8oflko4h"]
+
+[ext_resource type="Script" path="res://scripts/introduccion.gd" id="1_8ct2l"]
+[ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_u4vdi"]
+[ext_resource type="Texture2D" uid="uid://b67wa71b8pnnn" path="res://ui/Fondos/fondo4.png" id="2_bhgex"]
+
+[sub_resource type="Animation" id="Animation_0cq5g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5yjdj"]
+resource_name = "negro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cambiar_escena"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrsn0"]
+_data = {
+"RESET": SubResource("Animation_0cq5g"),
+"negro": SubResource("Animation_5yjdj")
+}
+
+[node name="Introduccion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8ct2l")
+
+[node name="Fondo4" type="Sprite2D" parent="."]
+position = Vector2(635, 311)
+texture = ExtResource("2_bhgex")
+
+[node name="CuadroDialogo" parent="." instance=ExtResource("1_u4vdi")]
+layout_mode = 1
+offset_left = -667.5
+offset_top = -360.0
+offset_right = 667.5
+offset_bottom = 0.0
+
+[node name="Sprite2D" parent="CuadroDialogo/Container" index="0"]
+position = Vector2(630, -253.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xrsn0")
+}
+
+[editable path="CuadroDialogo"]

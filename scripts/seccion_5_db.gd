@@ -113,12 +113,7 @@ func _process(_delta):
 		$CuadroDialogo.desactivar_dialogo()
 		bandera2=true
 		$ayuda.cambiar_texto("Arrasta las palabras clave relacionadas con las áreas de actuación")
-	elif($CuadroDialogo.indice_dialogo == 7 and !bandera4 and parte2):
-		bandera4=true
-		$Torta.visible=true
-		reproducir(SonidoCorneta)
-		pass
-	if($CuadroDialogo.indice_dialogo == 9 and !bandera3 and parte2):
+	if($CuadroDialogo.indice_dialogo == 7 and !bandera3 and parte2):
 		if(!logrosNivel[3]):
 			$Logro.fijar_logro("¡La historia de mi vida!", "Completar el nivel 4 y 5")
 			logrosNivel[3]= true
@@ -164,7 +159,7 @@ func _on_siete_2_item_selected(_index):
 	if($ScrollContainer/TextureRect/siete.text== "Los Siete Cabritillos y el Lobo" ):
 		if($ScrollContainer/TextureRect/siete2.text == "Un lobo engaña a los cabritillos, pero el último los salva."):
 			uno=true
-	if uno and dos and tres:
+	if uno and dos and tres and !parte2:
 		congelar(false)
 		$AudioStreamPlayer.stream=sonidoCaida
 		$AudioStreamPlayer.play()
@@ -174,7 +169,7 @@ func _on_seis_2_item_selected(_index):
 	if($ScrollContainer/TextureRect/seis.text== "Los Seis Cisnes" ):
 		if($ScrollContainer/TextureRect/seis2.text == "Una princesa teje camisas para liberar a sus hermanos cisnes."):
 			dos=true
-	if uno and dos and tres:
+	if uno and dos and tres and !parte2:
 		congelar(false)
 		$AudioStreamPlayer.stream=sonidoCaida
 		$AudioStreamPlayer.play()
@@ -184,7 +179,7 @@ func _on_tres_2_item_selected(_index):
 	if($ScrollContainer/TextureRect/tres.text=="Los Tres Cerditos"):
 		if($ScrollContainer/TextureRect/tres2.text == "Tres cerditos construyen casas, el lobo las derriba, excepto la de ladrillos."):
 			tres=true
-	if uno and dos and tres:
+	if uno and dos and tres and !parte2:
 		congelar(false)
 		$AudioStreamPlayer.stream=sonidoCaida
 		$AudioStreamPlayer.play()
