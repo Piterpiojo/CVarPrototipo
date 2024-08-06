@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxckd85g2ymn4"]
+[gd_scene load_steps=16 format=3 uid="uid://dxckd85g2ymn4"]
 
 [ext_resource type="Texture2D" uid="uid://cxvxead0sl0em" path="res://Imagenes/seccion5/seccion5a-12.png" id="1_msmy0"]
 [ext_resource type="Script" path="res://scripts/nivel5.gd" id="1_wcpmf"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://dhsao611j3kw1" path="res://dialogos/peligro.png" id="7_c4fn7"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="8_go8va"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="10_3kgye"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="11_rhnws"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="12_wnns1"]
 
 [sub_resource type="Animation" id="Animation_3kjdd"]
 length = 0.001
@@ -453,6 +455,8 @@ libraries = {
 
 [node name="ayuda" parent="." instance=ExtResource("2_ofinn")]
 layout_mode = 1
+offset_left = 35.0
+offset_right = 34.52
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_rbxin")
@@ -480,7 +484,19 @@ layout_mode = 1
 [node name="logroTimer" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="menu" type="Button" parent="."]
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("11_rhnws")
+flat = true
+expand_icon = true
+script = ExtResource("12_wnns1")
+
 [connection signal="toggled" from="ScrollContainer/seccion-a/Pais_pasaporte" to="." method="_on_pais_pasaporte_toggled"]
 [connection signal="pressed" from="ScrollContainer/seccion-a/guardar" to="." method="_on_guardar_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="logroTimer" to="." method="_on_logro_timer_timeout"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

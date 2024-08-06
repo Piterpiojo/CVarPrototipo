@@ -39,6 +39,7 @@ func comenzar():
 func Mostrar_Linea(indice):
 	$Timer.start()
 	$Container/Sprite2D.play(dialogos[indice]["emocion"])
+	dialogos[indice]["importante"]=false
 	if(dialogos[indice]["personaje"]=="Usuario"):
 		$Container/Sprite2D.visible =false
 		$personaje.visible=false
@@ -183,7 +184,7 @@ func _on_button_pressed():
 		$enfriamiento_importante.start()
 		$Importante.disabled=true
 	elif(!contiene_importante()):
-		$Importante.disabled=true
+		$Importante.disabled=true	
 
 func saltar_dialogo():
 	if !pausa:

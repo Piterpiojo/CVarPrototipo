@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bj6w7b8ehmjet"]
+[gd_scene load_steps=18 format=3 uid="uid://bj6w7b8ehmjet"]
 
 [ext_resource type="Script" path="res://scripts/seccion_5_db.gd" id="1_hmole"]
 [ext_resource type="Texture2D" uid="uid://clhv7n8c66h06" path="res://Imagenes/seccion5/seccion5dc-1.png" id="2_n6ktq"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="7_fn05h"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="8_78nnp"]
 [ext_resource type="Texture2D" uid="uid://bbxdgocf1qoaf" path="res://ui/Elementos/torta.png" id="9_irpcy"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="10_um4yu"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="11_56vck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgokq"]
 size = Vector2(381, 27)
@@ -452,6 +454,10 @@ volume_db = 6.0
 [node name="Pausa" parent="." instance=ExtResource("6_jhycl")]
 
 [node name="ayuda" parent="." instance=ExtResource("7_fn05h")]
+offset_left = 30.76
+offset_top = -0.0200043
+offset_right = 30.76
+offset_bottom = -0.0200043
 
 [node name="Logro" parent="." instance=ExtResource("8_78nnp")]
 
@@ -459,6 +465,15 @@ volume_db = 6.0
 visible = false
 position = Vector2(640, 240)
 texture = ExtResource("9_irpcy")
+
+[node name="menu" type="Button" parent="."]
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("10_um4yu")
+flat = true
+expand_icon = true
+script = ExtResource("11_56vck")
 
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete" to="." method="_on_siete_2_item_selected"]
 [connection signal="item_selected" from="ScrollContainer/TextureRect/siete2" to="." method="_on_siete_2_item_selected"]
@@ -472,3 +487,6 @@ texture = ExtResource("9_irpcy")
 [connection signal="body_entered" from="ScrollContainer/TextureRect/Container/ingles" to="." method="_on_ingles_body_entered"]
 [connection signal="body_entered" from="ScrollContainer/TextureRect/Container/ingles2" to="." method="_on_ingles_2_body_entered"]
 [connection signal="body_entered" from="ScrollContainer/TextureRect/Container/ingles3" to="." method="_on_ingles_3_body_entered"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

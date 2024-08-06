@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bdhbfpnq83ybt"]
+[gd_scene load_steps=22 format=3 uid="uid://bdhbfpnq83ybt"]
 
 [ext_resource type="Script" path="res://scripts/nivel_4.gd" id="1_xry6i"]
 [ext_resource type="Texture2D" uid="uid://cc8xnpfsf0g2a" path="res://Imagenes/Sistemas_CV/Sistemas-12-recortado.png" id="2_htcdl"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="7_26887"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="8_01bs6"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="9_gdnjo"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="10_qrwb8"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="11_iluso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qk3fy"]
 size = Vector2(768, 65.7876)
@@ -223,12 +225,26 @@ layout_mode = 1
 
 [node name="ayuda" parent="." instance=ExtResource("8_01bs6")]
 layout_mode = 1
+offset_left = 31.0
+offset_right = 30.52
 
 [node name="Logro" parent="." instance=ExtResource("9_gdnjo")]
 layout_mode = 1
+
+[node name="menu" type="Button" parent="."]
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("10_qrwb8")
+flat = true
+expand_icon = true
+script = ExtResource("11_iluso")
 
 [connection signal="body_entered" from="logo/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="input_event" from="logo/Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="pressed" from="boton/Boton" to="." method="_on_boton_pressed"]
 [connection signal="mouse_entered" from="boton/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

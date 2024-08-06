@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dlknlog2m1w1i"]
+[gd_scene load_steps=17 format=3 uid="uid://dlknlog2m1w1i"]
 
 [ext_resource type="FontFile" uid="uid://0smxyo876ro4" path="res://Sprites/fuentes/digital-7.ttf" id="1_1pygp"]
 [ext_resource type="Script" path="res://scripts/nivel_3_recupero_contrasenia.gd" id="1_jtls3"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="8_24p5a"]
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="9_w0kps"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="10_5qhq3"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="11_cglky"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="12_2j8q5"]
 
 [sub_resource type="Animation" id="Animation_hfu2l"]
 length = 0.001
@@ -347,9 +349,21 @@ layout_mode = 1
 
 [node name="ayuda" parent="." instance=ExtResource("9_w0kps")]
 layout_mode = 1
+offset_left = 44.0
+offset_right = 43.52
 
 [node name="Logro" parent="." instance=ExtResource("10_5qhq3")]
 layout_mode = 1
+
+[node name="menu" type="Button" parent="."]
+layout_mode = 0
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("11_cglky")
+flat = true
+expand_icon = true
+script = ExtResource("12_2j8q5")
 
 [connection signal="pressed" from="ScrollContainer/TextureRect/cambiar" to="." method="_on_cambiar_pressed"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/contrasenias/Button3" to="." method="_on_button_3_pressed"]
@@ -361,3 +375,6 @@ layout_mode = 1
 [connection signal="timeout" from="horas" to="." method="_on_horas_timeout"]
 [connection signal="timeout" from="segundos" to="." method="_on_segundos_timeout"]
 [connection signal="timeout" from="espera" to="." method="_on_espera_timeout"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

@@ -92,3 +92,4 @@ func _on_usuario_text_changed():
 	elif $ScrollContainer/TextureRect/usuario.text == "tuberculo@mail.com":
 		$AudioStreamPlayer2D.stream=SonidoFallo
 		$AudioStreamPlayer2D.play()
+

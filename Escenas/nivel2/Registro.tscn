@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://p32ucbdoh3h8"]
+[gd_scene load_steps=22 format=3 uid="uid://p32ucbdoh3h8"]
 
 [ext_resource type="Script" path="res://scripts/Registro.gd" id="1_i41gf"]
 [ext_resource type="Texture2D" uid="uid://5r8k4vi5hkcy" path="res://Imagenes/RegistroUsuario/Registro de Usuario-12-recortado.png" id="2_5hsr6"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="9_6bmav"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="10_f66m4"]
 [ext_resource type="Texture2D" uid="uid://c0hp2a1x0vi76" path="res://ui/Elementos/ficha.png" id="11_4ljvo"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="12_fv763"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="13_0esfl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sc8rw"]
 size = Vector2(138, 29)
@@ -825,6 +827,8 @@ volume_db = 3.0
 
 [node name="ayuda" parent="." instance=ExtResource("9_6bmav")]
 layout_mode = 1
+offset_left = 49.0
+offset_right = 48.52
 
 [node name="Pausa" parent="." instance=ExtResource("8_ibty7")]
 layout_mode = 1
@@ -884,6 +888,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 28
 text = "Masculino"
 
+[node name="menu" type="Button" parent="."]
+layout_mode = 0
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("12_fv763")
+flat = true
+expand_icon = true
+script = ExtResource("13_0esfl")
+
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/nombre2" to="." method="_on_nombre_2_focus_exited"]
 [connection signal="gui_input" from="ScrollContainer/TextureRect/nombre2" to="." method="_on_nombre_2_gui_input"]
 [connection signal="focus_exited" from="ScrollContainer/TextureRect/nombre" to="." method="_on_nombre_2_focus_exited"]
@@ -920,3 +934,6 @@ text = "Masculino"
 [connection signal="mouse_entered" from="ScrollContainer/TextureRect/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_entered" from="ScrollContainer/TextureRect/advertencia" to="." method="_on_advertencia_mouse_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

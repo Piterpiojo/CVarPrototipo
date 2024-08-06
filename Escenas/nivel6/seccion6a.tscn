@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://3kqjgake2c7k"]
+[gd_scene load_steps=20 format=3 uid="uid://3kqjgake2c7k"]
 
 [ext_resource type="Script" path="res://scripts/seccion6.gd" id="1_tp1pa"]
 [ext_resource type="Texture2D" uid="uid://ckjpvnxx6mlxs" path="res://Imagenes/seccion6/seccion6.png" id="2_pcoug"]
@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://wp0wt27hki5j" path="res://Imagenes/seccion6/imprimir cv.png" id="7_6ey2f"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="9_nqxoc"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="10_nb7o1"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="11_ir681"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="12_xn1ch"]
 
 [sub_resource type="Animation" id="Animation_yvi5q"]
 length = 0.001
@@ -293,12 +295,26 @@ layout_mode = 1
 
 [node name="Logro" parent="." instance=ExtResource("10_nb7o1")]
 layout_mode = 1
+offset_top = 25.0
+offset_bottom = 115.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="menu" type="Button" parent="."]
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("11_ir681")
+flat = true
+expand_icon = true
+script = ExtResource("12_xn1ch")
 
 [connection signal="pressed" from="Node2D/TextureRect2/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Node2D/TextureRect3/recargar" to="." method="_on_recargar_pressed"]
 [connection signal="pressed" from="Node2D/TextureRect3/visualizar" to="." method="_on_visualizar_pressed"]
 [connection signal="pressed" from="Node2D/TextureRect6/imprimir" to="." method="_on_imprimir_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

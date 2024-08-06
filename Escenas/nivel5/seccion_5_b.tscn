@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://owao3l8xso4f"]
+[gd_scene load_steps=14 format=3 uid="uid://owao3l8xso4f"]
 
 [ext_resource type="Texture2D" uid="uid://cc88p371wiv4b" path="res://Imagenes/seccion5/seccion5b-12.png" id="1_gnlaj"]
 [ext_resource type="Script" path="res://scripts/seccion_5_b.gd" id="1_v4s2q"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cmtgnvcckiwnd" path="res://ui/recuadrogenerico.png" id="4_ob1xj"]
 [ext_resource type="PackedScene" uid="uid://27d4ixo8lm6y" path="res://Escenas/pausa.tscn" id="5_3susf"]
 [ext_resource type="PackedScene" uid="uid://cbp86ksvxsnrj" path="res://Escenas/logro/logro.tscn" id="6_akbvn"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="8_ceq06"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="9_8w876"]
 
 [sub_resource type="Animation" id="Animation_c3amr"]
 length = 0.001
@@ -430,6 +432,18 @@ layout_mode = 1
 [node name="Logro" parent="." instance=ExtResource("6_akbvn")]
 layout_mode = 1
 
+[node name="menu" type="Button" parent="."]
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("8_ceq06")
+flat = true
+expand_icon = true
+script = ExtResource("9_8w876")
+
 [connection signal="focus_entered" from="ScrollContainer/TextureRect/LineEdit16" to="." method="_on_line_edit_16_focus_entered"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/guardar" to="." method="_on_guardar_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]

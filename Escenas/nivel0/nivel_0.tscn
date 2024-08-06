@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://mx5clyvrtq7v"]
+[gd_scene load_steps=20 format=3 uid="uid://mx5clyvrtq7v"]
 
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_diia6"]
 [ext_resource type="Script" path="res://scripts/nivel_0.gd" id="1_vkic3"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dxdtqld8bv815" path="res://ui/portapapeles/portapapeles.png" id="3_w2fnc"]
 [ext_resource type="Texture2D" uid="uid://cmtgnvcckiwnd" path="res://ui/recuadrogenerico.png" id="4_dop4d"]
 [ext_resource type="PackedScene" uid="uid://er7fqx8w6ual" path="res://Escenas/nivel0/texto_nivel_0.tscn" id="5_2n522"]
+[ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="9_oi5bp"]
+[ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="10_mojip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dk1hi"]
 size = Vector2(304, 96.75)
@@ -232,9 +234,9 @@ _data = {
 script = ExtResource("1_vkic3")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_top = -24.0
+offset_top = -25.0
 offset_right = 1292.0
-offset_bottom = 1302.0
+offset_bottom = 1301.0
 texture = ExtResource("2_sjba5")
 
 [node name="Triangulo" type="Sprite2D" parent="."]
@@ -373,10 +375,22 @@ position = Vector2(32, 181.5)
 
 [node name="Sonidos" type="AudioStreamPlayer" parent="."]
 
+[node name="menu" type="Button" parent="."]
+offset_right = 52.0
+offset_bottom = 52.0
+focus_mode = 0
+icon = ExtResource("9_oi5bp")
+flat = true
+expand_icon = true
+script = ExtResource("10_mojip")
+
 [connection signal="area_shape_entered" from="Triangulo/1" to="." method="_on__area_shape_entered"]
 [connection signal="area_entered" from="Triangulo/2" to="." method="_on__area_entered"]
 [connection signal="area_entered" from="Triangulo/3" to="." method="_on__area3_entered"]
 [connection signal="mouse_entered" from="ColorRect2" to="." method="_on_color_rect_2_mouse_entered"]
+[connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
+[connection signal="pressed" from="menu" to="menu" method="_on_pressed"]
 
 [editable path="CuadroDialogo"]
 [editable path="Pausa"]
