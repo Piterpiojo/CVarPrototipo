@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://cla13vr5u1pva"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
-[ext_resource type="Texture2D" uid="uid://b67wa71b8pnnn" path="res://ui/Fondos/fondo4.png" id="2_h2fc3"]
+[ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="2_4ql3o"]
 [ext_resource type="Texture2D" uid="uid://hrkv16yw4g5d" path="res://ui/separadoresnivel/todonegro.png" id="3_8ey22"]
 [ext_resource type="Texture2D" uid="uid://2y27gws8gv4j" path="res://ui/genericstar.png" id="3_edi36"]
 [ext_resource type="Texture2D" uid="uid://dyma3j2lr1jmo" path="res://ui/Nueva Seleccion/botonmenu1.png" id="6_busb0"]
@@ -131,6 +131,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gfbry")
+metadata/_edit_vertical_guides_ = [100.0, 1180.0]
 
 [node name="Fondo4" type="TextureRect" parent="."]
 layout_mode = 1
@@ -145,14 +146,14 @@ offset_right = 640.0
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_h2fc3")
+texture = ExtResource("2_4ql3o")
 expand_mode = 1
 
 [node name="fondo Selector" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 648.0
+offset_left = 595.0
 offset_top = 235.0
-offset_right = 1231.0
+offset_right = 1178.0
 offset_bottom = 605.0
 texture = ExtResource("3_8ey22")
 expand_mode = 1
@@ -162,9 +163,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -72.0
-offset_right = 72.0
-offset_bottom = 23.0
+offset_left = -256.0
+offset_top = 57.0
+offset_right = 256.0
+offset_bottom = 121.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 46
 text = "Guia Ludificada - Menú
@@ -172,23 +174,23 @@ text = "Guia Ludificada - Menú
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 648.0
+offset_left = 595.0
 offset_top = 235.0
-offset_right = 1231.0
+offset_right = 1178.0
 offset_bottom = 605.0
-texture = ExtResource("3_8ey22")
 expand_mode = 1
 
 [node name="Objectivo" type="Label" parent="."]
 layout_mode = 0
-offset_left = 584.0
-offset_top = 74.0
-offset_right = 1279.0
-offset_bottom = 256.0
+offset_left = 592.0
+offset_top = 136.0
+offset_right = 1176.0
+offset_bottom = 232.0
 theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+clip_text = true
 
 [node name="VBoxContainer" type="HBoxContainer" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -197,9 +199,9 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 601.0
-offset_top = -84.0
-offset_right = 3061.0
+offset_left = 547.0
+offset_top = -84.0001
+offset_right = 3007.0
 offset_bottom = 276.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -387,16 +389,17 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ncwed")
 [node name="botones" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 0
+offset_left = -35.0
 offset_top = 90.0
-offset_right = 40.0
+offset_right = 5.0
 offset_bottom = 130.0
 
 [node name="c0" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 78.0
-offset_right = 168.0
-offset_bottom = 157.0
+offset_left = 136.0
+offset_top = 150.0
+offset_right = 256.0
+offset_bottom = 229.0
 focus_mode = 0
 icon = ExtResource("6_busb0")
 flat = true
@@ -404,10 +407,10 @@ expand_icon = true
 
 [node name="c1" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 78.0
-offset_right = 344.0
-offset_bottom = 157.0
+offset_left = 272.0
+offset_top = 150.0
+offset_right = 392.0
+offset_bottom = 229.0
 focus_mode = 0
 icon = ExtResource("7_mbslg")
 flat = true
@@ -415,10 +418,10 @@ expand_icon = true
 
 [node name="c2" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 198.0
-offset_right = 168.0
-offset_bottom = 277.0
+offset_left = 408.0
+offset_top = 150.0
+offset_right = 528.0
+offset_bottom = 229.0
 focus_mode = 0
 icon = ExtResource("8_fgx24")
 flat = true
@@ -426,10 +429,10 @@ expand_icon = true
 
 [node name="c3" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 198.0
-offset_right = 344.0
-offset_bottom = 277.0
+offset_left = 136.0
+offset_top = 262.0
+offset_right = 256.0
+offset_bottom = 341.0
 focus_mode = 0
 icon = ExtResource("9_3xpb5")
 flat = true
@@ -437,10 +440,10 @@ expand_icon = true
 
 [node name="c4" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 318.0
-offset_right = 168.0
-offset_bottom = 397.0
+offset_left = 272.0
+offset_top = 262.0
+offset_right = 392.0
+offset_bottom = 341.0
 focus_mode = 0
 icon = ExtResource("10_fshvs")
 flat = true
@@ -448,10 +451,10 @@ expand_icon = true
 
 [node name="c5" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 224.0
-offset_top = 318.0
-offset_right = 344.0
-offset_bottom = 397.0
+offset_left = 408.0
+offset_top = 262.0
+offset_right = 528.0
+offset_bottom = 341.0
 focus_mode = 0
 icon = ExtResource("11_g0pet")
 flat = true
@@ -459,10 +462,10 @@ expand_icon = true
 
 [node name="c6" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 430.0
-offset_right = 168.0
-offset_bottom = 509.0
+offset_left = 272.0
+offset_top = 374.0
+offset_right = 392.0
+offset_bottom = 453.0
 focus_mode = 0
 icon = ExtResource("12_ca37f")
 flat = true
@@ -480,12 +483,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -629.0
-offset_top = -110.0
+offset_left = -686.0
+offset_top = -116.0
 offset_right = -505.0
-offset_bottom = -87.0
+offset_bottom = -85.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_font_sizes/font_size = 22
 text = "Logros del Nivel: "
 
 [node name="CambiarNivel" type="AnimationPlayer" parent="."]

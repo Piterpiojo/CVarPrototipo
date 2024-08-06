@@ -245,13 +245,13 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -261.0
-offset_top = -69.0
-offset_right = -77.0
-offset_bottom = -37.0
+offset_left = -327.0
+offset_top = -71.0
+offset_right = -82.0
+offset_bottom = -39.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 22
 text = "Click para continuar"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -321,6 +321,7 @@ stream = ExtResource("23_blrmw")
 volume_db = 14.0
 
 [node name="Curiosidad" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1014.0
 offset_top = 190.0
@@ -362,6 +363,7 @@ fill_mode = 2
 show_percentage = false
 
 [node name="prueba" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 344.0
 offset_top = 298.0

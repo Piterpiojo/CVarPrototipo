@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CVarPrototipo"
-run/main_scene="res://Escenas/splash.tscn"
+run/main_scene="res://Escenas/menuFinal.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Sprites/ave/saludando.png"
 

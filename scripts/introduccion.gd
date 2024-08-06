@@ -9,7 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if $CuadroDialogo.indice_dialogo > 2 and ! bandera:
+	if $CuadroDialogo.indice_dialogo > 1 and ! bandera:
 		$AnimationPlayer.play("negro")
 		bandera= true
 

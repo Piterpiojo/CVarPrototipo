@@ -9,12 +9,6 @@
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "Este juego te permitirá tener más información acerca de los Sistemas informáticos utilizados por los científicos y estudiantes de Argentina y mejorar la carga de tus datos. "
-	},
-	{
-		"emocion": "felicitaciones",
-		"importante": true,
-		"personaje": "IA",
-		"texto": "[b]La Ciencia te necesita[/b]"
+		"texto": "Este juego te permitirá tener más información acerca de los Sistemas informáticos utilizados por los científicos y estudiantes de Argentina y mejorar la carga de tus datos. [b]La Ciencia te necesita[/b] "
 	}
 ]
