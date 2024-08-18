@@ -17,7 +17,7 @@ const niveles = ["res://Escenas/nivel1/identificacion.tscn",
 "res://Escenas/nivel0/nivel_0.tscn"
 ]
 
-const objetivos=[" En este nivel aprenderemos todos los datos concernientes a cómo la plataforma llegó a ser lo que es hoy en día.
+const objetivos=[" En este Capitulo aprenderemos todos los datos concernientes a cómo la plataforma llegó a ser lo que es hoy en día.
 ","Gestión de Usuario y contraseña. Aprenderemos cómo unirnos a laplataforma.",
 "Gestión de datos personales. Aprenderemos sobre los datos iniciales que aparecerán en la plataforma.",
 "Gestión de contraseña. Conseguiremos que el sistema nos genera nuestra primera contraseña.",
@@ -28,31 +28,31 @@ finalmente el que se convertirá en el CV propiamente dicho.",
 "Impresión del CV: En esta área daremos los últimos retoques necesarios
 para imprimir nuestro CV de forma física."]
 const tooltips = {
-	"0": ["completar el nivel 0"],
-	"1": ["Iniciar el nivel 1","Presionar el botón de usuarios nuevos",
+	"0": ["completar el Capitulo 0"],
+	"1": ["Iniciar el Capitulo 1","Presionar el botón de usuarios nuevos",
 		"Ingresar datos de correo electrónico.",
-		" Completar el nivel 1."],
+		" Completar el Capitulo 1."],
 	"2": ["Hacer que Ave limpie la pantalla de información.",
 		" Completar un formulario con la información solicitada.",
 		"Intentar resolver el captcha sin éxito.",
 		"Resolver correctamente el captcha.",
-		"Completar el nivel 2."],
+		"Completar el Capitulo 2."],
 	"3": ["Observar el retrato de Ave.",
 		"Esperar el tiempo necesario para recibir el correo electrónico.",
 		"Intentar ingresar la contraseña incorrectamente.",
 		"Ingresar la contraseña correctamente.",
 		" Repetir la nueva contraseña diez veces.",
-		"Completar el nivel 3."],
+		"Completar el Capitulo 3."],
 	"4": ["Tocar el botón esquivo."],
 	"5": ["Selecciona correctamente el país de emisión teniendo en cuenta el pasaporte.",
 		"Completar los datos de residencia.",
 		"Pasa la prueba de escribir rápido de Ave de cualquier forma.",
-		"Completar el nivel 4 y 5."],
+		"Completar el Capitulo 4 y 5."],
 	"6": ["Presionar el botón de actualizar el currículum tres veces.",
 		"Observar el currículum distorsionado.",
 		"Observar las estadísticas del usuario.",
 		"Imprimir el currículum.",
-		"Completar el nivel 6."]
+		"Completar el Capitulo 6."]
 }
 func _ready():
 	avances = CargaArchivos.cargar_avance()
