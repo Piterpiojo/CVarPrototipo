@@ -295,13 +295,12 @@ layout_mode = 1
 
 [node name="Logro" parent="." instance=ExtResource("10_nb7o1")]
 layout_mode = 1
-offset_top = 25.0
-offset_bottom = 115.0
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 
 [node name="menu" type="Button" parent="."]
+layout_mode = 0
 offset_right = 52.0
 offset_bottom = 52.0
 focus_mode = 0
