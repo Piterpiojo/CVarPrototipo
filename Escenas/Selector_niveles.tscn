@@ -168,7 +168,7 @@ offset_right = 256.0
 offset_bottom = 121.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 46
-text = "Guia Ludificada - Menú
+text = "Guía Ludificada - Menú
 "
 
 [node name="TextureRect" type="TextureRect" parent="."]
