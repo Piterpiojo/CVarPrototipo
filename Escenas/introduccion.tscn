@@ -78,6 +78,12 @@ offset_bottom = 0.0
 [node name="Sprite2D" parent="CuadroDialogo/Container" index="0"]
 position = Vector2(630, -253.5)
 
+[node name="Importante" parent="CuadroDialogo" index="9"]
+visible = false
+
+[node name="ProgressBar" parent="CuadroDialogo/Importante" index="0"]
+visible = false
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_xrsn0")

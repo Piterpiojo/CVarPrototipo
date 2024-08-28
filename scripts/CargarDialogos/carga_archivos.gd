@@ -6,9 +6,9 @@ var nivel= {"nivel":0,"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0}
 var logros = {"0":[false],
 "1": [false, false, false, false],
 "2": [false, false, false, false, false],
-"3": [false, false, false, false, false, false],
-"4": [false],
-"5": [false, false, false, false],
+"3": [false, false, false, false, false],
+"4": [false,false, false, false, false],
+"5": [],
 "6": [false, false, false, false, false]
 }
 var config = {"volumen":0,"mute":false};

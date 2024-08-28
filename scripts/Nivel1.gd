@@ -9,7 +9,7 @@ func _ready():
 	$AnimationPlayer.play("Entrada")
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel1")
 	$CuadroDialogo.comenzar()
-	$ayuda.cambiar_texto("Da tu primer paso en Cvar, Regístrate")
+	$ayuda.cambiar_texto("Elige el correo apropiado")
 	logrosNivel = CargaArchivos.logros["1"]
 	if(!logrosNivel[0]):
 		$Logro.fijar_logro("Ahora si es hora de actuar", " Iniciar el nivel 1.")
@@ -89,7 +89,16 @@ func _on_usuario_text_changed():
 	elif $ScrollContainer/TextureRect/usuario.text == "abcdefghijklmnopqrstuvwxyz@email.com":
 		$AudioStreamPlayer2D.stream=SonidoFallo
 		$AudioStreamPlayer2D.play()
-	elif $ScrollContainer/TextureRect/usuario.text == "tuberculo@mail.com":
+	elif $ScrollContainer/TextureRect/usuario.text == "ElMejor@mail.com":
 		$AudioStreamPlayer2D.stream=SonidoFallo
 		$AudioStreamPlayer2D.play()
 
+
+
+func _on_visibilidad_textpo_pressed():
+	if($visibilidad_textpo.text=="Ocultar"):
+		$CuadroDialogo.visible =false
+		$visibilidad_textpo.text="Mostrar"
+	elif($visibilidad_textpo.text=="Mostrar"):
+		$CuadroDialogo.visible =true
+		$visibilidad_textpo.text="Ocultar"

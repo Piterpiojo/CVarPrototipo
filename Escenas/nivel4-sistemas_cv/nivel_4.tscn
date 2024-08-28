@@ -232,6 +232,7 @@ offset_right = 30.52
 layout_mode = 1
 
 [node name="menu" type="Button" parent="."]
+layout_mode = 0
 offset_right = 52.0
 offset_bottom = 52.0
 focus_mode = 0

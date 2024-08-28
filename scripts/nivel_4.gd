@@ -79,7 +79,7 @@ func _on_area_2d_mouse_entered():
 
 func _on_area_2d_body_entered(body):
 	if body.name == "boton" and ya_cayo:
-		poder = 1000
+		poder = 10
 		body.get_child(1).disabled = false
 		$CuadroDialogo.habilitar_dialogo()
 		$CuadroDialogo.sig_dialogo()

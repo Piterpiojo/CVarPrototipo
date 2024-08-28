@@ -230,6 +230,14 @@ flat = true
 expand_icon = true
 script = ExtResource("8_bqjji")
 
+[node name="visibilidad_textpo" type="Button" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 656.0
+offset_right = 158.0
+offset_bottom = 687.0
+text = "Ocultar"
+
 [connection signal="pressed" from="ScrollContainer/TextureRect/OlvidoContrasenia" to="." method="_on_olvido_contrasenia_pressed"]
 [connection signal="pressed" from="ScrollContainer/TextureRect/NuevoUsuario" to="." method="_on_nuevo_usuario_pressed"]
 [connection signal="text_changed" from="ScrollContainer/TextureRect/usuario" to="." method="_on_usuario_text_changed"]
@@ -237,3 +245,4 @@ script = ExtResource("8_bqjji")
 [connection signal="mouse_entered" from="menu" to="menu" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="menu" to="menu" method="_on_mouse_exited"]
 [connection signal="pressed" from="menu" to="menu" method="_on_pressed"]
+[connection signal="pressed" from="visibilidad_textpo" to="." method="_on_visibilidad_textpo_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://mx5clyvrtq7v"]
+[gd_scene load_steps=23 format=3 uid="uid://mx5clyvrtq7v"]
 
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_diia6"]
 [ext_resource type="Script" path="res://scripts/nivel_0.gd" id="1_vkic3"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://er7fqx8w6ual" path="res://Escenas/nivel0/texto_nivel_0.tscn" id="5_2n522"]
 [ext_resource type="Texture2D" uid="uid://ch54i604bj24d" path="res://ui/button_settings.png" id="9_oi5bp"]
 [ext_resource type="Script" path="res://scripts/Botonmenu.gd" id="10_mojip"]
+[ext_resource type="Texture2D" uid="uid://bp83ud1iilcux" path="res://ui/logos/sigamosestudiando.png" id="11_kf6y7"]
+[ext_resource type="Texture2D" uid="uid://bj4ypq08dvgdq" path="res://ui/logos/unpazsa.png" id="12_7uflg"]
+[ext_resource type="PackedScene" uid="uid://7y0gl8rhxmbi" path="res://Escenas/ayuda.tscn" id="13_uoxkx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dk1hi"]
 size = Vector2(304, 96.75)
@@ -239,10 +242,24 @@ offset_right = 1292.0
 offset_bottom = 1301.0
 texture = ExtResource("2_sjba5")
 
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1296.0
+offset_bottom = 201.0
+
+[node name="Sigamosestudiando" type="Sprite2D" parent="TextureRect/ColorRect"]
+position = Vector2(1048, 104)
+texture = ExtResource("11_kf6y7")
+
+[node name="Unpazsa" type="Sprite2D" parent="TextureRect/ColorRect"]
+position = Vector2(248, 112)
+texture = ExtResource("12_7uflg")
+
 [node name="Triangulo" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
-position = Vector2(616, 296)
+position = Vector2(616, 324)
 texture = ExtResource("3_w2fnc")
 
 [node name="1" type="Area2D" parent="Triangulo"]
@@ -315,6 +332,7 @@ text = "No"
 [node name="frases" type="Node2D" parent="."]
 visible = false
 modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 71)
 
 [node name="correcto1" parent="frases" groups=["correcto"] instance=ExtResource("5_2n522")]
 position = Vector2(1088, 264)
@@ -383,6 +401,12 @@ icon = ExtResource("9_oi5bp")
 flat = true
 expand_icon = true
 script = ExtResource("10_mojip")
+
+[node name="ayuda" parent="." instance=ExtResource("13_uoxkx")]
+offset_left = 40.0
+offset_top = -8.0
+offset_right = 40.0
+offset_bottom = -8.0
 
 [connection signal="area_shape_entered" from="Triangulo/1" to="." method="_on__area_shape_entered"]
 [connection signal="area_entered" from="Triangulo/2" to="." method="_on__area_entered"]

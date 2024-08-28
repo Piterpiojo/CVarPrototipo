@@ -44,6 +44,7 @@ func _process(_delta):
 	elif($CuadroDialogo.indice_dialogo==41 and !banderaTriangulo):
 		$AnimationPlayer.play("Triangulo")
 		banderaTriangulo=true
+		$ayuda.cambiar_texto("Arrastra las opciones correctas al interior del recuadro")
 	elif($CuadroDialogo.indice_dialogo==43 and !banderas[4]):
 		$CuadroDialogo.sig_dialogo()
 		$CuadroDialogo.desactivar_dialogo()

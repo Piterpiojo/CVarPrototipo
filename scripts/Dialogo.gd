@@ -184,7 +184,7 @@ func _on_button_pressed():
 		$enfriamiento_importante.start()
 		$Importante.disabled=true
 	elif(!contiene_importante()):
-		$Importante.disabled=true	
+		$Importante.visible=false
 
 func saltar_dialogo():
 	if !pausa:
@@ -228,3 +228,7 @@ func desactivar_importante(valor:bool):
 
 func _on_enfriamiento_importante_timeout():
 	$Importante.disabled=false
+
+
+func _on_volver_a_ver_pressed():
+	self.visible=true

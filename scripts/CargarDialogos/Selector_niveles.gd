@@ -17,16 +17,12 @@ const niveles = ["res://Escenas/nivel1/identificacion.tscn",
 "res://Escenas/nivel0/nivel_0.tscn"
 ]
 
-const objetivos=[" En este Capitulo aprenderemos todos los datos concernientes a cómo la plataforma llegó a ser lo que es hoy en día.
-","Gestión de Usuario y contraseña. Aprenderemos cómo unirnos a laplataforma.",
-"Gestión de datos personales. Aprenderemos sobre los datos iniciales que aparecerán en la plataforma.",
-"Gestión de contraseña. Conseguiremos que el sistema nos genera nuestra primera contraseña.",
-"Sistemas del CVAR. Esta sección es la más amplia y veremos cómo formar
-finalmente el que se convertirá en el CV propiamente dicho.",
-"Sistemas del CVAR. Esta sección es la más amplia y veremos cómo formar
-finalmente el que se convertirá en el CV propiamente dicho.",
-"Impresión del CV: En esta área daremos los últimos retoques necesarios
-para imprimir nuestro CV de forma física."]
+const objetivos=["Que es CVAR","Gestión de Usuario y contraseña.",
+"Gestión de datos personales.",
+"Gestión de contraseña.",
+"Sistemas del CVAR",
+"Sistemas del CVAR parte 2",
+"Impresión del CV."]
 const tooltips = {
 	"0": ["completar el Capitulo 0"],
 	"1": ["Iniciar el Capitulo 1","Presionar el botón de usuarios nuevos",
@@ -41,10 +37,8 @@ const tooltips = {
 		"Esperar el tiempo necesario para recibir el correo electrónico.",
 		"Intentar ingresar la contraseña incorrectamente.",
 		"Ingresar la contraseña correctamente.",
-		" Repetir la nueva contraseña diez veces.",
 		"Completar el Capitulo 3."],
-	"4": ["Tocar el botón esquivo."],
-	"5": ["Selecciona correctamente el país de emisión teniendo en cuenta el pasaporte.",
+	"4": ["Tocar el botón esquivo.","Selecciona correctamente el país de emisión teniendo en cuenta el pasaporte.",
 		"Completar los datos de residencia.",
 		"Pasa la prueba de escribir rápido de Ave de cualquier forma.",
 		"Completar el Capitulo 4 y 5."],

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cla13vr5u1pva"]
+[gd_scene load_steps=17 format=3 uid="uid://cla13vr5u1pva"]
 
 [ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
 [ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="2_4ql3o"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://b5q8gcsu87xlf" path="res://ui/Nueva Seleccion/botonmenu4.png" id="9_3xpb5"]
 [ext_resource type="Texture2D" uid="uid://fkmyp3ufo3ot" path="res://ui/Nueva Seleccion/botonmenu5.png" id="10_fshvs"]
 [ext_resource type="Texture2D" uid="uid://suag6w0oxpev" path="res://ui/Nueva Seleccion/botonmenu6.png" id="11_g0pet"]
-[ext_resource type="Texture2D" uid="uid://i781dhmil1kf" path="res://ui/Nueva Seleccion/botonmenu7.png" id="12_ca37f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncwed"]
 bg_color = Color(0, 0.72549, 0.152941, 0.623529)
@@ -390,17 +389,19 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ncwed")
 layout_mode = 1
 anchors_preset = 0
 offset_left = -35.0
-offset_top = 90.0
+offset_top = 161.0
 offset_right = 5.0
-offset_bottom = 130.0
+offset_bottom = 201.0
 
 [node name="c0" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 136.0
-offset_top = 150.0
+offset_top = 127.0
 offset_right = 256.0
-offset_bottom = 229.0
+offset_bottom = 206.0
 focus_mode = 0
+theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
 icon = ExtResource("6_busb0")
 flat = true
 expand_icon = true
@@ -408,10 +409,12 @@ expand_icon = true
 [node name="c1" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 272.0
-offset_top = 150.0
+offset_top = 127.0
 offset_right = 392.0
-offset_bottom = 229.0
+offset_bottom = 206.0
 focus_mode = 0
+theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
 icon = ExtResource("7_mbslg")
 flat = true
 expand_icon = true
@@ -419,10 +422,12 @@ expand_icon = true
 [node name="c2" type="Button" parent="botones"]
 layout_mode = 0
 offset_left = 408.0
-offset_top = 150.0
+offset_top = 127.0
 offset_right = 528.0
-offset_bottom = 229.0
+offset_bottom = 206.0
 focus_mode = 0
+theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
 icon = ExtResource("8_fgx24")
 flat = true
 expand_icon = true
@@ -434,6 +439,8 @@ offset_top = 262.0
 offset_right = 256.0
 offset_bottom = 341.0
 focus_mode = 0
+theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
 icon = ExtResource("9_3xpb5")
 flat = true
 expand_icon = true
@@ -445,29 +452,36 @@ offset_top = 262.0
 offset_right = 392.0
 offset_bottom = 341.0
 focus_mode = 0
+theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
 icon = ExtResource("10_fshvs")
 flat = true
 expand_icon = true
 
 [node name="c5" type="Button" parent="botones"]
+visible = false
 layout_mode = 0
 offset_left = 408.0
 offset_top = 262.0
 offset_right = 528.0
 offset_bottom = 341.0
 focus_mode = 0
+theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
 icon = ExtResource("11_g0pet")
 flat = true
 expand_icon = true
 
 [node name="c6" type="Button" parent="botones"]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 374.0
-offset_right = 392.0
-offset_bottom = 453.0
+offset_left = 411.0
+offset_top = 262.0
+offset_right = 531.0
+offset_bottom = 341.0
 focus_mode = 0
-icon = ExtResource("12_ca37f")
+theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
+theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
+icon = ExtResource("11_g0pet")
 flat = true
 expand_icon = true
 
@@ -483,14 +497,14 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -686.0
-offset_top = -116.0
-offset_right = -505.0
-offset_bottom = -85.0
+offset_left = -416.0
+offset_top = -112.0
+offset_right = -346.0
+offset_bottom = -81.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_font_sizes/font_size = 22
-text = "Logros del Nivel: "
+text = "Logros"
 
 [node name="CambiarNivel" type="AnimationPlayer" parent="."]
 libraries = {
@@ -507,7 +521,5 @@ libraries = {
 [connection signal="pressed" from="botones/c3" to="." method="_on_c_3_pressed"]
 [connection signal="mouse_entered" from="botones/c4" to="." method="_on_c_4_mouse_entered"]
 [connection signal="pressed" from="botones/c4" to="." method="_on_c_4_pressed"]
-[connection signal="mouse_entered" from="botones/c5" to="." method="_on_c_5_mouse_entered"]
-[connection signal="pressed" from="botones/c5" to="." method="_on_c_5_pressed"]
 [connection signal="mouse_entered" from="botones/c6" to="." method="_on_c_6_mouse_entered"]
 [connection signal="pressed" from="botones/c6" to="." method="_on_c_6_pressed"]

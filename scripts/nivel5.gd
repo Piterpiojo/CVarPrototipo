@@ -166,7 +166,7 @@ func buscar_cuadros(nodo):
 			cuadros_texto.append(child)
 
 func _process(_delta):
-	if($CuadroDialogo.indice_dialogo==2 and !bandera1):
+	if($CuadroDialogo.indice_dialogo > 2 and !bandera1):
 		$AnimationPlayer.play("intro")
 		bandera1=true
 	elif($CuadroDialogo.indice_dialogo==13 and !bandera2):
