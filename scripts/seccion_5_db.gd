@@ -259,5 +259,3 @@ func _on_ingles_3_body_entered(body):
 			reproducir(SonidoExito)
 			$CuadroDialogo.habilitar_dialogo()
 			$CuadroDialogo.sig_dialogo()
-
-

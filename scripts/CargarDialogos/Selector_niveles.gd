@@ -49,21 +49,7 @@ const tooltips = {
 		"Completar el Capitulo 6."]
 }
 func _ready():
-	avances = CargaArchivos.cargar_avance()
-	if(avances == null):
-		get_tree().reload_current_scene()
-	mover_porcentaje()
 	CargaArchivos.cargar_logros()
-	
-	
-	
-	
-func mover_porcentaje():
-	for i in range(7):
-		if(avances[str(i)] > 99):
-			$Control.get_child(i).button_pressed = true
-		$Control.get_child(i).get_child(0).value=avances[str(i)]
-
 
 func cargar():
 	get_tree().change_scene_to_file(niveles[nivel_a_cargar])
@@ -88,12 +74,6 @@ func _on_c_4_pressed():
 	nivel_a_cargar=3
 
 
-func _on_c_5_pressed():
-	$CambiarNivel.play("siguiente_nivel")
-	var progreso5 = CargaArchivos.cargar_avance()["5"]
-	nivel_a_cargar=4
-
-
 func _on_c_6_pressed():
 	$CambiarNivel.play("siguiente_nivel")
 	nivel_a_cargar=5
@@ -102,42 +82,25 @@ func _on_c_6_pressed():
 
 func _on_c_1_mouse_entered():
 	$TextureRect.texture = preload(imagenes[1])
-	$Objectivo.text= objetivos[1]
-	vista_logros(1)
-	$AnimationPlayer.play("fade")
+	animar_menu(1)
 
 func _on_c_2_mouse_entered():
 	$TextureRect.texture = preload(imagenes[2])
-	vista_logros(2)
-	$Objectivo.text= objetivos[2]
-	$AnimationPlayer.play("fade")
+	animar_menu(2)
 
 func _on_c_3_mouse_entered():
 	$TextureRect.texture = preload(imagenes[3])
-	vista_logros(3)
-	$Objectivo.text= objetivos[3]
-	$AnimationPlayer.play("fade")
+	animar_menu(3)
 
 
 func _on_c_4_mouse_entered():
 	$TextureRect.texture = preload(imagenes[4])
-	vista_logros(4)
-	$Objectivo.text= objetivos[4]
-	$AnimationPlayer.play("fade")
-
-
-func _on_c_5_mouse_entered():
-	$TextureRect.texture = preload(imagenes[4])
-	vista_logros(5)
-	$Objectivo.text= objetivos[5]
-	$AnimationPlayer.play("fade")
+	animar_menu(4)
 
 
 func _on_c_6_mouse_entered():
 	$TextureRect.texture = preload(imagenes[5])
-	vista_logros(6)
-	$Objectivo.text= objetivos[6]
-	$AnimationPlayer.play("fade")
+	animar_menu(6)
 
 func vista_logros(_index):
 	var indice= 0
@@ -161,9 +124,11 @@ func _on_c_0_pressed():
 	$CambiarNivel.play("siguiente_nivel")
 	nivel_a_cargar=6
 
+func animar_menu(nivel):
+	$Objectivo.text=objetivos[nivel]
+	vista_logros(nivel)
+	$AnimationPlayer.play("fade")
 
 func _on_c_0_mouse_entered():
 	$TextureRect.texture = preload(imagenes[0])
-	vista_logros(0)
-	$Objectivo.text= objetivos[0]
-	$AnimationPlayer.play("fade")
+	animar_menu(0)

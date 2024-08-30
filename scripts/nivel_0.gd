@@ -113,6 +113,3 @@ func _on__area3_entered(area):
 		reproducir_exito()
 	else:
 		area.global_position= area.pos_inicial
-
-
-

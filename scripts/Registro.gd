@@ -223,6 +223,3 @@ func _on_advertencia_mouse_entered():
 		progreso=40
 		guardar_avances()
 	
-
-
-
