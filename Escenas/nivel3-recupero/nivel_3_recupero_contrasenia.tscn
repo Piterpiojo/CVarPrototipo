@@ -284,7 +284,6 @@ offset_left = 525.0
 offset_top = 460.0
 offset_right = 783.0
 offset_bottom = 494.0
-text = "jhondoe@email.com"
 
 [node name="contrasenia" type="LineEdit" parent="ScrollContainer/identificacion"]
 layout_mode = 0

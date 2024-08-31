@@ -15,10 +15,10 @@ var logrosNivel
 
 func _ready():
 	$AnimationPlayer.play("Entrada")
-	buscar_cuadros($ScrollContainer/TextureRect)
+	#buscar_cuadros($ScrollContainer/TextureRect)
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()
-	guardar_avances()
+	#guardar_avances()
 	logrosNivel = CargaArchivos.logros["2"]
 	
 
@@ -40,18 +40,18 @@ func buscar_cuadros(nodo):
 			cuadros_texto.append(child)
 
 func _process(_delta):
-	if(!ya_ejecuto):
-		_ejecutar_evento()
-	if(!evento2 and $CuadroDialogo.indice_dialogo == 5):
-		$CuadroDialogo.desactivar_dialogo()
-		evento2=true
-	elif $CuadroDialogo.indice_dialogo==8 and !evento4:
-		$AnimationPlayer.play("ficha")
-		evento4=true
-	elif !evento3 and $CuadroDialogo.indice_dialogo==9:
-		evento3=true
-		$CuadroDialogo.desactivar_dialogo()
-		
+	#if(!ya_ejecuto):
+	#	_ejecutar_evento()
+	#f(!evento2 and $CuadroDialogo.indice_dialogo == 5):
+	#	$CuadroDialogo.desactivar_dialogo()
+	#	evento2=true
+	#elif $CuadroDialogo.indice_dialogo==8 and !evento4:
+	#	$AnimationPlayer.play("ficha")
+	#	evento4=true
+	#elif !evento3 and $CuadroDialogo.indice_dialogo==9:
+	#	evento3=true
+	#	$CuadroDialogo.desactivar_dialogo()
+	pass
 func pausar_y_ocultar_dialogo():
 	$CuadroDialogo.pausa= true
 	$CuadroDialogo.visible = false
@@ -97,20 +97,14 @@ func comprobar_respuesta():
 	return $ScrollContainer/TextureRect/respuesta_secreta.text == $ScrollContainer/TextureRect/respuesta_secreta_nuevamente.text && $ScrollContainer/TextureRect/respuesta_secreta.text != ""
 
 func comprobar_correo():
-	return $ScrollContainer/TextureRect/correo.text == $ScrollContainer/TextureRect/repetir_correo.text and $ScrollContainer/TextureRect/repetir_correo.text == $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text && $ScrollContainer/TextureRect/repetir_repeticion/TextEdit.text !=""
+	return $ScrollContainer/TextureRect/correo.text == $ScrollContainer/TextureRect/repetir_correo.text 
 
 func _on_enviar_pressed():
 	if comprobar_respuesta():
 		if(comprobar_correo()):
 			if(!hay_campos_vacios()):
 				if($ScrollContainer/TextureRect/nombre9.text== "w62bc"):
-					if(comprobar_ficha()):
-						$CuadroDialogo.habilitar_dialogo()
-						$Timer.start()
-						$Ficha.visible=false
-						$AudioStreamPlayer.stream= SonidoExito
-						$AudioStreamPlayer.play()
-					$CuadroDialogo.habilitar_dialogo()
+					$Timer.start()
 					$AudioStreamPlayer.stream= SonidoExito
 					$AudioStreamPlayer.play()
 					progreso = 80

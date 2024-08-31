@@ -2,98 +2,21 @@
 	{
 		"emocion": "artista",
 		"personaje": "IA",
-		"texto": "¿Te gusta tu retrato?",
+		"texto": "Buen Trabajo, ahora Tendrias que recibir una contraseña en tu correo, pero para agilizar, yo te lo voy a dar",
 		"importante": true
 	},
+
 	{
-		"emocion": "felicitaciones",
-		"personaje": "Usuario",
-		"texto": "¡...! ",
-		"importante": false
-	},
-	{
-		"emocion": "artista",
+		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "¿Wow,  tan sorprendido? ¿Acaso no estabas al tanto? a las IA  ahora no solo nos emplean por nuestras habilidades para procesar datos escritos,sino que también recientemente incursionamos en el mundo del arte y estamos abriéndonos paso también en otros escenarios; En fin, a lo que sigue; Tus datos fueron cargados de forma correcta, en breve recibirás un mail… ",
+		"texto": "Simplemente inicia sesion con el usuario que elegiste al registrarte, en nuestro caso el usuario era [b]Jazurduy[/b]",
 		"importante": false
 	},
 	{
 		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "Con instrucciones de cómo continuar, en caso de no recibirlo dentro de las próximas 48 horas…",
+		"texto": "... por cierto, siempre respeta las [i]mayusculas y minusculas[/i]",
 		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "... Deberías consultar a [u]registracioncvar@mincyt.gob.ar[/u]. Aunque para tu suerte, como cuentas conmigo, puedo hacer algo al respecto de forma directa  yo si fuese necesario… pero de momento, esperemos…",
-		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "Usuario",
-		"texto": " Todavía nada, ninguna notificación de mensaje nuevo, ¿No se supone que esto es automático?",
-		"importante": false
-	},
-	{
-		"emocion": "reloj",
-		"personaje": "IA",
-		"texto": "Los humanos son seres tan impacientes, de momento esperemos que se cumpla en plazo antes de tomar cualquier otra acción",
-		"importante": false
-	},
-	{
-		"emocion": "curiosa",
-		"personaje": "Usuario",
-		"texto": "…",
-		"importante": false
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "IA",
-		"texto": "…",
-		"importante": false
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "Usuario",
-		"texto": "*tose*",
-		"importante": false
-	},
-	{
-		"emocion": "tos",
-		"personaje": "IA",
-		"texto": "*tose* *tose*",
-		"importante": false
-	},
-	{
-		"emocion": "reloj",
-		"personaje": "IA",
-		"texto": "Bueno esta bien, apresuremos un poco esto solo por que ya se puso incomodo",
-		"importante": false
-	},
-	{
-		"emocion": "senalando",
-		"personaje": "Usuario",
-		"texto": "(Bueno, no voy a quejarme de algo que me haga ahorrar tiempo)",
-		"importante": false
-	},
-	{
-		"emocion": "seguime",
-		"personaje": "IA",
-		"texto": "Ya se ha cumplido el plazo de espera máximo para la recepción del mail, para acelerar el proceso revisare por vos el Mail que debio haberte llegado, así no molestamos a la pobre gente de soporte.",
-		"importante": true
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
-		"texto": "De acuerdo, el siguiente paso es sencillo",
-		"importante": true
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
-		"texto": "En esta pantalla, deberás poner el usuario que tú mismo seleccionaste, pero lo más importante es que uses de contraseña, aquella que te debio haber llegado al mail, osea, específicamente estos 8 dígitos Y NINGÚN OTRO",
-		"importante": true
 	},
 	{
 		"emocion": "confiada",
@@ -126,30 +49,6 @@
 		"importante": false
 	},
 	{
-		"emocion": "curiosa",
-		"personaje": "IA",
-		"texto": "...\n\n",
-		"importante": false
-	},
-	{
-		"emocion": "curiosa",
-		"personaje": "Usuario",
-		"texto": "Por qué razón yo deb-",
-		"importante": false
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
-		"texto": "Dije que esos eran los dígitos exactos, no que los envíe en el orden que debían ir.",
-		"importante":false
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "Usuario",
-		"texto": " *Suspiro* Solo acabemos con esta sección ¿si?\n",
-		"importante": false
-	},
-	{
 		"emocion": "ensenando",
 		"personaje": "IA",
 		"texto": "Muy bien, para terminar con este capítulo, ¡algo rápido! ",
@@ -158,31 +57,13 @@
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "Esto es simple, agarrá todas las contraseñas que cumplan con las normas de una buena contraseña, que son…",
-		"importante": true
-	},
-	{
-		"emocion": "curiosa",
-		"personaje": "Usuario",
-		"texto": "...\n\n",
+		"texto": "Realmente en la plataforma deberias escribir la contraseña, pero aqui haremos este ejercicio. Esto es simple, haz [i]click[/i] todas las contraseñas que cumplan con las normas de una buena contraseña, que son…",
 		"importante": true
 	},
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "De menos de 16 caracteres…",
-		"importante": true
-	},
-	{
-		"emocion": "curiosa",
-		"personaje": "Usuario",
-		"texto": "...\n\n",
-		"importante": true
-	},
-	{
-		"emocion": "curiosa",
-		"personaje": "IA",
-		"texto": "Está bien, lo digo yo: De menos de 16 caracteres, primera letra mayúscula y algún símbolo. No es muy difícil, te tendría que tomar menos de un minuto. Probablemente.",
+		"texto": "De menos de 16 caracteres, primera letra mayúscula y algún símbolo. No es muy difícil, te tendría que tomar menos de un minuto. Probablemente.",
 		"importante": true
 	},
 	{

@@ -9,7 +9,6 @@ func _ready():
 	$AnimationPlayer.play("Entrada")
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel1")
 	$CuadroDialogo.comenzar()
-	$ayuda.cambiar_texto("Elige el correo apropiado")
 	logrosNivel = CargaArchivos.logros["1"]
 	if(!logrosNivel[0]):
 		$Logro.fijar_logro("Ahora si es hora de actuar", " Iniciar el nivel 1.")
@@ -19,17 +18,9 @@ func _ready():
 		
 
 func _on_nuevo_usuario_pressed():
-	if(banderas[2]):
-		if(!logrosNivel[1]):
-			$Logro.fijar_logro("Novato", "Presionar el botón de usuarios nuevos")
-			logrosNivel[1]= true
-			CargaArchivos.logros["1"]= logrosNivel
-			CargaArchivos.guardar_logros()
-		$AudioStreamPlayer2D.stream=SonidoExito
-		$AudioStreamPlayer2D.play()
-		progreso = 100
-		CargaArchivos.establecer_progreso(1,progreso)
-		$AnimationPlayer.play("negro")
+	$AudioStreamPlayer2D.stream=SonidoExito
+	$AudioStreamPlayer2D.play()
+	$AnimationPlayer.play("negro")
 
 func _process(delta):
 	if $CuadroDialogo.indice_dialogo == 14 and !banderas[0]:

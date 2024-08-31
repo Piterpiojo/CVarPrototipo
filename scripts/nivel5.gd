@@ -153,7 +153,7 @@ func _ready():
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel5")
 	$CuadroDialogo.comenzar()
 	buscar_cuadros($"ScrollContainer/seccion-a")
-	logrosNivel=CargaArchivos.logros["5"]
+	logrosNivel=CargaArchivos.logros["4"]
 	guardar_avances()
 
 func guardar_avances():
@@ -167,6 +167,7 @@ func buscar_cuadros(nodo):
 
 func _process(_delta):
 	if($CuadroDialogo.indice_dialogo > 2 and !bandera1):
+		$ScrollContainer/Inicio.queue_free()
 		$AnimationPlayer.play("intro")
 		bandera1=true
 	elif($CuadroDialogo.indice_dialogo==13 and !bandera2):
@@ -205,11 +206,14 @@ func _on_guardar_pressed():
 	if !hay_campos_vacios():
 		progreso = 25
 		guardar_avances()
+		$logroTimer.wait_time=1
+		$logroTimer.start()
 		if(!logrosNivel[0]):
 			$Logro.fijar_logro("Identidad nacional", "Selecciona correctamente el país de emisión teniendo en cuenta el pasaporte.")
 			logrosNivel[0]= true
-			CargaArchivos.logros["5"]= logrosNivel
+			CargaArchivos.logros["4"]= logrosNivel
 			CargaArchivos.guardar_logros()
+
 		$CuadroDialogo.mostrar_dialogo_unico("¡Creo que esto fue lo más difícil que hicimos hasta ahora, así que felicidades. Necesito un poco de agua virtual, nos vemos en el próximo capítulo.","IA")
 	else:
 		$AudioStreamPlayer.stream=sonidoError

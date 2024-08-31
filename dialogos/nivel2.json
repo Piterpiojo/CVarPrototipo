@@ -5,22 +5,11 @@
 		"texto": "Ahora que la página está de vuelta, ¡vamos a crear tu cuenta! Solo necesitamos llenar algunos datos personales primero",
 		"importante": true
 	},
-	{
-		"emocion": "felicitaciones",
-		"personaje": "Usuario",
-		"texto": "...",
-		"importante": true
-	},
+
 	{
 		"emocion": "curiosa",
 		"personaje": "IA",
-		"texto": "¿Eso? Ni siquiera te preocupes, yo me encargo de eso en un parpadeo.",
-		"importante": true
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
-		"texto": "",
+		"texto": "Todos tenemos que pasar por esto, para hacerte este paso mas sencillo, me tome la libertad de llenar los datos con un personaje historico",
 		"importante": true
 	},
 	{
@@ -32,31 +21,7 @@
 	{
 		"emocion": "felicitaciones",
 		"personaje": "IA",
-		"texto": " ¡Felicidades!, pudiste poner toda tu información en un tiempo récord. Creo. Tengo una tarea rápida para vos, no nos va a llevar más de un minuto.",
+		"texto": "Tu solo encargate de Completar el captcha y presionar el boton [b]enviar[/b] recibiras una contraseña en tu correo electronico con una contraseña",
 		"importante": true
-	},
-	{
-		"emocion": "felicitaciones",
-		"personaje": "Usuario",
-		"texto": "Realmente no tengo tiempo para más acti…",
-		"importante": true
-	},
-	{
-		"emocion": "felicitaciones",
-		"personaje": "IA",
-		"texto": " Perfecto, te explico lo que hay que hacer.",
-		"importante": true
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": " Solamente para verificar que entendiste lo que estuvimos hablando, hace de cuenta que sos esta persona que ves al lado mio. Completa la ficha, nos vemos en un parpadeo.",
-		"importante": true
-	},
-		{
-		"emocion": "felicitaciones",
-		"personaje": "IA",
-		"texto": "¡Te dije que era algo rápido, felicidades! Ahora, continuemos, tenemos más cosas interesantes por delante.",
-		"importante": true
-	},
+	}
 ]

@@ -227,6 +227,7 @@ layout_mode = 2
 texture = ExtResource("2_5hsr6")
 
 [node name="fake" type="Control" parent="ScrollContainer/TextureRect"]
+visible = false
 anchors_preset = 0
 
 [node name="Label" type="Label" parent="ScrollContainer/TextureRect/fake"]
@@ -499,6 +500,7 @@ offset_left = 616.0
 offset_top = 705.0
 offset_right = 888.0
 offset_bottom = 736.0
+text = "Jazurduy"
 
 [node name="nombre" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -506,6 +508,7 @@ offset_left = 616.0
 offset_top = 226.0
 offset_right = 752.0
 offset_bottom = 257.0
+text = "Juana"
 
 [node name="correo" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -513,13 +516,15 @@ offset_left = 616.0
 offset_top = 744.0
 offset_right = 888.0
 offset_bottom = 768.0
+text = "jazurduy@email.com"
 
 [node name="repetir_correo" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
 offset_left = 616.0
-offset_top = 792.0
+offset_top = 791.0
 offset_right = 888.0
-offset_bottom = 816.0
+offset_bottom = 823.0
+text = "jazurduy@email.com"
 
 [node name="nombre5" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -527,6 +532,7 @@ offset_left = 616.0
 offset_top = 840.0
 offset_right = 888.0
 offset_bottom = 864.0
+text = "1234 5678"
 
 [node name="nombre6" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -534,6 +540,7 @@ offset_left = 616.0
 offset_top = 888.0
 offset_right = 888.0
 offset_bottom = 912.0
+text = "¿Cuál es el nombre de mi caballo?"
 
 [node name="respuesta_secreta" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -541,6 +548,7 @@ offset_left = 616.0
 offset_top = 936.0
 offset_right = 888.0
 offset_bottom = 960.0
+text = "Pachorra"
 secret = true
 
 [node name="respuesta_secreta_nuevamente" type="LineEdit" parent="ScrollContainer/TextureRect"]
@@ -549,6 +557,7 @@ offset_left = 616.0
 offset_top = 976.0
 offset_right = 888.0
 offset_bottom = 1000.0
+text = "Pachorra"
 secret = true
 
 [node name="nombre9" type="LineEdit" parent="ScrollContainer/TextureRect"]
@@ -564,6 +573,7 @@ offset_left = 616.0
 offset_top = 544.0
 offset_right = 752.0
 offset_bottom = 568.0
+text = "AZ12345678 "
 
 [node name="apellido" type="LineEdit" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -571,6 +581,7 @@ offset_left = 616.0
 offset_top = 272.0
 offset_right = 752.0
 offset_bottom = 303.0
+text = "Azurduy"
 
 [node name="OptionButton" type="OptionButton" parent="ScrollContainer/TextureRect"]
 layout_mode = 0
@@ -578,7 +589,7 @@ offset_left = 616.0
 offset_top = 416.0
 offset_right = 752.0
 offset_bottom = 436.0
-selected = 0
+selected = 2
 item_count = 6
 popup/item_0/text = "Seleccionar"
 popup/item_1/text = "Argentina"
@@ -598,7 +609,7 @@ offset_left = 616.0
 offset_top = 584.0
 offset_right = 752.0
 offset_bottom = 615.0
-selected = 0
+selected = 2
 item_count = 6
 popup/item_0/text = "Seleccionar"
 popup/item_1/text = "Argentina"
@@ -623,6 +634,7 @@ offset_left = 600.0
 offset_top = 368.0
 offset_right = 667.063
 offset_bottom = 399.0
+text = "12"
 max_length = 2
 
 [node name="TextEdit4" type="LineEdit" parent="ScrollContainer/TextureRect/fecha"]
@@ -631,6 +643,7 @@ offset_left = 680.0
 offset_top = 368.0
 offset_right = 747.063
 offset_bottom = 399.0
+text = "06"
 max_length = 2
 
 [node name="TextEdit5" type="LineEdit" parent="ScrollContainer/TextureRect/fecha"]
@@ -639,6 +652,7 @@ offset_left = 760.0
 offset_top = 368.0
 offset_right = 827.063
 offset_bottom = 399.0
+text = "1780"
 max_length = 4
 
 [node name="Label" type="Label" parent="ScrollContainer/TextureRect/fecha"]
@@ -668,6 +682,7 @@ offset_bottom = 1192.0
 flat = true
 
 [node name="Label18" type="Label" parent="ScrollContainer/TextureRect"]
+visible = false
 layout_mode = 0
 offset_left = 856.0
 offset_top = 480.0
@@ -683,6 +698,7 @@ offset_right = 237.0
 offset_bottom = 28.0
 
 [node name="repetir_repeticion" type="Label" parent="ScrollContainer/TextureRect"]
+visible = false
 layout_mode = 0
 offset_left = 896.0
 offset_top = 784.0
@@ -700,6 +716,7 @@ offset_right = 317.0
 offset_bottom = 39.0
 
 [node name="Label19" type="Label" parent="ScrollContainer/TextureRect"]
+visible = false
 layout_mode = 0
 offset_left = 896.0
 offset_top = 704.0
@@ -727,6 +744,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
 button_group = ExtResource("3_7wbqm")
 text = "Femenino"
 
@@ -769,6 +787,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+button_pressed = true
 button_group = ExtResource("4_47ty6")
 text = "Pasaporte"
 
@@ -799,10 +818,12 @@ shape = SubResource("RectangleShape2D_sc8rw")
 position = Vector2(-946, 720)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ScrollContainer/TextureRect/advertencia"]
+visible = false
 position = Vector2(1595, 41.5)
 shape = SubResource("RectangleShape2D_l8lh1")
 
 [node name="Capcha" type="Sprite2D" parent="ScrollContainer/TextureRect"]
+visible = false
 position = Vector2(287.5, 1159.5)
 scale = Vector2(0.418312, 0.652174)
 texture = ExtResource("5_gn0lg")
@@ -833,6 +854,8 @@ layout_mode = 1
 
 [node name="Logro" parent="." instance=ExtResource("10_f66m4")]
 layout_mode = 1
+offset_top = 25.0
+offset_bottom = 115.0
 
 [node name="Ficha" type="Sprite2D" parent="."]
 visible = false

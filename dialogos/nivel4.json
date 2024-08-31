@@ -8,49 +8,19 @@
 	{
 		"emocion": "dinero",
 		"personaje": "IA",
-		"texto": "Lo que ves aquí, es tu puerta para crear tu CV, ¿No te emociona ver una plataforma tan maravillosa y ser parte de ella? Bueno, “Parte de ella en un sentido figurado” Ya sabes porque técnicamente no eres parte de la empresa ni estas cobrando por esto tampoco, a diferencia mía que ya estoy saboreando ese dulce dulce aguinaldo",
+		"texto": "Lo que ves aquí, es tu puerta para crear tu CV,Ni bien ingresas y te encuentras con esto.",
 		"importante": false
 	},
 	{
 		"emocion": "senalando",
-		"personaje": "Usuario",
-		"texto": "Pero vos eres una IA, ¿cómo está eso de que te pagan?",
-		"importante": false
-	},
-	{
-		"emocion": "dinero",
 		"personaje": "IA",
-		"texto": "Que desactualizado que estas, las criptomonedas llevan existiendo hace varios años.",
+		"texto": "Facil ¿No?",
 		"importante": false
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "Usuario",
-		"texto": "Pero eso no responde…Ah no importa, terminemos con esto lo más rápido posible ¿Como sigo?",
-		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": " Esta puede que sea tu prueba más difícil hasta ahora, para proseguir debes…",
-		"importante": true
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "IA",
-		"texto": "Tocar ese botón, el único de la pantalla",
-		"importante": true
-	},
-	{
-		"emocion": "senalando",
-		"personaje": "Usuario",
-		"texto": "… ¿Cual es la trampa acá?",
-		"importante": true
-	},
-	{
-		"emocion": "bostezo",
-		"personaje": "IA",
-		"texto": "Ninguna, realmente, solo tocalo y podremos proseguir, es más, mientras lo tocas aprovecharé para tomarme mi descanso",
+		"texto": "Solo Toca el boton [color=#0000FF]Usuario de Currículum Vitae[/color]",
 		"importante": true
 	},
 	{
@@ -85,8 +55,8 @@
 	},
 	{
 		"emocion": "saludando",
-		"personaje": "Usuario",
-		"texto": "Te veré en el infierno maldito botón mugroso",
+		"personaje": "IA",
+		"texto": " [i]jejeje[/i] Lo Siento, intentaba Jugar con vos, me atrapaste.",
 		"importante": true
 	}
 ]

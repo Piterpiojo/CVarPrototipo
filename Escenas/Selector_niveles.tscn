@@ -394,6 +394,7 @@ offset_right = 5.0
 offset_bottom = 201.0
 
 [node name="c0" type="Button" parent="botones"]
+visible = false
 layout_mode = 0
 offset_left = 136.0
 offset_top = 127.0

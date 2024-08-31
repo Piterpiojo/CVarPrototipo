@@ -39,53 +39,9 @@ func guardar_avances():
 	CargaArchivos.establecer_progreso(3,progreso)
 
 func eventos():
-	if $CuadroDialogo.indice_dialogo ==0 and !bandera1:
-		$AnimationPlayer.play("mostrar_foto")
-		$Usuario.visible = true
-		$AudioStreamPlayer.stream=SonidoFoto
-		$AudioStreamPlayer.play()
-		bandera1= true
-		progreso = 10
-	elif $CuadroDialogo.indice_dialogo == 2 and !banderaMail:
-		$AnimationPlayer.stop()
-		$Usuario.visible=false
-		$"NicePngEmail-icon-png-transparent903587".visible=true
-		$AudioStreamPlayer.stream=SonidoMail
-		$AudioStreamPlayer.play()
-		banderaMail=true
-		progreso = 20
-		if(!logrosNivel[0]):
-			$Logro.fijar_logro("El arte es subjetivo", "Observar el retrato de Ave.")
-			logrosNivel[0]= true
-			CargaArchivos.logros["3"]= logrosNivel
-			CargaArchivos.guardar_logros()
-		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo == 3 and !bandera2:
-		tiempo()
-		bandera2=true
-		progreso = 30
-		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo == 6 and !bandera3:
-		$espera.start()
-		$CuadroDialogo.pausa=true
-		$CuadroDialogo.habilitado= false
-		bandera3=true
-		$ayuda.cambiar_texto("Espera a que se complete el tiempo")
-		progreso = 40
-		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo == 10 and !bandera4:
-		$espera.start()
-		$CuadroDialogo.pausa=true
-		$CuadroDialogo.habilitado= false
-		$CuadroDialogo.letra=0
-		bandera4=true
-		progreso = 50
-	elif $CuadroDialogo.indice_dialogo == 11 and !bandera5:
-		acelerar()
-		bandera5=true
-		progreso = 60
-		guardar_avances()
-	elif $CuadroDialogo.indice_dialogo== 15 and !bandera6:
+	if false:
+		pass
+	elif $CuadroDialogo.indice_dialogo == 1 and !bandera6:
 		$reloj.visible= false
 		$"NicePngEmail-icon-png-transparent903587".visible = false
 		$contrasenia.visible=true
@@ -96,29 +52,29 @@ func eventos():
 			logrosNivel[1]= true
 			CargaArchivos.logros["3"]= logrosNivel
 			CargaArchivos.guardar_logros()
-		$ayuda.cambiar_texto("ingresa la contraseña correctamente")
+		$ayuda.cambiar_texto("ingresa la contraseña correctamente en orden alfabetico, este es un pequeño chiste")
 		progreso = 70
 		guardar_avances()
 		
-	elif $CuadroDialogo.indice_dialogo== 16 and !bandera16:
+	elif $CuadroDialogo.indice_dialogo== 3 and !bandera16:
 		pausar_y_ocultar_dialogo()
 		bandera16=true
 		
-	elif $CuadroDialogo.indice_dialogo == 25 and !bandera7:
+	elif $CuadroDialogo.indice_dialogo == 7 and !bandera7:
 		bandera7=true
 		$CuadroDialogo.desactivar_importante(false)
 		pausar_y_ocultar_dialogo()
 		$CuadroDialogo/Importante.disabled =false
 		progreso = 80
-	elif $CuadroDialogo.indice_dialogo == 31 and !bandera8:
+	elif $CuadroDialogo.indice_dialogo == 11 and !bandera8:
 		bandera8=true
 		pausar_y_ocultar_dialogo()
 		$ayuda.cambiar_texto("Selecciona Buenas contraseñas")
 		progreso = 90
-	elif $CuadroDialogo.indice_dialogo == 31 and !banderaFin:
-		if(!logrosNivel[5]):
+	elif $CuadroDialogo.indice_dialogo == 11 and !banderaFin:
+		if(!logrosNivel[4]):
 			$Logro.fijar_logro("¡Que nadie se entere!", "Completar el nivel 3.")
-			logrosNivel[5]= true
+			logrosNivel[4]= true
 			CargaArchivos.logros["3"]= logrosNivel
 			CargaArchivos.guardar_logros()
 		banderaFin=true
@@ -214,7 +170,7 @@ func _on_ingresar_pressed():
 			logrosNivel[2]= true
 			CargaArchivos.logros["3"]= logrosNivel
 			CargaArchivos.guardar_logros()
-		$ayuda.cambiar_texto("ingresa la contraseña correctamente")
+		$ayuda.cambiar_texto("ingresa la contraseña correctamente en orden alfabetico, este es un pequeño chiste")
 		errores +=1
 		$ScrollContainer/identificacion/error.visible= true
 		$AudioStreamPlayer.stream= SonidoFallo

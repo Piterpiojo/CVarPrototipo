@@ -2,25 +2,25 @@
 	{
 		"emocion": "bostezo",
 		"personaje": "IA",
-		"texto": "*Bostezo* Que buena suspensión/Hibernación me pegue…. ¿Bueno, fue sencillo no?",
+		"texto": "Bienvenido a la seccion [b]Principal[/b], Aqui hay un resumen de todos los datos que cargaste en la pagina",
 		"importante": true
 	},
 	{
 		"emocion": "saludando",
-		"personaje": "Usuario",
-		"texto": "…Facilisimo…. \n",
+		"personaje": "IA",
+		"texto": "Bueno recorramos juntos la seccion de datos personales, que incluye Identificacion, Direccion residencial, Direccion laboral, Experticia en CyT \n",
 		"importante": true
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "Bien, ya estamos listos para la sección más desafiante pero también la más gratificante y esta vez sí que lo digo con absolutamente 0 sarcasmo; Bueno, siendo sincera nunca puedo asegurar un 0% Exacto de sarcasmo por como esta hecho mi propio código, pero sí puedo asegurarte un 0,000000001% de sarcasmo máximo en la frase anterior.",
+		"texto": "Bien Vamos a [color=#0000FF]identificación[/color].",
 		"importante": false
 	},
 	{
 		"emocion": "estatico",
 		"personaje": "IA",
-		"texto": "En fin, a lo que vamos, Vas a tener que completar paso a paso la información solicitada, sin importar que tan vergonzosa sea, todo es necesario para armar un CV de la mejor forma!",
+		"texto": "En fin, a lo que vamos, Vas a tener que completar paso a paso la información solicitada, Afortunadamente algunos datos ya quedaron registradas, asi que solo debes completar unos pocos datos",
 		"importante": true
 	},
 	{

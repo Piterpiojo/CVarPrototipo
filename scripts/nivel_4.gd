@@ -24,14 +24,14 @@ func guardar_avances():
 	CargaArchivos.establecer_progreso(4,progreso)
 
 func _process(_delta):
-	if($CuadroDialogo.indice_dialogo == 9 and !bandera1):
+	if($CuadroDialogo.indice_dialogo == 4 and !bandera1):
 		$CuadroDialogo.desactivar_dialogo()
 		$CuadroDialogo.letra=0
 		$boton/Area2D/CollisionShape2D.disabled = false
 		$ayuda.cambiar_texto("Presiona el boton")
 		progreso = 33
 		bandera1= true
-	elif ($CuadroDialogo.indice_dialogo == 13 and !bandera2):
+	elif ($CuadroDialogo.indice_dialogo == 8 and !bandera2):
 		$CuadroDialogo.desactivar_dialogo()
 		$CuadroDialogo.letra=0
 		$ayuda.cambiar_texto("Atrapa ese boton, quizas podrias aplastarlo con algo...")
