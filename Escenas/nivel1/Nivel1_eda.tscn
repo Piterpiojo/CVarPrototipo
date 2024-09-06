@@ -1,9 +1,48 @@
-[gd_scene load_steps=12 format=3 uid="uid://cwo2b7ahcys1s"]
+[gd_scene load_steps=13 format=3 uid="uid://cwo2b7ahcys1s"]
 
 [ext_resource type="Script" path="res://Escenas/nivel1/nivel_1_eda.gd" id="1_ids7a"]
 [ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="1_sws1j"]
 [ext_resource type="Texture2D" uid="uid://bn2lceqt58atk" path="res://Imagenes/logo.png" id="2_piqr4"]
 [ext_resource type="Texture2D" uid="uid://23w38rl48xgk" path="res://Sprites/ave/cap 5/pensando.png" id="3_8d3uy"]
+
+[sub_resource type="Animation" id="Animation_spd71"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Control:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_raqo4"]
 resource_name = "correcto"
@@ -32,38 +71,41 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cambiar_escena"
+}]
+}
 
-[sub_resource type="Animation" id="Animation_spd71"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_mexj5"]
+resource_name = "entrada"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Control:position")
-tracks/0/interp = 1
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f4y2v"]
 _data = {
 "RESET": SubResource("Animation_spd71"),
-"correcto": SubResource("Animation_raqo4")
+"correcto": SubResource("Animation_raqo4"),
+"entrada": SubResource("Animation_mexj5")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r0hql"]
@@ -116,6 +158,7 @@ libraries = {
 }
 
 [node name="Control" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

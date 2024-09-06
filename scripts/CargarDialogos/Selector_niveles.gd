@@ -8,14 +8,14 @@ const imagenes=["res://ui/separadoresnivel/separador0.png",
 "res://ui/separadoresnivel/separador6.png"]
 
 var nivel_a_cargar
-const niveles = ["res://Escenas/nivel1/identificacion.tscn",
-"res://Escenas/nivel2/Registro.tscn",
-"res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn",
-"res://Escenas/nivel4-sistemas_cv/nivel_4.tscn",
-"res://Escenas/nivel5/nivel5.tscn",
-"res://Escenas/nivel6/seccion6a.tscn",
-"res://Escenas/nivel0/nivel_0.tscn"
-]
+#const niveles = ["res://Escenas/nivel1/identificacion.tscn",
+#"res://Escenas/nivel2/Registro.tscn",
+#"res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn",
+#"res://Escenas/nivel4-sistemas_cv/nivel_4.tscn",
+#"res://Escenas/nivel5/nivel5.tscn",
+#"res://Escenas/nivel6/seccion6a.tscn",
+#"res://Escenas/nivel0/nivel_0.tscn"
+#]
 
 const objetivos=["Que es CVAR","Gestión de Usuario y contraseña.",
 "Gestión de datos personales.",
@@ -23,6 +23,9 @@ const objetivos=["Que es CVAR","Gestión de Usuario y contraseña.",
 "Sistemas del CVAR",
 "Sistemas del CVAR parte 2",
 "Impresión del CV."]
+
+const niveles=["res://Escenas/nivel1/Nivel1_eda.tscn"]
+
 const tooltips = {
 	"0": ["completar el Capitulo 0"],
 	"1": ["Iniciar el Capitulo 1","Presionar el botón de usuarios nuevos",
@@ -133,3 +136,8 @@ func animar_menu(nivel):
 func _on_c_0_mouse_entered():
 	$TextureRect.texture = preload(imagenes[0])
 	animar_menu(0)
+
+
+func _on_button_pressed() -> void:
+	$CambiarNivel.play("siguiente_nivel")
+	nivel_a_cargar=0

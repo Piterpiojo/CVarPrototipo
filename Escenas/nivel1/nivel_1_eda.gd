@@ -4,11 +4,11 @@ const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.
 const SonidoExito = preload("res://sonidos/Musica y sonidos a utilizar/confirmation_004.ogg") 
 
 func _ready() -> void:
-	pass # Replace with function body.
-
+	$AnimationPlayer.play("entrada")
 
 func _on_v_pressed() -> void:
 	reproducir(SonidoExito)
+	$AnimationPlayer.play("correcto")
 
 
 
@@ -22,4 +22,4 @@ func _on_f_pressed() -> void:
 
 
 func cambiar_escena():
-	pass
+	get_tree().change_scene_to_file("res://Escenas/menu_e/menue2.tscn")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbxm5ov2pu1gh"]
+
+[ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="1_v17dr"]
+[ext_resource type="Texture2D" uid="uid://bssnsaxko8pgn" path="res://Sprites/ave/ensenando.png" id="2_n73nh"]
+
+[node name="nivel2-e" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v17dr")
+expand_mode = 2
+
+[node name="Ensenando" type="Sprite2D" parent="."]
+position = Vector2(184, 344)
+scale = Vector2(0.533333, 1)
+texture = ExtResource("2_n73nh")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -240.0
+offset_right = 243.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 38
+text = "Ordena la secuencia"
+
+[node name="HFlowContainer" type="VFlowContainer" parent="Control"]
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 56.0
+alignment = 1
+
+[node name="Button" type="Button" parent="Control/HFlowContainer"]
+layout_mode = 2
+text = "weqw"
+
+[node name="Button2" type="Button" parent="Control/HFlowContainer"]
+layout_mode = 2
+text = "weqw"

@@ -1,16 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://cla13vr5u1pva"]
+[gd_scene load_steps=19 format=3 uid="uid://barpd6ph5xke"]
 
-[ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_gfbry"]
-[ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="2_4ql3o"]
-[ext_resource type="Texture2D" uid="uid://hrkv16yw4g5d" path="res://ui/separadoresnivel/todonegro.png" id="3_8ey22"]
-[ext_resource type="Texture2D" uid="uid://2y27gws8gv4j" path="res://ui/genericstar.png" id="3_edi36"]
-[ext_resource type="Texture2D" uid="uid://dyma3j2lr1jmo" path="res://ui/Nueva Seleccion/botonmenu1.png" id="6_busb0"]
-[ext_resource type="Texture2D" uid="uid://c137av0yj1ljb" path="res://ui/Nueva Seleccion/botonmenu2.png" id="7_mbslg"]
-[ext_resource type="Texture2D" uid="uid://f2brp2x58kgj" path="res://ui/Nueva Seleccion/botonmenu3.png" id="8_fgx24"]
-[ext_resource type="Texture2D" uid="uid://b5q8gcsu87xlf" path="res://ui/Nueva Seleccion/botonmenu4.png" id="9_3xpb5"]
-[ext_resource type="Texture2D" uid="uid://fkmyp3ufo3ot" path="res://ui/Nueva Seleccion/botonmenu5.png" id="10_fshvs"]
-[ext_resource type="Texture2D" uid="uid://dh7bpq0vdww8l" path="res://Sprites/ave/curiosa.png" id="11_f01ot"]
-[ext_resource type="Texture2D" uid="uid://suag6w0oxpev" path="res://ui/Nueva Seleccion/botonmenu6.png" id="11_g0pet"]
+[ext_resource type="Script" path="res://scripts/CargarDialogos/Selector_niveles.gd" id="1_yvhtv"]
+[ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="2_w840u"]
+[ext_resource type="Texture2D" uid="uid://hrkv16yw4g5d" path="res://ui/separadoresnivel/todonegro.png" id="3_w7d50"]
+[ext_resource type="Texture2D" uid="uid://2y27gws8gv4j" path="res://ui/genericstar.png" id="4_8kg2v"]
+[ext_resource type="Texture2D" uid="uid://dyma3j2lr1jmo" path="res://ui/Nueva Seleccion/botonmenu1.png" id="5_rerc5"]
+[ext_resource type="Texture2D" uid="uid://c137av0yj1ljb" path="res://ui/Nueva Seleccion/botonmenu2.png" id="6_elc4f"]
+[ext_resource type="Texture2D" uid="uid://f2brp2x58kgj" path="res://ui/Nueva Seleccion/botonmenu3.png" id="7_bh0tt"]
+[ext_resource type="Texture2D" uid="uid://b5q8gcsu87xlf" path="res://ui/Nueva Seleccion/botonmenu4.png" id="8_ndyul"]
+[ext_resource type="Texture2D" uid="uid://fkmyp3ufo3ot" path="res://ui/Nueva Seleccion/botonmenu5.png" id="9_5oite"]
+[ext_resource type="Texture2D" uid="uid://suag6w0oxpev" path="res://ui/Nueva Seleccion/botonmenu6.png" id="10_j8ruu"]
+[ext_resource type="Texture2D" uid="uid://dikdnsjqa1c2m" path="res://Sprites/ave/confiada.png" id="11_o2sxb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncwed"]
 bg_color = Color(0, 0.72549, 0.152941, 0.623529)
@@ -158,7 +158,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_gfbry")
+script = ExtResource("1_yvhtv")
 metadata/_edit_vertical_guides_ = [100.0, 1180.0]
 
 [node name="Fondo4" type="TextureRect" parent="."]
@@ -174,7 +174,7 @@ offset_right = 640.0
 offset_bottom = 360.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_4ql3o")
+texture = ExtResource("2_w840u")
 expand_mode = 1
 
 [node name="fondo Selector" type="TextureRect" parent="."]
@@ -184,7 +184,7 @@ offset_left = 595.0
 offset_top = 235.0
 offset_right = 1178.0
 offset_bottom = 605.0
-texture = ExtResource("3_8ey22")
+texture = ExtResource("3_w7d50")
 expand_mode = 1
 
 [node name="titulo" type="Label" parent="."]
@@ -192,14 +192,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -216.0
-offset_top = 144.0
-offset_right = 537.0
-offset_bottom = 208.0
+offset_left = -384.0
+offset_top = 160.0
+offset_right = 1068.0
+offset_bottom = 224.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 46
-text = "Primera estación: SIGEVA - UNPAZ
-"
+theme_override_font_sizes/font_size = 32
+text = "¡¡¡¡¡ Felicitaciones !!! Avanzamos a la estación: creación del usuario"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
@@ -244,38 +243,38 @@ modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 tooltip_text = "Registrate"
-texture = ExtResource("3_edi36")
+texture = ExtResource("4_8kg2v")
 
 [node name="2" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
 tooltip_text = "logro bloqueado"
-texture = ExtResource("3_edi36")
+texture = ExtResource("4_8kg2v")
 
 [node name="3" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("3_edi36")
+texture = ExtResource("4_8kg2v")
 
 [node name="4" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("3_edi36")
+texture = ExtResource("4_8kg2v")
 
 [node name="5" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("3_edi36")
+texture = ExtResource("4_8kg2v")
 
 [node name="6" type="TextureRect" parent="VBoxContainer"]
 modulate = Color(0.360784, 0.360784, 0.360784, 1)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("3_edi36")
+texture = ExtResource("4_8kg2v")
 
 [node name="Control" type="Control" parent="."]
 visible = false
@@ -436,7 +435,7 @@ offset_bottom = 206.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
-icon = ExtResource("6_busb0")
+icon = ExtResource("5_rerc5")
 flat = true
 expand_icon = true
 
@@ -449,7 +448,7 @@ offset_bottom = 206.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
-icon = ExtResource("7_mbslg")
+icon = ExtResource("6_elc4f")
 flat = true
 expand_icon = true
 
@@ -462,7 +461,7 @@ offset_bottom = 206.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
-icon = ExtResource("8_fgx24")
+icon = ExtResource("7_bh0tt")
 flat = true
 expand_icon = true
 
@@ -475,7 +474,7 @@ offset_bottom = 341.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
-icon = ExtResource("9_3xpb5")
+icon = ExtResource("8_ndyul")
 flat = true
 expand_icon = true
 
@@ -488,7 +487,7 @@ offset_bottom = 341.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
-icon = ExtResource("10_fshvs")
+icon = ExtResource("9_5oite")
 flat = true
 expand_icon = true
 
@@ -502,7 +501,7 @@ offset_bottom = 341.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
-icon = ExtResource("11_g0pet")
+icon = ExtResource("10_j8ruu")
 flat = true
 expand_icon = true
 
@@ -515,7 +514,7 @@ offset_bottom = 341.0
 focus_mode = 0
 theme_override_colors/icon_pressed_color = Color(1, 0.494118, 0, 1)
 theme_override_colors/icon_hover_color = Color(0.964706, 1, 0, 1)
-icon = ExtResource("11_g0pet")
+icon = ExtResource("10_j8ruu")
 flat = true
 expand_icon = true
 
@@ -549,7 +548,7 @@ libraries = {
 [node name="Curiosa" type="Sprite2D" parent="."]
 position = Vector2(256, 384)
 scale = Vector2(0.566667, 1)
-texture = ExtResource("11_f01ot")
+texture = ExtResource("11_o2sxb")
 
 [node name="Botones_eda" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -557,10 +556,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -6.0
+offset_right = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="Botones_eda"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -597,9 +599,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -16.0
+offset_left = -132.0
 offset_top = -104.0
-offset_right = 152.0
+offset_right = 36.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -628,9 +630,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 176.0
+offset_left = 60.0
 offset_top = -104.0
-offset_right = 344.0
+offset_right = 228.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -659,9 +661,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 368.0
+offset_left = 252.0
 offset_top = -104.0
-offset_right = 536.0
+offset_right = 420.0
 offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
