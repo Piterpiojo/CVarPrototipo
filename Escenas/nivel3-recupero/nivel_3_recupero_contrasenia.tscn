@@ -357,7 +357,7 @@ libraries = {
 }
 
 [node name="espera" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 5.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = 6.0

@@ -10,6 +10,7 @@ const sondioExito= preload("res://sonidos/Musica y sonidos a utilizar/confirmati
 var posInicial
 var progreso = 0
 var logrosNivel
+
 func _ready():
 	randomize()
 	$CuadroDialogo.dialogos= CargaArchivos.cargar("nivel4")
@@ -18,26 +19,24 @@ func _ready():
 	guardar_avances()
 	logrosNivel=CargaArchivos.logros["4"]
 
-
 func guardar_avances():
 	CargaArchivos.guardar_avance(4, $CuadroDialogo.indice_dialogo)
 	CargaArchivos.establecer_progreso(4,progreso)
 
 func _process(_delta):
-	if($CuadroDialogo.indice_dialogo == 9 and !bandera1):
+	if($CuadroDialogo.indice_dialogo == 5 and !bandera1):
 		$CuadroDialogo.desactivar_dialogo()
 		$CuadroDialogo.letra=0
 		$boton/Area2D/CollisionShape2D.disabled = false
 		$ayuda.cambiar_texto("Presiona el boton")
 		progreso = 33
 		bandera1= true
-	elif ($CuadroDialogo.indice_dialogo == 13 and !bandera2):
+	elif ($CuadroDialogo.indice_dialogo == 9 and !bandera2):
 		$CuadroDialogo.desactivar_dialogo()
 		$CuadroDialogo.letra=0
 		$ayuda.cambiar_texto("Atrapa ese boton, quizas podrias aplastarlo con algo...")
 		bandera2 = true
 		progreso = 66
-
 
 func mod_fuerza():
 	fuerza.x = randf_range(-poder,poder)
@@ -48,16 +47,11 @@ func _input(event):
 		get_tree().paused=true
 		$Pausa.visible=true
 
-	
 func comprobar_evento_click():
 	if(cantidad_tocado > 2):
 		ya_cayo = true
 		$logo.freeze = false
 		$AudioStreamPlayer.play()
-
-		
-
-
 
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if(event is InputEventMouseButton && event.button_index == MOUSE_BUTTON_LEFT ):
@@ -65,7 +59,6 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 			cantidad_tocado +=1 
 			$AnimationPlayer.play("sacudir")
 			comprobar_evento_click()
-
 
 func _on_area_2d_mouse_entered():
 		contador_entrada +=1

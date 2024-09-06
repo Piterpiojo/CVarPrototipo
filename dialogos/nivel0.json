@@ -27,25 +27,25 @@
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones."
+		"texto": "[font_size=30]Recibir información valiosa para la planificación y la toma de decisiones.[/font_size]"
 	},
 	{
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones.\n- La promoción del intercambio de información entre individuos, grupos e instituciones.\n"
+		"texto": "[font_size=30]La promoción del intercambio de información entre individuos, grupos e instituciones.[/font_size]"
 	},
 	{
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "-Recibir información valiosa para la planificación y la toma de decisiones.\n-La promoción del intercambio de información entre individuos, grupos e instituciones.\n-Poder consultar qué, quién, cuándo, dónde y cómo se realiza investigación y desarrollo en Argentina.\n"
+		"texto": "[font_size=30]Poder consultar qué, quién, cuándo, dónde y cómo se realiza investigación y desarrollo en Argentina.[/font_size]"
 	},
 	{
 		"emocion": "ensenando",
 		"importante": true,
 		"personaje": "IA",
-		"texto": "- Recibir información valiosa para la planificación y la toma de decisiones.\n- La promoción del intercambio de información entre individuos, grupos e instituciones.\n- Poder consultar qué, quién, cuándo, dónde y cómo se realiza investigación y desarrollo en Argentina.\n- La posibilidad de realizar y participar en convocatorias institucionales, \n [b]¡incluyendo las de financiamiento para proyectos![/b], utilizando información cargada en el CVar y evitando que el investigador tenga que subir y completar todo una y otra vez."
+		"texto": "La posibilidad de realizar y participar en convocatorias institucionales, \n [b]¡incluyendo las de financiamiento para proyectos![/b], utilizando información cargada en el CVar y evitando que el investigador tenga que subir y completar todo una y otra vez."
 	},
 	{
 		"emocion": "pensando",
@@ -88,156 +88,6 @@
 		"importante": true,
 		"personaje": "IA",
 		"texto": "Ese es el [b]¡módulo de banco de actividades de CyT![/b]"
-	},
-	{
-		"emocion": "curiosa",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "¿Queres saber que contiene? [b]¿Seguro?[/b]"
-	},
-	{
-		"emocion": "curiosa",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Bueno, este módulo cuenta con formularios importantes que componen tu CV, tales como:"
-	},
-	{
-		"emocion": "curiosa",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Datos Personales: Identificación; Dirección residencial; "
-	},
-	{
-		"emocion": "curiosa",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Lugar de trabajo; "
-	},
-	{
-		"emocion": "curiosa",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Experticia en CyT."
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Formación académica; Formación complementaria.\n"
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Cargos: Docencia; Cargos I+D; Cargos en gestión institucional; Otros cargos.\n"
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Antecedentes: Financiamiento C-T; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Formación RRHH; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Extensión; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Evaluación; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Becas; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Otras actividades CyT."
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Producción Científica: Artículos publicados en revistas; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Libros; Partes de libros; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Trabajos en eventos C-T publicados y no publicados; \n"
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Tesis; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Demás producciones C-T."
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Producción Tecnológica: Con título de propiedad intelectual;"
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Servicios C-T; Informes técnicos."
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Producción Artística: Musical-sonora; Visual; Audiovisual; Teatral; Género literario "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "dramático, poético o ensayo, guión; Otros tipos."
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Participación en eventos C-T; "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Premios "
-	},
-	{
-		"emocion": "ensenando",
-		"importante": false,
-		"personaje": "IA",
-		"texto": "Membresías."
 	},
 	{
 		"emocion": "felicitaciones",

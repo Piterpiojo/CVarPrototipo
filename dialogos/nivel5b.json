@@ -12,48 +12,6 @@
 		"importante": true
 	},
 	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "oh, esto puede ser algo problemático.\n\n",
-		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "Sinceramente, estos datos pueden ser algo personales, así que recomiendo que los llenemos con él de alguna gran celebridad argentina cuya imagen sea libre de derechos para evitar situaciones legales. ",
-		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "Todavía mis creadores están peleando con cierta empresa por los derechos de mi modulo de sarcasmo. Lo que menos necesitamos son más luchas legales.",
-		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "Propongo que llenes este documento usando los datos de algún criptido, como por ejemplo, el pombero.",
-		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "No, mejor, la luz mala.",
-		"importante": false
-	},
-	{
-		"emocion": "felicitaciones",
-		"personaje": "Usuario",
-		"texto": "¿Y de donde sacare dichos datos? ¿Me los vas a dar vos?\n\n",
-		"importante": false
-	},
-	{
-		"emocion": "ensenando",
-		"personaje": "IA",
-		"texto": "Mi estimado usuario, por favor, lo mas bello que tienen los criptidos es que dejan volar la imaginación, ¡encargate tu de poner los datos que consideres correctos! \n\n",
-		"importante": false
-	},
-	{
 		"emocion": "felicitaciones",
 		"personaje": "Usuario",
 		"texto": "Entonces…¿lo que sea?",

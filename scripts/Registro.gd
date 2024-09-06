@@ -6,6 +6,7 @@ var contador_recarga : int = 0
 var evento2=false
 var evento3=false
 var evento4=false
+var parteFinal=false
 var cuadros_texto=[]
 var i = 0
 const SonidoFallo= preload("res://sonidos/Musica y sonidos a utilizar/error_003.ogg")
@@ -18,13 +19,7 @@ func _ready():
 	buscar_cuadros($ScrollContainer/TextureRect)
 	$CuadroDialogo.dialogos=CargaArchivos.cargar("nivel2")
 	$CuadroDialogo.comenzar()
-	guardar_avances()
 	logrosNivel = CargaArchivos.logros["2"]
-	
-
-func guardar_avances():
-	CargaArchivos.guardar_avance(2, $CuadroDialogo.indice_dialogo)
-	CargaArchivos.establecer_progreso(2,progreso)
 
 func eliminar_fake():
 	if(!logrosNivel[0]):
@@ -42,7 +37,7 @@ func buscar_cuadros(nodo):
 func _process(_delta):
 	if(!ya_ejecuto):
 		_ejecutar_evento()
-	if(!evento2 and $CuadroDialogo.indice_dialogo == 5):
+	if(!evento2 and $CuadroDialogo.indice_dialogo == 4):
 		$CuadroDialogo.desactivar_dialogo()
 		evento2=true
 	elif $CuadroDialogo.indice_dialogo==8 and !evento4:
@@ -76,7 +71,7 @@ func vaciar_especificos():
 	$ScrollContainer/TextureRect/Label19/TextEdit.clear()
 
 func _ejecutar_evento():
-	if $CuadroDialogo.dialogo_actual() == 3:
+	if $CuadroDialogo.dialogo_actual() == 2:
 		$CuadroDialogo.habilitado = false
 		$AnimationPlayer.play("arreglar")
 		ya_ejecuto = true
@@ -105,16 +100,15 @@ func _on_enviar_pressed():
 			if(!hay_campos_vacios()):
 				if($ScrollContainer/TextureRect/nombre9.text== "w62bc"):
 					if(comprobar_ficha()):
-						$CuadroDialogo.habilitar_dialogo()
+						parteFinal=true
 						$Timer.start()
 						$Ficha.visible=false
 						$AudioStreamPlayer.stream= SonidoExito
 						$AudioStreamPlayer.play()
-					$CuadroDialogo.habilitar_dialogo()
+					if !parteFinal:
+						$CuadroDialogo.habilitar_dialogo()
 					$AudioStreamPlayer.stream= SonidoExito
 					$AudioStreamPlayer.play()
-					progreso = 80
-					guardar_avances()
 					if(!logrosNivel[1]):
 						$Logro.fijar_logro("Completista","Completar un formulario con la información solicitada.")
 						logrosNivel[1]= true
@@ -125,8 +119,6 @@ func _on_enviar_pressed():
 					llamar_dialogo("el [b]codigo de seguridad[/b] es incorrecto")
 					$AudioStreamPlayer.stream= SonidoFallo
 					$AudioStreamPlayer.play()
-					progreso = 80
-					guardar_avances()
 					if(!logrosNivel[2]):
 						$Logro.fijar_logro("Del error se aprende","Intentar resolver el captcha sin éxito.")
 						logrosNivel[2]= true
@@ -136,20 +128,17 @@ func _on_enviar_pressed():
 				llamar_dialogo("te falto completar algun campo")
 				$AudioStreamPlayer.stream= SonidoFallo
 				$AudioStreamPlayer.play()
-				progreso = 80
-				guardar_avances()
+
 		else:
 			$CuadroDialogo.mostrar_dialogo_unico("error correo no coinciden","Ave")
 			$AudioStreamPlayer.stream= SonidoFallo
 			$AudioStreamPlayer.play()
-			progreso = 80
-			guardar_avances()
+
 	else:
 		$CuadroDialogo.mostrar_dialogo_unico("Error respuesta secreta no coinciden","Ave")
 		$AudioStreamPlayer.stream= SonidoFallo
 		$AudioStreamPlayer.play()
-		progreso = 80
-		guardar_avances()
+
 
 
 
@@ -158,7 +147,7 @@ func llamar_dialogo(texto):
 
 func _on_recargar_pressed():
 	contador_recarga +=1
-	if contador_recarga ==3:
+	if contador_recarga ==2:
 		$ScrollContainer/TextureRect/Capcha.queue_free()
 		$AudioStreamPlayer.stream= SonidoExito
 		$AudioStreamPlayer.play()
@@ -175,8 +164,7 @@ func _on_timer_timeout():
 		logrosNivel[4]= true
 		CargaArchivos.logros["2"]= logrosNivel
 		CargaArchivos.guardar_logros()
-	progreso = 100
-	guardar_avances()
+
 
 func pasar_al_siguiente():
 	get_tree().change_scene_to_file("res://Escenas/nivel3-recupero/nivel_3_recupero_contrasenia.tscn")
@@ -208,8 +196,6 @@ func _on_area_2d_mouse_entered():
 	if(!$CuadroDialogo.visible):
 		$CuadroDialogo.mostrar_dialogo_unico("[font_size=50]Solo deberías tocar la opción de [b]País de Emisión[/b] si seleccionamos [b]Pasaporte[/b].[/font_size]","Ave")
 		$ScrollContainer/TextureRect/Area2D.queue_free()
-		progreso = 20
-		guardar_avances()
 
 func comprobar_ficha():
 	return $ScrollContainer/TextureRect/nombre.text=="Juan" and $ScrollContainer/TextureRect/CheckBox2.button_pressed and $ScrollContainer/TextureRect/OptionButton.text== "Argentina" and $ScrollContainer/TextureRect/cuil.text=="20-99493923-3"
@@ -220,6 +206,4 @@ func _on_advertencia_mouse_entered():
 		$CuadroDialogo.mostrar_dialogo_unico("Ten MUCHO, MUCHO, [b]MUCHO[/b] cuidado con hacer dos clicks dentro de un cuadro de texto. Va a borrar toda tu información y realmente no queremos eso, ¿No?","Ave")
 		$CuadroDialogo.bajar_volumen()
 		$ScrollContainer/TextureRect/advertencia.queue_free()
-		progreso=40
-		guardar_avances()
 	

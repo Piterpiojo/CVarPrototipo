@@ -27,16 +27,14 @@ func _on_nuevo_usuario_pressed():
 			CargaArchivos.guardar_logros()
 		$AudioStreamPlayer2D.stream=SonidoExito
 		$AudioStreamPlayer2D.play()
-		progreso = 100
-		CargaArchivos.establecer_progreso(1,progreso)
 		$AnimationPlayer.play("negro")
 
 func _process(delta):
-	if $CuadroDialogo.indice_dialogo == 14 and !banderas[0]:
+	if $CuadroDialogo.indice_dialogo == 9 and !banderas[0]:
 		banderas[0]=true
 		$ScrollContainer/TextureRect/emails.visible=true
 		progreso = 75
-	elif $CuadroDialogo.indice_dialogo == 15 and !banderas[1]:
+	elif $CuadroDialogo.indice_dialogo == 12 and !banderas[1]:
 		banderas[1]=true
 		$CuadroDialogo.desactivar_dialogo()
 
@@ -85,20 +83,9 @@ func _on_usuario_text_changed():
 			logrosNivel[2]= true
 			CargaArchivos.logros["1"]= logrosNivel
 			CargaArchivos.guardar_logros()
-		progreso = 90
 	elif $ScrollContainer/TextureRect/usuario.text == "abcdefghijklmnopqrstuvwxyz@email.com":
 		$AudioStreamPlayer2D.stream=SonidoFallo
 		$AudioStreamPlayer2D.play()
 	elif $ScrollContainer/TextureRect/usuario.text == "ElMejor@mail.com":
 		$AudioStreamPlayer2D.stream=SonidoFallo
 		$AudioStreamPlayer2D.play()
-
-
-
-func _on_visibilidad_textpo_pressed():
-	if($visibilidad_textpo.text=="Ocultar"):
-		$CuadroDialogo.visible =false
-		$visibilidad_textpo.text="Mostrar"
-	elif($visibilidad_textpo.text=="Mostrar"):
-		$CuadroDialogo.visible =true
-		$visibilidad_textpo.text="Ocultar"

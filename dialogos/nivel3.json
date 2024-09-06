@@ -5,16 +5,10 @@
 		"texto": "¿Te gusta tu retrato?",
 		"importante": true
 	},
-	{
-		"emocion": "felicitaciones",
-		"personaje": "Usuario",
-		"texto": "¡...! ",
-		"importante": false
-	},
-	{
-		"emocion": "artista",
+		{
+		"emocion": "ensenando",
 		"personaje": "IA",
-		"texto": "¿Wow,  tan sorprendido? ¿Acaso no estabas al tanto? a las IA  ahora no solo nos emplean por nuestras habilidades para procesar datos escritos,sino que también recientemente incursionamos en el mundo del arte y estamos abriéndonos paso también en otros escenarios; En fin, a lo que sigue; Tus datos fueron cargados de forma correcta, en breve recibirás un mail… ",
+		"texto": "En fin, tus datos fueron cargados de forma correcta, en breve recibirás un mail…",
 		"importante": false
 	},
 	{
@@ -38,43 +32,13 @@
 	{
 		"emocion": "reloj",
 		"personaje": "IA",
-		"texto": "Los humanos son seres tan impacientes, de momento esperemos que se cumpla en plazo antes de tomar cualquier otra acción",
-		"importante": false
-	},
-	{
-		"emocion": "curiosa",
-		"personaje": "Usuario",
-		"texto": "…",
-		"importante": false
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "IA",
-		"texto": "…",
-		"importante": false
-	},
-	{
-		"emocion": "estatico",
-		"personaje": "Usuario",
-		"texto": "*tose*",
-		"importante": false
-	},
-	{
-		"emocion": "tos",
-		"personaje": "IA",
-		"texto": "*tose* *tose*",
-		"importante": false
-	},
-	{
-		"emocion": "reloj",
-		"personaje": "IA",
 		"texto": "Bueno esta bien, apresuremos un poco esto solo por que ya se puso incomodo",
 		"importante": false
 	},
 	{
 		"emocion": "senalando",
 		"personaje": "Usuario",
-		"texto": "(Bueno, no voy a quejarme de algo que me haga ahorrar tiempo)",
+		"texto": "Hmm ¿Cómo va el tema con mi correo?",
 		"importante": false
 	},
 	{
@@ -86,15 +50,10 @@
 	{
 		"emocion": "confiada",
 		"personaje": "IA",
-		"texto": "De acuerdo, el siguiente paso es sencillo",
-		"importante": true
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "IA",
 		"texto": "En esta pantalla, deberás poner el usuario que tú mismo seleccionaste, pero lo más importante es que uses de contraseña, aquella que te debio haber llegado al mail, osea, específicamente estos 8 dígitos Y NINGÚN OTRO",
 		"importante": true
 	},
+	
 	{
 		"emocion": "confiada",
 		"personaje": "Usuario",
@@ -126,28 +85,10 @@
 		"importante": false
 	},
 	{
-		"emocion": "curiosa",
-		"personaje": "IA",
-		"texto": "...\n\n",
-		"importante": false
-	},
-	{
-		"emocion": "curiosa",
-		"personaje": "Usuario",
-		"texto": "Por qué razón yo deb-",
-		"importante": false
-	},
-	{
 		"emocion": "confiada",
 		"personaje": "IA",
 		"texto": "Dije que esos eran los dígitos exactos, no que los envíe en el orden que debían ir.",
 		"importante":false
-	},
-	{
-		"emocion": "confiada",
-		"personaje": "Usuario",
-		"texto": " *Suspiro* Solo acabemos con esta sección ¿si?\n",
-		"importante": false
 	},
 	{
 		"emocion": "ensenando",

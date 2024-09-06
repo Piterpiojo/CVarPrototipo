@@ -293,10 +293,6 @@ offset_right = 1319.0
 offset_bottom = 728.0
 grow_horizontal = 0
 
-[node name="Container" parent="CuadroDialogo" index="2"]
-offset_top = 199.5
-offset_bottom = 239.5
-
 [node name="Logro" parent="." instance=ExtResource("2_wwqp0")]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -35,13 +35,13 @@ func _process(_delta):
 		progreso = 10
 		$AnimationPlayer.play("RESET")
 		guardar_avances()
-	elif($CuadroDialogo.indice_dialogo==40 and !banderas[3]):
+	elif($CuadroDialogo.indice_dialogo==15 and !banderas[3]):
 		banderas[3]=true
 		$ColorRect2.visible = true
 		$CuadroDialogo.pausa =true
 		progreso = 60
 		guardar_avances()
-	elif($CuadroDialogo.indice_dialogo==41 and !banderaTriangulo):
+	elif($CuadroDialogo.indice_dialogo==16 and !banderaTriangulo):
 		$AnimationPlayer.play("Triangulo")
 		banderaTriangulo=true
 		$ayuda.cambiar_texto("Arrastra las opciones correctas al interior del recuadro")
