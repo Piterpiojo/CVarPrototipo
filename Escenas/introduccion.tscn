@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://hivy8oflko4h"]
+[gd_scene load_steps=9 format=3 uid="uid://hivy8oflko4h"]
 
 [ext_resource type="Script" path="res://scripts/introduccion.gd" id="1_8ct2l"]
 [ext_resource type="PackedScene" uid="uid://b7jonfd41k68h" path="res://Escenas/cuadro_dialogo.tscn" id="1_u4vdi"]
-[ext_resource type="Texture2D" uid="uid://b67wa71b8pnnn" path="res://ui/Fondos/fondo4.png" id="2_bhgex"]
+[ext_resource type="Texture2D" uid="uid://dugtmnj8ugbo1" path="res://ui/Fondos/fondo2.png" id="2_2l7ah"]
+[ext_resource type="Texture2D" uid="uid://bnvthotqk0857" path="res://Sprites/ave/saludando.png" id="4_s0vhc"]
 
 [sub_resource type="Animation" id="Animation_0cq5g"]
 length = 0.001
@@ -17,6 +18,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Saludando:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.479167, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_5yjdj"]
@@ -49,10 +62,28 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_432n4"]
+resource_name = "new_animation"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Saludando:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.479167, 1), Vector2(0.691667, 1.42222), Vector2(0.479167, 1), Vector2(0.691667, 1.42222), Vector2(0.479167, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xrsn0"]
 _data = {
 "RESET": SubResource("Animation_0cq5g"),
-"negro": SubResource("Animation_5yjdj")
+"negro": SubResource("Animation_5yjdj"),
+"new_animation": SubResource("Animation_432n4")
 }
 
 [node name="Introduccion" type="Control"]
@@ -66,7 +97,7 @@ script = ExtResource("1_8ct2l")
 
 [node name="Fondo4" type="Sprite2D" parent="."]
 position = Vector2(635, 311)
-texture = ExtResource("2_bhgex")
+texture = ExtResource("2_2l7ah")
 
 [node name="CuadroDialogo" parent="." instance=ExtResource("1_u4vdi")]
 layout_mode = 1
@@ -75,8 +106,12 @@ offset_top = -360.0
 offset_right = 667.5
 offset_bottom = 0.0
 
+[node name="Container" parent="CuadroDialogo" index="2"]
+visible = false
+
 [node name="Sprite2D" parent="CuadroDialogo/Container" index="0"]
-position = Vector2(630, -253.5)
+visible = false
+position = Vector2(630, -328.5)
 
 [node name="Importante" parent="CuadroDialogo" index="9"]
 visible = false
@@ -88,5 +123,10 @@ visible = false
 libraries = {
 "": SubResource("AnimationLibrary_xrsn0")
 }
+
+[node name="Saludando" type="Sprite2D" parent="."]
+position = Vector2(637, 220)
+scale = Vector2(0.479167, 1)
+texture = ExtResource("4_s0vhc")
 
 [editable path="CuadroDialogo"]
