@@ -50,6 +50,7 @@ const tooltips = {
 }
 func _ready():
 	CargaArchivos.cargar_logros()
+	$AnimationPlayer.play("fade_")
 
 func cargar():
 	get_tree().change_scene_to_file(niveles[nivel_a_cargar])

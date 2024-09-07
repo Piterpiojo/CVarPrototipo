@@ -314,7 +314,7 @@ offset_top = 72.0
 offset_right = 992.0
 offset_bottom = 220.0
 text = "Guía ludificada
- para CVar"
+SIGEVA - UNPAZ"
 label_settings = SubResource("LabelSettings_p1otd")
 horizontal_alignment = 1
 
@@ -326,9 +326,26 @@ frame_progress = 0.877933
 
 [node name="logos" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="logos"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -224.0
+offset_top = -80.0
+offset_right = -4.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="Images" type="TextureRect" parent="logos"]
 layout_mode = 1
@@ -337,10 +354,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1012.0
-offset_top = 585.0
-offset_right = 1232.0
-offset_bottom = 671.0
+offset_left = -224.0
+offset_top = -93.0
+offset_right = -4.0
+offset_bottom = -7.0
 grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("11_db820")
@@ -364,12 +381,23 @@ tooltip_text = "https://www.unpaz.edu.ar/"
 focus_mode = 0
 flat = true
 
+[node name="ColorRect2" type="ColorRect" parent="logos"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -80.0
+offset_right = 236.0
+offset_bottom = -16.0
+grow_vertical = 0
+
 [node name="Sicty" type="TextureRect" parent="logos"]
 layout_mode = 0
 offset_left = 24.0
-offset_top = 633.0
+offset_top = 632.0
 offset_right = 216.0
-offset_bottom = 713.0
+offset_bottom = 712.0
 texture = ExtResource("12_vnsnf")
 expand_mode = 1
 stretch_mode = 4
